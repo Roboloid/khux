@@ -1,9 +1,9 @@
 {
-  "short_name": "Dragalia Lost",
-  "name": "Dragalia Lost Stats Calculator",
+  "short_name": "KINGDOM HEARTS Union χ",
+  "name": "KINGDOM HEARTS Union χ [CROSS] Calculator",
   "icons": [
     {
-      "src": "%PUBLIC_URL%/images/adventurer/100001_01_r05.png",
+      "src": "%PUBLIC_URL%/images/adventurer/roboloid.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     }
