@@ -1,6 +1,8 @@
 {
   "name": "khux",
+  "homepage": "http://roboloid.github.io/khux",
   "version": "1.0.0",
+  "private": true,
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -14,6 +16,5 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Roboloid/khux/issues"
-  },
-  "homepage": "https://github.com/Roboloid/khux#readme"
+  }
 }
