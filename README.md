@@ -1,5 +1,5 @@
 ---
-permalink: ./index.html
+permalink: /public/index.html
 ---
 
 <h1 align="center">
