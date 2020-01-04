@@ -1,39 +1,17 @@
-import React from 'react';
-import './style.css';
-import Dropdown from './Dropdown';
+function keybladeDropdown() {
+  document.getElementById("dropdown_container").classList.toggle("show");
+}
 
-<Dropdown
-    onSelect={(eventKey) => {
-    }}
->
-    <Dropdown.Toggle
-        btnStyle="flat"
-    >
-        Toggler
-    </Dropdown.Toggle>
-    <Dropdown.Menu>
-        <MenuItem header>Header</MenuItem>
-        <MenuItem eventKey={1}>link</MenuItem>
-        <MenuItem divider />
-        <MenuItem header>Header</MenuItem>
-        <MenuItem eventKey={2}>link</MenuItem>
-        <MenuItem eventKey={3} disabled>disabled</MenuItem>
-        <MenuItem
-            eventKey={4}
-            title="link with title"
-        >
-            link with title
-        </MenuItem>
-        <MenuItem
-            eventKey={5}
-            active
-            onSelect={(eventKey) => {
-                alert(`Alert from menu item.\neventKey: ${eventKey}`);
-            }}
-        >
-            link that alerts
-        </MenuItem>
-    </Dropdown.Menu>
-</Dropdown>
-
-export default Dropdown;
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+} 
