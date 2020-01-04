@@ -1,3 +1,4 @@
+import React from 'react';
 import "./style.css";
 
 class Dropdown extends React.Component {
@@ -29,7 +30,7 @@ showDropdownMenu(event) {
 
   render() {
     return (
-        <div  className="dropdown" style = {{background:"red",width:"200px"}} >
+        <div className="dropdown" style = {{background:"red",width:"200px"}} >
          <div className="button" onClick={this.showDropdownMenu}> My Setting </div>
 
           { this.state.displayMenu ? (
