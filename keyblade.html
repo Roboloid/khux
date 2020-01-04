@@ -13,7 +13,7 @@
   <meta property="og:image" content="https://roboloid.github.io/khux/public/images/icon/keyblade_thumb.png">
   <!-- Metadata end -->
 
-  <head>
+  <head>                         <!---------------------- START HEADER ---------------------->
     <meta charset="utf-8" />
     <meta name="author" content="Roboloid" />
     <meta name="description" content="Keyblade Cost Calculator" />
@@ -28,10 +28,6 @@
       href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
     />
 
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
     <link rel="manifest" href="./public/manifest.json" />
 
     <!-- Site title -->
@@ -39,17 +35,16 @@
 
     <!-- Content overlay -->
     <style type="text/css">
-      #content {
-        padding: 15px 15px;
+      .whiteOverlay {
+        padding: 15px 15px 15px;
+        margin: 10% 10% 10%;
+        color: #ffffff;
         background-color: #FFF;
-      }
-      #main-content {
-        float: none;
-        width:100%;
-      }
-
-      #news.newsDetail {
-        padding: 5px 15px 15px;
+        background-position: center;
+        margin-left: auto;
+        margin-right: auto;
+        height: 100%;
+        width: 800px
       }
     </style>
 
@@ -58,19 +53,57 @@
         body  {
           background-image: url("./public/images/other/bg.png");
           background-size: 150px;
-          background-repeat: repeat;
+          background-repeat: repeat
         }
     </style>
+  </head>                         <!---------------------- END HEADER ---------------------->
+
+  
 
   <body>
-    <div id="root"></div>
+      <div class="whiteOverlay">
 
-    <body>
+          <h1 style = "text-align:center;color:black;font-family:Verdana, sans-serif;">Keyblade Cost Calculator</h1>
+          
+          <h2 style = "text-align:center;color:black;font-family:Verdana, sans-serif;">Select a keyblade & level</h2>
 
-      <h3 style = "text-align:center;color:white;font-family:Verdana, sans-serif;">Test</h3>
-      
-      <h1 style = "text-align:center;color:white;font-family:Verdana, sans-serif;">My message</h1>
-      
-      </body>
+          <div id="keyblade_dropdown"></div>
+
+          <Dropdown
+            title="Select a keyblade"
+            list={this.keybladeList.keyblade}
+          />
+
+
+          <h1 style = "text-align:center;color:black;font-family:Verdana, sans-serif;">My message2</h1>
+
+          <h1 style = "text-align:center;color:black;font-family:Verdana, sans-serif;">My message</h1>
+
+          <h1 style = "text-align:center;color:black;font-family:Verdana, sans-serif;">My message2</h1>
+
+          <h1 style = "text-align:center;color:black;font-family:Verdana, sans-serif;">My message</h1>
+
+          <h1 style = "text-align:center;color:black;font-family:Verdana, sans-serif;">My message2</h1>
+
+          <h1 style = "text-align:center;color:black;font-family:Verdana, sans-serif;">My message</h1>
+
+          <h1 style = "text-align:center;color:black;font-family:Verdana, sans-serif;">My message2</h1>
+
+          <h1 style = "text-align:center;color:black;font-family:Verdana, sans-serif;">My message</h1>
+
+          <h1 style = "text-align:center;color:black;font-family:Verdana, sans-serif;">My message2</h1>
+
+          <h1 style = "text-align:center;color:black;font-family:Verdana, sans-serif;">My message</h1>
+
+          <h1 style = "text-align:center;color:black;font-family:Verdana, sans-serif;">My message2</h1>
+          
+      </div>
+    
+      <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+      <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    
+      <!-- SCRIPT IMPORTS -->
+      <script src="./src/keyblade.jsx" type="module"></script>
+
   </body>
 </html>
