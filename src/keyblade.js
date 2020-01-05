@@ -6,8 +6,13 @@ function keybladeDropdown() {
 function selectKeyblade(value)  {
   if(value != "") {
     console.log(value);
+    loadKeyblade(value);
     window.alert(value);
   }
+}
+
+function loadKeyblade(value)  {
+  
 }
 
 // Close the dropdown menu if the user clicks outside of it
