@@ -15,7 +15,7 @@ function selectKeyblade(value)  {
 }
 
 function loadKeyblade()  {
-  document.getElementById("number_container").classList.toggle("showNum");
+  document.getElementById("number_container").classList.toggle("showNum", true);
 }
 
 function displayValue(value)  {
