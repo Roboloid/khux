@@ -79,6 +79,7 @@
         background-position: center;
         margin-left: auto;
         margin-right: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
       }
 
       /* Dropdown Content (Hidden by Default) */
@@ -113,6 +114,7 @@
         background-position: center;
         margin-left: auto;
         margin-right: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
       }
 
       /* Display value input field (Hidden by Default) */
@@ -121,12 +123,14 @@
         position: relative;
         background-color: #f1f1f1;
         min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
         z-index: 1;
         margin: 0;
       }
 
       .showNum {display:block;}
+
+      .showLevelNum {display:block;}
 
       input[type=number]::-webkit-inner-spin-button, 
       input[type=number]::-webkit-outer-spin-button { 
@@ -157,10 +161,6 @@
             <h2 style = "text-align:center;color:black;font-family:Verdana, sans-serif;">Select a keyblade & level</h2>
 
             <pre></pre>
-
-            <!-- <div id="like_button_container"></div> -->
-
-            <!-- <div id="keyblade_dropdown"></div> -->
             
             <div class="dropdown">    <!-- Keyblade selection area -->
               <button onclick="keybladeDropdown()" class="dropbtn">Keyblade</button>
@@ -183,22 +183,20 @@
                 <input type="image" onclick="selectKeyblade('FairyStars')" class="optbtn" src="./public/images/keyblade/kb14_3.png" height=25% width=25%/>
                 <input type="image" onclick="selectKeyblade('DiamondDust')" class="optbtn" src="./public/images/keyblade/kb15_3.png" height=25% width=25%/>
                 <input type="image" onclick="selectKeyblade('BadGuyBreaker')" class="optbtn" src="./public/images/keyblade/kb16_3.png" height=25% width=25%/>
-                <!-- <button onclick="selectKeyblade('Starlight')" class="optbtn"><img src="./public/images/keyblade/kb1_3.png" height=25% width = 25%></button>
-                <button onclick="selectKeyblade('TreasureTrove')" class="optbtn"><img src="./public/images/keyblade/kb2_3.png" height=25% width = 25%></button>
-                <button onclick="selectKeyblade('LadyLuck')" class="optbtn"><img src="./public/images/keyblade/kb3_3.png" height=25% width = 25%></button> -->
               </div>
             </div>
 
             <div class="numberbox">                     <!-- Cost area -->
               <div id="number_container" class="number-content">
                 <pre></pre>
-                <input type="number" id="level1" onkeyup="displayValue(level1.value);" placeholder="Enter starting level."/>
+                <input type="number" id="level1" onkeyup="inputValue(level1.value);" placeholder="Enter starting level."/>
                 <pre></pre>
-                <input type="number" id="level2" onkeyup="displayValue2(level2.value);" placeholder="Enter target level."/>
+                <input type="number" id="level2" onkeyup="inputValue2(level2.value);" placeholder="Enter target level."/>
                 <pre></pre>
                 <pre></pre>
                 <p id="displayValue_container"style="color:black"></p>
                 <p id="displayValue_container2"style="color:black"></p>
+                <p id="displayValue_container3"style="color:black"></p>
               </div>
             </div>
             
@@ -207,7 +205,6 @@
         
     
       <!-- SCRIPT IMPORTS -->
-      <!-- <script src="./src/like_button.js"></script> -->
       <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
       <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
