@@ -6,13 +6,24 @@ function keybladeDropdown() {
 function selectKeyblade(value)  {
   if(value != "") {
     console.log(value);
-    loadKeyblade(value);
-    window.alert(value);
+
+    /* Reset values */
+    document.getElementById("level1").value = "";
+    document.getElementById("level2").value = "";
+    loadKeyblade();
   }
 }
 
-function loadKeyblade(value)  {
-  
+function loadKeyblade()  {
+  document.getElementById("number_container").classList.toggle("showNum");
+}
+
+function displayValue(value)  {
+  document.getElementById("displayValue_container").innerHTML = value;
+}
+
+function displayValue2(value)  {
+  document.getElementById("displayValue_container2").innerHTML = value;
 }
 
 // Close the dropdown menu if the user clicks outside of it

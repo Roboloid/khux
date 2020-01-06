@@ -103,7 +103,37 @@
       .dropdown-content a:hover {background-color: #ddd}
 
       /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-      .show {display:block;} 
+      .show {display:block;}
+
+
+      .numberbox {
+        position: relative;
+        display: block;
+        text-align: center;
+        background-position: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* Display value input field (Hidden by Default) */
+      .number-content {
+        display: none;
+        position: relative;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        margin: 0;
+      }
+
+      .showNum {display:block;}
+
+      input[type=number]::-webkit-inner-spin-button, 
+      input[type=number]::-webkit-outer-spin-button { 
+        -webkit-appearance: none; 
+        margin: 0; 
+      }
+
     </style>
 
     <!-- Backdrop pattern -->
@@ -126,20 +156,17 @@
             
             <h2 style = "text-align:center;color:black;font-family:Verdana, sans-serif;">Select a keyblade & level</h2>
 
-            <br></br>
-
+            <pre></pre>
 
             <!-- <div id="like_button_container"></div> -->
 
             <!-- <div id="keyblade_dropdown"></div> -->
-
-            <div class="menu"></div>
-
             
             <div class="dropdown">    <!-- Keyblade selection area -->
               <button onclick="keybladeDropdown()" class="dropbtn">Keyblade</button>
               <div id="dropdown_container" class="dropdown-content">
-                <br></br>
+                <pre></pre>
+                <pre></pre>
                 <input type="image" onclick="selectKeyblade('Starlight')" class="optbtn" src="./public/images/keyblade/kb1_3.png" height=25% width=25%/>
                 <input type="image" onclick="selectKeyblade('TreasureTrove')" class="optbtn" src="./public/images/keyblade/kb2_3.png" height=25% width=25%/>
                 <input type="image" onclick="selectKeyblade('LadyLuck')" class="optbtn" src="./public/images/keyblade/kb3_3.png" height=25% width=25%/>
@@ -162,11 +189,20 @@
               </div>
             </div>
 
-            <div>                     <!-- Cost area -->
-
+            <div class="numberbox">                     <!-- Cost area -->
+              <div id="number_container" class="number-content">
+                <pre></pre>
+                <input type="number" id="level1" onkeyup="displayValue(level1.value);" placeholder="Enter starting level."/>
+                <pre></pre>
+                <input type="number" id="level2" onkeyup="displayValue2(level2.value);" placeholder="Enter target level."/>
+                <pre></pre>
+                <pre></pre>
+                <p id="displayValue_container"style="color:black"></p>
+                <p id="displayValue_container2"style="color:black"></p>
+              </div>
             </div>
             
-        </div></div>>
+        </div>
     
         
     
