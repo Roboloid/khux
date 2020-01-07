@@ -112,12 +112,13 @@
       .number-content {
         display: none;
         position: relative;
-        background-color: #f1f1f1;
         min-width: 160px;
         /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
         z-index: 1;
         margin: 0;
       }
+
+      .gapSpacer {display:none;}
 
       .showNum {display:block;}
 
@@ -198,9 +199,13 @@
               </div>
             </div>
 
+            <div id="gap_container" class="gapSpacer">
+              <pre></pre>
+              <pre></pre>
+            </div>
+
             <div class="numberbox">                     <!-- Cost area -->
               <div id="number_container" class="number-content">
-                <pre></pre>
                 <img id="kbImage" class="shadow">
                 <pre></pre>
                 <input type="number" id="level1" onkeyup="inputValue(level1.value);" placeholder="Enter starting level."/>

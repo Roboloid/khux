@@ -14,6 +14,7 @@ function selectKeyblade(value)  {
     /* Reset values */
     document.getElementById("level1").value = "";
     document.getElementById("level2").value = "";
+    document.getElementById("displayNumErr").innerHTML = "";
     currentKeyblade = value;
     grabKeybladeImg(currentKeyblade);
     cost1 = "";
@@ -26,6 +27,7 @@ function selectKeyblade(value)  {
     document.getElementById("showMoon").classList.toggle("showMoonNum", false);
 
     document.getElementById("number_container").classList.toggle("showNum", true);
+    document.getElementById("gap_container").classList.toggle("showNum", true);
   }
 }
 
