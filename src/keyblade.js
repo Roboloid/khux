@@ -69,20 +69,25 @@ function sumCost(keyblade, base, target) {
 }
 
 function calculateCost() {
-  if(cost1 == "NaN" || cost2 == "NaN" || currentKeyblade == "")  { // Inputs not yet full, do nothing
-    document.getElementById("displayValue_container3").innerHTML = "";
+  if(cost1 == "NaN" || cost2 == "NaN" || currentKeyblade == "" || cost1 >= cost2)  { // Inputs not yet full, do nothing
+    document.getElementById("displayNumErr").innerHTML = "";
+    document.getElementById("showPower").classList.toggle("showPowerNum", false);
+    document.getElementById("showSpeed").classList.toggle("showSpeedNum", false);
+    document.getElementById("showMagic").classList.toggle("showMagicNum", false);
+    document.getElementById("showSun").classList.toggle("showSunNum", false);
+    document.getElementById("showMoon").classList.toggle("showMoonNum", false);
   }
   else  {
-    if(cost1 >= cost2 || cost1 < 0 || cost2 > 50)  { // Inputs full but invalid
-      document.getElementById("displayValue_container3").innerHTML = "";
-        document.getElementById("showPower").classList.toggle("showPowerNum", false);
-        document.getElementById("showSpeed").classList.toggle("showSpeedNum", false);
-        document.getElementById("showMagic").classList.toggle("showMagicNum", false);
-        document.getElementById("showSun").classList.toggle("showSunNum", false);
-        document.getElementById("showMoon").classList.toggle("showMoonNum", false);
+    if(cost1 < 0 || cost2 > 50)  { // Inputs full but invalid
+      document.getElementById("displayNumErr").innerHTML = "Invalid input.";
+      document.getElementById("showPower").classList.toggle("showPowerNum", false);
+      document.getElementById("showSpeed").classList.toggle("showSpeedNum", false);
+      document.getElementById("showMagic").classList.toggle("showMagicNum", false);
+      document.getElementById("showSun").classList.toggle("showSunNum", false);
+      document.getElementById("showMoon").classList.toggle("showMoonNum", false);
     }
     else  {
-      // document.getElementById("displayValue_container3").innerHTML = "Success!" + cost1 + " " + cost2;
+      document.getElementById("displayNumErr").innerHTML = "";
       var thisBlade;
       switch(currentKeyblade) {
         case "kb1":
@@ -177,6 +182,13 @@ function calculateCost() {
       }
       else  {
         document.getElementById("showMoon").classList.toggle("showMoonNum", false);
+      }
+
+      if(powerCost == 0 && speedCost == 0 && magicCost == 0 && sunCost == 0 && moonCost == 0) {
+        document.getElementById("displayNumErr").innerHTML = "There are no gem costs from Lv. " + cost1 + " to Lv. " + cost2 + ".";
+      }
+      else  {
+        document.getElementById("displayNumErr").innerHTML = "";
       }
       
     }
