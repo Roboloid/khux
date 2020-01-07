@@ -92,17 +92,6 @@
         z-index: 1;
       }
 
-      /* Links inside the dropdown */
-      .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-      }
-
-      /* Change color of dropdown links on hover */
-      .dropdown-content a:hover {background-color: #ddd}
-
       /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
       .show {display:block;}
 
@@ -131,6 +120,27 @@
       .showNum {display:block;}
 
       .showLevelNum {display:block;}
+
+      .hideGem {display:none;}
+
+      .showPowerNum {display:inline;}
+      .showSpeedNum {display:inline;}
+      .showMagicNum {display:inline;}
+      .showSunNum {display:inline;}
+      .showMoonNum {display:inline;}
+
+      .shadow  {
+        width: 150px;
+        -webkit-filter: drop-shadow(5px 5px 5px #222);
+        filter: drop-shadow(3px 3px 1px rgb(97, 97, 97));
+      }
+
+      .costbox {
+        position: relative;
+        display: block;
+        margin: 8px;
+        font-size: 20px;
+      }
 
       input[type=number]::-webkit-inner-spin-button, 
       input[type=number]::-webkit-outer-spin-button { 
@@ -167,27 +177,29 @@
               <div id="dropdown_container" class="dropdown-content">
                 <pre></pre>
                 <pre></pre>
-                <input type="image" onclick="selectKeyblade('Starlight')" class="optbtn" src="./public/images/keyblade/kb1_3.png" height=25% width=25%/>
-                <input type="image" onclick="selectKeyblade('TreasureTrove')" class="optbtn" src="./public/images/keyblade/kb2_3.png" height=25% width=25%/>
-                <input type="image" onclick="selectKeyblade('LadyLuck')" class="optbtn" src="./public/images/keyblade/kb3_3.png" height=25% width=25%/>
-                <input type="image" onclick="selectKeyblade('ThreeWishes')" class="optbtn" src="./public/images/keyblade/kb4_3.png" height=25% width=25%/>
-                <input type="image" onclick="selectKeyblade('DivineRose')" class="optbtn" src="./public/images/keyblade/kb5_3.png" height=25% width=25%/>
-                <input type="image" onclick="selectKeyblade('Olympia')" class="optbtn" src="./public/images/keyblade/kb6_3.png" height=25% width=25%/>
-                <input type="image" onclick="selectKeyblade('MoogleOGlory')" class="optbtn" src="./public/images/keyblade/kb7_3.png" height=25% width=25%/>
-                <input type="image" onclick="selectKeyblade('SleepingLion')" class="optbtn" src="./public/images/keyblade/kb8_3.png" height=25% width=25%/>
-                <input type="image" onclick="selectKeyblade('Counterpoint')" class="optbtn" src="./public/images/keyblade/kb9_3.png" height=25% width=25%/>
-                <input type="image" onclick="selectKeyblade('StrokeOfMidnight')" class="optbtn" src="./public/images/keyblade/kb10_3.png" height=25% width=25%/>
-                <input type="image" onclick="selectKeyblade('Fenrir')" class="optbtn" src="./public/images/keyblade/kb11_3.png" height=25% width=25%/>
-                <input type="image" onclick="selectKeyblade('Darkgnaw')" class="optbtn" src="./public/images/keyblade/kb12_3.png" height=25% width=25%/>
-                <input type="image" onclick="selectKeyblade('MissingAche')" class="optbtn" src="./public/images/keyblade/kb13_3.png" height=25% width=25%/>
-                <input type="image" onclick="selectKeyblade('FairyStars')" class="optbtn" src="./public/images/keyblade/kb14_3.png" height=25% width=25%/>
-                <input type="image" onclick="selectKeyblade('DiamondDust')" class="optbtn" src="./public/images/keyblade/kb15_3.png" height=25% width=25%/>
-                <input type="image" onclick="selectKeyblade('BadGuyBreaker')" class="optbtn" src="./public/images/keyblade/kb16_3.png" height=25% width=25%/>
+                <input type="image" onclick="selectKeyblade('kb1')" class="optbtn" src="./public/images/keyblade/kb1_3.png" height=25% width=25%/>
+                <input type="image" onclick="selectKeyblade('kb2')" class="optbtn" src="./public/images/keyblade/kb2_3.png" height=25% width=25%/>
+                <input type="image" onclick="selectKeyblade('kb3')" class="optbtn" src="./public/images/keyblade/kb3_3.png" height=25% width=25%/>
+                <input type="image" onclick="selectKeyblade('kb4')" class="optbtn" src="./public/images/keyblade/kb4_3.png" height=25% width=25%/>
+                <input type="image" onclick="selectKeyblade('kb5')" class="optbtn" src="./public/images/keyblade/kb5_3.png" height=25% width=25%/>
+                <input type="image" onclick="selectKeyblade('kb6')" class="optbtn" src="./public/images/keyblade/kb6_3.png" height=25% width=25%/>
+                <input type="image" onclick="selectKeyblade('kb7')" class="optbtn" src="./public/images/keyblade/kb7_3.png" height=25% width=25%/>
+                <input type="image" onclick="selectKeyblade('kb8')" class="optbtn" src="./public/images/keyblade/kb8_3.png" height=25% width=25%/>
+                <input type="image" onclick="selectKeyblade('kb9')" class="optbtn" src="./public/images/keyblade/kb9_3.png" height=25% width=25%/>
+                <input type="image" onclick="selectKeyblade('kb10')" class="optbtn" src="./public/images/keyblade/kb10_3.png" height=25% width=25%/>
+                <input type="image" onclick="selectKeyblade('kb11')" class="optbtn" src="./public/images/keyblade/kb11_3.png" height=25% width=25%/>
+                <input type="image" onclick="selectKeyblade('kb12')" class="optbtn" src="./public/images/keyblade/kb12_3.png" height=25% width=25%/>
+                <input type="image" onclick="selectKeyblade('kb13')" class="optbtn" src="./public/images/keyblade/kb13_3.png" height=25% width=25%/>
+                <input type="image" onclick="selectKeyblade('kb14')" class="optbtn" src="./public/images/keyblade/kb14_3.png" height=25% width=25%/>
+                <input type="image" onclick="selectKeyblade('kb15')" class="optbtn" src="./public/images/keyblade/kb15_3.png" height=25% width=25%/>
+                <input type="image" onclick="selectKeyblade('kb16')" class="optbtn" src="./public/images/keyblade/kb16_3.png" height=25% width=25%/>
               </div>
             </div>
 
             <div class="numberbox">                     <!-- Cost area -->
               <div id="number_container" class="number-content">
+                <pre></pre>
+                <img id="kbImage" class="shadow" height=20% width=20%>
                 <pre></pre>
                 <input type="number" id="level1" onkeyup="inputValue(level1.value);" placeholder="Enter starting level."/>
                 <pre></pre>
@@ -197,6 +209,38 @@
                 <p id="displayValue_container"style="color:black"></p>
                 <p id="displayValue_container2"style="color:black"></p>
                 <p id="displayValue_container3"style="color:black"></p>
+
+                <div id="cost_container" class="costbox">
+                  <span id="showPower" class="hideGem">
+                    <img src="./public/images/material/powerGem.png" height=5% width=5%>
+                    <p id="powerCost_container" style="display:inline;color:black"></p>
+                    <span style="display:inline-block; width:5%;"></span>
+                  </span>
+
+                  <span id="showSpeed" class="hideGem">
+                    <img src="./public/images/material/speedGem.png" height=5% width=5%>
+                    <p id="speedCost_container" style="display:inline;color:black"></p>
+                    <span style="display:inline-block; width:5%;"></span>
+                  </span>
+
+                  <span id="showMagic" class="hideGem">
+                    <img src="./public/images/material/magicGem.png" height=5% width=5%>
+                    <p id="magicCost_container" style="display:inline;color:black"></p>
+                    <span style="display:inline-block; width:5%;"></span>
+                  </span>
+
+                  <span id="showSun" class="hideGem">
+                    <img src="./public/images/material/sunGem.png" height=5% width=5%>
+                    <p id="sunCost_container" style="display:inline;color:black"></p>
+                    <span style="display:inline-block; width:5%;"></span>
+                  </span>
+
+                  <span id="showMoon" class="hideGem">
+                    <img src="./public/images/material/moonGem.png" height=5% width=5%>
+                    <p id="moonCost_container" style="display:inline;color:black"></p>
+                  </span>
+                </div>
+
               </div>
             </div>
             
