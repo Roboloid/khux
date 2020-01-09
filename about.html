@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Metadata start -->
+  <html prefix="og: http://ogp.me/ns#"></html>
+  
+  <meta property="og:title" content="About">
+
+  <meta property="og:site_name" content="Roboloid's KHUχ Info Page" >
+
+  <meta property="og:image" content="https://roboloid.github.io/khux/public/images/icon/about_thumb.png">
+  <!-- Metadata end -->
+
+  <head>                         <!---------------------- START HEADER ---------------------->
+    <meta charset="utf-8" />
+    <meta name="author" content="Roboloid" />
+    <meta name="description" content="About" />
+    <meta name="theme-color" content="#abcdef" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="manifest" href="./public/manifest.json" />
+
+    <!-- Site title -->
+    <title>KHUχ</title>
+
+    <!-- Content overlay -->
+    <style type="text/css">
+
+      /* Header */
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: rgb(0, 0, 0);
+      }
+      li {
+        float: left;
+        border-right:1px solid #bbb;
+      }
+      li:last-child {
+        border-right: none;
+      }
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      li a:hover:not(.active) {
+        background-color: rgb(255, 255, 255);
+      }
+      .active {
+        background-color: rgb(0, 119, 255);
+      }
+      .active:hover {
+        background-color: rgb(109, 209, 255);
+      }
+      /* Header */
+      
+      .whiteOverlay {
+        padding: 15px 15px 15px;
+        margin: 10% 10% 10%;
+        color: #ffffff;
+        background-color: #FFF;
+        background-position: center;
+        margin-left: auto;
+        margin-right: auto;
+        height: 100%;
+        width: 80%;
+        box-shadow: 0px 8px 16px 0px rgba(0, 102, 255, 0.2);
+      }
+      /* Dropdown Button */
+      .dropbtn {
+        background-color: #3498DB;
+        color: white;
+        padding: 16px;
+        font-size: 24px;
+        border: none;
+        cursor: pointer;
+        background-position: center;
+      }
+      /* Dropdown button on hover & focus */
+      .dropbtn:hover, .dropbtn:focus {
+        background-color: #2980B9;
+      }
+      /* The container <div> - needed to position the dropdown content */
+      .dropdown {
+        position: relative;
+        display: block;
+        text-align: center;
+        background-position: center;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      }
+
+      /* Dropdown Content (Hidden by Default) */
+      .dropdown-content {
+        display: none;
+        position: relative;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+
+      /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+      .show {display:block;}
+
+      input[type=number]::-webkit-inner-spin-button, 
+      input[type=number]::-webkit-outer-spin-button { 
+        -webkit-appearance: none; 
+        margin: 0; 
+      }
+
+    </style>
+
+    <!-- Backdrop pattern -->
+    <style>
+        body  {
+          background-image: url("./public/images/other/bg_about.png");
+          background-size: 150px;
+          background-repeat: repeat
+        }
+    </style>
+  </head>                         <!---------------------- END HEADER ---------------------->
+
+  
+
+  <body>
+
+    <ul>
+      <li><a href="./keyblade">Cost Calculator</a></li>
+      <li><a href="./about" class="active" >About</a></li>
+    </ul>
+
+        <div class="whiteOverlay">
+
+            <h2 style="text-align:center;color:black;font-family:Verdana, sans-serif;">About this site</h2>
+
+            <pre></pre>
+            
+        </div>
+    
+        
+    
+      <!-- SCRIPT IMPORTS -->
+      <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+      <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="./js/bootstrap.min.js"></script>
+      <script src="./src/keyblade.js"></script>
+      <!-- <script src="./src/Slider.jsx"></script> -->
+
+  </body>
+</html>

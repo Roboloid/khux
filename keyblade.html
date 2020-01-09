@@ -31,6 +31,40 @@
 
     <!-- Content overlay -->
     <style type="text/css">
+
+      /* Header */
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: rgb(0, 0, 0);
+      }
+      li {
+        float: left;
+        border-right:1px solid #bbb;
+      }
+      li:last-child {
+        border-right: none;
+      }
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      li a:hover:not(.active) {
+        background-color: rgb(255, 255, 255);
+      }
+      .active {
+        background-color: rgb(0, 119, 255);
+      }
+      .active:hover {
+        background-color: rgb(109, 209, 255);
+      }
+      /* Header */
+
       .whiteOverlay {
         padding: 15px 15px 15px;
         margin: 10% 10% 10%;
@@ -166,6 +200,11 @@
   
 
   <body>
+
+    <ul>
+      <li><a href="./keyblade" class="active" >Cost Calculator</a></li>
+      <li><a href="./about">About</a></li>
+    </ul>
 
         <div class="whiteOverlay">
 
