@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Metadata start -->
+  <html prefix="og: http://ogp.me/ns#"></html>
+  
+  <meta property="og:title" content="About">
+
+  <meta property="og:site_name" content="Roboloid's KHUχ Info Page" >
+
+  <meta property="og:image" content="https://roboloid.github.io/khux/public/images/icon/about_thumb.png">
+  <!-- Metadata end -->
+
+  <head>                         <!---------------------- START HEADER ---------------------->
+    <meta charset="utf-8" />
+    <meta name="author" content="Roboloid" />
+    <meta name="description" content="About" />
+    <meta name="theme-color" content="#abcdef" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="manifest" href="./public/manifest.json" />
+
+    <!-- Site title -->
+    <title>KHUχ</title>
+
+    <!-- Content overlay -->
+    <style type="text/css">
+
+      /* Header */
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: rgb(0, 0, 0);
+      }
+      li {
+        float: left;
+        border-right:1px solid #bbb;
+      }
+      li:last-child {
+        border-right: none;
+      }
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      li a:hover:not(.active) {
+        background-color: rgb(255, 255, 255);
+      }
+      .active {
+        background-color: rgb(0, 119, 255);
+      }
+      .active:hover {
+        background-color: rgb(109, 209, 255);
+      }
+      /* Header */
+      
+      .whiteOverlay {
+        padding: 15px 15px 15px;
+        margin: 10% 10% 10%;
+        color: #ffffff;
+        background-color: #FFF;
+        background-position: center;
+        margin-left: auto;
+        margin-right: auto;
+        height: 100%;
+        width: 80%;
+        box-shadow: 0px 8px 16px 0px rgba(0, 102, 255, 0.2);
+      }
+      /* Dropdown Button */
+      .dropbtn {
+        background-color: #3498DB;
+        color: white;
+        padding: 16px;
+        font-size: 24px;
+        border: none;
+        cursor: pointer;
+        background-position: center;
+      }
+      /* Dropdown button on hover & focus */
+      .dropbtn:hover, .dropbtn:focus {
+        background-color: #2980B9;
+      }
+      /* Option Button */
+      .optbtn {
+        background-color: #00cc66;
+        /* width: 20%; */
+        width: 200px;
+        color: white;
+        padding: 16px;
+        font-size: 24px;
+        border: none;
+        cursor: pointer;
+        background-position: center;
+      }
+      /* Option button on hover & focus */
+      .optbtn:hover, .optbtn:focus {
+        background-color: #33cc33;
+      }
+      /* The container <div> - needed to position the dropdown content */
+      .dropdown {
+        position: relative;
+        display: block;
+        text-align: center;
+        background-position: center;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      }
+
+      /* Dropdown Content (Hidden by Default) */
+      .dropdown-content {
+        display: none;
+        position: relative;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+
+      /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+      .show {display:block;}
+
+      .numberbox {
+        position: relative;
+        display: block;
+        text-align: center;
+        background-position: center;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      }
+
+      /* Display value input field (Hidden by Default) */
+      .number-content {
+        display: none;
+        position: relative;
+        min-width: 160px;
+        /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+        z-index: 1;
+        margin: 0;
+      }
+
+      .gapSpacer {display:none;}
+
+      .showNum {display:block;}
+
+      .hidePassive {display:none;}
+      .show1 {display:block;}
+      .show2 {display:block;}
+      .show3 {display:block;}
+      .show4 {display:block;}
+      .show5 {display:block;}
+      .show6 {display:block;}
+      .show7 {display:block;}
+      .show8 {display:block;}
+      .show9 {display:block;}
+      .show10 {display:block;}
+      .show11 {display:block;}
+      .show12 {display:block;}
+      .show13 {display:block;}
+      .show14 {display:block;}
+      .show15 {display:block;}
+      .show16 {display:block;}
+      .show17 {display:block;}
+      .show18 {display:block;}
+      .show19 {display:block;}
+      .show20 {display:block;}
+      .show21 {display:block;}
+      .show22 {display:block;}
+      .show23 {display:block;}
+      .show24 {display:block;}
+      .show25 {display:block;}
+      .show26 {display:block;}
+      .show27 {display:block;}
+      .show28 {display:block;}
+      .show29 {display:block;}
+      .show30 {display:block;}
+      .show31 {display:block;}
+
+      .shadow  {
+        width: 250px;
+        -webkit-filter: drop-shadow(5px 5px 5px #222);
+        filter: drop-shadow(3px 3px 1px rgb(97, 97, 97));
+      }
+
+      input[type=number]::-webkit-inner-spin-button, 
+      input[type=number]::-webkit-outer-spin-button { 
+        -webkit-appearance: none; 
+        margin: 0; 
+      }
+
+    </style>
+
+    <!-- Backdrop pattern -->
+    <style>
+        body  {
+          background-image: url("./public/images/other/bg_about.png");
+          background-size: 150px;
+          background-repeat: repeat
+        }
+    </style>
+  </head>                         <!---------------------- END HEADER ---------------------->
+
+  
+
+  <body>
+
+    <ul>
+      <li><a href="./keyblade">Cost Calculator</a></li>
+      <li><a href="./passives" class="active">Passives List</a></li>
+      <li><a href="./about">About</a></li>
+    </ul>
+
+        <div class="whiteOverlay">
+
+            <h1 style="text-align:center;color:black;font-family:Verdana, sans-serif;">List of Keyblade Passives</h1>
+
+            <h3 style = "text-align:center;color:black;font-family:Verdana, sans-serif;">Select a keyblade to view its Passives</h3>
+
+            <pre></pre>
+
+            <div class="dropdown">    <!-- Keyblade selection area -->
+                <button onclick="keybladeDropdown()" class="dropbtn">Keyblade</button>
+                <div id="dropdown_container" class="dropdown-content">
+                  <pre></pre>
+                  <pre></pre>
+                  <input type="image" onclick="selectKeyblade('kb1')" class="optbtn" src="./public/images/keyblade/kb1_3.png" height=25% width=25%/>
+                  <input type="image" onclick="selectKeyblade('kb2')" class="optbtn" src="./public/images/keyblade/kb2_3.png" height=25% width=25%/>
+                  <input type="image" onclick="selectKeyblade('kb3')" class="optbtn" src="./public/images/keyblade/kb3_3.png" height=25% width=25%/>
+                  <input type="image" onclick="selectKeyblade('kb4')" class="optbtn" src="./public/images/keyblade/kb4_3.png" height=25% width=25%/>
+                  <input type="image" onclick="selectKeyblade('kb5')" class="optbtn" src="./public/images/keyblade/kb5_3.png" height=25% width=25%/>
+                  <input type="image" onclick="selectKeyblade('kb6')" class="optbtn" src="./public/images/keyblade/kb6_3.png" height=25% width=25%/>
+                  <input type="image" onclick="selectKeyblade('kb7')" class="optbtn" src="./public/images/keyblade/kb7_3.png" height=25% width=25%/>
+                  <input type="image" onclick="selectKeyblade('kb8')" class="optbtn" src="./public/images/keyblade/kb8_3.png" height=25% width=25%/>
+                  <input type="image" onclick="selectKeyblade('kb9')" class="optbtn" src="./public/images/keyblade/kb9_3.png" height=25% width=25%/>
+                  <input type="image" onclick="selectKeyblade('kb10')" class="optbtn" src="./public/images/keyblade/kb10_3.png" height=25% width=25%/>
+                  <input type="image" onclick="selectKeyblade('kb11')" class="optbtn" src="./public/images/keyblade/kb11_3.png" height=25% width=25%/>
+                  <input type="image" onclick="selectKeyblade('kb12')" class="optbtn" src="./public/images/keyblade/kb12_3.png" height=25% width=25%/>
+                  <input type="image" onclick="selectKeyblade('kb13')" class="optbtn" src="./public/images/keyblade/kb13_3.png" height=25% width=25%/>
+                  <input type="image" onclick="selectKeyblade('kb14')" class="optbtn" src="./public/images/keyblade/kb14_3.png" height=25% width=25%/>
+                  <input type="image" onclick="selectKeyblade('kb15')" class="optbtn" src="./public/images/keyblade/kb15_3.png" height=25% width=25%/>
+                  <input type="image" onclick="selectKeyblade('kb16')" class="optbtn" src="./public/images/keyblade/kb16_3.png" height=25% width=25%/>
+                </div>
+              </div>
+            
+              <div id="gap_container" class="gapSpacer">
+                <pre></pre>
+                <pre></pre>
+              </div>
+
+              <div class="numberbox">                     <!-- Cost area -->
+                <div id="number_container" class="number-content" style="font-size:20px;text-align:center;color:black;font-family:Verdana, sans-serif;">
+                  <img id="kbImage" class="shadow">
+                  <pre></pre>
+                  <pre></pre>
+                  
+                  <span id="lv1" class="hidePassive">
+                    <p style="display:inline" id="lv1_level"></p>
+                    <p style="display:inline">:  </p>
+                    <img id="lv1_img" width=60px>
+                    <p style="display:inline">  +</p>
+                    <p style="display:inline" id="lv1_value"></p>
+                    <pre></pre>
+                  </span>
+                  
+                  <span id="lv2" class="hidePassive">
+                    <p style="display:inline" id="lv2_level"></p>
+                    <p style="display:inline">:  </p>
+                    <img id="lv2_img" width=60px>
+                    <p style="display:inline">  +</p>
+                    <p style="display:inline" id="lv2_value"></p>
+                    <pre></pre>
+                  </span>
+                  
+                  <span id="lv3" class="hidePassive">
+                    <p style="display:inline" id="lv3_level"></p>
+                    <p style="display:inline">:  </p>
+                    <img id="lv3_img" width=60px>
+                    <p style="display:inline">  +</p>
+                    <p style="display:inline" id="lv3_value"></p>
+                    <pre></pre>
+                  </span>
+                  
+                  <span id="lv4" class="hidePassive">
+                    <p style="display:inline" id="lv4_level"></p>
+                    <p style="display:inline">:  </p>
+                    <img id="lv4_img" width=60px>
+                    <p style="display:inline">  +</p>
+                    <p style="display:inline" id="lv4_value"></p>
+                    <pre></pre>
+                  </span>
+                  
+                  <span id="lv5" class="hidePassive">
+                    <p style="display:inline" id="lv5_level"></p>
+                    <p style="display:inline">:  </p>
+                    <img id="lv5_img" width=60px>
+                    <p style="display:inline">  +</p>
+                    <p style="display:inline" id="lv5_value"></p>
+                    <pre></pre>
+                  </span>
+                  
+                  <span id="lv6" class="hidePassive">
+                    <p style="display:inline" id="lv6_level"></p>
+                    <p style="display:inline">:  </p>
+                    <img id="lv6_img" width=60px>
+                    <p style="display:inline">  +</p>
+                    <p style="display:inline" id="lv6_value"></p>
+                    <pre></pre>
+                  </span>
+                  
+                  <span id="lv7" class="hidePassive">
+                    <p style="display:inline" id="lv7_level"></p>
+                    <p style="display:inline">:  </p>
+                    <img id="lv7_img" width=60px>
+                    <p style="display:inline">  +</p>
+                    <p style="display:inline" id="lv7_value"></p>
+                    <pre></pre>
+                  </span>
+                  
+                  <span id="lv8" class="hidePassive">
+                    <p style="display:inline" id="lv8_level"></p>
+                    <p style="display:inline">:  </p>
+                    <img id="lv8_img" width=60px>
+                    <p style="display:inline">  +</p>
+                    <p style="display:inline" id="lv8_value"></p>
+                    <pre></pre>
+                  </span>
+
+                  <span id="lv9" class="hidePassive">
+                    <p style="display:inline" id="lv9_level"></p>
+                    <p style="display:inline">:  </p>
+                    <img id="lv9_img" width=60px>
+                    <p style="display:inline">  +</p>
+                    <p style="display:inline" id="lv9_value"></p>
+                    <pre></pre>
+                  </span>
+                  
+                  <span id="lv10" class="hidePassive">
+                    <p style="display:inline" id="lv10_level"></p>
+                    <p style="display:inline">:  </p>
+                    <img id="lv10_img" width=60px>
+                    <p style="display:inline">  +</p>
+                    <p style="display:inline" id="lv10_value"></p>
+                    <pre></pre>
+                  </span>
+                  
+                  <span id="lv11" class="hidePassive">
+                    <p style="display:inline" id="lv11_level"></p>
+                    <p style="display:inline">:  </p>
+                    <img id="lv11_img" width=60px>
+                    <p style="display:inline">  +</p>
+                    <p style="display:inline" id="lv11_value"></p>
+                    <pre></pre>
+                  </span>
+
+                  <span id="lv12" class="hidePassive">
+                    <p style="display:inline" id="lv12_level"></p>
+                    <p style="display:inline">:  </p>
+                    <img id="lv12_img" width=60px>
+                    <p style="display:inline">  +</p>
+                    <p style="display:inline" id="lv12_value"></p>
+                    <pre></pre>
+                  </span>
+                  
+                  <span id="lv13" class="hidePassive">
+                    <p style="display:inline" id="lv13_level"></p>
+                    <p style="display:inline">:  </p>
+                    <img id="lv13_img" width=60px>
+                    <p style="display:inline">  +</p>
+                    <p style="display:inline" id="lv13_value"></p>
+                    <pre></pre>
+                  </span>
+
+                  <span id="lv14" class="hidePassive">
+                    <p style="display:inline" id="lv14_level"></p>
+                    <p style="display:inline">:  </p>
+                    <img id="lv14_img" width=60px>
+                    <p style="display:inline">  +</p>
+                    <p style="display:inline" id="lv14_value"></p>
+                    <pre></pre>
+                  </span>
+                  
+                  <span id="lv15" class="hidePassive">
+                    <p style="display:inline" id="lv15_level"></p>
+                    <p style="display:inline">:  </p>
+                    <img id="lv15_img" width=60px>
+                    <p style="display:inline">  +</p>
+                    <p style="display:inline" id="lv15_value"></p>
+                    <pre></pre>
+                  </span>
+                  
+                  <span id="lv16" class="hidePassive">
+                    <p style="display:inline" id="lv16_level"></p>
+                    <p style="display:inline">:  </p>
+                    <img id="lv16_img" width=60px>
+                    <p style="display:inline">  +</p>
+                    <p style="display:inline" id="lv16_value"></p>
+                    <pre></pre>
+                  </span>
+
+                  <span id="lv13" class="hidePassive">
+                    <p style="display:inline" id="lv13_level"></p>
+                    <p style="display:inline">:  </p>
+                    <img id="lv13_img" width=60px>
+                    <p style="display:inline">  +</p>
+                    <p style="display:inline" id="lv13_value"></p>
+                    <pre></pre>
+                  </span>
+                  
+                  <span id="lv14" class="hidePassive">
+                    <p style="display:inline" id="lv14_level"></p>
+                    <p style="display:inline">:  </p>
+                    <img id="lv14_img" width=60px>
+                    <p style="display:inline">  +</p>
+                    <p style="display:inline" id="lv14_value"></p>
+                    <pre></pre>
+                  </span>
+
+                  <span id="lv15" class="hidePassive">
+                    <p style="display:inline" id="lv15_level"></p>
+                    <p style="display:inline">:  </p>
+                    <img id="lv15_img" width=60px>
+                    <p style="display:inline">  +</p>
+                    <p style="display:inline" id="lv15_value"></p>
+                    <pre></pre>
+                  </span>
+                  
+                  <span id="lv16" class="hidePassive">
+                    <p style="display:inline" id="lv16_level"></p>
+                    <p style="display:inline">:  </p>
+                    <img id="lv16_img" width=60px>
+                    <p style="display:inline">  +</p>
+                    <p style="display:inline" id="lv16_value"></p>
+                    <pre></pre>
+                  </span>
+                  
+                  <span id="lv17" class="hidePassive">
+                    <p style="display:inline" id="lv17_level"></p>
+                    <p style="display:inline">:  </p>
+                    <img id="lv17_img" width=60px>
+                    <p style="display:inline">  +</p>
+                    <p style="display:inline" id="lv17_value"></p>
+                    <pre></pre>
+                  </span>
+
+                  <span id="lv18" class="hidePassive">
+                    <p style="display:inline" id="lv18_level"></p>
+                    <p style="display:inline">:  </p>
+                    <img id="lv18_img" width=60px>
+                    <p style="display:inline">  +</p>
+                    <p style="display:inline" id="lv18_value"></p>
+                    <pre></pre>
+                  </span>
+
+                  <span id="lv19" class="hidePassive">
+                    <p style="display:inline" id="lv19_level"></p>
+                    <p style="display:inline">:  </p>
+                    <img id="lv19_img" width=60px>
+                    <p style="display:inline">  +</p>
+                    <p style="display:inline" id="lv19_value"></p>
+                    <pre></pre>
+                  </span>
+                  
+                  <span id="lv20" class="hidePassive">
+                    <p style="display:inline" id="lv20_level"></p>
+                    <p style="display:inline">:  </p>
+                    <img id="lv20_img" width=60px>
+                    <p style="display:inline">  +</p>
+                    <p style="display:inline" id="lv20_value"></p>
+                    <pre></pre>
+                  </span>
+                  
+                  <span id="lv21" class="hidePassive">
+                    <p style="display:inline" id="lv21_level"></p>
+                    <p style="display:inline">:  </p>
+                    <img id="lv21_img" width=60px>
+                    <p style="display:inline">  +</p>
+                    <p style="display:inline" id="lv21_value"></p>
+                    <pre></pre>
+                  </span>
+
+                  <span id="lv22" class="hidePassive">
+                    <p style="display:inline" id="lv22_level"></p>
+                    <p style="display:inline">:  </p>
+                    <img id="lv22_img" width=60px>
+                    <p style="display:inline">  +</p>
+                    <p style="display:inline" id="lv22_value"></p>
+                    <pre></pre>
+                  </span>
+                  
+                  <span id="lv23" class="hidePassive">
+                    <p style="display:inline" id="lv23_level"></p>
+                    <p style="display:inline">:  </p>
+                    <img id="lv23_img" width=60px>
+                    <p style="display:inline">  +</p>
+                    <p style="display:inline" id="lv23_value"></p>
+                    <pre></pre>
+                  </span>
+
+                  <span id="lv24" class="hidePassive">
+                    <p style="display:inline" id="lv24_level"></p>
+                    <p style="display:inline">:  </p>
+                    <img id="lv24_img" width=60px>
+                    <p style="display:inline">  +</p>
+                    <p style="display:inline" id="lv24_value"></p>
+                    <pre></pre>
+                  </span>
+                  
+                  <span id="lv25" class="hidePassive">
+                    <p style="display:inline" id="lv25_level"></p>
+                    <p style="display:inline">:  </p>
+                    <img id="lv25_img" width=60px>
+                    <p style="display:inline">  +</p>
+                    <p style="display:inline" id="lv25_value"></p>
+                    <pre></pre>
+                  </span>
+
+                  <span id="lv26" class="hidePassive">
+                    <p style="display:inline" id="lv26_level"></p>
+                    <p style="display:inline">:  </p>
+                    <img id="lv26_img" width=60px>
+                    <p style="display:inline">  +</p>
+                    <p style="display:inline" id="lv26_value"></p>
+                    <pre></pre>
+                  </span>
+                  
+                  <span id="lv27" class="hidePassive">
+                    <p style="display:inline" id="lv27_level"></p>
+                    <p style="display:inline">:  </p>
+                    <img id="lv27_img" width=60px>
+                    <p style="display:inline">  +</p>
+                    <p style="display:inline" id="lv27_value"></p>
+                    <pre></pre>
+                  </span>
+
+                  <span id="lv28" class="hidePassive">
+                    <p style="display:inline" id="lv28_level"></p>
+                    <p style="display:inline">:  </p>
+                    <img id="lv28_img" width=60px>
+                    <p style="display:inline">  +</p>
+                    <p style="display:inline" id="lv28_value"></p>
+                    <pre></pre>
+                  </span>
+                  
+                  <span id="lv29" class="hidePassive">
+                    <p style="display:inline" id="lv29_level"></p>
+                    <p style="display:inline">:  </p>
+                    <img id="lv29_img" width=60px>
+                    <p style="display:inline">  +</p>
+                    <p style="display:inline" id="lv29_value"></p>
+                    <pre></pre>
+                  </span>
+
+                  <span id="lv30" class="hidePassive">
+                    <p style="display:inline" id="lv30_level"></p>
+                    <p style="display:inline">:  </p>
+                    <img id="lv30_img" width=60px>
+                    <p style="display:inline">  +</p>
+                    <p style="display:inline" id="lv30_value"></p>
+                    <pre></pre>
+                  </span>
+                  
+                  <span id="lv31" class="hidePassive">
+                    <p style="display:inline" id="lv31_level"></p>
+                    <p style="display:inline">:  </p>
+                    <img id="lv31_img" width=60px>
+                    <p style="display:inline">  +</p>
+                    <p style="display:inline" id="lv31_value"></p>
+                    <pre></pre>
+                  </span>
+  
+                </div>
+              </div>
+
+        </div>
+    
+      <!-- SCRIPT IMPORTS -->
+      <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+      <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="./js/bootstrap.min.js"></script>
+      <script src="./src/passives.js"></script>
+
+  </body>
+</html>

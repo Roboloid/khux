@@ -131,7 +131,6 @@
       /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
       .show {display:block;}
 
-
       .numberbox {
         position: relative;
         display: block;
@@ -202,15 +201,16 @@
   <body>
 
     <ul>
-      <li><a href="./keyblade" class="active" >Cost Calculator</a></li>
-      <li><a href="./about">About</a></li>
+      <li><a href="./keyblade" class="active">Cost Calculator</a></li>
+        <li><a href="./passives">Passives List</a></li>
+        <li><a href="./about">About</a></li>
     </ul>
 
         <div class="whiteOverlay">
 
             <h1 style = "text-align:center;color:black;font-family:Verdana, sans-serif;">Keyblade Cost Calculator</h1>
             
-            <h2 style = "text-align:center;color:black;font-family:Verdana, sans-serif;">Select a keyblade & level</h2>
+            <h3 style = "text-align:center;color:black;font-family:Verdana, sans-serif;">Select a keyblade & level</h3>
 
             <pre></pre>
             
@@ -298,15 +298,12 @@
             
         </div>
     
-        
-    
       <!-- SCRIPT IMPORTS -->
       <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
       <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
       <script src="./js/bootstrap.min.js"></script>
       <script src="./src/keyblade.js"></script>
-      <!-- <script src="./src/Slider.jsx"></script> -->
 
   </body>
 </html>

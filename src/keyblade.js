@@ -9,7 +9,7 @@ var cost2 = "";
 
 function selectKeyblade(value)  {
   if(value != "") {
-    console.log(value);
+    // console.log(value);
 
     /* Reset values */
     document.getElementById("level1").value = "";
