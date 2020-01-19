@@ -79,17 +79,10 @@
       }
       /* Dropdown Button */
       .dropbtn {
-        background-color: rgb(0, 153, 255);
-        color: white;
         padding: 4px;
-        font-size: 24px;
+        font-size: 0px;
         border: none;
-        cursor: pointer;
         background-position: center;
-      }
-      /* Dropdown button on hover & focus */
-      .dropbtn:hover, .dropbtn:focus {
-        background-color: rgb(0, 117, 195);
       }
       /* Option Button */
       .optbtn {
@@ -236,8 +229,8 @@
 
             <div class="dropdown">    <!-- Keyblade selection area -->
                 <!-- <button onclick="keybladeDropdown()" class="dropbtn">Keyblade</button> -->
-                <input type="image" onclick="keybladeDropdown()" class="dropbtn" src="./public/images/ui/kbButton.png" width="40%"/>
-                <div id="dropdown_container" class="dropdown-content">
+                <input type="image" onclick="keybladeDropdown()" class="dropbtn" id ="dropbtn_container" src="./public/images/ui/kbButton_Off.png" width="40%"/>
+              <div id="dropdown_container" class="dropdown-content">
                   <pre></pre>
                   <pre></pre>
                   <input type="image" onclick="selectKeyblade('kb1')" class="optbtn" src="./public/images/keyblade/kb1_3.png" height=25% width=25%/>

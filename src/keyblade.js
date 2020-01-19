@@ -1,9 +1,10 @@
 // Toggle dropdown
 function keybladeDropdown() {
-  if((document.getElementById("dropbtn_container").src).localeCompare("https://roboloid.github.io/khux/public/images/ui/kbButton_On.png") == 0)  {
+  var comparator = document.getElementById("dropbtn_container").src.substring(document.getElementById("dropbtn_container").src.length - 5, document.getElementById("dropbtn_container").src.length);
+  if(comparator == "n.png")  {
     document.getElementById("dropbtn_container").src = "./public/images/ui/kbButton_Off.png";
   }
-  else if((document.getElementById("dropbtn_container").src).localeCompare("https://roboloid.github.io/khux/public/images/ui/kbButton_Off.png") == 0)  {
+  else  {
     document.getElementById("dropbtn_container").src = "./public/images/ui/kbButton_On.png";
   }
   document.getElementById("dropdown_container").classList.toggle("show");
