@@ -1,5 +1,11 @@
 // Toggle dropdown
 function keybladeDropdown() {
+  if((document.getElementById("dropbtn_container").src).localeCompare("https://roboloid.github.io/khux/public/images/ui/kbButton_On.png") == 0)  {
+    document.getElementById("dropbtn_container").src = "./public/images/ui/kbButton_Off.png";
+  }
+  else if((document.getElementById("dropbtn_container").src).localeCompare("https://roboloid.github.io/khux/public/images/ui/kbButton_Off.png") == 0)  {
+    document.getElementById("dropbtn_container").src = "./public/images/ui/kbButton_On.png";
+  }
   document.getElementById("dropdown_container").classList.toggle("show");
 }
 
@@ -225,6 +231,7 @@ function calculateCost() {
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
+    document.getElementById("dropbtn_container").src = "./public/images/ui/kbButton_Off.png";
     var dropdowns = document.getElementsByClassName("dropdown-content");
     var i;
     for (i = 0; i < dropdowns.length; i++) {
