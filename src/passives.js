@@ -33,7 +33,7 @@ function selectKeyblade(value)  {
 }
 
 function grabKeybladeImg(value)  {
-  document.getElementById("kbImage").src = "./public/images/keyblade/" + value + "_3.png";
+  document.getElementById("kbImage").src = "./public/images/icon/" + value + "_icon.png";
 }
 
 function calculatePassives()   {
