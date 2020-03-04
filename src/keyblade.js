@@ -2,10 +2,10 @@
 function keybladeDropdown() {
   var comparator = document.getElementById("dropbtn_container").src.substring(document.getElementById("dropbtn_container").src.length - 5, document.getElementById("dropbtn_container").src.length);
   if(comparator == "n.png")  {
-    document.getElementById("dropbtn_container").src = "./public/images/ui/kbButton_Off.png";
+    document.getElementById("dropbtn_container").src = "./images/ui/kbButton_Off.png";
   }
   else  {
-    document.getElementById("dropbtn_container").src = "./public/images/ui/kbButton_On.png";
+    document.getElementById("dropbtn_container").src = "./images/ui/kbButton_On.png";
   }
   document.getElementById("dropdown_container").classList.toggle("show");
 }
@@ -39,7 +39,7 @@ function selectKeyblade(value)  {
 }
 
 function grabKeybladeImg(value)  {
-  document.getElementById("kbImage").src = "./public/images/icon/" + value + "_icon.png";
+  document.getElementById("kbImage").src = "./images/icon/" + value + "_icon.png";
 }
 
 function inputValue(value)  {
@@ -232,7 +232,7 @@ function calculateCost() {
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
-    document.getElementById("dropbtn_container").src = "./public/images/ui/kbButton_Off.png";
+    document.getElementById("dropbtn_container").src = "./images/ui/kbButton_Off.png";
     var dropdowns = document.getElementsByClassName("dropdown-content");
     var i;
     for (i = 0; i < dropdowns.length; i++) {
