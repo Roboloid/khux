@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Metadata start -->
+  <html prefix="og: http://ogp.me/ns#"></html>
+  
+  <meta property="og:title" content="Keyblade Gem Cost Calculator">
+
+  <meta property="og:description" content="Use this tool to calculate gem costs for Keyblades at any levels.">
+
+  <meta property="og:site_name" content="Roboloid's KHUχ Info Page" >
+
+  <meta property="og:image" content="https://roboloid.github.io/khux/images/icon/keyblade_thumb.png">
+  <!-- Metadata end -->
+
+  <head>                         <!---------------------- START HEADER ---------------------->
+    <meta charset="utf-8" />
+    <meta name="author" content="Roboloid" />
+    <meta name="description" content="Keyblade Gem Cost Calculator" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/icon/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff">
+    <link rel="shortcut icon" type="image/x-icon" href="images/icon/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="images/icon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="57x57" href="images/icon/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="images/icon/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/icon/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="images/icon/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/icon/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="images/icon/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="images/icon/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="images/icon/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icon/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="images/icon/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="images/icon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icon/favicon-16x16.png" />
+    <link rel="shortcut icon" type="image/png" href="images/icon/favicon-16x16.png" />
+    <link rel="manifest" href="manifest.json">
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!-- Site title -->
+    <title>KHUχ</title>
+
+    <!-- Content overlay -->
+    <style type="text/css">
+
+      /* Header */
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: rgb(0, 0, 0);
+      }
+      li {
+        float: left;
+        border-right:1px solid #bbb;
+      }
+      li:last-child {
+        border-right: none;
+      }
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      li a:hover:not(.active) {
+        background-color: rgb(255, 255, 255);
+      }
+      .active {
+        background-color: rgb(0, 119, 255);
+      }
+      .active:hover {
+        background-color: rgb(109, 209, 255);
+      }
+      /* Header */
+
+      .whiteOverlay {
+        padding: 15px 15px 15px;
+        margin: 10% 10% 10%;
+        color: #ffffff;
+        background-color: #FFF;
+        background-position: center;
+        margin-left: auto;
+        margin-right: auto;
+        height: 100%;
+        width: 80%;
+        box-shadow: 0px 8px 16px 0px rgba(0, 102, 255, 0.2);
+      }
+      .logo {
+        position: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        background-position: center;
+      }
+
+    </style>
+
+    <!-- Backdrop pattern -->
+    <style>
+        body  {
+          background-image: url("./images/other/bg_maps.png");
+          background-size: 150px;
+          background-repeat: repeat
+        }
+    </style>
+  </head>                         <!---------------------- END HEADER ---------------------->
+
+  
+
+  <body>
+
+    <ul>
+      <li><a href="./keyblade">Cost Calculator</a></li>
+        <li><a href="./passives">Passives List</a></li>
+        <li><a href="./maps" class="active">Maps</a></li>
+        <li><a href="./about">About</a></li>
+    </ul>
+
+        <div class="whiteOverlay">
+
+            <h1 style = "text-align:center;color:black;font-family:Verdana, sans-serif;">KHUχ Maps</h1>
+
+            <input type="image" href="./passives" class="logo" src="./images/icon/Logo_Daybreak_Town.png" width=25%>
+
+            <pre></pre>
+
+            <a id="Daybreak_Town"><img src ="./images/icon/Logo_Daybreak_Town.png" width=50%></a>
+
+            
+        </div>
+    
+      <!-- SCRIPT IMPORTS -->
+      <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+      <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="./js/bootstrap.min.js"></script>
+
+  </body>
+</html>
