@@ -93,27 +93,17 @@
         width: 80%;
         box-shadow: 0px 8px 16px 0px rgba(255, 102, 0, 0.2);
       }
-      .logo_container   {
-        position: relative;
-        display: block;
-        text-align: center;
-        background-position: center;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .logo {
-        position: center;
-        display: relative;
-        margin-left: auto;
-        margin-right: auto;
-        background-position: center;
-        width: 250px;
-      }
       .maps {
         margin: 5px 5px 5px;
         display: relative;
         width: 40%;
         /* width: 400px; */
+      }
+      .mapContainer  {
+        display: none;
+      }
+      .showMap {
+        display: block;
       }
     </style>
 
@@ -142,66 +132,13 @@
 
             <h1 style = "text-align:center;color:black;font-family:Verdana, sans-serif;">Map Gallery</h1>
 
-            <h3 style = "text-align:center;color:black;font-family:Verdana, sans-serif;">Click on a world icon to jump to that world's maps</h3>
-
-            <div class="logo_container">
-                <a href="#Daybreak_Town">
-                    <img class="logo" src="./images/icon/Logo_Daybreak_Town.png">
-                </a>
-
-                <a href="#Dwarf_Woodlands">
-                    <img class="logo" src="./images/icon/Logo_Dwarf_Woodlands.png">
-                </a>
-
-                <a href="#Wonderland">
-                    <img class="logo" src="./images/icon/Logo_Wonderland.png">
-                </a>
-
-                <a href="#Agrabah">
-                    <img class="logo" src="./images/icon/Logo_Agrabah.png">
-                </a>
-
-                <a href="#Olympus_Coliseum">
-                    <img class="logo" src="./images/icon/Logo_Olympus_Coliseum.png">
-                </a>
-
-                <a href="#Beast's_Castle">
-                    <img class="logo" src="./images/icon/Logo_Beast's_Castle.png">
-                </a>
-
-                <a href="#Castle_of_Dreams">
-                    <img class="logo" src="./images/icon/Logo_Castle_of_Dreams.png">
-                </a>
-
-                <a href="#Enchanted_Dominion">
-                    <img class="logo" src="./images/icon/Logo_Enchanted_Dominion.png">
-                </a>
-
-                <a href="#Game_Central_Station">
-                    <img class="logo" src="./images/icon/Logo_Game_Central_Station.png">
-                </a>
-
-                <a href="#Niceland">
-                    <img class="logo" src="./images/icon/Logo_Niceland.png">
-                </a>
-
-                <a href="#Cy-Bug_Sector">
-                    <img class="logo" src="./images/icon/Logo_Cy-Bug_Sector.png">
-                </a>
-
-                <a href="#Candy_Kingdom">
-                    <img class="logo" src="./images/icon/Logo_Candy_Kingdom.png">
-                </a>
-
-                <a href="#Extras">
-                  <img class="logo" src="./images/icon/Logo_Extras.png">
-              </a>
-            </div>
+            <h3 style = "text-align:center;color:black;font-family:Verdana, sans-serif;">Click on a world icon to display that world's maps</h3>
 
             <pre></pre>
 
-            <a id="Daybreak_Town"><img src ="./images/icon/Logo_Daybreak_Town.png" width=25%></a>
+            <input type="image" onclick="mapFunction('Daybreak_Town')" id="Daybreak_Town" src ="./images/icon/Logo_Daybreak_Town.png" width=25%/>
 
+                <div id="Daybreak_Town_Container" class="mapContainer">
                 <pre></pre>
 
                 <img class="maps" src="./images/map/Daybreak_Town_0000.png"/>
@@ -259,6 +196,7 @@
                 <img class="maps" src="./images/map/Daybreak_Town_0030_02.png"/>
                 <img class="maps" src="./images/map/Daybreak_Town_0031.png"/>
 
+                </div>
                 <pre></pre>
 
                 <pre></pre>
@@ -268,9 +206,11 @@
                 <pre></pre>
 
                 <pre></pre>
+                
 
-            <a id="Dwarf_Woodlands"><img src ="./images/icon/Logo_Dwarf_Woodlands.png" width=25%></a>
+            <input type="image" onclick="mapFunction('Dwarf_Woodlands')" id="Dwarf_Woodlands" src ="./images/icon/Logo_Dwarf_Woodlands.png" width=25%/>
 
+                <div id="Dwarf_Woodlands_Container" class="mapContainer">
                 <pre></pre>
 
                 <img class="maps" src="./images/map/Dwarf_Woodlands_0000.png"/>
@@ -300,6 +240,7 @@
                 <img class="maps" src="./images/map/Dwarf_Woodlands_0024_03.png"/>
                 <img class="maps" src="./images/map/Dwarf_Woodlands_0025.png"/>
 
+                </div>
                 <pre></pre>
 
                 <pre></pre>
@@ -310,8 +251,9 @@
 
                 <pre></pre>
 
-            <a id="Wonderland"><img src ="./images/icon/Logo_Wonderland.png" width=25%></a>
+            <input type="image" onclick="mapFunction('Wonderland')" id="Wonderland" src ="./images/icon/Logo_Wonderland.png" width=25%/>
 
+                <div id="Wonderland_Container" class="mapContainer">
                 <pre></pre>
 
                 <img class="maps" src="./images/map/Wonderland_0000.png"/>
@@ -333,6 +275,7 @@
                 <img class="maps" src="./images/map/Wonderland_0019.png"/>
                 <img class="maps" src="./images/map/Wonderland_0020.png"/>
 
+                </div>
                 <pre></pre>
 
                 <pre></pre>
@@ -343,8 +286,9 @@
 
                 <pre></pre>
 
-            <a id="Agrabah"><img src ="./images/icon/Logo_Agrabah.png" width=25%></a>
+            <input type="image" onclick="mapFunction('Agrabah')" id="Agrabah" src ="./images/icon/Logo_Agrabah.png" width=25%/>
 
+                <div id="Agrabah_Container" class="mapContainer">
                 <pre></pre>
 
                 <img class="maps" src="./images/map/Agrabah_0000_00.png"/>
@@ -398,6 +342,7 @@
                 <img class="maps" src="./images/map/Agrabah_0022_02.png"/>
                 <img class="maps" src="./images/map/Agrabah_0023.png"/>
 
+                </div>
                 <pre></pre>
 
                 <pre></pre>
@@ -408,8 +353,9 @@
 
                 <pre></pre>
 
-            <a id="Olympus_Coliseum"><img src ="./images/icon/Logo_Olympus_Coliseum.png" width=25%></a>
+            <input type="image" onclick="mapFunction('Olympus_Coliseum')" id="Olympus_Coliseum" src ="./images/icon/Logo_Olympus_Coliseum.png" width=25%/>
 
+                <div id="Olympus_Coliseum_Container" class="mapContainer">
                 <pre></pre>
 
                 <img class="maps" src="./images/map/Olympus_Coliseum_0000.png"/>
@@ -425,6 +371,7 @@
                 <img class="maps" src="./images/map/Olympus_Coliseum_0007_02.png"/>
                 <img class="maps" src="./images/map/Olympus_Coliseum_0007_03.png"/>
 
+                </div>
                 <pre></pre>
 
                 <pre></pre>
@@ -435,8 +382,9 @@
 
                 <pre></pre>
 
-            <a id="Beast's_Castle"><img src ="./images/icon/Logo_Beast's_Castle.png" width=25%></a>
+            <input type="image" onclick="mapFunction('Beast\'s_Castle')" id="Beast's_Castle" src ="./images/icon/Logo_Beast's_Castle.png" width=25%/>
 
+                <div id="Beast's_Castle_Container" class="mapContainer">
                 <pre></pre>
 
                 <img class="maps" src="./images/map/Beast's_Castle_0000.png"/>
@@ -458,6 +406,7 @@
                 <img class="maps" src="./images/map/Beast's_Castle_0012_02.png"/>
                 <img class="maps" src="./images/map/Beast's_Castle_0025.png"/>
 
+                </div>
                 <pre></pre>
 
                 <pre></pre>
@@ -468,8 +417,9 @@
 
                 <pre></pre>
 
-            <a id="Castle_of_Dreams"><img src ="./images/icon/Logo_Castle_of_Dreams.png" width=25%></a>
+            <input type="image" onclick="mapFunction('Castle_of_Dreams')" id="Castle_of_Dreams" src ="./images/icon/Logo_Castle_of_Dreams.png" width=25%/>
 
+                <div id="Castle_of_Dreams_Container" class="mapContainer">
                 <pre></pre>
 
                 <img class="maps" src="./images/map/Castle_of_Dreams_0001.png"/>
@@ -490,6 +440,7 @@
                 <img class="maps" src="./images/map/Castle_of_Dreams_0019_00.png"/>
                 <img class="maps" src="./images/map/Castle_of_Dreams_0019_01.png"/>
 
+                </div>
                 <pre></pre>
 
                 <pre></pre>
@@ -500,8 +451,9 @@
 
                 <pre></pre>
 
-            <a id="Enchanted_Dominion"><img src ="./images/icon/Logo_Enchanted_Dominion.png" width=25%></a>
+            <input type="image" onclick="mapFunction('Enchanted_Dominion')" id="Enchanted_Dominion" src ="./images/icon/Logo_Enchanted_Dominion.png" width=25%/>
 
+                <div id="Enchanted_Dominion_Container" class="mapContainer">
                 <pre></pre>
 
                 <img class="maps" src="./images/map/Enchanted_Dominion_0000_00.png"/>
@@ -548,6 +500,7 @@
                 <img class="maps" src="./images/map/Enchanted_Dominion_0022.png"/>
                 <img class="maps" src="./images/map/Enchanted_Dominion_0024.png"/>
 
+                </div>
                 <pre></pre>
 
                 <pre></pre>
@@ -558,14 +511,16 @@
 
                 <pre></pre>
 
-            <a id="Game_Central_Station"><img src ="./images/icon/Logo_Game_Central_Station.png" width=25%></a>
+            <input type="image" onclick="mapFunction('Game_Central_Station')" id="Game_Central_Station" src ="./images/icon/Logo_Game_Central_Station.png" width=25%/>
 
+                <div id="Game_Central_Station_Container" class="mapContainer">
                 <pre></pre>
 
                 <img class="maps" src="./images/map/Game_Central_Station_0000_00.png"/>
                 <img class="maps" src="./images/map/Game_Central_Station_0000_01.png"/>
                 <img class="maps" src="./images/map/Game_Central_Station_0002.png"/>
 
+                </div>
                 <pre></pre>
 
                 <pre></pre>
@@ -576,8 +531,9 @@
 
                 <pre></pre>
 
-            <a id="Niceland"><img src ="./images/icon/Logo_Niceland.png" width=25%></a>
+            <input type="image" onclick="mapFunction('Niceland')" id="Niceland" src ="./images/icon/Logo_Niceland.png" width=25%/>
 
+                <div id="Niceland_Container" class="mapContainer">
                 <pre></pre>
 
                 <img class="maps" src="./images/map/Niceland_0000_00.png"/>
@@ -591,6 +547,7 @@
                 <img class="maps" src="./images/map/Niceland_0006.png"/>
                 <img class="maps" src="./images/map/Niceland_0007.png"/>
 
+                </div>
                 <pre></pre>
 
                 <pre></pre>
@@ -601,8 +558,9 @@
 
                 <pre></pre>
 
-            <a id="Cy-Bug_Sector"><img src ="./images/icon/Logo_Cy-Bug_Sector.png" width=25%></a>
+            <input type="image" onclick="mapFunction('Cy-Bug_Sector')" id="Cy-Bug_Sector" src ="./images/icon/Logo_Cy-Bug_Sector.png" width=25%/>
 
+                <div id="Cy-Bug_Sector_Container" class="mapContainer">
                 <pre></pre>
 
                 <img class="maps" src="./images/map/Cy-Bug_Sector_0000.png"/>
@@ -619,6 +577,7 @@
                 <img class="maps" src="./images/map/Cy-Bug_Sector_0008_01.png"/>
                 <img class="maps" src="./images/map/Cy-Bug_Sector_0009.png"/>
 
+                </div>
                 <pre></pre>
 
                 <pre></pre>
@@ -629,8 +588,9 @@
 
                 <pre></pre>
 
-            <a id="Candy_Kingdom"><img src ="./images/icon/Logo_Candy_Kingdom.png" width=25%></a>
+            <input type="image" onclick="mapFunction('Candy_Kingdom')" id="Candy_Kingdom" src ="./images/icon/Logo_Candy_Kingdom.png" width=25%/>
 
+                <div id="Candy_Kingdom_Container" class="mapContainer">
                 <pre></pre>
 
                 <img class="maps" src="./images/map/Candy_Kingdom_0000.png"/>
@@ -645,6 +605,7 @@
                 <img class="maps" src="./images/map/Candy_Kingdom_0008.png"/>
                 <img class="maps" src="./images/map/Candy_Kingdom_0009.png"/>
 
+                </div>
                 <pre></pre>
 
                 <pre></pre>
@@ -655,10 +616,16 @@
 
                 <pre></pre>
 
-            <a id="Extras"><img src ="./images/icon/Logo_Extras.png" width=25%></a>
+            <input type="image" onclick="mapFunction('Extras')" id="Extras" src ="./images/icon/Logo_Extras.png" width=25%/>
 
+                <div id="Extras_Container" class="mapContainer">
                 <pre></pre>
                 
+                <img class="maps" src="./images/map/Corridor_of_Darkness_0100.png"/>
+                <img class="maps" src="./images/map/Corridor_of_Darkness_0200.png"/>
+
+                <img class="maps" src="./images/map/Keyblade_Graveyard_0000.png"/>
+
                 <img class="maps" src="./images/map/Extras_Daybreak_Town_1.png"/>
                 <img class="maps" src="./images/map/Extras_Daybreak_Town_2.png"/>
                 <img class="maps" src="./images/map/Extras_Daybreak_Town_3.png"/>
@@ -709,11 +676,8 @@
                 <img class="maps" src="./images/map/Extras_Other_2.png"/>
                 <img class="maps" src="./images/map/Extras_Other_3.png"/>
                 
-                <img class="maps" src="./images/map/Corridor_of_Darkness_0100.png"/>
-                <img class="maps" src="./images/map/Corridor_of_Darkness_0200.png"/>
-
-                <img class="maps" src="./images/map/Keyblade_Graveyard_0000.png"/>
                 <img class="maps" src="./images/map/Extras_Keyblade_Graveyard_1.png"/>
+                </div>
 
         </div>
     
@@ -722,6 +686,7 @@
       <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
       <script src="./js/bootstrap.min.js"></script>
+      <script src="./src/maps.js"></script>
 
   </body>
 </html>
