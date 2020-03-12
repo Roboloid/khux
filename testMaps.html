@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Metadata start -->
+<html prefix="og: http://ogp.me/ns#">
+
+</html>
+
+<meta property="og:title" content="Map Gallery">
+
+<meta property="og:description" content="Browse the many gorgeous maps that KHUχ has to offer.">
+
+<meta property="og:site_name" content="Roboloid's KHUχ Info Page">
+
+<meta property="og:image" content="https://roboloid.github.io/khux/images/icon/maps_thumb.png">
+<!-- Metadata end -->
+
+<head>
+  <!---------------------- START HEADER ---------------------->
+  <meta charset="utf-8" />
+  <meta name="author" content="Roboloid" />
+  <meta name="description" content="Keyblade Gem Cost Calculator" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="images/icon/ms-icon-144x144.png" />
+  <meta name="theme-color" content="#ffffff">
+  <link rel="shortcut icon" type="image/x-icon" href="images/icon/favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="images/icon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="57x57" href="images/icon/apple-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="images/icon/apple-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="images/icon/apple-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="images/icon/apple-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="images/icon/apple-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="images/icon/apple-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="images/icon/apple-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="images/icon/apple-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/icon/apple-icon-180x180.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="images/icon/android-icon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="images/icon/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/icon/favicon-16x16.png" />
+  <link rel="shortcut icon" type="image/png" href="images/icon/favicon-16x16.png" />
+  <link rel="manifest" href="manifest.json">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+  <!-- Site title -->
+  <title>KHUχ</title>
+
+  <!-- Content overlay -->
+  <style type="text/css">
+    /* Header */
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: rgb(0, 0, 0);
+    }
+
+    li {
+      float: left;
+      border-right: 1px solid #bbb;
+    }
+
+    li:last-child {
+      border-right: none;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+      background-color: rgb(255, 255, 255);
+    }
+
+    .active {
+      background-color: rgb(0, 119, 255);
+    }
+
+    .active:hover {
+      background-color: rgb(109, 209, 255);
+    }
+
+    /* Header */
+
+    .whiteOverlay {
+      padding: 15px 15px 15px;
+      margin: 10% 10% 10%;
+      color: #ffffff;
+      background-color: #FFF;
+      background-position: center;
+      margin-left: auto;
+      margin-right: auto;
+      height: 100%;
+      width: 80%;
+      box-shadow: 0px 8px 16px 0px rgba(255, 102, 0, 0.2);
+    }
+
+    .masterDisplay {
+      display: block;
+      position: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+  
+
+    .mapContainer {
+      display: none;
+    }
+
+    .showMap {
+      display: grid;
+      grid-gap: .5rem;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 1000px) {
+      .showMap {
+        grid-template-columns: 1fr;
+      }
+
+    }
+  </style>
+
+  <!-- Backdrop pattern -->
+  <style>
+    body {
+      background-image: url("./images/other/bg_maps.png");
+      background-size: 150px;
+      background-repeat: repeat
+    }
+  </style>
+</head>
+<!---------------------- END HEADER ---------------------->
+
+
+
+<body>
+
+  <ul>
+    <li><a href="./keyblade">Cost Calculator</a></li>
+    <li><a href="./passives">Passives List</a></li>
+    <li><a href="./maps" class="active">Maps</a></li>
+    <li><a href="./about">About</a></li>
+  </ul>
+
+  <div class="whiteOverlay">
+
+    <h1 style="text-align:center;color:black;font-family:Verdana, sans-serif;">Map Gallery</h1>
+
+    <h3 style="text-align:center;color:black;font-family:Verdana, sans-serif;">Click on a world icon to display that
+      world's maps</h3>
+
+
+
+    <input type="button" onclick="mapFunction('All')" class="masterDisplay" value="Display all maps" />
+
+
+
+    <input type="image" onclick="mapFunction('Daybreak_Town')" id="Daybreak_Town"
+      src="./images/icon/Logo_Daybreak_Town.png" width=25% />
+
+    <div id="Daybreak_Town_Container" class="mapContainer">
+
+
+      <img loading="lazy" src="./images/map/Daybreak_Town_0000.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0001_00.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0001_01.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0002_00.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0002_01.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0003.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0004_00.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0004_01.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0004_02.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0005.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0006.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0007.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0008.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0009.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0010_00.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0010_01.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0010_02.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0011.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0015.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0016.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0017_00.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0017_01.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0018_00.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0018_01.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0018_02.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0020_00.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0020_01.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0020_02.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0020_03.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0021_00.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0021_01.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0021_02.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0022_00.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0022_01.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0023_00.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0023_01.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0023_02.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0024.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0025.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0026_00.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0026_01.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0026_02.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0026_03.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0026_05.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0026_06.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0026_07.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0026_08.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0027.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0029_00.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0029_01.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0030_00.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0030_01.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0030_02.png" />
+      <img loading="lazy" src="./images/map/Daybreak_Town_0031.png" />
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <input type="image" onclick="mapFunction('Dwarf_Woodlands')" id="Dwarf_Woodlands"
+      src="./images/icon/Logo_Dwarf_Woodlands.png" width=25% />
+
+    <div id="Dwarf_Woodlands_Container" class="mapContainer">
+
+
+      <img loading="lazy" src="./images/map/Dwarf_Woodlands_0000.png" />
+      <img loading="lazy" src="./images/map/Dwarf_Woodlands_0001_00.png" />
+      <img loading="lazy" src="./images/map/Dwarf_Woodlands_0001_01.png" />
+      <img loading="lazy" src="./images/map/Dwarf_Woodlands_0002.png" />
+      <img loading="lazy" src="./images/map/Dwarf_Woodlands_0003.png" />
+      <img loading="lazy" src="./images/map/Dwarf_Woodlands_0004_00.png" />
+      <img loading="lazy" src="./images/map/Dwarf_Woodlands_0004_01.png" />
+      <img loading="lazy" src="./images/map/Dwarf_Woodlands_0004_02.png" />
+      <img loading="lazy" src="./images/map/Dwarf_Woodlands_0004_03.png" />
+      <img loading="lazy" src="./images/map/Dwarf_Woodlands_0005_00.png" />
+      <img loading="lazy" src="./images/map/Dwarf_Woodlands_0005_02.png" />
+      <img loading="lazy" src="./images/map/Dwarf_Woodlands_0005_03.png" />
+      <img loading="lazy" src="./images/map/Dwarf_Woodlands_0005_04.png" />
+      <img loading="lazy" src="./images/map/Dwarf_Woodlands_0005_05.png" />
+      <img loading="lazy" src="./images/map/Dwarf_Woodlands_0005_06.png" />
+      <img loading="lazy" src="./images/map/Dwarf_Woodlands_0005_07.png" />
+      <img loading="lazy" src="./images/map/Dwarf_Woodlands_0006.png" />
+      <img loading="lazy" src="./images/map/Dwarf_Woodlands_0007.png" />
+      <img loading="lazy" src="./images/map/Dwarf_Woodlands_0008.png" />
+      <img loading="lazy" src="./images/map/Dwarf_Woodlands_0019.png" />
+      <img loading="lazy" src="./images/map/Dwarf_Woodlands_0020.png" />
+      <img loading="lazy" src="./images/map/Dwarf_Woodlands_0024_00.png" />
+      <img loading="lazy" src="./images/map/Dwarf_Woodlands_0024_01.png" />
+      <img loading="lazy" src="./images/map/Dwarf_Woodlands_0024_02.png" />
+      <img loading="lazy" src="./images/map/Dwarf_Woodlands_0024_03.png" />
+      <img loading="lazy" src="./images/map/Dwarf_Woodlands_0025.png" />
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <input type="image" onclick="mapFunction('Wonderland')" id="Wonderland" src="./images/icon/Logo_Wonderland.png"
+      width=25% />
+
+    <div id="Wonderland_Container" class="mapContainer">
+
+
+      <img loading="lazy" src="./images/map/Wonderland_0000.png" />
+      <img loading="lazy" src="./images/map/Wonderland_0001_00.png" />
+      <img loading="lazy" src="./images/map/Wonderland_0001_01.png" />
+      <img loading="lazy" src="./images/map/Wonderland_0001_02.png" />
+      <img loading="lazy" src="./images/map/Wonderland_0001_03.png" />
+      <img loading="lazy" src="./images/map/Wonderland_0002_00.png" />
+      <img loading="lazy" src="./images/map/Wonderland_0002_01.png" />
+      <img loading="lazy" src="./images/map/Wonderland_0003.png" />
+      <img loading="lazy" src="./images/map/Wonderland_0004.png" />
+      <img loading="lazy" src="./images/map/Wonderland_0007.png" />
+      <img loading="lazy" src="./images/map/Wonderland_0008.png" />
+      <img loading="lazy" src="./images/map/Wonderland_0009_00.png" />
+      <img loading="lazy" src="./images/map/Wonderland_0009_01.png" />
+      <img loading="lazy" src="./images/map/Wonderland_0009_02.png" />
+      <img loading="lazy" src="./images/map/Wonderland_0009_03.png" />
+      <img loading="lazy" src="./images/map/Wonderland_0009_04.png" />
+      <img loading="lazy" src="./images/map/Wonderland_0019.png" />
+      <img loading="lazy" src="./images/map/Wonderland_0020.png" />
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <input type="image" onclick="mapFunction('Agrabah')" id="Agrabah" src="./images/icon/Logo_Agrabah.png" width=25% />
+
+    <div id="Agrabah_Container" class="mapContainer">
+
+
+      <img loading="lazy" src="./images/map/Agrabah_0000_00.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0000_01.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0001_00.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0001_01.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0001_08.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0001_10.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0001_14.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0001_15.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0001_16.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0001_18.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0002_00.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0002_01.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0003_00.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0003_01.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0003_02.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0003_03.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0003_07.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0003_08.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0003_09.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0003_10.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0003_11.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0003_13.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0005_00.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0006.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0007_00.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0007_01.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0007_02.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0008_00.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0008_01.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0009_00.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0009_01.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0010_00.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0010_01.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0011.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0012.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0013.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0014.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0015_00.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0015_01.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0016_00.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0016_01.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0017_00.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0017_01.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0018.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0019.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0021.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0022_00.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0022_01.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0022_02.png" />
+      <img loading="lazy" src="./images/map/Agrabah_0023.png" />
+
+    </div>
+
+
+
+    <input type="image" onclick="mapFunction('Olympus_Coliseum')" id="Olympus_Coliseum"
+      src="./images/icon/Logo_Olympus_Coliseum.png" width=25% />
+
+    <div id="Olympus_Coliseum_Container" class="mapContainer">
+
+
+      <img loading="lazy" src="./images/map/Olympus_Coliseum_0000.png" />
+      <img loading="lazy" src="./images/map/Olympus_Coliseum_0001_00.png" />
+      <img loading="lazy" src="./images/map/Olympus_Coliseum_0001_01.png" />
+      <img loading="lazy" src="./images/map/Olympus_Coliseum_0001_02.png" />
+      <img loading="lazy" src="./images/map/Olympus_Coliseum_0002.png" />
+      <img loading="lazy" src="./images/map/Olympus_Coliseum_0003.png" />
+      <img loading="lazy" src="./images/map/Olympus_Coliseum_0004.png" />
+      <img loading="lazy" src="./images/map/Olympus_Coliseum_0005.png" />
+      <img loading="lazy" src="./images/map/Olympus_Coliseum_0006.png" />
+      <img loading="lazy" src="./images/map/Olympus_Coliseum_0007_01.png" />
+      <img loading="lazy" src="./images/map/Olympus_Coliseum_0007_02.png" />
+      <img loading="lazy" src="./images/map/Olympus_Coliseum_0007_03.png" />
+
+    </div>
+
+
+
+    <input type="image" onclick="mapFunction('Beast\'s_Castle')" id="Beast's_Castle"
+      src="./images/icon/Logo_Beast's_Castle.png" width=25% />
+
+    <div id="Beast's_Castle_Container" class="mapContainer">
+
+
+      <img loading="lazy" src="./images/map/Beast's_Castle_0000.png" />
+      <img loading="lazy" src="./images/map/Beast's_Castle_0001_00.png" />
+      <img loading="lazy" src="./images/map/Beast's_Castle_0001_01.png" />
+      <img loading="lazy" src="./images/map/Beast's_Castle_0001_02.png" />
+      <img loading="lazy" src="./images/map/Beast's_Castle_0002_00.png" />
+      <img loading="lazy" src="./images/map/Beast's_Castle_0002_01.png" />
+      <img loading="lazy" src="./images/map/Beast's_Castle_0002_02.png" />
+      <img loading="lazy" src="./images/map/Beast's_Castle_0003_00.png" />
+      <img loading="lazy" src="./images/map/Beast's_Castle_0003_01.png" />
+      <img loading="lazy" src="./images/map/Beast's_Castle_0004.png" />
+      <img loading="lazy" src="./images/map/Beast's_Castle_0005.png" />
+      <img loading="lazy" src="./images/map/Beast's_Castle_0007.png" />
+      <img loading="lazy" src="./images/map/Beast's_Castle_0008.png" />
+      <img loading="lazy" src="./images/map/Beast's_Castle_0009.png" />
+      <img loading="lazy" src="./images/map/Beast's_Castle_0011.png" />
+      <img loading="lazy" src="./images/map/Beast's_Castle_0012_00.png" />
+      <img loading="lazy" src="./images/map/Beast's_Castle_0012_02.png" />
+      <img loading="lazy" src="./images/map/Beast's_Castle_0025.png" />
+
+    </div>
+
+
+
+    <input type="image" onclick="mapFunction('Castle_of_Dreams')" id="Castle_of_Dreams"
+      src="./images/icon/Logo_Castle_of_Dreams.png" width=25% />
+
+    <div id="Castle_of_Dreams_Container" class="mapContainer">
+
+
+      <img loading="lazy" src="./images/map/Castle_of_Dreams_0001.png" />
+      <img loading="lazy" src="./images/map/Castle_of_Dreams_0002.png" />
+      <img loading="lazy" src="./images/map/Castle_of_Dreams_0003_00_00.png" />
+      <img loading="lazy" src="./images/map/Castle_of_Dreams_0003_00_01.png" />
+      <img loading="lazy" src="./images/map/Castle_of_Dreams_0003_01.png" />
+      <img loading="lazy" src="./images/map/Castle_of_Dreams_0005.png" />
+      <img loading="lazy" src="./images/map/Castle_of_Dreams_0006.png" />
+      <img loading="lazy" src="./images/map/Castle_of_Dreams_0007.png" />
+      <img loading="lazy" src="./images/map/Castle_of_Dreams_0012_00.png" />
+      <img loading="lazy" src="./images/map/Castle_of_Dreams_0012_02.png" />
+      <img loading="lazy" src="./images/map/Castle_of_Dreams_0012_05.png" />
+      <img loading="lazy" src="./images/map/Castle_of_Dreams_0012_07.png" />
+      <img loading="lazy" src="./images/map/Castle_of_Dreams_0014.png" />
+      <img loading="lazy" src="./images/map/Castle_of_Dreams_0016.png" />
+      <img loading="lazy" src="./images/map/Castle_of_Dreams_0018.png" />
+      <img loading="lazy" src="./images/map/Castle_of_Dreams_0019_00.png" />
+      <img loading="lazy" src="./images/map/Castle_of_Dreams_0019_01.png" />
+
+    </div>
+
+
+
+    <input type="image" onclick="mapFunction('Enchanted_Dominion')" id="Enchanted_Dominion"
+      src="./images/icon/Logo_Enchanted_Dominion.png" width=25% />
+
+    <div id="Enchanted_Dominion_Container" class="mapContainer">
+
+
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0000_00.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0000_01.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0001_02.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0001_03.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0001_04.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0001_05.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0002_00.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0002_01.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0002_02.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0002_03.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0003_00.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0003_01.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0004.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0005.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0006.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0007.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0008_00.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0008_01.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0008_02.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0009.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0010_00.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0010_01.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0011_00.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0011_01.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0012.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0013_00.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0013_01.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0013_02.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0013_03.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0013_04.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0014_00.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0014_01.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0015.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0016.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0017.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0018_00.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0018_01.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0018_02.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0019.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0020.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0021.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0022.png" />
+      <img loading="lazy" src="./images/map/Enchanted_Dominion_0024.png" />
+
+    </div>
+
+
+
+    <input type="image" onclick="mapFunction('Game_Central_Station')" id="Game_Central_Station"
+      src="./images/icon/Logo_Game_Central_Station.png" width=25% />
+
+    <div id="Game_Central_Station_Container" class="mapContainer">
+
+
+      <img loading="lazy" src="./images/map/Game_Central_Station_0000_00.png" />
+      <img loading="lazy" src="./images/map/Game_Central_Station_0000_01.png" />
+      <img loading="lazy" src="./images/map/Game_Central_Station_0002.png" />
+
+    </div>
+
+
+
+    <input type="image" onclick="mapFunction('Niceland')" id="Niceland" src="./images/icon/Logo_Niceland.png"
+      width=25% />
+
+    <div id="Niceland_Container" class="mapContainer">
+
+
+      <img loading="lazy" src="./images/map/Niceland_0000_00.png" />
+      <img loading="lazy" src="./images/map/Niceland_0000_02.png" />
+      <img loading="lazy" src="./images/map/Niceland_0001_00.png" />
+      <img loading="lazy" src="./images/map/Niceland_0001_01.png" />
+      <img loading="lazy" src="./images/map/Niceland_0001_03.png" />
+      <img loading="lazy" src="./images/map/Niceland_0002.png" />
+      <img loading="lazy" src="./images/map/Niceland_0003.png" />
+      <img loading="lazy" src="./images/map/Niceland_0004.png" />
+      <img loading="lazy" src="./images/map/Niceland_0006.png" />
+      <img loading="lazy" src="./images/map/Niceland_0007.png" />
+
+    </div>
+
+
+
+    <input type="image" onclick="mapFunction('Cy-Bug_Sector')" id="Cy-Bug_Sector"
+      src="./images/icon/Logo_Cy-Bug_Sector.png" width=25% />
+
+    <div id="Cy-Bug_Sector_Container" class="mapContainer">
+
+
+      <img loading="lazy" src="./images/map/Cy-Bug_Sector_0000.png" />
+      <img loading="lazy" src="./images/map/Cy-Bug_Sector_0001.png" />
+      <img loading="lazy" src="./images/map/Cy-Bug_Sector_0002.png" />
+      <img loading="lazy" src="./images/map/Cy-Bug_Sector_0003.png" />
+      <img loading="lazy" src="./images/map/Cy-Bug_Sector_0004_00.png" />
+      <img loading="lazy" src="./images/map/Cy-Bug_Sector_0004_01.png" />
+      <img loading="lazy" src="./images/map/Cy-Bug_Sector_0005_02.png" />
+      <img loading="lazy" src="./images/map/Cy-Bug_Sector_0005_03.png" />
+      <img loading="lazy" src="./images/map/Cy-Bug_Sector_0006.png" />
+      <img loading="lazy" src="./images/map/Cy-Bug_Sector_0007.png" />
+      <img loading="lazy" src="./images/map/Cy-Bug_Sector_0008_00.png" />
+      <img loading="lazy" src="./images/map/Cy-Bug_Sector_0008_01.png" />
+      <img loading="lazy" src="./images/map/Cy-Bug_Sector_0009.png" />
+
+    </div>
+
+
+
+    <input type="image" onclick="mapFunction('Candy_Kingdom')" id="Candy_Kingdom"
+      src="./images/icon/Logo_Candy_Kingdom.png" width=25% />
+
+    <div id="Candy_Kingdom_Container" class="mapContainer">
+
+
+      <img loading="lazy" src="./images/map/Candy_Kingdom_0000.png" />
+      <img loading="lazy" src="./images/map/Candy_Kingdom_0001.png" />
+      <img loading="lazy" src="./images/map/Candy_Kingdom_0002_00.png" />
+      <img loading="lazy" src="./images/map/Candy_Kingdom_0002_02.png" />
+      <img loading="lazy" src="./images/map/Candy_Kingdom_0003.png" />
+      <img loading="lazy" src="./images/map/Candy_Kingdom_0005.png" />
+      <img loading="lazy" src="./images/map/Candy_Kingdom_0006_00.png" />
+      <img loading="lazy" src="./images/map/Candy_Kingdom_0006_01.png" />
+      <img loading="lazy" src="./images/map/Candy_Kingdom_0007.png" />
+      <img loading="lazy" src="./images/map/Candy_Kingdom_0008.png" />
+      <img loading="lazy" src="./images/map/Candy_Kingdom_0009.png" />
+
+    </div>
+
+
+    <input type="image" onclick="mapFunction('Extras')" id="Extras" src="./images/icon/Logo_Extras.png" width=25% />
+
+    <div id="Extras_Container" class="mapContainer">
+
+
+      <img loading="lazy" src="./images/map/Corridor_of_Darkness_0100.png" />
+      <img loading="lazy" src="./images/map/Corridor_of_Darkness_0200.png" />
+
+      <img loading="lazy" src="./images/map/Keyblade_Graveyard_0000.png" />
+
+      <img loading="lazy" src="./images/map/Extras_Daybreak_Town_1.png" />
+      <img loading="lazy" src="./images/map/Extras_Daybreak_Town_2.png" />
+      <img loading="lazy" src="./images/map/Extras_Daybreak_Town_3.png" />
+      <img loading="lazy" src="./images/map/Extras_Daybreak_Town_4.png" />
+      <img loading="lazy" src="./images/map/Extras_Daybreak_Town_5.png" />
+      <img loading="lazy" src="./images/map/Extras_Daybreak_Town_6.png" />
+      <img loading="lazy" src="./images/map/Extras_Daybreak_Town_7.png" />
+      <img loading="lazy" src="./images/map/Extras_Daybreak_Town_8.png" />
+      <img loading="lazy" src="./images/map/Extras_Daybreak_Town_9.png" />
+      <img loading="lazy" src="./images/map/Extras_Daybreak_Town_10.png" />
+      <img loading="lazy" src="./images/map/Extras_Daybreak_Town_11.png" />
+      <img loading="lazy" src="./images/map/Extras_Daybreak_Town_12.png" />
+      <img loading="lazy" src="./images/map/Extras_Daybreak_Town_13.png" />
+      <img loading="lazy" src="./images/map/Extras_Daybreak_Town_14.png" />
+      <img loading="lazy" src="./images/map/Extras_Daybreak_Town_15.png" />
+      <img loading="lazy" src="./images/map/Extras_Daybreak_Town_16.png" />
+      <img loading="lazy" src="./images/map/Extras_Daybreak_Town_17.png" />
+      <img loading="lazy" src="./images/map/Extras_Daybreak_Town_18.png" />
+
+      <img loading="lazy" src="./images/map/Extras_Dwarf_Woodlands_1.png" />
+      <img loading="lazy" src="./images/map/Extras_Dwarf_Woodlands_2.png" />
+
+      <img loading="lazy" src="./images/map/Extras_Wonderland_1.png" />
+
+      <img loading="lazy" src="./images/map/Extras_Agrabah_0003_09_Sky.png" />
+      <img loading="lazy" src="./images/map/Extras_Agrabah_1.png" />
+      <img loading="lazy" src="./images/map/Extras_Agrabah_2.png" />
+
+      <img loading="lazy" src="./images/map/Extras_Beast's_Castle_1.png" />
+      <img loading="lazy" src="./images/map/Extras_Beast's_Castle_2.png" />
+
+      <img loading="lazy" src="./images/map/Extras_Castle_of_Dreams_0012_02_Sky.png" />
+      <img loading="lazy" src="./images/map/Extras_Castle_of_Dreams_0012_04_Sky.png" />
+      <img loading="lazy" src="./images/map/Extras_Castle_of_Dreams_1.png" />
+      <img loading="lazy" src="./images/map/Extras_Castle_of_Dreams_2.png" />
+
+      <img loading="lazy" src="./images/map/Extras_Enchanted_Dominion_1.png" />
+      <img loading="lazy" src="./images/map/Extras_Enchanted_Dominion_2.png" />
+      <img loading="lazy" src="./images/map/Extras_Enchanted_Dominion_3.png" />
+      <img loading="lazy" src="./images/map/Extras_Enchanted_Dominion_4.png" />
+      <img loading="lazy" src="./images/map/Extras_Enchanted_Dominion_5.png" />
+      <img loading="lazy" src="./images/map/Extras_Enchanted_Dominion_6.png" />
+
+      <img loading="lazy" src="./images/map/Extras_Niceland_1.png" />
+      <img loading="lazy" src="./images/map/Extras_Niceland_2.png" />
+
+      <img loading="lazy" src="./images/map/Extras_Cy-Bug_Sector_1.png" />
+      <img loading="lazy" src="./images/map/Extras_Cy-Bug_Sector_2.png" />
+
+      <img loading="lazy" src="./images/map/Extras_Keyblade_Graveyard_1.gif" />
+      <img loading="lazy" src="./images/map/Extras_Keyblade_Graveyard_2.png" />
+      <img loading="lazy" src="./images/map/Extras_Keyblade_Graveyard_3.png" />
+      <img loading="lazy" src="./images/map/Extras_Keyblade_Graveyard_4.png" />
+
+      <img loading="lazy" src="./images/map/Extras_Other_1.png" />
+      <img loading="lazy" src="./images/map/Extras_Other_2.png" />
+      <img loading="lazy" src="./images/map/Extras_Other_3.png" />
+    </div>
+
+  </div>
+
+  <!-- SCRIPT IMPORTS -->
+  <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./src/maps.js"></script>
+
+</body>
+
+</html>
