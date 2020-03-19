@@ -4,6 +4,11 @@ function switchDisplay() {
     document.getElementById("swapbtn_container").src = "./images/ui/medalButton_toMedal.png";
     document.getElementById("Medals_Container").classList.toggle("show1");
     document.getElementById("Renders_Container").classList.toggle("show2");
+    $(document).ready(function() {
+      $("#Renders_Container").find("img").each(function() {
+           $(this).attr("src", $(this).data("src"));
+         });
+    });
   }
   else  {
     document.getElementById("swapbtn_container").src = "./images/ui/medalButton_toRender.png";
