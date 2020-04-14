@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Metadata start -->
+  <html prefix="og: http://ogp.me/ns#"></html>
+  
+  <meta property="og:title" content="Music Box">
+
+  <meta property="og:description" content="Tune into the various tracks that KHUχ uses.">
+
+  <meta property="og:site_name" content="Roboloid's KHUχ Info Page" >
+
+  <meta property="og:image" content="https://roboloid.github.io/khux/images/icon/music_thumb.png">
+  <!-- Metadata end -->
+
+  <head>                         <!---------------------- START HEADER ---------------------->
+    <meta charset="utf-8" />
+    <meta name="author" content="Roboloid" />
+    <meta name="description" content="Keyblade Gem Cost Calculator" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/icon/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff">
+    <link rel="shortcut icon" type="image/x-icon" href="images/icon/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="images/icon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="57x57" href="images/icon/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="images/icon/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/icon/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="images/icon/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/icon/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="images/icon/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="images/icon/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="images/icon/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icon/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="images/icon/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="images/icon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icon/favicon-16x16.png" />
+    <link rel="shortcut icon" type="image/png" href="images/icon/favicon-16x16.png" />
+    <link rel="manifest" href="manifest.json">
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!-- Site title -->
+    <title>KHUχ</title>
+
+    <!-- Content overlay -->
+    <style type="text/css">
+
+      /* Header */
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: rgb(0, 0, 0);
+      }
+      li {
+        float: left;
+        border-right:1px solid #bbb;
+      }
+      li:last-child {
+        border-right: none;
+      }
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      li a:hover:not(.active) {
+        background-color: rgb(255, 255, 255);
+      }
+      .active {
+        background-color: rgb(0, 119, 255);
+      }
+      .active:hover {
+        background-color: rgb(109, 209, 255);
+      }
+      .gradOverlay {
+        padding: 15px 15px 15px;
+        margin: 10% 10% 10%;
+        color: #666666;
+        background-color: #2e2e2e;
+        background-position: center;
+        margin-left: auto;
+        margin-right: auto;
+        height: 100%;
+        width: 80%;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      }
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      .settingsBox {
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .musicTable {
+        display: flex;
+        justify-content: center;
+        max-height: 750px;
+        overflow-y: auto;
+      }
+      .musicEntry {
+        display: relative;
+        cursor: pointer;
+        width: 50px;
+      }
+      .musicLabel {
+        font-family: Verdana;
+        text-align: center;
+        color:rgb(255, 255, 255);
+      }
+
+    </style>
+
+    <!-- Backdrop pattern -->
+    <style>
+        body  {
+          background-image: url("./images/other/bg_music.png");
+          background-size: 150px;
+          background-repeat: repeat
+        }
+    </style>
+  </head>                         <!---------------------- END HEADER ---------------------->
+
+  
+
+  <body>
+
+    <ul>
+      <li><a href="./keyblade">Cost Calculator</a></li>
+        <li><a href="./passives">Passives List</a></li>
+        <li><a href="./medals">Medals</a></li>
+        <li><a href="./maps">Maps</a></li>
+        <li><a href="./music" class="active">Music</a></li>
+        <li><a href="./assets">Assets</a></li>
+        <li><a href="./about">About</a></li>
+    </ul>
+
+        <div class="gradOverlay">
+
+            <h1 style = "text-align:center;color:rgb(255, 255, 255);font-family:Verdana, sans-serif;">Music Box</h1>
+
+            <pre></pre>
+
+            <audio controls id="musicPlayer" style="display:block;margin-left:auto;margin-right:auto">
+              <source id="currentMusic" src="" type="audio/mpeg">
+            </audio>
+
+            <pre></pre>
+
+            <div class="settingsBox">
+                <input style="display:inline" type="image" onclick="skipTrack('RW')" src="./images/icon/skip_RW.png" width="50px"/>
+
+                <input id="looper" style="display:inline" type="image" onclick="loopMusic()" src="./images/icon/loopButton_Off.png" width="100px"/>
+
+                <input style="display:inline" type="image" onclick="skipTrack('FF')" src="./images/icon/skip_FF.png" width="50px"/>
+            </div>
+
+            <pre></pre>
+
+            <input style="display:block;margin-left:auto;margin-right:auto" type="image" onclick="window.open('https://drive.google.com/file/d/1SbDXhUjWOLAxqYDm8KaqsBlYzxO66DMt/view?usp=sharing')" src="./images/icon/downloadButtonAll.png" width="150px"/>
+
+            <pre></pre>
+
+            <h4 id="nowPlayingText" style="text-align:center;color:rgb(255, 255, 255);"></h4>
+
+            <pre></pre>
+            
+            <div class="musicTable" style="align-self:center">
+            <table>
+              <col width="50">
+              <col width="85%">
+              <col width="50">
+
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHBC)_Case_of_the_Foretellers.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHBC) Case of the Foretellers</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHBC)_Case_of_the_Foretellers.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHBC)_Guiding_Key.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHBC) Guiding Key</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHBC)_Guiding_Key.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHBC)_The_Foretellers.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHBC) The Foretellers</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHBC)_The_Foretellers.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHUX)_Candy_Kingdom_Battle.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHUX) Candy Kingdom Battle</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHUX)_Candy_Kingdom_Battle.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHUX)_Candy_Kingdom_Field.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHUX) Candy Kingdom Field</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHUX)_Candy_Kingdom_Field.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHUX)_Clash_On_the_Big_Bridge.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHUX) Clash On the Big Bridge</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHUX)_Clash_On_the_Big_Bridge.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHUX)_Classic_Kingdom.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHUX) Classic Kingdom</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHUX)_Classic_Kingdom.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHUX)_Cy-Bug_Sector_Battle.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHUX) Cy-Bug Sector Battle</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHUX)_Cy-Bug_Sector_Battle.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHUX)_Cy-Bug_Sector_Field.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHUX) Cy-Bug Sector Field</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHUX)_Cy-Bug_Sector_Field.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHUX)_Dancing_Mad.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHUX) Dancing Mad</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHUX)_Dancing_Mad.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHUX)_Daybreak_Town_Battle.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHUX) Daybreak Town Battle</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHUX)_Daybreak_Town_Battle.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHUX)_Daybreak_Town_Field.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHUX) Daybreak Town Field</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHUX)_Daybreak_Town_Field.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHUX)_Daybreak_Town_The_Heart_of_X.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHUX) Daybreak Town The Heart of X</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHUX)_Daybreak_Town_The_Heart_of_X.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHUX)_Dearly_Beloved.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHUX) Dearly Beloved</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHUX)_Dearly_Beloved.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHUX)_Defeat....mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHUX) Defeat...</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHUX)_Defeat....mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHUX)_Game_Central_Station.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHUX) Game Central Station</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHUX)_Game_Central_Station.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHUX)_Gummi_Ship_Editor.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHUX) Gummi Ship Editor</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHUX)_Gummi_Ship_Editor.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHUX)_Menu.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHUX) Menu</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHUX)_Menu.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHUX)_Niceland_Battle.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHUX) Niceland Battle</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHUX)_Niceland_Battle.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHUX)_Niceland_Field.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHUX) Niceland Field</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHUX)_Niceland_Field.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHUX)_Quest_Selection.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHUX) Quest Selection</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHUX)_Quest_Selection.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHUX)_Title.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHUX) Title</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHUX)_Title.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHUX)_TWISTER_-UNION_X_MIX-.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHUX) TWISTER -UNION X MIX-</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHUX)_TWISTER_-UNION_X_MIX-.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHUX)_Victory!.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHUX) Victory!</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHUX)_Victory!.mp3')" src="./images/icon/downloadButton.png"/></th>
+
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHBBS)_Aqua.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHBBS) Aqua</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHBBS)_Aqua.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHBBS)_Black_Power.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHBBS) Black Power</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHBBS)_Black_Power.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHBBS)_Castle_Escapade.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHBBS) Castle Escapade</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHBBS)_Castle_Escapade.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHBBS)_Drops_of_Poison.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHBBS) Drops of Poison</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHBBS)_Drops_of_Poison.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHBBS)_Extreme_Encountes.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHBBS) Extreme Encountes</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHBBS)_Extreme_Encountes.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHBBS)_Go!_Go!_Rumble_Racer.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHBBS) Go! Go! Rumble Racer</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHBBS)_Go!_Go!_Rumble_Racer.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHBBS)_Innocent_Times.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHBBS) Innocent Times</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHBBS)_Innocent_Times.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHBBS)_Night_in_the_Dark_Dream.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHBBS) Night in the Dark Dream</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHBBS)_Night_in_the_Dark_Dream.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHBBS)_Night_of_Tragedy.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHBBS) Night of Tragedy</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHBBS)_Night_of_Tragedy.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHBBS)_Peaceful_Hearts.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHBBS) Peaceful Hearts</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHBBS)_Peaceful_Hearts.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHBBS)_Risky_Romp.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHBBS) Risky Romp</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHBBS)_Risky_Romp.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHBBS)_Tears_of_the_Light.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHBBS) Tears of the Light</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHBBS)_Tears_of_the_Light.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHBBS)_Terra.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHBBS) Terra</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHBBS)_Terra.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHBBS)_The_Key.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHBBS) The Key</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHBBS)_The_Key.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHBBS)_The_Key_of_Light.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHBBS) The Key of Light</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHBBS)_The_Key_of_Light.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHBBS)_The_Rustling_Forest.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHBBS) The Rustling Forest</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHBBS)_The_Rustling_Forest.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHBBS)_The_Secret_Whispers.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHBBS) The Secret Whispers</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHBBS)_The_Secret_Whispers.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHBBS)_The_Silent_Forest.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHBBS) The Silent Forest</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHBBS)_The_Silent_Forest.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHBBS)_Unbreakable_Chains.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHBBS) Unbreakable Chains</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHBBS)_Unbreakable_Chains.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHBBS)_Ventus.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHBBS) Ventus</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHBBS)_Ventus.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH1)_Night_of_Fate.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH1) Night of Fate</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH1)_Night_of_Fate.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH1)_Shrouding_Dark_Cloud.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH1) Shrouding Dark Cloud</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH1)_Shrouding_Dark_Cloud.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH1.5)_Another_Side.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH1.5) Another Side</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH1.5)_Another_Side.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH1.5)_Arabian_Dream.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH1.5) Arabian Dream</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH1.5)_Arabian_Dream.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH1.5)_A_Day_in_Agrabah.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH1.5) A Day in Agrabah</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH1.5)_A_Day_in_Agrabah.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH1.5)_Blast_Away!_-Gummi_Ship_I-.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH1.5) Blast Away! -Gummi Ship I-</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH1.5)_Blast_Away!_-Gummi_Ship_I-.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH1.5)_Dearly_Beloved.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH1.5) Dearly Beloved</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH1.5)_Dearly_Beloved.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH1.5)_Destiny\'s_Force.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH1.5) Destiny's Force</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH1.5)_Destiny\'s_Force.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH1.5)_Destiny_Islands.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH1.5) Destiny Islands</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH1.5)_Destiny_Islands.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH1.5)_Kairi_(Piano).mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH1.5) Kairi (Piano)</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH1.5)_Kairi_(Piano).mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH1.5)_Kairi_I.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH1.5) Kairi I</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH1.5)_Kairi_I.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH1.5)_Musique_pour_la_tristesse_de_Xion.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH1.5) Musique pour la tristesse de Xion</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH1.5)_Musique_pour_la_tristesse_de_Xion.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH1.5)_Musique_pour_la_tristesse_de_Xion_(Piano).mp3.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH1.5) Musique pour la tristesse de Xion (Piano)</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH1.5)_Musique_pour_la_tristesse_de_Xion_(Piano).mp3.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH1.5)_No_Time_to_Think.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH1.5) No Time to Think</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH1.5)_No_Time_to_Think.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH1.5)_Olympus_Coliseum.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH1.5) Olympus Coliseum</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH1.5)_Olympus_Coliseum.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH1.5)_Road_to_a_Hero.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH1.5) Road to a Hero</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH1.5)_Road_to_a_Hero.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH1.5)_Shrouding_Dark_Cloud.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH1.5) Shrouding Dark Cloud</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH1.5)_Shrouding_Dark_Cloud.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH1.5)_Spooks_of_Halloween_Town.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH1.5) Spooks of Halloween Town</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH1.5)_Spooks_of_Halloween_Town.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH1.5)_Squirming_Evil.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH1.5) Squirming Evil</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH1.5)_Squirming_Evil.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH1.5)_Strange_Whispers.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH1.5) Strange Whispers</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH1.5)_Strange_Whispers.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH1.5)_The_Deep_End.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH1.5) The Deep End</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH1.5)_The_Deep_End.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH1.5)_To_Our_Surprise.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH1.5) To Our Surprise</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH1.5)_To_Our_Surprise.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH1.5)_Treasured_Memories.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH1.5) Treasured Memories</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH1.5)_Treasured_Memories.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH1.5)_Welcome_to_Wonderland.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH1.5) Welcome to Wonderland</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH1.5)_Welcome_to_Wonderland.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHReCoM)_La_Pace.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHReCoM) La Pace</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHReCoM)_La_Pace.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHReCoM)_Namine.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHReCoM) Namine</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHReCoM)_Namine.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KHReCoM)_Scent_of_Silence.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KHReCoM) Scent of Silence</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KHReCoM)_Scent_of_Silence.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH358)_Vector_to_the_Heavens.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH358) Vector to the Heavens</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH358)_Vector_to_the_Heavens.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH2)_Organization_XIII.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH2) Organization XIII</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH2)_Organization_XIII.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH2)_Rowdy_Rumble.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH2) Rowdy Rumble</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH2)_Rowdy_Rumble.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH2.5)_Apprehension.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH2.5) Apprehension</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH2.5)_Apprehension.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH2.5)_A_Walk_in_Andante.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH2.5) A Walk in Andante</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH2.5)_A_Walk_in_Andante.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH2.5)_Battleship_Bravery.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH2.5) Battleship Bravery</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH2.5)_Battleship_Bravery.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH2.5)_Dance_of_the_Daring.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH2.5) Dance of the Daring</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH2.5)_Dance_of_the_Daring.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH2.5)_Dance_to_the_Death.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH2.5) Dance to the Death</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH2.5)_Dance_to_the_Death.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH2.5)_Darkness_of_the_Unknown.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH2.5) Darkness of the Unknown</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH2.5)_Darkness_of_the_Unknown.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH2.5)_Desire_for_All_That_is_Lost.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH2.5) Desire for All That is Lost</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH2.5)_Desire_for_All_That_is_Lost.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH2.5)_Dive_Into_the_Heart_-Destati-.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH2.5) Dive Into the Heart -Destati-</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH2.5)_Dive_Into_the_Heart_-Destati-.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH2.5)_Fate_of_the_Unknown.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH2.5) Fate of the Unknown</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH2.5)_Fate_of_the_Unknown.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH2.5)_Fragments_of_Sorrow.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH2.5) Fragments of Sorrow</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH2.5)_Fragments_of_Sorrow.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH2.5)_Friends_in_My_Heart.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH2.5) Friends in My Heart</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH2.5)_Friends_in_My_Heart.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH2.5)_Gearing_Up.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH2.5) Gearing Up</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH2.5)_Gearing_Up.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH2.5)_Hesitation.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH2.5) Hesitation</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH2.5)_Hesitation.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH2.5)_Laughter_and_Merriment.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH2.5) Laughter and Merriment</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH2.5)_Laughter_and_Merriment.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH2.5)_Lazy_Afternoons.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH2.5) Lazy Afternoons</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH2.5)_Lazy_Afternoons.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH2.5)_Missing_You.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH2.5) Missing You</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH2.5)_Missing_You.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH2.5)_One-Winged_Angel.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH2.5) One-Winged Angel</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH2.5)_One-Winged_Angel.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH2.5)_Riku.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH2.5) Riku</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH2.5)_Riku.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH2.5)_Road_to_a_Hero.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH2.5) Road to a Hero</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH2.5)_Road_to_a_Hero.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH2.5)_Roxas.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH2.5) Roxas</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH2.5)_Roxas.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH2.5)_Roxas_(Piano).mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH2.5) Roxas (Piano)</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH2.5)_Roxas_(Piano).mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH2.5)_Sora.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH2.5) Sora</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH2.5)_Sora.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH2.5)_The_Encounter.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH2.5) The Encounter</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH2.5)_The_Encounter.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH2.5)_The_Other_Promise.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH2.5) The Other Promise</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH2.5)_The_Other_Promise.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH2.5)_The_Other_Promise_(Drammatica).mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH2.5) The Other Promise (Drammatica)</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH2.5)_The_Other_Promise_(Drammatica).mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH2.5)_The_Underworld.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH2.5) The Underworld</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH2.5)_The_Underworld.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH2.5)_Villains_of_a_Sort.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH2.5) Villains of a Sort</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH2.5)_Villains_of_a_Sort.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH2.5)_Vim_and_Vigor.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH2.5) Vim and Vigor</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH2.5)_Vim_and_Vigor.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH2.5)_Waltz_of_the_Damned.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH2.5) Waltz of the Damned</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH2.5)_Waltz_of_the_Damned.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH2.5)_What_Lies_Beneath.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH2.5) What Lies Beneath</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH2.5)_What_Lies_Beneath.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH3D)_Dearly_Beloved.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH3D) Dearly Beloved</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH3D)_Dearly_Beloved.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH3D)_Dream_Eaters.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH3D) Dream Eaters</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH3D)_Dream_Eaters.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH3D)_Ever_After.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH3D) Ever After</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH3D)_Ever_After.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH3D)_The_Dread_of_Night.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH3D) The Dread of Night</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH3D)_The_Dread_of_Night.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH3D)_The_Dream.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH3D) The Dream</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH3D)_The_Dream.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH3D)_The_Nightmare.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH3D) The Nightmare</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH3D)_The_Nightmare.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+
+                  <tr>                 <th><input class="musicEntry" type="image" onclick="playMusic('(KH3)_Peaceful_Hearts.mp3')" src="./images/icon/playButton.png"/></th>                 <th class="musicLabel">(KH3) Peaceful Hearts</th>                 <th><input class="musicEntry" type="image" onclick="window.open('./music/(KH3)_Peaceful_Hearts.mp3')" src="./images/icon/downloadButton.png"/></th>               </tr>
+
+            </table>
+            
+</div>
+            
+        </div>
+    
+      <!-- SCRIPT IMPORTS -->
+      <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+      <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+      <script src="./js/bootstrap.min.js"></script>
+      <script src="./src/music.js"></script>
+
+  </body>
+</html>
