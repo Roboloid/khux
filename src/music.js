@@ -99,7 +99,7 @@ var musicArray = {
   26: "(KHBBS)_Black_Power.mp3",
   27: "(KHBBS)_Castle_Escapade.mp3",
   28: "(KHBBS)_Drops_of_Poison.mp3",
-  29: "(KHBBS)_Extreme_Encountes.mp3",
+  29: "(KHBBS)_Extreme_Encounters.mp3",
   30: "(KHBBS)_Go!_Go!_Rumble_Racer.mp3",
   31: "(KHBBS)_Innocent_Times.mp3",
   32: "(KHBBS)_Night_in_the_Dark_Dream.mp3",
