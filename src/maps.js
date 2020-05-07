@@ -1,6 +1,7 @@
 // Display maps
 function mapFunction(value)  {
   if(value == "All")  {
+    document.getElementById("Dark_Road_Container").classList.toggle("showMap");
     document.getElementById("Daybreak_Town_Container").classList.toggle("showMap");
     document.getElementById("Dwarf_Woodlands_Container").classList.toggle("showMap");
     document.getElementById("Wonderland_Container").classList.toggle("showMap");
