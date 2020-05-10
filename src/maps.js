@@ -7,7 +7,7 @@ function mapFunction(value)  {
     document.getElementById("Wonderland_Container").classList.toggle("showMap");
     document.getElementById("Agrabah_Container").classList.toggle("showMap");
     document.getElementById("Olympus_Coliseum_Container").classList.toggle("showMap");
-    document.getElementById("Beast's_Castle_Container").classList.toggle("showMap");
+    document.getElementById("Beasts_Castle_Container").classList.toggle("showMap");
     document.getElementById("Castle_of_Dreams_Container").classList.toggle("showMap");
     document.getElementById("Enchanted_Dominion_Container").classList.toggle("showMap");
     document.getElementById("Game_Central_Station_Container").classList.toggle("showMap");
