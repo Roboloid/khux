@@ -127,7 +127,7 @@ var musicArray = {
   54: "(KH1.5)_Kairi_(Piano).mp3",
   55: "(KH1.5)_Kairi_I.mp3",
   56: "(KH1.5)_Musique_pour_la_tristesse_de_Xion.mp3",
-  57: "(KH1.5)_Musique_pour_la_tristesse_de_Xion_(Piano).mp3.mp3",
+  57: "(KH1.5)_Musique_pour_la_tristesse_de_Xion_(Piano).mp3",
   58: "(KH1.5)_No_Time_to_Think.mp3",
   59: "(KH1.5)_Olympus_Coliseum.mp3",
   60: "(KH1.5)_Road_to_a_Hero.mp3",
