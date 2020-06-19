@@ -1588,6 +1588,7 @@ var newFig = document.createElement('figure');
                 k++;
                 var selfBuffsOtherSTRPlusSpan = document.createElement('span');
                 selfBuffsOtherSTRPlusSpan.style = "display: inline-block";
+                selfBuffsOtherSTRPlusSpan.title = "Raises " + medalDatabase[MedalID].Ability.SelfBuffs.STRPlus.Type + "-type STR+ by " + medalDatabase[MedalID].Ability.SelfBuffs.STRPlus.Amount;
                 selfBuffsOtherSTRPlusSpan.appendChild(document.createTextNode("\xa0\xa0"));
                 var selfBuffsOtherSTRPlus = document.createElement('img');
                 selfBuffsOtherSTRPlus.src = "./images/ui/STRPlus_" + medalDatabase[MedalID].Ability.SelfBuffs.STRPlus.Type + ".png";
@@ -1601,6 +1602,7 @@ var newFig = document.createElement('figure');
                 k++;
                 var selfBuffsOtherDEFPlusSpan = document.createElement('span');
                 selfBuffsOtherDEFPlusSpan.style = "display: inline-block";
+                selfBuffsOtherDEFPlusSpan.title = "Raises " + medalDatabase[MedalID].Ability.SelfBuffs.DEFPlus.Type + "-type DEF+ by " + medalDatabase[MedalID].Ability.SelfBuffs.DEFPlus.Amount;
                 selfBuffsOtherDEFPlusSpan.appendChild(document.createTextNode("\xa0\xa0"));
                 var selfBuffsOtherDEFPlus = document.createElement('img');
                 selfBuffsOtherDEFPlus.src = "./images/ui/DEFPlus_" + medalDatabase[MedalID].Ability.SelfBuffs.DEFPlus.Type + ".png";
@@ -1614,6 +1616,7 @@ var newFig = document.createElement('figure');
                 k++;
                 var selfBuffsOtherGuiltSpan = document.createElement('span');
                 selfBuffsOtherGuiltSpan.style = "display: inline-block";
+                selfBuffsOtherGuiltSpan.title = "Raises Guilt by " + medalDatabase[MedalID].Ability.SelfBuffs.GuiltBuff + "%";
                 selfBuffsOtherGuiltSpan.appendChild(document.createTextNode("\xa0\xa0"));
                 var selfBuffsOtherGuilt = document.createElement('img');
                 selfBuffsOtherGuilt.src = "./images/ui/GuiltBuffIcon.png";
@@ -1627,6 +1630,7 @@ var newFig = document.createElement('figure');
                 k++;
                 var selfBuffsOtherReflectSpan = document.createElement('span');
                 selfBuffsOtherReflectSpan.style = "display: inline-block";
+                selfBuffsOtherReflectSpan.title = "Reflects " + medalDatabase[MedalID].Ability.SelfBuffs.Reflect.Percent + "% of " + medalDatabase[MedalID].Ability.SelfBuffs.Reflect.ReflectType + "-type damage received";
                 selfBuffsOtherReflectSpan.appendChild(document.createTextNode("\xa0\xa0"));
                 var selfBuffsOtherReflect = document.createElement('img');
                 selfBuffsOtherReflect.src = "./images/ui/Reflect" + medalDatabase[MedalID].Ability.SelfBuffs.Reflect.ReflectType + ".png";
@@ -1641,6 +1645,7 @@ var newFig = document.createElement('figure');
                 k++;
                 var selfBuffsOtherNextMedalIconSpan = document.createElement('span');
                 selfBuffsOtherNextMedalIconSpan.style = "display: inline-block";
+                selfBuffsOtherNextMedalIconSpan.title = "Next Medal: " + medalDatabase[MedalID].Ability.SelfBuffs.NextMedal;
                 selfBuffsOtherNextMedalIconSpan.appendChild(document.createTextNode("\xa0\xa0"));
                 var selfBuffsOtherNextMedalIcon = document.createElement('img');
                 selfBuffsOtherNextMedalIcon.src = "./images/ui/NextMedalIcon.png";
@@ -1659,6 +1664,7 @@ var newFig = document.createElement('figure');
                 k++;
                 var selfBuffsOtherGaugeRecoverySpan = document.createElement('span');
                 selfBuffsOtherGaugeRecoverySpan.style = "display: inline-block";
+                selfBuffsOtherGaugeRecoverySpan.title = "Fills " + medalDatabase[MedalID].Ability.SelfBuffs.GaugeRecovery + " gauges";
                 selfBuffsOtherGaugeRecoverySpan.appendChild(document.createTextNode("\xa0\xa0"));
                 var selfBuffsOtherGaugeRecovery = document.createElement('img');
                 selfBuffsOtherGaugeRecovery.src = "./images/ui/GaugeRecoveryIcon.png";
@@ -1673,6 +1679,7 @@ var newFig = document.createElement('figure');
                 k++;
                 var selfBuffsOtherGaugeConsumeSpan = document.createElement('span');
                 selfBuffsOtherGaugeConsumeSpan.style = "display: inline-block";
+                selfBuffsOtherGaugeConsumeSpan.title = "Consumes " + medalDatabase[MedalID].Ability.SelfBuffs.GaugeConsume + " gauges";
                 selfBuffsOtherGaugeConsumeSpan.appendChild(document.createTextNode("\xa0\xa0"));
                 var selfBuffsOtherGaugeConsume = document.createElement('img');
                 selfBuffsOtherGaugeConsume.src = "./images/ui/GaugeRecoveryIcon.png";
@@ -1687,6 +1694,7 @@ var newFig = document.createElement('figure');
                 k++;
                 var selfBuffsOtherConsumesAllGaugesSpan = document.createElement('span');
                 selfBuffsOtherConsumesAllGaugesSpan.style = "display: inline-block";
+                selfBuffsOtherConsumesAllGaugesSpan.title = "Consumes all gauges";
                 selfBuffsOtherConsumesAllGaugesSpan.appendChild(document.createTextNode("\xa0\xa0"));
                 var selfBuffsOtherConsumesAllGauges = document.createElement('img');
                 selfBuffsOtherConsumesAllGauges.src = "./images/ui/GaugeRecoveryIcon.png";
@@ -1701,6 +1709,7 @@ var newFig = document.createElement('figure');
                 k++;
                 var selfBuffsOtherAttributeAlwaysSpan = document.createElement('span');
                 selfBuffsOtherAttributeAlwaysSpan.style = "display: inline-block";
+                selfBuffsOtherAttributeAlwaysSpan.title = "Always deals " + medalDatabase[MedalID].Ability.SelfBuffs.AttributeAlways.toLowerCase() + " effective damage";
                 selfBuffsOtherAttributeAlwaysSpan.appendChild(document.createTextNode("\xa0\xa0"));
                 var selfBuffsOtherAttributeAlways = document.createElement('img');
                 selfBuffsOtherAttributeAlways.src = "./images/ui/Attribute_" + medalDatabase[MedalID].Ability.SelfBuffs.AttributeAlways + ".png";
@@ -1714,6 +1723,7 @@ var newFig = document.createElement('figure');
                 k++;
                 var selfBuffsOtherHealSpan = document.createElement('span');
                 selfBuffsOtherHealSpan.style = "display: inline-block";
+                selfBuffsOtherHealSpan.title = "Recovers HP";
                 selfBuffsOtherHealSpan.appendChild(document.createTextNode("\xa0\xa0"));
                 var selfBuffsOtherHeal = document.createElement('img');
                 selfBuffsOtherHeal.src = "./images/ui/HealIcon.png";
@@ -1727,6 +1737,7 @@ var newFig = document.createElement('figure');
                 k++;
                 var selfBuffsOtherEsunaSpan = document.createElement('span');
                 selfBuffsOtherEsunaSpan.style = "display: inline-block";
+                selfBuffsOtherEsunaSpan.title = "Removes status ailments";
                 selfBuffsOtherEsunaSpan.appendChild(document.createTextNode("\xa0\xa0"));
                 var selfBuffsOtherEsuna = document.createElement('img');
                 selfBuffsOtherEsuna.src = "./images/ui/EsunaIcon.png";
@@ -1740,6 +1751,7 @@ var newFig = document.createElement('figure');
                 k++;
                 var selfBuffsOtherDispelSpan = document.createElement('span');
                 selfBuffsOtherDispelSpan.style = "display: inline-block";
+                selfBuffsOtherDispelSpan.title = "Removes own status effects";
                 selfBuffsOtherDispelSpan.appendChild(document.createTextNode("\xa0\xa0"));
                 var selfBuffsOtherDispel = document.createElement('img');
                 selfBuffsOtherDispel.src = "./images/ui/DispelIcon.png";
@@ -1753,6 +1765,7 @@ var newFig = document.createElement('figure');
                 k++;
                 var selfBuffsOtherMirrorSpan = document.createElement('span');
                 selfBuffsOtherMirrorSpan.style = "display: inline-block";
+                selfBuffsOtherMirrorSpan.title = "Mirrors status effects";
                 selfBuffsOtherMirrorSpan.appendChild(document.createTextNode("\xa0\xa0"));
                 var selfBuffsOtherMirror = document.createElement('img');
                 selfBuffsOtherMirror.src = "./images/ui/MirrorIcon.png";
@@ -1864,6 +1877,7 @@ var newFig = document.createElement('figure');
                 k++;
                 var enemyBuffsOtherSTRMinusSpan = document.createElement('span');
                 enemyBuffsOtherSTRMinusSpan.style = "display: inline-block";
+                enemyBuffsOtherSTRMinusSpan.title = "Lowers " + medalDatabase[MedalID].Ability.EnemyBuffs.STRMinus.Type + "-type STR- by " + medalDatabase[MedalID].Ability.EnemyBuffs.STRMinus.Amount;
                 var enemyBuffsOtherSTRMinus = document.createElement('img');
                 enemyBuffsOtherSTRMinus.src = "./images/ui/STRPlus_" + medalDatabase[MedalID].Ability.EnemyBuffs.STRMinus.Type + ".png";
                 enemyBuffsOtherSTRMinus.style = "max-width: 50px";
@@ -1876,6 +1890,7 @@ var newFig = document.createElement('figure');
                 k++;
                 var enemyBuffsOtherDEFPierceSpan = document.createElement('span');
                 enemyBuffsOtherDEFPierceSpan.style = "display: inline-block";
+                enemyBuffsOtherDEFPierceSpan.title = medalDatabase[MedalID].Ability.EnemyBuffs.DEFPierce + "% chance to ignore enemy Defense Skills";
                 var enemyBuffsOtherDEFPierce = document.createElement('img');
                 enemyBuffsOtherDEFPierce.src = "./images/ui/DefensePiece.png";
                 enemyBuffsOtherDEFPierce.style = "max-width: 50px";
@@ -1895,12 +1910,15 @@ var newFig = document.createElement('figure');
                 enemyBuffsOtherCounterSpan.appendChild(enemyBuffsOtherCounter);
                 enemyBuffsOtherCounterSpan.appendChild(document.createTextNode("\xa0"));
                 if(medalDatabase[MedalID].Ability.EnemyBuffs.Counter.CountDirection == "Up") {
+                    enemyBuffsOtherCounterSpan.title = "Increments enemy counters by " + medalDatabase[MedalID].Ability.EnemyBuffs.Counter.Count;
                     enemyBuffsOtherCounterSpan.appendChild(document.createTextNode("+" + medalDatabase[MedalID].Ability.EnemyBuffs.Counter.Count));
                 }
                 if(medalDatabase[MedalID].Ability.EnemyBuffs.Counter.CountDirection == "Null") {
+                    enemyBuffsOtherCounterSpan.title = "Does not affect enemy counters";
                     enemyBuffsOtherCounterSpan.appendChild(document.createTextNode("±0"));
                 }
                 if(medalDatabase[MedalID].Ability.EnemyBuffs.Counter.CountDirection == "Reset") {
+                    enemyBuffsOtherCounterSpan.title = "Resets enemy counters";
                     enemyBuffsOtherCounterSpan.appendChild(document.createTextNode(" Reset"));
                 }
                 enemyBuffsOtherCounterSpan.appendChild(document.createTextNode("\xa0\xa0\xa0\xa0"));
@@ -1911,6 +1929,7 @@ var newFig = document.createElement('figure');
                 k++;
                 var enemyBuffsOtherDispelSpan = document.createElement('span');
                 enemyBuffsOtherDispelSpan.style = "display: inline-block";
+                enemyBuffsOtherDispelSpan.title = "Removes enemy status effects";
                 enemyBuffsOtherDispelSpan.appendChild(document.createTextNode("\xa0\xa0"));
                 var enemyBuffsOtherDispel = document.createElement('img');
                 enemyBuffsOtherDispel.src = "./images/ui/DispelIcon.png";
@@ -2123,6 +2142,7 @@ if(medalDatabase[MedalID].Supernova !== undefined)  {
                 k++;
                 var supernovaSelfBuffsOtherRenewSpan = document.createElement('span');
                 supernovaSelfBuffsOtherRenewSpan.style = "display: inline-block";
+                supernovaSelfBuffsOtherRenewSpan.title = "Renews " + medalDatabase[MedalID].Supernova.SelfBuffs.Renew + "-type Supernovas";
                 supernovaSelfBuffsOtherRenewSpan.appendChild(document.createTextNode("\xa0\xa0"));
                 var supernovaSelfBuffsOtherRenew = document.createElement('img');
                 supernovaSelfBuffsOtherRenew.src = "./images/ui/Renew_" + medalDatabase[MedalID].Supernova.SelfBuffs.Renew + ".png";
@@ -2135,6 +2155,7 @@ if(medalDatabase[MedalID].Supernova !== undefined)  {
                 k++;
                 var supernovaSelfBuffsOtherSTRPlusSpan = document.createElement('span');
                 supernovaSelfBuffsOtherSTRPlusSpan.style = "display: inline-block";
+                supernovaSelfBuffsOtherSTRPlusSpan.title = "Raises " + medalDatabase[MedalID].Supernova.SelfBuffs.STRPlus.Type + "-type STR+ by " + medalDatabase[MedalID].Supernova.SelfBuffs.STRPlus.Amount;
                 supernovaSelfBuffsOtherSTRPlusSpan.appendChild(document.createTextNode("\xa0\xa0"));
                 var supernovaSelfBuffsOtherSTRPlus = document.createElement('img');
                 supernovaSelfBuffsOtherSTRPlus.src = "./images/ui/STRPlus_" + medalDatabase[MedalID].Supernova.SelfBuffs.STRPlus.Type + ".png";
@@ -2148,6 +2169,7 @@ if(medalDatabase[MedalID].Supernova !== undefined)  {
                 k++;
                 var supernovaSelfBuffsOtherDEFPlusSpan = document.createElement('span');
                 supernovaSelfBuffsOtherDEFPlusSpan.style = "display: inline-block";
+                supernovaSelfBuffsOtherSTRPlusSpan.title = "Raises " + medalDatabase[MedalID].Supernova.SelfBuffs.DEFPlus.Type + "-type DEF+ by " + medalDatabase[MedalID].Supernova.SelfBuffs.DEFPlus.Amount;
                 supernovaSelfBuffsOtherDEFPlusSpan.appendChild(document.createTextNode("\xa0\xa0"));
                 var supernovaSelfBuffsOtherDEFPlus = document.createElement('img');
                 supernovaSelfBuffsOtherDEFPlus.src = "./images/ui/DEFPlus_" + medalDatabase[MedalID].Supernova.SelfBuffs.DEFPlus.Type + ".png";
@@ -2161,6 +2183,7 @@ if(medalDatabase[MedalID].Supernova !== undefined)  {
                 k++;
                 var supernovaSelfBuffsOtherGuiltSpan = document.createElement('span');
                 supernovaSelfBuffsOtherGuiltSpan.style = "display: inline-block";
+                supernovaSelfBuffsOtherGuiltSpan.title = "Raises Guilt by " + medalDatabase[MedalID].Supernova.SelfBuffs.GuiltBuff + "%";
                 supernovaSelfBuffsOtherGuiltSpan.appendChild(document.createTextNode("\xa0\xa0"));
                 var supernovaSelfBuffsOtherGuilt = document.createElement('img');
                 supernovaSelfBuffsOtherGuilt.src = "./images/ui/GuiltBuffIcon.png";
@@ -2174,6 +2197,7 @@ if(medalDatabase[MedalID].Supernova !== undefined)  {
                 k++;
                 var supernovaSelfBuffsOtherReflectSpan = document.createElement('span');
                 supernovaSelfBuffsOtherReflectSpan.style = "display: inline-block";
+                supernovaSelfBuffsOtherReflectSpan.title = "Reflects " + medalDatabase[MedalID].Supernova.SelfBuffs.Reflect.Percent + "% of " + medalDatabase[MedalID].Supernova.SelfBuffs.Reflect.ReflectType + "-type damage received";
                 supernovaSelfBuffsOtherReflectSpan.appendChild(document.createTextNode("\xa0\xa0"));
                 var supernovaSelfBuffsOtherReflect = document.createElement('img');
                 supernovaSelfBuffsOtherReflect.src = "./images/ui/Reflect" + medalDatabase[MedalID].Supernova.SelfBuffs.Reflect.ReflectType + ".png";
@@ -2184,28 +2208,12 @@ if(medalDatabase[MedalID].Supernova !== undefined)  {
                 supernovaSelfBuffsOtherReflectSpan.appendChild(document.createTextNode("\xa0\xa0"));
                 supernovaSelfBuffsOther.appendChild(supernovaSelfBuffsOtherReflectSpan);
             }
-            if(medalDatabase[MedalID].Supernova.SelfBuffs !== undefined && medalDatabase[MedalID].Supernova.SelfBuffs.NextMedal !== undefined)  {
-                k++;
-                var supernovaSelfBuffsOtherNextMedalIconSpan = document.createElement('span');
-                supernovaSelfBuffsOtherNextMedalIconSpan.style = "display: inline-block";
-                supernovaSelfBuffsOtherNextMedalIconSpan.appendChild(document.createTextNode("\xa0\xa0"));
-                var supernovaSelfBuffsOtherNextMedalIcon = document.createElement('img');
-                supernovaSelfBuffsOtherNextMedalIcon.src = "./images/ui/NextMedalIcon.png";
-                supernovaSelfBuffsOtherNextMedalIcon.style = "max-height: 75px";
-                supernovaSelfBuffsOtherNextMedalIconSpan.appendChild(supernovaSelfBuffsOtherNextMedalIcon);
-                supernovaSelfBuffsOtherNextMedalIconSpan.appendChild(document.createTextNode("\xa0"));
-                var supernovaSelfBuffsOtherNextMedalEffect = document.createElement('img');
-                supernovaSelfBuffsOtherNextMedalEffect.src = "./images/ui/NextMedal_" + medalDatabase[MedalID].Supernova.SelfBuffs.NextMedal + ".png";
-                supernovaSelfBuffsOtherNextMedalEffect.style = "max-height: 30px";
-                supernovaSelfBuffsOtherNextMedalIconSpan.appendChild(supernovaSelfBuffsOtherNextMedalEffect);
-                supernovaSelfBuffsOtherNextMedalIconSpan.appendChild(document.createTextNode("\xa0\xa0"));
-                supernovaSelfBuffsOther.appendChild(supernovaSelfBuffsOtherNextMedalIconSpan);
-            }
 
             if(medalDatabase[MedalID].Supernova.SelfBuffs !== undefined && medalDatabase[MedalID].Supernova.SelfBuffs.GaugeRecovery !== undefined)  {
                 k++;
                 var supernovaSelfBuffsOtherGaugeRecoverySpan = document.createElement('span');
                 supernovaSelfBuffsOtherGaugeRecoverySpan.style = "display: inline-block";
+                supernovaSelfBuffsOtherGaugeRecoverySpan.title = "Fills " + medalDatabase[MedalID].Supernova.SelfBuffs.GaugeRecovery + " gauges";
                 supernovaSelfBuffsOtherGaugeRecoverySpan.appendChild(document.createTextNode("\xa0\xa0"));
                 var supernovaSelfBuffsOtherGaugeRecovery = document.createElement('img');
                 supernovaSelfBuffsOtherGaugeRecovery.src = "./images/ui/GaugeRecoveryIcon.png";
@@ -2261,6 +2269,7 @@ if(medalDatabase[MedalID].Supernova !== undefined)  {
                 k++;
                 var supernovaSelfBuffsOtherHealSpan = document.createElement('span');
                 supernovaSelfBuffsOtherHealSpan.style = "display: inline-block";
+                supernovaSelfBuffsOtherHealSpan.title = "Recovers HP";
                 supernovaSelfBuffsOtherHealSpan.appendChild(document.createTextNode("\xa0\xa0"));
                 var supernovaSelfBuffsOtherHeal = document.createElement('img');
                 supernovaSelfBuffsOtherHeal.src = "./images/ui/HealIcon.png";
@@ -2274,6 +2283,7 @@ if(medalDatabase[MedalID].Supernova !== undefined)  {
                 k++;
                 var supernovaSelfBuffsOtherEsunaSpan = document.createElement('span');
                 supernovaSelfBuffsOtherEsunaSpan.style = "display: inline-block";
+                supernovaSelfBuffsOtherEsunaSpan.title = "Removes status ailments";
                 supernovaSelfBuffsOtherEsunaSpan.appendChild(document.createTextNode("\xa0\xa0"));
                 var supernovaSelfBuffsOtherEsuna = document.createElement('img');
                 supernovaSelfBuffsOtherEsuna.src = "./images/ui/EsunaIcon.png";
@@ -2281,19 +2291,6 @@ if(medalDatabase[MedalID].Supernova !== undefined)  {
                 supernovaSelfBuffsOtherEsunaSpan.appendChild(supernovaSelfBuffsOtherEsuna);
                 supernovaSelfBuffsOtherEsunaSpan.appendChild(document.createTextNode("\xa0\xa0"));
                 supernovaSelfBuffsOther.appendChild(supernovaSelfBuffsOtherEsunaSpan);
-            }
-
-            if(medalDatabase[MedalID].Supernova.SelfBuffs !== undefined && medalDatabase[MedalID].Supernova.SelfBuffs.Mirror !== undefined)  {
-                k++;
-                var supernovaSelfBuffsOtherMirrorSpan = document.createElement('span');
-                supernovaSelfBuffsOtherMirrorSpan.style = "display: inline-block";
-                supernovaSelfBuffsOtherMirrorSpan.appendChild(document.createTextNode("\xa0\xa0"));
-                var supernovaSelfBuffsOtherMirror = document.createElement('img');
-                supernovaSelfBuffsOtherMirror.src = "./images/ui/MirrorIcon.png";
-                supernovaSelfBuffsOtherMirror.style = "max-height: 50px";
-                supernovaSelfBuffsOtherMirrorSpan.appendChild(supernovaSelfBuffsOtherMirror);
-                supernovaSelfBuffsOtherMirrorSpan.appendChild(document.createTextNode("\xa0\xa0"));
-                supernovaSelfBuffsOther.appendChild(supernovaSelfBuffsOtherMirrorSpan);
             }
 
     supernovaSelfBuffsDiv.appendChild(supernovaSelfBuffsOther);
@@ -2361,7 +2358,7 @@ if(medalDatabase[MedalID].Supernova !== undefined)  {
                 var supernovaEnemyBuffsOtherSTRMinusSpan = document.createElement('span');
                 supernovaEnemyBuffsOtherSTRMinusSpan.style = "display: inline-block";
                 var supernovaEnemyBuffsOtherSTRMinus = document.createElement('img');
-                supernovaEnemyBuffsOtherSTRMinus.src = "./images/ui/STRPlus_" + medalDatabase[MedalID].Supernova.EnemyBuffs.STRMinus.Type + ".png";
+                supernovaEnemyBuffsOtherSTRMinus.title = "Lowers " + medalDatabase[MedalID].Supernova.EnemyBuffs.STRMinus.Type + "-type STR- by " + medalDatabase[MedalID].Supernova.EnemyBuffs.STRMinus.Amount;
                 supernovaEnemyBuffsOtherSTRMinus.style = "max-width: 50px";
                 supernovaEnemyBuffsOtherSTRMinusSpan.appendChild(supernovaEnemyBuffsOtherSTRMinus);
                 supernovaEnemyBuffsOtherSTRMinusSpan.appendChild(document.createTextNode("-" + medalDatabase[MedalID].Supernova.EnemyBuffs.STRMinus.Amount));
@@ -2372,6 +2369,7 @@ if(medalDatabase[MedalID].Supernova !== undefined)  {
                 k++;
                 var supernovaEnemyBuffsOtherDEFPierceSpan = document.createElement('span');
                 supernovaEnemyBuffsOtherDEFPierceSpan.style = "display: inline-block";
+                supernovaEnemyBuffsOtherDEFPierceSpan.title = medalDatabase[MedalID].Supernova.EnemyBuffs.DEFPierce + "% chance to ignore enemy Defense Skills";
                 var supernovaEnemyBuffsOtherDEFPierce = document.createElement('img');
                 supernovaEnemyBuffsOtherDEFPierce.src = "./images/ui/DefensePiece.png";
                 supernovaEnemyBuffsOtherDEFPierce.style = "max-width: 50px";
@@ -2391,12 +2389,15 @@ if(medalDatabase[MedalID].Supernova !== undefined)  {
                 supernovaEnemyBuffsOtherCounterSpan.appendChild(supernovaEnemyBuffsOtherCounter);
                 supernovaEnemyBuffsOtherCounterSpan.appendChild(document.createTextNode("\xa0"));
                 if(medalDatabase[MedalID].Supernova.EnemyBuffs.Counter.CountDirection == "Up") {
+                    supernovaEnemyBuffsOtherCounterSpan.title = "Increments enemy counters by " + medalDatabase[MedalID].Supernova.EnemyBuffs.Counter.Count;
                     supernovaEnemyBuffsOtherCounterSpan.appendChild(document.createTextNode("+" + medalDatabase[MedalID].Supernova.EnemyBuffs.Counter.Count));
                 }
                 if(medalDatabase[MedalID].Supernova.EnemyBuffs.Counter.CountDirection == "Null") {
+                    supernovaEnemyBuffsOtherCounterSpan.title = "Does not affect enemy counters";
                     supernovaEnemyBuffsOtherCounterSpan.appendChild(document.createTextNode("±0"));
                 }
                 if(medalDatabase[MedalID].Supernova.EnemyBuffs.Counter.CountDirection == "Reset") {
+                    supernovaEnemyBuffsOtherCounterSpan.title = "Resets enemy counters";
                     supernovaEnemyBuffsOtherCounterSpan.appendChild(document.createTextNode(" Reset"));
                 }
                 supernovaEnemyBuffsOtherCounterSpan.appendChild(document.createTextNode("\xa0\xa0\xa0\xa0"));
