@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Metadata start -->
+  <html prefix="og: http://ogp.me/ns#"></html>
+  
+  <meta property="og:title" content="Medal Search Tool">
+
+  <meta property="og:description" content="Use this page to search for medals and filter by several features.">
+
+  <meta property="og:site_name" content="Roboloid's KHUχ Info Page" >
+
+  <meta property="og:image" content="https://roboloid.github.io/khux/images/icon/search_thumb.png">
+  <!-- Metadata end -->
+
+  <head>                         <!---------------------- START HEADER ---------------------->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163660070-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-163660070-1');
+    </script>
+
+    <meta charset="utf-8" />
+    <meta name="author" content="Roboloid" />
+    <meta name="description" content="Keyblade Gem Cost Calculator" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="apple-touch-icon" sizes="76x76" href="./images/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/icon/favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!-- Site title -->
+    <title>KHUχ</title>
+
+    <!-- Content overlay -->
+    <style type="text/css">
+
+      @font-face {
+        font-family: PRGothIWA;
+        src: url("./images/assets/font/PRGothIWA-Dm.TTF")
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: rgb(0, 0, 0);
+      }
+      li {
+        float: left;
+        border-right:1px solid #bbb;
+      }
+      li:last-child {
+        border-right: none;
+      }
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      li a:hover:not(.active) {
+        background-color: rgb(255, 255, 255);
+      }
+      .active {
+        background-color: rgb(0, 119, 255);
+      }
+      .active:hover {
+        background-color: rgb(109, 209, 255);
+      }
+
+      .whiteOverlay {
+        text-align: center;
+        padding: 15px 15px 15px;
+        margin: 10% 10% 10%;
+        color: #ffffff;
+        background-color: #FFF;
+        background-position: center;
+        margin-left: auto;
+        margin-right: auto;
+        height: 100%;
+        width: 95%;
+        box-shadow: 0px 8px 16px 0px rgba(0, 102, 255, 0.2);
+      }
+      .searchBtn {
+        text-align: center;
+        padding: 10px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .searchTextBox {
+        text-align: center;
+        width: 250px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .resultsListClass {
+        text-align: center;
+        display: block;
+      }
+      .imgClass {
+        width: 200px;
+        display: relative;
+        margin-left: auto;
+        margin-right: auto;
+        cursor: pointer;
+      }
+      .headerText {
+        font-size: 20px;
+      }
+      .shape1 {
+        border-radius: 15px;
+        background: rgb(99, 102, 246);
+      }
+      .shape2 {
+        border-radius: 10px;
+        background: rgb(18, 36, 62);
+      }
+      .overText {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .buffImage {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .underImage {
+        position: inline-block;
+        margin: 2px;
+      }
+      .buttonText {
+        position: absolute;
+        top: 50%;
+        left: 48%;
+        transform: translate(-50%, -50%);
+        font-size: 18px;
+        text-shadow: 1.50px 1.50px rgb(0, 0, 0);
+      }
+      .styledText {
+        font-size: 18px;
+        text-shadow: 1.50px 1.50px rgb(0, 0, 0);
+      }
+      .medalPopupClass {
+        font-family: Verdana, sans-serif;
+        display: none;
+        border-width: 5px;
+        border-style: solid;
+        border-image: linear-gradient(to bottom, rgb(0, 148, 211), rgb(0, 29, 119));
+        border-image-slice: 1;
+        padding: 5px;
+        width: 1000px;
+        max-width: 80%;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        background: rgb(0, 72, 167);
+        position: fixed;
+        max-height: 100%;
+        overflow-y: auto;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+        z-index: 10001;
+      }
+      .medalSortFilterClass {
+        font-family: Verdana, sans-serif;
+        display: none;
+        border-width: 5px;
+        border-style: solid;
+        border-image: linear-gradient(to bottom, rgb(0, 148, 211), rgb(0, 29, 119));
+        border-image-slice: 1;
+        padding: 5px;
+        width: 1250px;
+        max-width: 80%;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        background: rgb(0, 72, 167);
+        position: fixed;
+        max-height: 100%;
+        overflow-y: auto;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+        z-index: 10001;
+      }
+      .darkOverlayClass {
+        position: fixed;
+        background:rgb(0, 0, 0);
+        display: none;
+        opacity: 50%;
+        width: 100%;
+        height: 100%;
+        z-index: 10000;
+      }
+      .caption  {
+        margin-right: 75px;
+        display: none;
+      }
+      .show  {
+        vertical-align: middle;
+        display: inline-block;
+      }
+      figure{
+        margin: 5px;
+        display: inline-block;
+        vertical-align: top;
+        max-width: 33%;
+      }
+      figcaption {
+        text-align: center;
+        font-family: Verdana, sans-serif;
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        padding: 3px;
+        max-width: 200px;
+        text-shadow: 2px 2px rgb(0, 0, 0);
+      }
+      hr  {
+        border-width: 3px;
+        border-radius: 100px;
+        border-color: rgb(0, 29, 119);
+      }
+
+      input[type=number]::-webkit-inner-spin-button, 
+      input[type=number]::-webkit-outer-spin-button { 
+        -webkit-appearance: none; 
+        margin: 0; 
+      }
+
+      input[type=number] {
+        -moz-appearance:textfield;
+      }
+
+    </style>
+
+    <!-- Backdrop pattern -->
+    <style>
+        body  {
+          background-image: url("./images/other/bg_search.png");
+          background-size: 150px;
+          background-repeat: repeat
+        }
+    </style>
+  </head>                         <!---------------------- END HEADER ---------------------->
+
+  
+
+  <body onload="loadPage()">
+
+    <div id="darkOverlay" class="darkOverlayClass">
+    </div>
+
+    <div id="darkOverlay2" class="darkOverlayClass">
+    </div>
+
+    <ul>
+      <li><a href="./keyblade" class="active">Cost Calculator</a></li>
+        <li><a href="./passives">Passives List</a></li>
+        <li><a href="./medals">Medals</a></li>
+        <li><a href="./maps">Maps</a></li>
+        <li><a href="./music">Music</a></li>
+        <li><a href="./assets">Assets</a></li>
+        <li><a href="./about">About</a></li>
+    </ul>
+
+        <div id="medalPopup" class="medalPopupClass">
+        </div>
+
+        <div id="medalSortFilterPopup" class="medalSortFilterClass">
+            <div id="upperInfo" style="overflow: hidden; display: block">
+                <br>
+                <span id="upperInfo_secondaryInformation" style="font-size: 24px; text-shadow: 1.50px 1.50px rgb(0, 0, 0); display: inline-block; min-width: 45%">
+                    <p>Select secondary information</p>
+                    <select id="secondaryInformation" style="display: inline-block; margin: 10px">
+                        <option value="AlbumNum">Album Number</option>
+                        <option value="Guilt">Guilt</option>
+                        <option value="STR">Strength</option>
+                        <option value="DEF">Defense</option>
+                        <option value="Gauge">Gauge</option>
+                        <option value="Hits">Hits</option>
+                        <option value="Multi">Multiplier</option>
+                        <option value="MaxMulti">Multiplier (w/ Guilt)</option>
+                        <option value="MaxMultiGuiltBuff">Multiplier + 300% Guilt</option>
+                    </select>
+                </span>
+                <span id="upperInfo_sortCondition" style="font-size: 24px; text-shadow: 1.50px 1.50px rgb(0, 0, 0); display: inline-block; min-width: 45%">
+                  <p>Select sort condition</p>
+                  <select id="sortCondition" style="display: inline-block; margin: 10px">
+                      <option value="AlbumNum">Album Number</option>
+                      <option value="Guilt">Guilt</option>
+                      <option value="STR">Strength</option>
+                      <option value="DEF">Defense</option>
+                      <option value="Gauge">Gauge</option>
+                      <option value="Hits">Hits</option>
+                      <option value="Multi">Multiplier</option>
+                      <option value="MaxMulti">Multiplier (w/ Guilt)</option>
+                  </select>
+                  <select id="ascendingOrder" style="display: inline-block; margin: 10px">
+                    <option value="Descending">↓ Descending</option>
+                    <option value="Ascending">↑ Ascending</option>
+                </select>
+              </span>
+            </div>
+
+            <br>
+
+            <span id="searchButtonSpan" onclick="searchFormButton('searchButtonIMG')" style="position: relative; text-align: center; cursor: pointer; margin-right: 50px">
+                <img id="searchButtonIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
+                <p class="buttonText" style="font-size: 24px; margin-left: -2px; top: 10px">Search</p>
+            </span>
+
+            <span id="resetButtonSpan" onclick="resetForm('resetButtonIMG')" style="position: relative; text-align: center; cursor: pointer">
+                <img id="resetButtonIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
+                <p class="buttonText" style="font-size: 24px; top: 10px">Clear</p>
+            </span>
+            
+            <hr>
+
+            <div id="otherFilters" style="overflow: hidden; display: block">
+              <div id="otherFilters_leftSide" style="overflow: hidden; display: inline-block; width: 55%">
+                  <span id="otherFilters_Rarity" style="font-size: 18px; text-shadow: 1.50px 1.50px rgb(0, 0, 0); display: inline-block">
+                      <span id="otherFilters_RaritySpan1" onclick="lightButtons('Rarity1')" style="position: relative; text-align: center; cursor: pointer">
+                          <img id="Rarity1" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/RarityStar.png" style="height: 25px">
+                      </span>
+
+                      <span id="otherFilters_RaritySpan2" onclick="lightButtons('Rarity2')" style="position: relative; text-align: center; cursor: pointer">
+                          <img id="Rarity2" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/RarityStar.png" style="height: 25px; margin-left: -10px">
+                          <img class="overText" src="./images/ui/RarityStar.png" style="height: 25px; margin-left: 10px">
+                      </span>
+
+                      <span id="otherFilters_RaritySpan3" onclick="lightButtons('Rarity3')" style="position: relative; text-align: center; cursor: pointer">
+                          <img id="Rarity3" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/RarityStar.png" style="height: 25px; margin-left: -20px">
+                          <img class="overText" src="./images/ui/RarityStar.png" style="height: 25px">
+                          <img class="overText" src="./images/ui/RarityStar.png" style="height: 25px; margin-left: 20px">
+                      </span>
+
+                      <span id="otherFilters_RaritySpan4" onclick="lightButtons('Rarity4')" style="position: relative; text-align: center; cursor: pointer">
+                          <img id="Rarity4" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/RarityStar.png" style="height: 25px; margin-left: -30px">
+                          <img class="overText" src="./images/ui/RarityStar.png" style="height: 25px; margin-left: -10px">
+                          <img class="overText" src="./images/ui/RarityStar.png" style="height: 25px; margin-left: 10px">
+                          <img class="overText" src="./images/ui/RarityStar.png" style="height: 25px; margin-left: 30px">
+                      </span>
+
+                      <span id="otherFilters_RaritySpan5" onclick="lightButtons('Rarity5')" style="position: relative; text-align: center; cursor: pointer">
+                          <img id="Rarity5" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/RarityStar.png" style="height: 25px; margin-left: -40px">
+                          <img class="overText" src="./images/ui/RarityStar.png" style="height: 25px; margin-left: -20px">
+                          <img class="overText" src="./images/ui/RarityStar.png" style="height: 25px">
+                          <img class="overText" src="./images/ui/RarityStar.png" style="height: 25px; margin-left: 20px">
+                          <img class="overText" src="./images/ui/RarityStar.png" style="height: 25px; margin-left: 40px">
+                      </span>
+
+                      <span id="otherFilters_RaritySpan6" onclick="lightButtons('Rarity6')" style="position: relative; text-align: center; cursor: pointer">
+                          <img id="Rarity6" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/RarityStar.png" style="height: 25px; margin-left: -50px">
+                          <img class="overText" src="./images/ui/RarityStar.png" style="height: 25px; margin-left: -30px">
+                          <img class="overText" src="./images/ui/RarityStar.png" style="height: 25px; margin-left: -10px">
+                          <img class="overText" src="./images/ui/RarityStar.png" style="height: 25px; margin-left: 10px">
+                          <img class="overText" src="./images/ui/RarityStar.png" style="height: 25px; margin-left: 30px">
+                          <img class="overText" src="./images/ui/RarityStar.png" style="height: 25px; margin-left: 50px">
+                      </span>
+
+                      <span id="otherFilters_RaritySpan7" onclick="lightButtons('Rarity7')" style="position: relative; text-align: center; cursor: pointer">
+                          <img id="Rarity7" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/RarityStar.png" style="height: 25px; margin-left: -54px">
+                          <img class="overText" src="./images/ui/RarityStar.png" style="height: 25px; margin-left: -36px">
+                          <img class="overText" src="./images/ui/RarityStar.png" style="height: 25px; margin-left: -18px">
+                          <img class="overText" src="./images/ui/RarityStar.png" style="height: 25px">
+                          <img class="overText" src="./images/ui/RarityStar.png" style="height: 25px; margin-left: 18px">
+                          <img class="overText" src="./images/ui/RarityStar.png" style="height: 25px; margin-left: 36px">
+                          <img class="overText" src="./images/ui/RarityStar.png" style="height: 25px; margin-left: 54px">
+                      </span>
+                  </span>
+
+                  <br><br>
+
+                  <span id="otherFilters_Attribute" style="font-size: 18px; text-shadow: 1.50px 1.50px rgb(0, 0, 0); display: inline-block">
+                      <span id="otherFilters_PowerSpan" onclick="lightButtons('Power')" style="position: relative; text-align: center; cursor: pointer">
+                          <img id="Power" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/ElementPower.png" style="height: 50px; top: 14px">
+                      </span>
+
+                      <span id="otherFilters_SpeedSpan" onclick="lightButtons('Speed')" style="position: relative; text-align: center; cursor: pointer">
+                          <img id="Speed" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/ElementSpeed.png" style="height: 50px; top: 14px">
+                      </span>
+
+                      <span id="otherFilters_MagicSpan" onclick="lightButtons('Magic')" style="position: relative; text-align: center; cursor: pointer">
+                          <img id="Magic" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/ElementMagic.png" style="height: 50px; top: 14px">
+                      </span>
+
+                      <br>
+
+                      <span id="otherFilters_UprightSpan" onclick="lightButtons('Upright')" style="position: relative; text-align: center; cursor: pointer">
+                          <img id="Upright" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/ElementUpright.png" style="height: 50px; top: 14px">
+                      </span>
+
+                      <span id="otherFilters_ReversedSpan" onclick="lightButtons('Reversed')" style="position: relative; text-align: center; cursor: pointer">
+                          <img id="Reversed" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/ElementReversed.png" style="height: 50px; top: 14px">
+                      </span>
+                  </span>
+
+                  <br><br>
+
+                  <span id="otherFilters_Guilt" style="font-size: 18px; text-shadow: 1.50px 1.50px rgb(0, 0, 0); display: inline-block">
+                      <span id="otherFilters_GuiltSpan1" onclick="lightButtons('Guilt1')" style="position: relative; text-align: center; cursor: pointer">
+                          <img id="Guilt1" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/Guilt1.png" style="height: 50px; top: 15px">
+                      </span>
+
+                      <span id="otherFilters_GuiltSpan2" onclick="lightButtons('Guilt2')" style="position: relative; text-align: center; cursor: pointer">
+                          <img id="Guilt2" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/Guilt2.png" style="height: 50px; top: 16px">
+                      </span>
+
+                      <span id="otherFilters_GuiltSpan3" onclick="lightButtons('Guilt3')" style="position: relative; text-align: center; cursor: pointer">
+                          <img id="Guilt3" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/Guilt3.png" style="height: 50px; top: 17px">
+                      </span>
+
+                      <span id="otherFilters_GuiltSpan4" onclick="lightButtons('Guilt4')" style="position: relative; text-align: center; cursor: pointer">
+                          <img id="Guilt4" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/Guilt4.png" style="height: 50px; top: 14px">
+                      </span>
+
+                      <span id="otherFilters_GuiltSpan5" onclick="lightButtons('Guilt5')" style="position: relative; text-align: center; cursor: pointer">
+                          <img id="Guilt5" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/Guilt5.png" style="height: 50px; top: 17px">
+                      </span>
+
+                      <span id="otherFilters_GuiltSpan6" onclick="lightButtons('Guilt6')" style="position: relative; text-align: center; cursor: pointer">
+                          <img id="Guilt6" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/Guilt6.png" style="height: 50px; top: 14px">
+                      </span>
+
+                      <span id="otherFilters_GuiltSpan7" onclick="lightButtons('Guilt7')" style="position: relative; text-align: center; cursor: pointer">
+                          <img id="Guilt7" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/Guilt7.png" style="height: 50px; top: 16px">
+                      </span>
+
+                      <span id="otherFilters_GuiltSpan8" onclick="lightButtons('Guilt8')" style="position: relative; text-align: center; cursor: pointer">
+                          <img id="Guilt8" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/Guilt8.png" style="height: 50px; top: 15px">
+                      </span>
+
+                      <span id="otherFilters_GuiltSpan9" onclick="lightButtons('Guilt9')" style="position: relative; text-align: center; cursor: pointer">
+                          <img id="Guilt9" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/Guilt9.png" style="height: 50px; top: 14px">
+                      </span>
+
+                      <span id="otherFilters_GuiltSpan10" onclick="lightButtons('Guilt10')" style="position: relative; text-align: center; cursor: pointer">
+                          <img id="Guilt10" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/Guilt10.png" style="height: 50px; top: 14px">
+                      </span>
+                  </span>
+              </div>
+
+              <div id="otherFilters_rightSide" style="overflow: hidden; display: inline-block; max-width: 35%; vertical-align: top">
+
+                <br><br>
+
+                <span id="otherFilters_KeyArtImage" onclick="lightButtons('KeyArtImage')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="KeyArtImage" class="underImage" src="./images/ui/SearchArt_Off.png" style="height: 50px">
+                </span>
+
+                <span id="otherFilters_MusicLink" onclick="lightButtons('MusicLink')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="MusicLink" class="underImage" src="./images/ui/SearchMusic_Off.png" style="height: 50px">
+                </span>
+
+                <br><br><br>
+
+                <span id="otherFilters_Strength" style="font-size: 18px; text-shadow: 1.50px 1.50px rgb(0, 0, 0); display: table; float: right">
+                  <label for="STR">Set Strength: </label>
+                  <select id="StrengthOrder" style="display: inline-block; margin: 10px">
+                    <option value=">=">≥</option>
+                    <option value="<=">≤</option>
+                    <option value="=">=</option>
+                  </select>
+                  <input type="number" id="STR" style="width: 75px">
+                </span>
+
+                <span id="otherFilters_Defense" style="font-size: 18px; text-shadow: 1.50px 1.50px rgb(0, 0, 0); display: table; float: right">
+                  <label for="DEF">Set Defense: </label>
+                  <select id="DefenseOrder" style="display: inline-block; margin: 10px">
+                    <option value=">=">≥</option>
+                    <option value="<=">≤</option>
+                    <option value="=">=</option>
+                  </select>
+                  <input type="number" id="DEF" style="width: 75px">
+                </span>
+
+                <span id="otherFilters_AlbumNum" style="font-size: 18px; text-shadow: 1.50px 1.50px rgb(0, 0, 0); display: table; float: right">
+                  <label for="AlbumNum">Set Album Number: </label>
+                  <select id="AlbumNumOrder" style="display: inline-block; margin: 10px">
+                    <option value=">=">≥</option>
+                    <option value="<=">≤</option>
+                    <option value="=">=</option>
+                  </select>
+                  <input type="number" id="AlbumNum" style="width: 75px">
+                </span>
+
+                <span id="otherFilters_Evolvable" style="font-size: 18px; text-shadow: 1.50px 1.50px rgb(0, 0, 0); display: table; float: right">
+                  <label for="Evolvable">Can Evolve: </label>
+                  <input type="checkbox" id="Evolvable" style="width: 65px">
+                </span>
+
+                <span id="otherFilters_UniqueAlbumNum" style="font-size: 18px; text-shadow: 1.50px 1.50px rgb(0, 0, 0); display: table; float: right">
+                  <label for="UniqueAlbumNum">Unique Album Number: </label>
+                  <input type="checkbox" id="UniqueAlbumNum" style="width: 65px">
+                </span>
+
+                <span id="otherFilters_MaxTier" style="font-size: 18px; text-shadow: 1.50px 1.50px rgb(0, 0, 0); display: table; float: right">
+                  <label for="MaxTier">Highest evolution per Medal: </label>
+                  <input type="checkbox" id="MaxTier" style="width: 65px">
+                </span>
+
+
+            </div>
+                
+
+            </div>
+
+            <hr>
+
+            <div id="abilityFilters" style="overflow: hidden; display: block; margin: 15px">
+                <h1 style="font-size: 28px; text-shadow: 1.50px 1.50px rgb(0, 0, 0)">Special Attacks</h1>
+                <span id="abilityFilters_Target" style="font-size: 18px; text-shadow: 1.50px 1.50px rgb(0, 0, 0); display: inline-block; margin-left: 30px; margin-right: 30px">
+                    <label for="Target/Value">Target: </label>
+                    <select id="Target/Value" style="display: inline-block">
+                        <option value=""></option>
+                        <option value="Single">Single</option>
+                        <option value="All">All</option>
+                        <option value="Random">Random</option>
+                    </select>
+                </span>
+
+                <span id="abilityFilters_Gauge" style="font-size: 18px; text-shadow: 1.50px 1.50px rgb(0, 0, 0); display: inline-block; margin-left: 30px; margin-right: 30px">
+                    <label for="Gauge">Gauge cost: </label>
+                    <select id="Gauge/Order" style="display: inline-block; margin: 10px">
+                        <option value=">=">≥</option>
+                        <option value="<=">≤</option>
+                        <option value="=">=</option>
+                    </select>
+                    <input type="number" id="Gauge" style="width: 75px">
+                </span>
+
+                <span id="abilityFilters_Multi" style="font-size: 18px; text-shadow: 1.50px 1.50px rgb(0, 0, 0); display: inline-block; margin-left: 30px; margin-right: 30px">
+                    <label for="Multi">Multiplier: </label>
+                    <select id="Multi/Order" style="display: inline-block; margin: 10px">
+                        <option value=">=">≥</option>
+                        <option value="<=">≤</option>
+                        <option value="=">=</option>
+                    </select>
+                    <input type="number" id="Multi" style="width: 75px">
+                </span>
+
+                <span id="abilityFilters_Hits" style="font-size: 18px; text-shadow: 1.50px 1.50px rgb(0, 0, 0); display: inline-block; margin-left: 30px; margin-right: 30px">
+                    <label for="Ability/Hits">Hits: </label>
+                    <select id="Ability/Hits/Order" style="display: inline-block; margin: 10px">
+                        <option value=">=">≥</option>
+                        <option value="<=">≤</option>
+                        <option value="=">=</option>
+                    </select>
+                    <input type="number" id="Ability/Hits" style="width: 75px">
+                </span>
+
+                <span id="abilityFilters_MultiCondition" style="font-size: 18px; text-shadow: 1.50px 1.50px rgb(0, 0, 0); display: inline-block; margin-left: 30px; margin-right: 30px">
+                    <label for="Multi/Condition">Multiplier Condition: </label>
+                    <select id="Multi/Condition" style="display: inline-block; margin: 10px">
+                        <option value=""></option>
+                        <option value="OneEnemy">One enemy left</option>
+                        <option value="HigherHP">Higher HP</option>
+                        <option value="LowerHP">Lower HP</option>
+                        <option value="GaugesFull">Gauges full</option>
+                        <option value="SPSuccession">SP attacks in succession</option>
+                        <option value="GaugesUsed">Gauges used</option>
+                        <option value="LowerSlot">Lower slot number</option>
+                        <option value="HigherSlot">Higher slot number</option>
+                        <option value="Critical">Critical hit</option>
+                        <option value="MoreParty">Bigger party</option>
+                        <option value="DrainsHP">Drains HP</option>
+                        <option value="DrainsDEF">Drains DEF</option>
+                        <option value="Slot3">Set in slot 3</option>
+                        <option value="Slot4">Set in slot 4</option>
+                        <option value="Slot5">Set in slot 5</option>
+                        <option value="Slot6">Set in slot 6</option>
+                        <option value="MoreSkillsStage">More skills used</option>
+                        <option value="MoreLUX">More LUX collected</option>
+                        <option value="LessLUX">Less LUX collected</option>
+                        <option value="Poison">Enemy is poisoned</option>
+                        <option value="Sleep">Enemy is asleep</option>
+                        <option value="Paralysis">Enemy is paralyzed</option>
+                        <option value="MoreGaugesPrevMedal">Gauges cost of previous medal</option>
+                        <option value="FixedMulti">Deals fixed damage</option>
+                    </select>
+                </span>
+
+                <br><br>
+                <h1 style="font-size: 22px; text-shadow: 1.50px 1.50px rgb(0, 0, 0)">Self:</h1>
+
+                <span id="abilityFilters_SelfBuffs_STRPlus" onclick="lightButtons('abilityFilters_SelfBuffs_STRPlusIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_STRPlusIMG" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                    <p class="buttonText" style="font-size: 16px; top: 12px">STR+</p>
+                </span>
+                <span id="abilityFilters_SelfBuffs_STRPlusIMGcaption" class="caption">
+                    <label class="styledText" for="abilityFilters_SelfBuffs_STRPlusIMGcaption/Type">Type</label>
+                    <select id="abilityFilters_SelfBuffs_STRPlusIMGcaption/Type" style="display: inline-block; margin: 10px">
+                        <option value=""></option>
+                        <option value="General">General</option>
+                        <option value="Power">Power</option>
+                        <option value="Speed">Speed</option>
+                        <option value="Magic">Magic</option>
+                        <option value="Upright">Upright</option>
+                        <option value="Reversed">Reversed</option>
+                    </select>
+                    <label class="styledText" for="abilityFilters_SelfBuffs_STRPlusIMGcaption/Value">≥</label>
+                    <input type="number" placeholder="Amount" id="abilityFilters_SelfBuffs_STRPlusIMGcaption/Value" style="width: 75px">
+                </span>
+
+                <span id="abilityFilters_SelfBuffs_DEFPlus" onclick="lightButtons('abilityFilters_SelfBuffs_DEFPlusIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_DEFPlusIMG" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                    <p class="buttonText" style="font-size: 16px; top: 12px">DEF+</p>
+                </span>
+                <span id="abilityFilters_SelfBuffs_DEFPlusIMGcaption" class="caption">
+                    <label class="styledText" for="abilityFilters_SelfBuffs_DEFPlusIMGcaption/Value">≥</label>
+                    <input type="number" placeholder="Amount" id="abilityFilters_SelfBuffs_DEFPlusIMGcaption/Value" style="width: 75px">
+                </span>
+
+                <span id="abilityFilters_SelfBuffs_Reflect" onclick="lightButtons('abilityFilters_SelfBuffs_ReflectIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_ReflectIMG" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                    <p class="buttonText" style="font-size: 16px; top: 12px">Reflect</p>
+                </span>
+                <span id="abilityFilters_SelfBuffs_ReflectIMGcaption" class="caption">
+                    <label class="styledText" for="abilityFilters_SelfBuffs_ReflectIMGcaption/Type">Type</label>
+                    <select id="abilityFilters_SelfBuffs_ReflectIMGcaption/Type" style="display: inline-block; margin: 10px">
+                        <option value=""></option>
+                        <option value="Power">Power</option>
+                        <option value="Speed">Speed</option>
+                        <option value="Magic">Magic</option>
+                    </select>
+                    <label class="styledText" for="abilityFilters_SelfBuffs_ReflectIMGcaption/Value">≥</label>
+                    <input type="number" placeholder="%" id="abilityFilters_SelfBuffs_ReflectIMGcaption/Value" style="width: 75px">
+                </span>
+
+                <span id="abilityFilters_SelfBuffs_NextMedal" onclick="lightButtons('abilityFilters_SelfBuffs_NextMedalIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_NextMedalIMG" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                    <p class="buttonText" style="font-size: 16px; top: 12px">Next Medal</p>
+                </span>
+                <span id="abilityFilters_SelfBuffs_NextMedalIMGcaption" class="caption">
+                    <select id="abilityFilters_SelfBuffs_NextMedalIMGcaption/Type" style="display: inline-block; margin: 10px">
+                        <option value=""></option>
+                        <option value="All">All</option>
+                        <option value="Power">Power</option>
+                        <option value="Speed">Speed</option>
+                        <option value="Magic">Magic</option>
+                    </select>
+                </span>
+
+                <span id="abilityFilters_SelfBuffs_Copy" onclick="lightButtons('abilityFilters_SelfBuffs_CopyIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_CopyIMG" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                    <p class="buttonText" style="font-size: 16px; top: 12px">Copy</p>
+                </span>
+                <span id="abilityFilters_SelfBuffs_CopyIMGcaption" class="caption">
+                    <label class="styledText" for="abilityFilters_SelfBuffs_CopyIMGcaption/Direction">Direction</label>
+                    <select id="abilityFilters_SelfBuffs_CopyIMGcaption/Direction" style="display: inline-block; margin: 10px">
+                        <option value=""></option>
+                        <option value="Next">Next</option>
+                        <option value="Previous">Previous</option>
+                    </select>
+                    <input type="number" placeholder="Distance" id="abilityFilters_SelfBuffs_CopyIMGcaption/Slot" style="width: 80px">
+                </span>
+
+                <span id="abilityFilters_SelfBuffs_GuiltBuff" onclick="lightButtons('abilityFilters_SelfBuffs_GuiltBuffIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_GuiltBuffIMG" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                    <p class="buttonText" style="font-size: 16px; top: 12px">Guilt Buff</p>
+                </span>
+                <span id="abilityFilters_SelfBuffs_GuiltBuffIMGcaption" class="caption">
+                    <label class="styledText" for="Ability/SelfBuffs/GuiltBuff">≥</label>
+                    <input type="number" placeholder="%" id="Ability/SelfBuffs/GuiltBuff" style="width: 50px">
+                </span>
+
+                <span id="abilityFilters_SelfBuffs_AttributeSuper" onclick="lightButtons('abilityFilters_SelfBuffs_AttributeSuperIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_AttributeSuperIMG" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                    <p class="buttonText" style="font-size: 16px; top: 12px">Always Effective</p>
+                </span>
+
+                <span id="abilityFilters_SelfBuffs_AttributeNeutral" onclick="lightButtons('abilityFilters_SelfBuffs_AttributeNeutralIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_AttributeNeutralIMG" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                    <p class="buttonText" style="font-size: 16px; top: 12px">Always Neutral</p>
+                </span>
+
+                <span id="abilityFilters_SelfBuffs_GaugeRecovery" onclick="lightButtons('abilityFilters_SelfBuffs_GaugeRecoveryIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_GaugeRecoveryIMG" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                    <p class="buttonText" style="font-size: 16px; top: 12px">Fills Gauges</p>
+                </span>
+                <span id="abilityFilters_SelfBuffs_GaugeRecoveryIMGcaption" class="caption">
+                    <label class="styledText" for="Ability/SelfBuffs/GaugeRecovery">≥</label>
+                    <input type="number"  placeholder="Gauges" id="Ability/SelfBuffs/GaugeRecovery" style="width: 75px">
+                </span>
+
+                <span id="abilityFilters_SelfBuffs_HPRecovery" onclick="lightButtons('abilityFilters_SelfBuffs_HPRecoveryIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_HPRecoveryIMG" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                    <p class="buttonText" style="font-size: 16px; top: 12px">Recovers HP</p>
+                </span>
+
+                <span id="abilityFilters_SelfBuffs_Esuna" onclick="lightButtons('abilityFilters_SelfBuffs_EsunaIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_EsunaIMG" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                    <p class="buttonText" style="font-size: 16px; top: 12px">Esuna</p>
+                </span>
+
+                <span id="abilityFilters_SelfBuffs_Dispel" onclick="lightButtons('abilityFilters_SelfBuffs_DispelIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_DispelIMG" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                    <p class="buttonText" style="font-size: 16px; top: 12px">Dispels Self</p>
+                </span>
+
+                <span id="abilityFilters_SelfBuffs_Mirror" onclick="lightButtons('abilityFilters_SelfBuffs_MirrorIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_MirrorIMG" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                    <p class="buttonText" style="font-size: 16px; top: 12px">Mirrors Status</p>
+                </span>
+
+                <!-- Regular buffs -->
+
+                <br><br>
+
+                    <label class="styledText" for="abilityFilters_SelfBuffs_BuffDebuff/BuffCount">Buff count: </label>
+                    <input type="number" placeholder="Count" id="abilityFilters_SelfBuffs_BuffDebuff/BuffCount" style="width: 75px; margin-right: 50px">
+                    <label class="styledText" for="abilityFilters_SelfBuffs_BuffDebuff/DurationType">Duration: </label>
+                    <input type="number" placeholder="Count" id="abilityFilters_SelfBuffs_BuffDebuff/DurationCount" style="width: 75px">
+                    <select id="abilityFilters_SelfBuffs_BuffDebuff/DurationType" style="display: inline-block; margin: 10px">
+                        <option value=""></option>
+                        <option value="Turn">Turn</option>
+                        <option value="Attack">Attack</option>
+                    </select>
+
+                <br>
+
+                <span id="abilityFilters_SelfBuffs_BuffGA" onclick="lightButtons('abilityFilters_SelfBuffs_BuffGAIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_BuffGAIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Buff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                    <img class="buffImage" src="./images/ui/Buff_GA.png" style="width: 50px; right: 2px; top: 11px">
+                </span>
+                <span id="abilityFilters_SelfBuffs_BuffUA" onclick="lightButtons('abilityFilters_SelfBuffs_BuffUAIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_BuffUAIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Buff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                    <img class="buffImage" src="./images/ui/Buff_UA.png" style="width: 50px; right: 2px; top: 11px">
+                </span>
+                <span id="abilityFilters_SelfBuffs_BuffRA" onclick="lightButtons('abilityFilters_SelfBuffs_BuffRAIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_BuffRAIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Buff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                    <img class="buffImage" src="./images/ui/Buff_RA.png" style="width: 50px; right: 2px; top: 11px">
+                </span>
+                <span id="abilityFilters_SelfBuffs_BuffPA" onclick="lightButtons('abilityFilters_SelfBuffs_BuffPAIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_BuffPAIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Buff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                    <img class="buffImage" src="./images/ui/Buff_PA.png" style="width: 50px; right: 2px; top: 11px">
+                </span>
+                <span id="abilityFilters_SelfBuffs_BuffSA" onclick="lightButtons('abilityFilters_SelfBuffs_BuffSAIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_BuffSAIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Buff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                    <img class="buffImage" src="./images/ui/Buff_SA.png" style="width: 50px; right: 2px; top: 11px">
+                </span>
+                <span id="abilityFilters_SelfBuffs_BuffMA" onclick="lightButtons('abilityFilters_SelfBuffs_BuffMAIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_BuffMAIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Buff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                    <img class="buffImage" src="./images/ui/Buff_MA.png" style="width: 50px; right: 2px; top: 11px">
+                </span>
+
+                <br>
+
+                <span id="abilityFilters_SelfBuffs_BuffGD" onclick="lightButtons('abilityFilters_SelfBuffs_BuffGDIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_BuffGDIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Buff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                    <img class="buffImage" src="./images/ui/Buff_GD.png" style="width: 50px; right: 2px; top: 11px">
+                </span>
+                <span id="abilityFilters_SelfBuffs_BuffUD" onclick="lightButtons('abilityFilters_SelfBuffs_BuffUDIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_BuffUDIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Buff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                    <img class="buffImage" src="./images/ui/Buff_UD.png" style="width: 50px; right: 2px; top: 11px">
+                </span>
+                <span id="abilityFilters_SelfBuffs_BuffRD" onclick="lightButtons('abilityFilters_SelfBuffs_BuffRDIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_BuffRDIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Buff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                    <img class="buffImage" src="./images/ui/Buff_RD.png" style="width: 50px; right: 2px; top: 11px">
+                </span>
+                <span id="abilityFilters_SelfBuffs_BuffPD" onclick="lightButtons('abilityFilters_SelfBuffs_BuffPDIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_BuffPDIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Buff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                    <img class="buffImage" src="./images/ui/Buff_PD.png" style="width: 50px; right: 2px; top: 11px">
+                </span>
+                <span id="abilityFilters_SelfBuffs_BuffSD" onclick="lightButtons('abilityFilters_SelfBuffs_BuffSDIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_BuffSDIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Buff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                    <img class="buffImage" src="./images/ui/Buff_SD.png" style="width: 50px; right: 2px; top: 11px">
+                </span>
+                <span id="abilityFilters_SelfBuffs_BuffMD" onclick="lightButtons('abilityFilters_SelfBuffs_BuffMDIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_BuffMDIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Buff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                    <img class="buffImage" src="./images/ui/Buff_MD.png" style="width: 50px; right: 2px; top: 11px">
+                </span>
+
+                <br>
+
+                <span id="abilityFilters_SelfBuffs_DebuffGA" onclick="lightButtons('abilityFilters_SelfBuffs_DebuffGAIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_DebuffGAIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Debuff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                    <img class="buffImage" src="./images/ui/Buff_GA.png" style="width: 50px; right: 2px; top: 11px">
+                </span>
+                <span id="abilityFilters_SelfBuffs_DebuffUA" onclick="lightButtons('abilityFilters_SelfBuffs_DebuffUAIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_DebuffUAIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Debuff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                    <img class="buffImage" src="./images/ui/Buff_UA.png" style="width: 50px; right: 2px; top: 11px">
+                </span>
+                <span id="abilityFilters_SelfBuffs_DebuffRA" onclick="lightButtons('abilityFilters_SelfBuffs_DebuffRAIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_DebuffRAIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Debuff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                    <img class="buffImage" src="./images/ui/Buff_RA.png" style="width: 50px; right: 2px; top: 11px">
+                </span>
+                <span id="abilityFilters_SelfBuffs_DebuffPA" onclick="lightButtons('abilityFilters_SelfBuffs_DebuffPAIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_DebuffPAIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Debuff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                    <img class="buffImage" src="./images/ui/Buff_PA.png" style="width: 50px; right: 2px; top: 11px">
+                </span>
+                <span id="abilityFilters_SelfBuffs_DebuffSA" onclick="lightButtons('abilityFilters_SelfBuffs_DebuffSAIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_DebuffSAIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Debuff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                    <img class="buffImage" src="./images/ui/Buff_SA.png" style="width: 50px; right: 2px; top: 11px">
+                </span>
+                <span id="abilityFilters_SelfBuffs_DebuffMA" onclick="lightButtons('abilityFilters_SelfBuffs_DebuffMAIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_DebuffMAIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Debuff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                    <img class="buffImage" src="./images/ui/Buff_MA.png" style="width: 50px; right: 2px; top: 11px">
+                </span>
+
+                <br>
+
+                <span id="abilityFilters_SelfBuffs_DebuffGD" onclick="lightButtons('abilityFilters_SelfBuffs_DebuffGDIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_DebuffGDIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Debuff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                    <img class="buffImage" src="./images/ui/Buff_GD.png" style="width: 50px; right: 2px; top: 11px">
+                </span>
+                <span id="abilityFilters_SelfBuffs_DebuffUD" onclick="lightButtons('abilityFilters_SelfBuffs_DebuffUDIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_DebuffUDIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Debuff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                    <img class="buffImage" src="./images/ui/Buff_UD.png" style="width: 50px; right: 2px; top: 11px">
+                </span>
+                <span id="abilityFilters_SelfBuffs_DebuffRD" onclick="lightButtons('abilityFilters_SelfBuffs_DebuffRDIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_DebuffRDIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Debuff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                    <img class="buffImage" src="./images/ui/Buff_RD.png" style="width: 50px; right: 2px; top: 11px">
+                </span>
+                <span id="abilityFilters_SelfBuffs_DebuffPD" onclick="lightButtons('abilityFilters_SelfBuffs_DebuffPDIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_DebuffPDIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Debuff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                    <img class="buffImage" src="./images/ui/Buff_PD.png" style="width: 50px; right: 2px; top: 11px">
+                </span>
+                <span id="abilityFilters_SelfBuffs_DebuffSD" onclick="lightButtons('abilityFilters_SelfBuffs_DebuffSDIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_DebuffSDIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Debuff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                    <img class="buffImage" src="./images/ui/Buff_SD.png" style="width: 50px; right: 2px; top: 11px">
+                </span>
+                <span id="abilityFilters_SelfBuffs_DebuffMD" onclick="lightButtons('abilityFilters_SelfBuffs_DebuffMDIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_SelfBuffs_DebuffMDIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Debuff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                    <img class="buffImage" src="./images/ui/Buff_MD.png" style="width: 50px; right: 2px; top: 11px">
+                </span>
+
+                <br><br>
+                <h1 style="font-size: 22px; text-shadow: 1.50px 1.50px rgb(0, 0, 0)">Enemy:</h1>
+
+                <span id="abilityFilters_EnemyBuffs_STRMinus" onclick="lightButtons('abilityFilters_EnemyBuffs_STRMinusIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_EnemyBuffs_STRMinusIMG" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                    <p class="buttonText" style="font-size: 16px; top: 12px">STR-</p>
+                </span>
+                <span id="abilityFilters_EnemyBuffs_STRMinusIMGcaption" class="caption">
+                    <label class="styledText" for="abilityFilters_EnemyBuffs_STRMinusIMGcaption/Type">Type</label>
+                    <select id="abilityFilters_EnemyBuffs_STRMinusIMGcaption/Type" style="display: inline-block; margin: 10px">
+                        <option value=""></option>
+                        <option value="General">General</option>
+                        <option value="Upright">Upright</option>
+                    </select>
+                    <label class="styledText" for="abilityFilters_EnemyBuffs_STRMinusIMGcaption/Value">≥</label>
+                    <input type="number" placeholder="Amount" id="abilityFilters_EnemyBuffs_STRMinusIMGcaption/Value" style="width: 75px">
+                </span>
+
+                <span id="abilityFilters_EnemyBuffs_DEFPierce" onclick="lightButtons('abilityFilters_EnemyBuffs_DEFPierceIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_EnemyBuffs_DEFPierceIMG" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                    <p class="buttonText" style="font-size: 16px; top: 12px; margin-left: 3px">Defense Pierce</p>
+                </span>
+                <span id="abilityFilters_EnemyBuffs_DEFPierceIMGcaption" class="caption">
+                    <label class="styledText" for="Ability/EnemyBuffs/DEFPierce">≥</label>
+                    <input type="number" placeholder="Chance" id="Ability/EnemyBuffs/DEFPierce" style="width: 70px">
+                </span>
+
+                <span id="abilityFilters_EnemyBuffs_Counter" onclick="lightButtons('abilityFilters_EnemyBuffs_CounterIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_EnemyBuffs_CounterIMG" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                    <p class="buttonText" style="font-size: 16px; top: 12px">Counter</p>
+                </span>
+                <span id="abilityFilters_EnemyBuffs_CounterIMGcaption" class="caption">
+                    <label class="styledText" for="abilityFilters_EnemyBuffs_CounterIMGcaption/Type">Type</label>
+                    <select id="abilityFilters_EnemyBuffs_CounterIMGcaption/Type" onchange="compareDropdown(this)" style="display: inline-block; margin: 10px">
+                        <option value=""></option>
+                        <option value="Up">+</option>
+                        <option value="Null">±0</option>
+                        <option value="Reset">Reset</option>
+                    </select>
+                    <span id="abilityFilters_EnemyBuffs_CounterIMGcaptioncaption" class="caption">
+                        <label class="styledText" for="abilityFilters_EnemyBuffs_CounterIMGcaption/Value">≥</label>
+                        <input type="number" placeholder="Count" id="abilityFilters_EnemyBuffs_CounterIMGcaption/Value" style="width: 75px">
+                    </span>
+                </span>
+
+                <span id="abilityFilters_EnemyBuffs_Dispel" onclick="lightButtons('abilityFilters_EnemyBuffs_DispelIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_EnemyBuffs_DispelIMG" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                    <p class="buttonText" style="font-size: 16px; top: 12px">Dispels Enemy</p>
+                </span>
+
+                <br><br>
+
+                <span id="abilityFilters_EnemyBuffs_DebuffGA" onclick="lightButtons('abilityFilters_EnemyBuffs_DebuffGAIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_EnemyBuffs_DebuffGAIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Debuff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                    <img class="buffImage" src="./images/ui/Buff_GA.png" style="width: 50px; right: 2px; top: 11px">
+                </span>
+                <span id="abilityFilters_EnemyBuffs_DebuffUA" onclick="lightButtons('abilityFilters_EnemyBuffs_DebuffUAIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_EnemyBuffs_DebuffUAIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Debuff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                    <img class="buffImage" src="./images/ui/Buff_UA.png" style="width: 50px; right: 2px; top: 11px">
+                </span>
+                <span id="abilityFilters_EnemyBuffs_DebuffRA" onclick="lightButtons('abilityFilters_EnemyBuffs_DebuffRAIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_EnemyBuffs_DebuffRAIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Debuff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                    <img class="buffImage" src="./images/ui/Buff_RA.png" style="width: 50px; right: 2px; top: 11px">
+                </span>
+                <span id="abilityFilters_EnemyBuffs_DebuffPA" onclick="lightButtons('abilityFilters_EnemyBuffs_DebuffPAIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_EnemyBuffs_DebuffPAIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Debuff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                    <img class="buffImage" src="./images/ui/Buff_PA.png" style="width: 50px; right: 2px; top: 11px">
+                </span>
+                <span id="abilityFilters_EnemyBuffs_DebuffSA" onclick="lightButtons('abilityFilters_EnemyBuffs_DebuffSAIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_EnemyBuffs_DebuffSAIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Debuff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                    <img class="buffImage" src="./images/ui/Buff_SA.png" style="width: 50px; right: 2px; top: 11px">
+                </span>
+                <span id="abilityFilters_EnemyBuffs_DebuffMA" onclick="lightButtons('abilityFilters_EnemyBuffs_DebuffMAIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_EnemyBuffs_DebuffMAIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Debuff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                    <img class="buffImage" src="./images/ui/Buff_MA.png" style="width: 50px; right: 2px; top: 11px">
+                </span>
+
+                <br>
+
+                <span id="abilityFilters_EnemyBuffs_DebuffGD" onclick="lightButtons('abilityFilters_EnemyBuffs_DebuffGDIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_EnemyBuffs_DebuffGDIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Debuff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                    <img class="buffImage" src="./images/ui/Buff_GD.png" style="width: 50px; right: 2px; top: 11px">
+                </span>
+                <span id="abilityFilters_EnemyBuffs_DebuffUD" onclick="lightButtons('abilityFilters_EnemyBuffs_DebuffUDIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_EnemyBuffs_DebuffUDIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Debuff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                    <img class="buffImage" src="./images/ui/Buff_UD.png" style="width: 50px; right: 2px; top: 11px">
+                </span>
+                <span id="abilityFilters_EnemyBuffs_DebuffRD" onclick="lightButtons('abilityFilters_EnemyBuffs_DebuffRDIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_EnemyBuffs_DebuffRDIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Debuff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                    <img class="buffImage" src="./images/ui/Buff_RD.png" style="width: 50px; right: 2px; top: 11px">
+                </span>
+                <span id="abilityFilters_EnemyBuffs_DebuffPD" onclick="lightButtons('abilityFilters_EnemyBuffs_DebuffPDIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_EnemyBuffs_DebuffPDIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Debuff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                    <img class="buffImage" src="./images/ui/Buff_PD.png" style="width: 50px; right: 2px; top: 11px">
+                </span>
+                <span id="abilityFilters_EnemyBuffs_DebuffSD" onclick="lightButtons('abilityFilters_EnemyBuffs_DebuffSDIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_EnemyBuffs_DebuffSDIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Debuff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                    <img class="buffImage" src="./images/ui/Buff_SD.png" style="width: 50px; right: 2px; top: 11px">
+                </span>
+                <span id="abilityFilters_EnemyBuffs_DebuffMD" onclick="lightButtons('abilityFilters_EnemyBuffs_DebuffMDIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="abilityFilters_EnemyBuffs_DebuffMDIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Debuff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                    <img class="buffImage" src="./images/ui/Buff_MD.png" style="width: 50px; right: 2px; top: 11px">
+                </span>
+
+            </div>
+
+            <hr>
+
+            <div id="supernovaFilters" style="overflow: hidden; display: block">
+                <h1 style="font-size: 28px; text-shadow: 1.50px 1.50px rgb(0, 0, 0)">Supernova</h1>
+
+                <span id="supernovaFilters_Timing" style="font-size: 18px; text-shadow: 1.50px 1.50px rgb(0, 0, 0); display: inline-block; margin-left: 30px; margin-right: 30px">
+                    <label for="Supernova/Timing/Value">Timing: </label>
+                    <select id="Supernova/Timing/Value" style="display: inline-block">
+                        <option value=""></option>
+                        <option value=1>1</option>
+                        <option value=2>2</option>
+                        <option value=3>3</option>
+                        <option value=4>4</option>
+                        <option value=5>5</option>
+                        <option value=6>6</option>
+                    </select>
+                </span>
+
+                <span id="supernovaFilters_Target" style="font-size: 18px; text-shadow: 1.50px 1.50px rgb(0, 0, 0); display: inline-block; margin-left: 30px; margin-right: 30px">
+                    <label for="Supernova/Target/Value">Target: </label>
+                    <select id="Supernova/Target/Value" style="display: inline-block">
+                        <option value=""></option>
+                        <option value="Single">Single</option>
+                        <option value="All">All</option>
+                    </select>
+                </span>
+
+                <span id="supernovaFilters_Multi" style="font-size: 18px; text-shadow: 1.50px 1.50px rgb(0, 0, 0); display: inline-block; margin-left: 30px; margin-right: 30px">
+                    <label for="Supernova/Multi">Multiplier: </label>
+                    <select id="Supernova/Multi/Order" style="display: inline-block; margin: 10px">
+                        <option value=">=">≥</option>
+                        <option value="<=">≤</option>
+                        <option value="=">=</option>
+                    </select>
+                    <input type="number" id="Supernova/Multi" style="width: 75px">
+                </span>
+
+                <span id="supernovaFilters_Hits" style="font-size: 18px; text-shadow: 1.50px 1.50px rgb(0, 0, 0); display: inline-block; margin-left: 30px; margin-right: 30px">
+                    <label for="Supernova/Hits">Hits: </label>
+                    <select id="Supernova/Hits/Order" style="display: inline-block; margin: 10px">
+                        <option value=">=">≥</option>
+                        <option value="<=">≤</option>
+                        <option value="=">=</option>
+                    </select>
+                    <input type="number" id="Supernova/Hits" style="width: 75px">
+                </span>
+
+                <br><br>
+                <h1 style="font-size: 22px; text-shadow: 1.50px 1.50px rgb(0, 0, 0)">Self:</h1>
+
+                <span id="supernovaFilters_SelfBuffs_Renew" onclick="lightButtons('supernovaFilters_SelfBuffs_RenewIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="supernovaFilters_SelfBuffs_RenewIMG" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                    <p class="buttonText" style="font-size: 16px; top: 12px">SN Renew</p>
+                </span>
+                <span id="supernovaFilters_SelfBuffs_RenewIMGcaption" class="caption">
+                    <label class="styledText" for="supernovaFilters_SelfBuffs_RenewIMGcaption/Type">Type</label>
+                    <select id="supernovaFilters_SelfBuffs_RenewIMGcaption/Type" style="display: inline-block; margin: 10px">
+                        <option value=""></option>
+                        <option value="Upright">Upright</option>
+                        <option value="Reversed">Reversed</option>
+                        <option value="Power">Power</option>
+                        <option value="Speed">Speed</option>
+                        <option value="Magic">Magic</option>
+                    </select>
+                </span>
+
+                <span id="supernovaFilters_SelfBuffs_STRPlus" onclick="lightButtons('supernovaFilters_SelfBuffs_STRPlusIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="supernovaFilters_SelfBuffs_STRPlusIMG" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                    <p class="buttonText" style="font-size: 16px; top: 12px">STR+</p>
+                </span>
+                <span id="supernovaFilters_SelfBuffs_STRPlusIMGcaption" class="caption">
+                    <label class="styledText" for="supernovaFilters_SelfBuffs_STRPlusIMGcaption/Type">Type</label>
+                    <select id="supernovaFilters_SelfBuffs_STRPlusIMGcaption/Type" style="display: inline-block; margin: 10px">
+                        <option value=""></option>
+                        <option value="General">General</option>
+                        <option value="Power">Power</option>
+                        <option value="Speed">Speed</option>
+                        <option value="Magic">Magic</option>
+                        <option value="Upright">Upright</option>
+                        <option value="Reversed">Reversed</option>
+                    </select>
+                    <label class="styledText" for="supernovaFilters_SelfBuffs_STRPlusIMGcaption/Value">≥</label>
+                    <input type="number" placeholder="Amount" id="supernovaFilters_SelfBuffs_STRPlusIMGcaption/Value" style="width: 75px">
+                </span>
+
+                <span id="supernovaFilters_SelfBuffs_GuiltBuff" onclick="lightButtons('supernovaFilters_SelfBuffs_GuiltBuffIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="supernovaFilters_SelfBuffs_GuiltBuffIMG" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                    <p class="buttonText" style="font-size: 16px; top: 12px">Guilt Buff</p>
+                </span>
+                <span id="supernovaFilters_SelfBuffs_GuiltBuffIMGcaption" class="caption">
+                    <label class="styledText" for="Supernova/SelfBuffs/GuiltBuff">≥</label>
+                    <input type="number" placeholder="%" id="Supernova/SelfBuffs/GuiltBuff" style="width: 50px">
+                </span>
+
+                <span id="supernovaFilters_SelfBuffs_GaugeRecovery" onclick="lightButtons('supernovaFilters_SelfBuffs_GaugeRecoveryIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="supernovaFilters_SelfBuffs_GaugeRecoveryIMG" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                    <p class="buttonText" style="font-size: 16px; top: 12px">Fills Gauges</p>
+                </span>
+                <span id="supernovaFilters_SelfBuffs_GaugeRecoveryIMGcaption" class="caption">
+                    <label class="styledText" for="Supernova/SelfBuffs/GaugeRecovery">≥</label>
+                    <input type="number"  placeholder="Gauges" id="Supernova/SelfBuffs/GaugeRecovery" style="width: 75px">
+                </span>
+
+                <span id="supernovaFilters_SelfBuffs_HPRecovery" onclick="lightButtons('supernovaFilters_SelfBuffs_HPRecoveryIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="supernovaFilters_SelfBuffs_HPRecoveryIMG" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                    <p class="buttonText" style="font-size: 16px; top: 12px">Recovers HP</p>
+                </span>
+
+                <span id="supernovaFilters_SelfBuffs_Esuna" onclick="lightButtons('supernovaFilters_SelfBuffs_EsunaIMG')" style="position: relative; text-align: center; cursor: pointer">
+                    <img id="supernovaFilters_SelfBuffs_EsunaIMG" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                    <p class="buttonText" style="font-size: 16px; top: 12px">Esuna</p>
+                </span>
+
+                <br><br>
+
+                <label class="styledText" for="supernovaFilters_SelfBuffs_BuffDebuff/BuffCount">Buff count: </label>
+                    <input type="number" placeholder="Count" id="supernovaFilters_SelfBuffs_BuffDebuff/BuffCount" style="width: 75px; margin-right: 50px">
+                    <label class="styledText" for="supernovaFilters_SelfBuffs_BuffDebuff/DurationType">Duration: </label>
+                    <input type="number" placeholder="Count" id="supernovaFilters_SelfBuffs_BuffDebuff/DurationCount" style="width: 75px">
+                    <select id="supernovaFilters_SelfBuffs_BuffDebuff/DurationType" style="display: inline-block; margin: 10px">
+                        <option value=""></option>
+                        <option value="Turn">Turn</option>
+                        <option value="Attack">Attack</option>
+                    </select>
+
+                <br>
+
+                    <span id="supernovaFilters_SelfBuffs_BuffGA" onclick="lightButtons('supernovaFilters_SelfBuffs_BuffGAIMG')" style="position: relative; text-align: center; cursor: pointer">
+                        <img id="supernovaFilters_SelfBuffs_BuffGAIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
+                        <img class="buffImage" src="./images/ui/Buff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                        <img class="buffImage" src="./images/ui/Buff_GA.png" style="width: 50px; right: 2px; top: 11px">
+                    </span>
+                    <span id="supernovaFilters_SelfBuffs_BuffUA" onclick="lightButtons('supernovaFilters_SelfBuffs_BuffUAIMG')" style="position: relative; text-align: center; cursor: pointer">
+                        <img id="supernovaFilters_SelfBuffs_BuffUAIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
+                        <img class="buffImage" src="./images/ui/Buff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                        <img class="buffImage" src="./images/ui/Buff_UA.png" style="width: 50px; right: 2px; top: 11px">
+                    </span>
+                    <span id="supernovaFilters_SelfBuffs_BuffRA" onclick="lightButtons('supernovaFilters_SelfBuffs_BuffRAIMG')" style="position: relative; text-align: center; cursor: pointer">
+                        <img id="supernovaFilters_SelfBuffs_BuffRAIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
+                        <img class="buffImage" src="./images/ui/Buff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                        <img class="buffImage" src="./images/ui/Buff_RA.png" style="width: 50px; right: 2px; top: 11px">
+                    </span>
+                    <span id="supernovaFilters_SelfBuffs_BuffPA" onclick="lightButtons('supernovaFilters_SelfBuffs_BuffPAIMG')" style="position: relative; text-align: center; cursor: pointer">
+                        <img id="supernovaFilters_SelfBuffs_BuffPAIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
+                        <img class="buffImage" src="./images/ui/Buff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                        <img class="buffImage" src="./images/ui/Buff_PA.png" style="width: 50px; right: 2px; top: 11px">
+                    </span>
+                    <span id="supernovaFilters_SelfBuffs_BuffSA" onclick="lightButtons('supernovaFilters_SelfBuffs_BuffSAIMG')" style="position: relative; text-align: center; cursor: pointer">
+                        <img id="supernovaFilters_SelfBuffs_BuffSAIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
+                        <img class="buffImage" src="./images/ui/Buff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                        <img class="buffImage" src="./images/ui/Buff_SA.png" style="width: 50px; right: 2px; top: 11px">
+                    </span>
+                    <span id="supernovaFilters_SelfBuffs_BuffMA" onclick="lightButtons('supernovaFilters_SelfBuffs_BuffMAIMG')" style="position: relative; text-align: center; cursor: pointer">
+                        <img id="supernovaFilters_SelfBuffs_BuffMAIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
+                        <img class="buffImage" src="./images/ui/Buff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                        <img class="buffImage" src="./images/ui/Buff_MA.png" style="width: 50px; right: 2px; top: 11px">
+                    </span>
+
+                    <br>
+
+                    <span id="supernovaFilters_SelfBuffs_BuffGD" onclick="lightButtons('supernovaFilters_SelfBuffs_BuffGDIMG')" style="position: relative; text-align: center; cursor: pointer">
+                        <img id="supernovaFilters_SelfBuffs_BuffGDIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
+                        <img class="buffImage" src="./images/ui/Buff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                        <img class="buffImage" src="./images/ui/Buff_GD.png" style="width: 50px; right: 2px; top: 11px">
+                    </span>
+                    <span id="supernovaFilters_SelfBuffs_BuffUD" onclick="lightButtons('supernovaFilters_SelfBuffs_BuffUDIMG')" style="position: relative; text-align: center; cursor: pointer">
+                        <img id="supernovaFilters_SelfBuffs_BuffUDIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
+                        <img class="buffImage" src="./images/ui/Buff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                        <img class="buffImage" src="./images/ui/Buff_UD.png" style="width: 50px; right: 2px; top: 11px">
+                    </span>
+                    <span id="supernovaFilters_SelfBuffs_BuffRD" onclick="lightButtons('supernovaFilters_SelfBuffs_BuffRDIMG')" style="position: relative; text-align: center; cursor: pointer">
+                        <img id="supernovaFilters_SelfBuffs_BuffRDIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
+                        <img class="buffImage" src="./images/ui/Buff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                        <img class="buffImage" src="./images/ui/Buff_RD.png" style="width: 50px; right: 2px; top: 11px">
+                    </span>
+                    <span id="supernovaFilters_SelfBuffs_BuffPD" onclick="lightButtons('supernovaFilters_SelfBuffs_BuffPDIMG')" style="position: relative; text-align: center; cursor: pointer">
+                        <img id="supernovaFilters_SelfBuffs_BuffPDIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
+                        <img class="buffImage" src="./images/ui/Buff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                        <img class="buffImage" src="./images/ui/Buff_PD.png" style="width: 50px; right: 2px; top: 11px">
+                    </span>
+                    <span id="supernovaFilters_SelfBuffs_BuffSD" onclick="lightButtons('supernovaFilters_SelfBuffs_BuffSDIMG')" style="position: relative; text-align: center; cursor: pointer">
+                        <img id="supernovaFilters_SelfBuffs_BuffSDIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
+                        <img class="buffImage" src="./images/ui/Buff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                        <img class="buffImage" src="./images/ui/Buff_SD.png" style="width: 50px; right: 2px; top: 11px">
+                    </span>
+                    <span id="supernovaFilters_SelfBuffs_BuffMD" onclick="lightButtons('supernovaFilters_SelfBuffs_BuffMDIMG')" style="position: relative; text-align: center; cursor: pointer">
+                        <img id="supernovaFilters_SelfBuffs_BuffMDIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
+                        <img class="buffImage" src="./images/ui/Buff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                        <img class="buffImage" src="./images/ui/Buff_MD.png" style="width: 50px; right: 2px; top: 11px">
+                    </span>
+
+                    <br><br>
+                    <h1 style="font-size: 22px; text-shadow: 1.50px 1.50px rgb(0, 0, 0)">Enemy:</h1>
+
+                    <span id="supernovaFilters_EnemyBuffs_DEFPierce" onclick="lightButtons('supernovaFilters_EnemyBuffs_DEFPierceIMG')" style="position: relative; text-align: center; cursor: pointer">
+                        <img id="supernovaFilters_EnemyBuffs_DEFPierceIMG" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                        <p class="buttonText" style="font-size: 16px; top: 12px; margin-left: 3px">Defense Pierce</p>
+                    </span>
+                    <span id="supernovaFilters_EnemyBuffs_DEFPierceIMGcaption" class="caption">
+                        <label class="styledText" for="Supernova/EnemyBuffs/DEFPierce">≥</label>
+                        <input type="number" placeholder="Chance" id="Supernova/EnemyBuffs/DEFPierce" style="width: 70px">
+                    </span>
+    
+                    <span id="supernovaFilters_EnemyBuffs_Counter" onclick="lightButtons('supernovaFilters_EnemyBuffs_CounterIMG')" style="position: relative; text-align: center; cursor: pointer">
+                        <img id="supernovaFilters_EnemyBuffs_CounterIMG" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                        <p class="buttonText" style="font-size: 16px; top: 12px">Counter</p>
+                    </span>
+                    <span id="supernovaFilters_EnemyBuffs_CounterIMGcaption" class="caption">
+                        <label class="styledText" for="supernovaFilters_EnemyBuffs_CounterIMGcaption/Type">Type</label>
+                        <select id="supernovaFilters_EnemyBuffs_CounterIMGcaption/Type" onchange="compareDropdown(this)" style="display: inline-block; margin: 10px">
+                            <option value=""></option>
+                            <option value="Up">+</option>
+                            <option value="Null">±0</option>
+                            <option value="Reset">Reset</option>
+                        </select>
+                        <span id="supernovaFilters_EnemyBuffs_CounterIMGcaptioncaption" class="caption">
+                            <label class="styledText" for="supernovaFilters_EnemyBuffs_CounterIMGcaption/Value">≥</label>
+                            <input type="number" placeholder="Count" id="supernovaFilters_EnemyBuffs_CounterIMGcaption/Value" style="width: 75px">
+                        </span>
+                    </span>
+
+                    <br><br>
+
+                    <span id="supernovaFilters_EnemyBuffs_DebuffGA" onclick="lightButtons('supernovaFilters_EnemyBuffs_DebuffGAIMG')" style="position: relative; text-align: center; cursor: pointer">
+                        <img id="supernovaFilters_EnemyBuffs_DebuffGAIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                        <img class="buffImage" src="./images/ui/Debuff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                        <img class="buffImage" src="./images/ui/Buff_GA.png" style="width: 50px; right: 2px; top: 11px">
+                    </span>
+                    <span id="supernovaFilters_EnemyBuffs_DebuffUA" onclick="lightButtons('supernovaFilters_EnemyBuffs_DebuffUAIMG')" style="position: relative; text-align: center; cursor: pointer">
+                        <img id="supernovaFilters_EnemyBuffs_DebuffUAIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                        <img class="buffImage" src="./images/ui/Debuff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                        <img class="buffImage" src="./images/ui/Buff_UA.png" style="width: 50px; right: 2px; top: 11px">
+                    </span>
+                    <span id="supernovaFilters_EnemyBuffs_DebuffRA" onclick="lightButtons('supernovaFilters_EnemyBuffs_DebuffRAIMG')" style="position: relative; text-align: center; cursor: pointer">
+                        <img id="supernovaFilters_EnemyBuffs_DebuffRAIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                        <img class="buffImage" src="./images/ui/Debuff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                        <img class="buffImage" src="./images/ui/Buff_RA.png" style="width: 50px; right: 2px; top: 11px">
+                    </span>
+                    <span id="supernovaFilters_EnemyBuffs_DebuffPA" onclick="lightButtons('supernovaFilters_EnemyBuffs_DebuffPAIMG')" style="position: relative; text-align: center; cursor: pointer">
+                        <img id="supernovaFilters_EnemyBuffs_DebuffPAIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                        <img class="buffImage" src="./images/ui/Debuff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                        <img class="buffImage" src="./images/ui/Buff_PA.png" style="width: 50px; right: 2px; top: 11px">
+                    </span>
+                    <span id="supernovaFilters_EnemyBuffs_DebuffSA" onclick="lightButtons('supernovaFilters_EnemyBuffs_DebuffSAIMG')" style="position: relative; text-align: center; cursor: pointer">
+                        <img id="supernovaFilters_EnemyBuffs_DebuffSAIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                        <img class="buffImage" src="./images/ui/Debuff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                        <img class="buffImage" src="./images/ui/Buff_SA.png" style="width: 50px; right: 2px; top: 11px">
+                    </span>
+                    <span id="supernovaFilters_EnemyBuffs_DebuffMA" onclick="lightButtons('supernovaFilters_EnemyBuffs_DebuffMAIMG')" style="position: relative; text-align: center; cursor: pointer">
+                        <img id="supernovaFilters_EnemyBuffs_DebuffMAIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                        <img class="buffImage" src="./images/ui/Debuff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                        <img class="buffImage" src="./images/ui/Buff_MA.png" style="width: 50px; right: 2px; top: 11px">
+                    </span>
+    
+                    <br>
+    
+                    <span id="supernovaFilters_EnemyBuffs_DebuffGD" onclick="lightButtons('supernovaFilters_EnemyBuffs_DebuffGDIMG')" style="position: relative; text-align: center; cursor: pointer">
+                        <img id="supernovaFilters_EnemyBuffs_DebuffGDIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                        <img class="buffImage" src="./images/ui/Debuff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                        <img class="buffImage" src="./images/ui/Buff_GD.png" style="width: 50px; right: 2px; top: 11px">
+                    </span>
+                    <span id="supernovaFilters_EnemyBuffs_DebuffUD" onclick="lightButtons('supernovaFilters_EnemyBuffs_DebuffUDIMG')" style="position: relative; text-align: center; cursor: pointer">
+                        <img id="supernovaFilters_EnemyBuffs_DebuffUDIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                        <img class="buffImage" src="./images/ui/Debuff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                        <img class="buffImage" src="./images/ui/Buff_UD.png" style="width: 50px; right: 2px; top: 11px">
+                    </span>
+                    <span id="supernovaFilters_EnemyBuffs_DebuffRD" onclick="lightButtons('supernovaFilters_EnemyBuffs_DebuffRDIMG')" style="position: relative; text-align: center; cursor: pointer">
+                        <img id="supernovaFilters_EnemyBuffs_DebuffRDIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                        <img class="buffImage" src="./images/ui/Debuff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                        <img class="buffImage" src="./images/ui/Buff_RD.png" style="width: 50px; right: 2px; top: 11px">
+                    </span>
+                    <span id="supernovaFilters_EnemyBuffs_DebuffPD" onclick="lightButtons('supernovaFilters_EnemyBuffs_DebuffPDIMG')" style="position: relative; text-align: center; cursor: pointer">
+                        <img id="supernovaFilters_EnemyBuffs_DebuffPDIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                        <img class="buffImage" src="./images/ui/Debuff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                        <img class="buffImage" src="./images/ui/Buff_PD.png" style="width: 50px; right: 2px; top: 11px">
+                    </span>
+                    <span id="supernovaFilters_EnemyBuffs_DebuffSD" onclick="lightButtons('supernovaFilters_EnemyBuffs_DebuffSDIMG')" style="position: relative; text-align: center; cursor: pointer">
+                        <img id="supernovaFilters_EnemyBuffs_DebuffSDIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                        <img class="buffImage" src="./images/ui/Debuff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                        <img class="buffImage" src="./images/ui/Buff_SD.png" style="width: 50px; right: 2px; top: 11px">
+                    </span>
+                    <span id="supernovaFilters_EnemyBuffs_DebuffMD" onclick="lightButtons('supernovaFilters_EnemyBuffs_DebuffMDIMG')" style="position: relative; text-align: center; cursor: pointer">
+                        <img id="supernovaFilters_EnemyBuffs_DebuffMDIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                        <img class="buffImage" src="./images/ui/Debuff_Arrow.png" style="width: 15px; margin-left: -20px; z-index: 1">
+                        <img class="buffImage" src="./images/ui/Buff_MD.png" style="width: 50px; right: 2px; top: 11px">
+                    </span>
+
+                    <br><br>
+
+            </div>
+
+        </div>
+
+        <div class="whiteOverlay">
+
+            <h1 style = "text-align:center;color:black;font-family:Verdana, sans-serif;">Medal Search</h1>
+            
+            <h3 style="text-align:center;color:black;font-family:Verdana, sans-serif;">Find medals based on your search conditions</h3>
+
+            <pre></pre>
+
+            <input type="text" id="searchMedalString" class="searchTextBox" onkeyup="parseMedalName(searchMedalString.value);" placeholder="Enter a medal name."/>
+            
+            <input type="image" onclick="searchMedal()" class="searchBtn" src="./images/ui/search_searchButton.png" width="150px"/>
+
+            <input type="image" onclick="loadSearchBox()" class="searchBtn" src="./images/ui/search_sortAndFilterButton.png" width="150px"/>
+
+            <div id="resultsList" class="resultsListClass">
+            </div>
+
+        </div>
+    
+      <!-- SCRIPT IMPORTS -->
+      <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+      <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+      <script src="./js/bootstrap.min.js"></script>
+      <script src="./src/search.js"></script>
+
+  </body>
+</html>
