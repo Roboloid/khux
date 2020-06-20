@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Script imports -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+            integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+            crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+    </head>
+    <style type="text/css">
+        .dropdownNavBar {
+            max-width: 35%;
+            position: relative;
+            display: inline-block;
+        }
+        .navbarUXDropButton {
+            background-image:   linear-gradient(to bottom, rgb(0, 49, 128), rgb(37, 160, 237));
+            max-width: 100%;
+            color: white;
+            text-shadow: 1.50px 1.50px rgb(0, 0, 0, 0.75);
+            height: 60px;
+            text-align: center;
+            vertical-align: middle;
+            width: 300px;
+            font-size: 32px;
+            border: none;
+            cursor: pointer;
+        }
+        .navbarUXDropButton:hover, .navbarUXDropButton:focus {
+            background-image:   linear-gradient(to bottom, rgb(7, 84, 179), rgb(44, 182, 234));
+        }
+        .navbarDRDropButton {
+            background-image:   linear-gradient(to bottom, rgb(0, 92, 110), rgb(7, 170, 153));
+            max-width: 100%;
+            color: white;
+            text-shadow: 1.50px 1.50px rgb(0, 0, 0, 0.75);
+            height: 60px;
+            text-align: center;
+            vertical-align: middle;
+            width: 300px;
+            font-size: 32px;
+            border: none;
+            cursor: pointer;
+        }
+        .navbarDRDropButton:hover, .navbarDRDropButton:focus {
+            background-image:   linear-gradient(to bottom, rgb(1, 136, 153), rgb(8, 192, 183));
+        }
+        .navbarUXDropdownContent {
+            margin-left: 20px;
+            display: none;
+            position: absolute;
+            width: 150px;
+            overflow: auto;
+            z-index: 1;
+            align-items: center;
+            justify-content: center;
+        }
+        .navbarUXDropdownContent a {
+            color: rgb(255, 255, 255);
+            text-shadow: 1.50px 1.50px rgb(0, 0, 0, 0.50);
+            text-align: center;
+            vertical-align: center;
+            margin-top: 20px;
+            height: 43px;
+            width: 150px;
+            border-width: 5px;
+            border: double 5px transparent;
+            border-radius: 20px;
+            background-image:   linear-gradient(to bottom, rgb(0, 49, 128), rgb(37, 160, 237)), 
+                                linear-gradient(to bottom, rgb(128, 198, 239), rgb(8, 38, 108));
+            background-origin: border-box;
+            background-position: center;
+            background-clip: content-box, border-box;
+            font-size: 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .navbarUXDropdownContent a:hover {
+            background-image:   linear-gradient(to bottom, rgb(7, 84, 179), rgb(44, 182, 234)), 
+                                linear-gradient(to bottom, rgb(150, 203, 233), rgb(31, 77, 165));
+        }
+        .navbarDRDropdownContent {
+            margin-right: 20px;
+            right: 0;
+            display: none;
+            position: absolute;
+            width: 150px;
+            overflow: auto;
+            z-index: 1;
+            align-items: center;
+            justify-content: center;
+        }
+        .navbarDRDropdownContent a {
+            color: rgb(255, 255, 255);
+            text-shadow: 1.50px 1.50px rgb(0, 0, 0, 0.50);
+            text-align: center;
+            vertical-align: center;
+            margin-top: 20px;
+            height: 43px;
+            width: 150px;
+            border-width: 5px;
+            border: double 5px transparent;
+            border-radius: 20px;
+            background-image:   linear-gradient(to bottom, rgb(0, 92, 110), rgb(7, 170, 153)), 
+                                linear-gradient(to bottom, rgb(128, 238, 229), rgb(29, 66, 75));
+            background-origin: border-box;
+            background-position: center;
+            background-clip: content-box, border-box;
+            font-size: 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .navbarDRDropdownContent a:hover {
+            background-image:   linear-gradient(to bottom, rgb(1, 136, 153), rgb(8, 192, 183)), 
+                                linear-gradient(to bottom, rgb(154, 229, 225), rgb(55, 117, 125));
+        }
+        .show   {
+            display: block;
+        }
+    </style>
+
+    <body>
+        <script>
+            function displayNavDropdown(value)   {
+                document.getElementById(value).classList.toggle("show");
+            }
+        </script>
+        <script>
+            window.onclick = function(event) {
+                if (!(event.target.matches('.navbarDRDropButton') || event.target.matches('.navbarUXDropButton'))) {
+                    var dropdowns = document.getElementsByClassName("navbarUXDropdownContent");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                    dropdowns = document.getElementsByClassName("navbarDRDropdownContent");
+                    for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            }
+        </script>
+        <div id="navbar-placeholder">
+            <div style="width:100%; height:60px; background-color: black"></div>
+            
+            <div class="dropdownNavBar" style="position: absolute; top: 0; left: 0">
+                <button onclick="displayNavDropdown('UnionCrossDropdown')" class="navbarUXDropButton">Union χ</button>
+                <span id="UnionCrossDropdown" class="navbarUXDropdownContent">
+                    <a href="./keyblade">Cost Calc.</a>
+                    <a href="./passives">Passives List</a>
+                    <a href="./search">Search</a>
+                    <a href="./medals">Medals</a>
+                    <a href="./maps">Maps</a>
+                    <a href="./music">Music</a>
+                    <a href="./assets">Assets</a>
+                    <a href="./about">About</a>
+            </div>
+
+            <div class="dropdownNavBar" style="position: absolute; top: 0; right: 0">
+                <button onclick="displayNavDropdown('DarkRoadDropdown')" class="navbarDRDropButton">Dark Road</button>
+                <span id="DarkRoadDropdown" class="navbarDRDropdownContent">
+                    <a href="./khdr/maps">Maps</a>
+                    <a href="./about">About</a>
+            </div>
+        </div>
+    </body>
+</html>
