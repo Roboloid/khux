@@ -76345,170 +76345,240 @@ var medalDatabase = {
             Hits: 1
         }
     },
-};
-
-/*
-    1:  {
-        ID: 1,
-        AlbumNum: 1,
-        Reference: [1, 2, 3, 4, 5, 6, 111],
-        MedalImage: "1_1Star_Wakka.png",
-        RenderImage: "1_1Star_Wakka_Render.png",
-        KeyArtImage: "art-Art_608_Key_Art_#1.png",
-        MusicLink: "(KH2)_Organization_XIII.mp3",
-        VoiceLink: "filenamehere.mp3",
-        Name: "SN+ - KH III Sora",
+    1987:  {
+        ID: 1987,
+        AlbumNum: 1855,
+        Reference: [1987],
+        MedalImage: "1855_7Star_SN++_-_Master_Xehanort.png",
+        RenderImage: "1855_7Star_SN++_-_Master_Xehanort_Render.png",
+        Name: "SN++ - Master Xehanort",
         Rarity: 7,
-        Direction: "Upright",
-        Attribute: "Speed",
-        Guilt: 9,
-        STR: 99999,
-        DEF: 99999,
-        LowMulti: 1.00,
-        HighMulti: 25.00,
-        Multi: 30.00,
-        Gauge: 2,
-        Target: Single,
-        Ability:  {
-            Name: "Imitation Afar II +6",
-            Text: "Deals 4 hits. 2 turns: ↑ STR, U- & S-STR 15, SP ATK B +160%, ↓ targets' DEF 15. Gauge +5. Count ±0. Damage+: Lower slot number.",
-            Condition: "LowerHP",
+        Direction: "Reversed",
+        Attribute: "Magic",
+        Guilt: 10,
+        STR: 44011,
+        DEF: 16591,
+        Multi: 20.54,
+        Gauge: 3,
+        Target: "All",
+        Ability:    {
+            Name: "Burning Darkness +6",
+            Text: "1 turn: M-Medal STR +8000, self [↑ STR, R- & M-STR 15], targets [↓ DEF, R- & M-DEF 15], SP ATK B +220%. Count ±0.",
             SelfBuffs:  {
-                Buff: {
+                BuffGA: {
                     BuffCount: 15,
                     DurationType: "Turn",
                     DurationCount: 1
                 },
-                Debuff: {
-                    DebuffType: "Defense",
-                    DebuffCount: 15,
-                    Overwrite: No,
+                BuffRA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 15,
                     DurationType: "Turn",
                     DurationCount: 1
                 },
                 STRPlus:  {
-                    Type: "Speed",
-                    Amount: 1500,
-                    DurationType: "Turn",
-                    DurationCount: 2
-                },
-                DEFPlus:  {
-                    Type: "General",
-                    Amount: 500,
+                    Type: "Magic",
+                    Amount: 8000,
                     DurationType: "Turn",
                     DurationCount: 1
                 },
-                GuiltBuff: 200,
-                Reflect:  {
-                    ReflectType: "Magic",
-                    Percent: 100
-                },
-                Copy: {
-                    Direction: "Previous",
-                    Slot: 3
-                },
-                GaugeRecovery: 3,
-                HPRecovery: "Yes",
-                Dispel: "No",
-                Esuna: "No"
+                GuiltBuff: 220
             },
             EnemyBuffs: {
-                Buff: {
-                    BuffType: "Attack",
+                DebuffGD: {
                     BuffCount: 15,
-                    Overwrite: No,
                     DurationType: "Turn",
                     DurationCount: 1
                 },
-                Debuff: {
-                    DebuffType: "Defense",
-                    DebuffCount: 15,
-                    Overwrite: No,
+                DebuffRD: {
+                    BuffCount: 15,
                     DurationType: "Turn",
                     DurationCount: 1
                 },
-                STRMinus:  {
-                    Type: "Upright",
-                    Amount: 1000,
+                DebuffMD: {
+                    BuffCount: 15,
                     DurationType: "Turn",
                     DurationCount: 1
-                },
-                DEFPierce: 30,
-                Counter:    {
-                    CountDirection: "Up",
-                    Count: 1
                 },
                 Counter:    {
                     CountDirection: "Null"
-                },
-                Dispel: "Yes"
+                }
             },
-            Hits: 5
-        }
+            Hits: 1
+        },
         Supernova:  {
+            Name: "[Mastery] Reversed Strike All M",
+            Text: "1 turn: M-Medal STR +12000, self [↑ STR, R- & M-STR 15], targets [↓ DEF, R- & M-DEF 15], SP ATK B +320%. Triggers before slot 1 is activated when defending in PVP.",
             Multi: 240.00,
+            Timing: 1,
             Target: "All",
-            Timing: 2,
-            Renew: "Speed",
-            Name: "Upright Strike All S",
-            Text: "1 turn: SP ATK B +200%. Count ±0. Triggers before slot 3 is activated when defending in PVP.",
-            Condition: "LowerHP",
             SelfBuffs:  {
-                Buff: {
-                    BuffType: "Attack",
+                BuffGA: {
                     BuffCount: 15,
-                    Overwrite: No,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffRA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 15,
                     DurationType: "Turn",
                     DurationCount: 1
                 },
                 STRPlus:  {
-                    Type: "Speed",
-                    Amount: 1500,
-                    DurationType: "Turn",
-                    DurationCount: 2
-                },
-                DEFPlus:  {
-                    Type: "General",
-                    Amount: 500,
+                    Type: "Magic",
+                    Amount: 12000,
                     DurationType: "Turn",
                     DurationCount: 1
-                }
-                GuiltBuff: 200,
-                Reflect:  {
-                    ReflectType: "Magic",
-                    Percent: 100
                 },
-                GaugeRecovery: 3,
-                GaugeConsume: 2,
-                NextMedal: "All",
-                HPRecovery: "Yes",
-                HPDrain: "No",
-                Dispel: "No",
-                Esuna: "No",
-                Mirror: "No"
+                GuiltBuff: 320
             },
             EnemyBuffs: {
-                Debuff: {
-                    DebuffType: "Defense",
-                    DebuffCount: 15,
-                    Overwrite: No,
+                DebuffGD: {
+                    BuffCount: 15,
                     DurationType: "Turn",
                     DurationCount: 1
                 },
-                STRMinus:  {
-                    Type: "Upright",
-                    Amount: 1000,
+                DebuffRD: {
+                    BuffCount: 15,
                     DurationType: "Turn",
                     DurationCount: 1
                 },
-                DEFPierce: 30,
-                Counter:    {
-                    CountDirection: "Up",
-                    Count: 1
+                DebuffMD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
                 }
-                Dispel: "Yes"
             },
             Hits: 1
         }
     },
-*/
+    1988:  {
+        ID: 1988,
+        AlbumNum: 1856,
+        Reference: [1988],
+        MedalImage: "1856_7Star_SN++_-_Terra-Xehanort_B.png",
+        RenderImage: "1856_7Star_SN++_-_Terra-Xehanort_B_Render.png",
+        Name: "SN++ - Terra-Xehanort B",
+        Rarity: 7,
+        Direction: "Reversed",
+        Attribute: "Power",
+        Guilt: 10,
+        STR: 41493,
+        DEF: 16271,
+        Multi: 19.10,
+        Gauge: 0,
+        Target: "All",
+        Ability:    {
+            Name: "Dark Slash EX +6",
+            Text: "Deals 11 hits. 1 turn: Medal STR +8000, self [↑ STR, U-, R- & PSM-STR 15], targets [↓ DEF, U-, R- & PSM-DEF 15], SP ATK B +220%. Gauge +3. Count ±0.",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffRA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffPA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "General",
+                    Amount: 8000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 220,
+                GaugeRecovery: 3
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffUD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffRD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffPD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffMD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Counter:    {
+                    CountDirection: "Null"
+                }
+            },
+            Hits: 1
+        },
+        Supernova:  {
+            Name: "[Mastery] Reversed Strike All P",
+            Text: "1 turn: Medal STR +10000, SP ATK B +300%. Count +1. Gauge +3. Triggers before slot 1 is activated when defending in PVP.",
+            Multi: 220.00,
+            Timing: 1,
+            Target: "All",
+            SelfBuffs:  {
+                STRPlus:  {
+                    Type: "General",
+                    Amount: 10000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 300,
+                GaugeRecovery: 3
+            },
+            EnemyBuffs: {
+                Counter:    {
+                    CountDirection: "Up",
+                    Count: 1
+                }
+            },
+            Hits: 1
+        }
+    },
+};
