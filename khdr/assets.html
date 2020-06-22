@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>                         <!---------------------- START HEADER ---------------------->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163660070-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-163660070-1');
+    </script>
+
+    <meta charset="utf-8" />
+    <meta name="author" content="Roboloid" />
+    <meta name="description" content="Assets Gallery" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.75, viewport-fit=cover" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://roboloid.github.io/khux/images/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://roboloid.github.io/khux/images/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://roboloid.github.io/khux/images/icon/favicon-16x16.png">
+    <link rel="manifest" href="https://roboloid.github.io/khux/images/icon/site.webmanifest">
+    <link rel="mask-icon" href="https://roboloid.github.io/khux/images/icon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="https://roboloid.github.io/khux/images/icon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="https://roboloid.github.io/khux/images/icon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Metadata start -->
+    <html prefix="og: http://ogp.me/ns#"></html>
+    
+    <meta property="og:title" content="Assets Gallery">
+
+    <meta property="og:description" content="View assets that don't fit into other pages, such as UI and other icons.">
+
+    <meta property="og:site_name" content="Roboloid's KHDR Info Page" >
+
+    <meta property="og:image" content="https://roboloid.github.io/khux/khdr/images/icon/assets_thumb.png">
+    <!-- Metadata end -->
+
+    <!-- Site title -->
+    <title>KHUχ</title>
+
+    <!-- Script imports -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <!-- Content overlay -->
+    <style type="text/css">
+
+      .whiteOverlay {
+        padding: 15px 15px 15px;
+        margin: 10% 10% 10%;
+        color: #ffffff;
+        background-color: #FFF;
+        background-position: center;
+        margin-left: auto;
+        margin-right: auto;
+        height: 100%;
+        width: 95%;
+        box-shadow: 0px 8px 16px 0px rgba(38, 0, 255, 0.2);
+      }
+      .displayButton {
+        background-image:   linear-gradient(to bottom, rgb(0, 49, 128), rgb(37, 160, 237)), 
+                            linear-gradient(to bottom, rgb(128, 198, 239), rgb(8, 38, 108));
+        background-origin: border-box;
+        background-position: center;
+        background-clip: content-box, border-box;
+        border-radius: 20px;
+        text-decoration: none;
+        width: 460px;
+        max-width: 25%;
+        height: auto;
+        color: white;
+        text-shadow: 1.50px 1.50px rgb(0, 0, 0, 0.75);
+        font-size: 46px;
+        text-overflow: ellipsis;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        vertical-align: middle;
+        padding: 8px;
+        margin-left: 50px;
+      }
+      .displayButton:hover, .displayButton:focus {
+        background-image:   linear-gradient(to bottom, rgb(7, 84, 179), rgb(44, 182, 234)), 
+                            linear-gradient(to bottom, rgb(150, 203, 233), rgb(31, 77, 165));
+      }
+      .imageContainer  {
+        max-width: 80%;
+        margin-bottom: 50px;
+        margin-left: 50px;
+        display: none;
+      }
+      .contentClass {
+        max-width: 100px;
+        cursor: pointer;
+      }
+      .contentCardClass {
+        max-width: 200px;
+        cursor: pointer;
+      }
+      .showSection {
+        display: block;
+      }
+    </style>
+
+    <!-- Backdrop pattern -->
+    <style>
+        body  {
+          background-image: url("../images/other/bg_assets.png");
+          background-size: 150px;
+          background-repeat: repeat
+        }
+    </style>
+  </head>                         <!---------------------- END HEADER ---------------------->
+
+  
+
+  <body>
+
+    <script>
+        $(function(){
+            $("#navbar-placeholder").load("./src/navigation.html");
+        });
+    </script>
+
+    <div id="navbar-placeholder">
+
+    </div>
+
+    <script>
+        function showFunction(value)  {
+            var variable = value + "_Container";
+            document.getElementById(variable).classList.toggle("showSection");
+            $(document).ready(function() {
+              $("#" + variable).find("img").each(function() {
+                  $(this).attr("src", $(this).data("src"));
+                });
+            });
+        }
+    </script>
+
+        <div class="whiteOverlay">
+
+            <h1 style = "text-align:center;color:black;font-family:Verdana, sans-serif;">Assets Gallery</h1>
+
+            <h3 style = "text-align:center;color:black;font-family:Verdana, sans-serif;">Click on an asset type to display selected assets</h3>
+
+            <pre></pre>
+
+            <button class="displayButton" onclick="showFunction('Characters')" id="Characters">Characters</button>
+
+                <div id="Characters_Container" class="imageContainer">
+                <pre></pre>
+
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/npc_Player.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/OrderPanel01a.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/DarkBattleAvatar_HP_UI01.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/DarkBattleAvatar_HP_UI01a.png"/>
+                    <br>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/npc_7001.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/OrderPanel7001a.png"/>
+                    <br>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/npc_7002.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/OrderPanel7002a.png"/>
+                    <br>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/npc_7003.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/OrderPanel7003a.png"/>
+                    <br>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/npc_7004.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/OrderPanel7004a.png"/>
+                    <br>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/npc_7005.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/OrderPanel7005a.png"/>
+
+                </div>
+                <pre></pre>
+
+                <pre></pre>
+
+                <pre></pre>
+
+                <pre></pre>
+
+                <pre></pre>
+
+            <button class="displayButton" onclick="showFunction('CardTemplates')" id="CardTemplates">Card Templates</button>
+
+                <div id="CardTemplates_Container" class="imageContainer">
+                <pre></pre>
+                    <img class="contentCardClass" onclick="window.open(this.src)" data-src="./images/assets/templates/CardTemplate_Sword_Light_Red.png"/>
+                    <img class="contentCardClass" onclick="window.open(this.src)" data-src="./images/assets/templates/CardTemplate_Sword_Light_Green.png"/>
+                    <img class="contentCardClass" onclick="window.open(this.src)" data-src="./images/assets/templates/CardTemplate_Sword_Light_Blue.png"/>
+                    <img class="contentCardClass" onclick="window.open(this.src)" data-src="./images/assets/templates/CardTemplate_Sword_Dark_Red.png"/>
+                    <img class="contentCardClass" onclick="window.open(this.src)" data-src="./images/assets/templates/CardTemplate_Sword_Dark_Green.png"/>
+                    <img class="contentCardClass" onclick="window.open(this.src)" data-src="./images/assets/templates/CardTemplate_Sword_Dark_Blue.png"/>
+                    <br><br>
+                    <img class="contentCardClass" onclick="window.open(this.src)" data-src="./images/assets/templates/CardTemplate_Staff_Light_Red.png"/>
+                    <img class="contentCardClass" onclick="window.open(this.src)" data-src="./images/assets/templates/CardTemplate_Staff_Light_Green.png"/>
+                    <img class="contentCardClass" onclick="window.open(this.src)" data-src="./images/assets/templates/CardTemplate_Staff_Light_Blue.png"/>
+                    <img class="contentCardClass" onclick="window.open(this.src)" data-src="./images/assets/templates/CardTemplate_Staff_Dark_Red.png"/>
+                    <img class="contentCardClass" onclick="window.open(this.src)" data-src="./images/assets/templates/CardTemplate_Staff_Dark_Green.png"/>
+                    <img class="contentCardClass" onclick="window.open(this.src)" data-src="./images/assets/templates/CardTemplate_Staff_Dark_Blue.png"/>
+                    <br><br>
+                    <img class="contentCardClass" onclick="window.open(this.src)" data-src="./images/assets/templates/CardTemplate_Shield_Light_Red.png"/>
+                    <img class="contentCardClass" onclick="window.open(this.src)" data-src="./images/assets/templates/CardTemplate_Shield_Light_Green.png"/>
+                    <img class="contentCardClass" onclick="window.open(this.src)" data-src="./images/assets/templates/CardTemplate_Shield_Light_Blue.png"/>
+                    <img class="contentCardClass" onclick="window.open(this.src)" data-src="./images/assets/templates/CardTemplate_Shield_Dark_Red.png"/>
+                    <img class="contentCardClass" onclick="window.open(this.src)" data-src="./images/assets/templates/CardTemplate_Shield_Dark_Green.png"/>
+                    <img class="contentCardClass" onclick="window.open(this.src)" data-src="./images/assets/templates/CardTemplate_Shield_Dark_Blue.png"/>
+
+                </div>
+                <pre></pre>
+
+                <pre></pre>
+
+                <pre></pre>
+
+                <pre></pre>
+
+                <pre></pre>
+                
+            <button class="displayButton" onclick="showFunction('MaterialsUI')" id="MaterialsUI">Materials and UI</button>
+
+                <div id="MaterialsUI_Container" class="imageContainer">
+                <pre></pre>
+
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/material/IncentiveIcon_2.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/material/IncentiveIcon_201.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/material/IncentiveIcon_202.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/material/IncentiveIcon_203.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/material/IncentiveIcon_204.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/material/IncentiveIcon_211.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/material/IncentiveIcon_212.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/material/IncentiveIcon_221.png"/>
+                    <br><br>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/But04_Off.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/But04_On.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/But05_Off.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/But05_On.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/But06_Off.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/But06_On.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/But33_Off.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/But33_On.png"/>
+                    <br><br>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/But_Rank1_Disable.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/But_Rank1_Off.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/But_Rank1_On.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/But_Rank2_Disable.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/But_Rank2_Off.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/But_Rank2_On.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/But_Rank3_Disable.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/But_Rank3_Off.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/But_Rank3_On.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/But_Rank4_Disable.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/But_Rank4_Off.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/But_Rank4_On.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/But_Rank5_Disable.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/But_Rank5_Off.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/But_Rank5_On.png"/>
+                    <br><br>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Card_Overlap_Now_Num1.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Card_Overlap_Now_Num2.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Card_Overlap_Now_Num3.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Card_Overlap_Now_Num4.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Card_Overlap_Now_Num5.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Card_Overlap_Now_Num6.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Card_Overlap_Now_Num7.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Card_Overlap_Now_Num8.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Card_Overlap_Now_Num9.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Card_Overlap_Now_Num10.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Card_OverlapChange.png"/>
+                    <br><br>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Card_OverlapNum1-Card_OverlapNum1.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Card_OverlapNum2.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Card_OverlapNum3.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Card_OverlapNum4.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Card_OverlapNum5.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Card_OverlapNum6.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Card_OverlapNum7.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Card_OverlapNum8.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Card_OverlapNum9.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Card_OverlapNum10.png"/>
+                    <br><br>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Collection_CardPanel01.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Collection_CardPanel02.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Collection_CardPanel03.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Collection_CardPanel04.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Collection_CardPanel05.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Collection_EnemyPanel01.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Collection_EnemyPanel02.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Collection_EnemyPanel03.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Collection_EnemyPanel04.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Collection_EnemyPanel05.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Collection_EnemyPanel06.png"/>
+                    <br><br>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Draw_Card.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/dark_BlankCard01.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/dark_BlankCard02.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/dark_BlankCard03.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/dark_BlankCard04.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/dark_BlankCard05.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/dark_BlankCard06.png"/>
+                    <br><br>
+                    <img class="contentClass" style="max-width: 150px" onclick="window.open(this.src)" data-src="./images/assets/ui/Shop_Panel01.png"/>
+                    <img class="contentClass" style="max-width: 150px" onclick="window.open(this.src)" data-src="./images/assets/ui/Shop_Panel02.png"/>
+                    <br><br>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/PassiveIcon_00.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/PassiveIcon_01.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/PassiveIcon_02.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/PassiveIcon_03.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/PassiveIcon_04.png"/>
+                    <br><br>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Dark_IncentiveIcon_202.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Dark_IncentiveIcon_204.png"/>
+                    <br><br>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/GlobalNavi_Collection.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/GlobalNavi_Home.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/GlobalNavi_Mission.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/GlobalNavi_Shop.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/GlobalNavi_Status.png"/>
+                    <br><br>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Icon_Attribute00.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Icon_Attribute01.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Icon_Attribute02.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Icon_Attribute03.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Icon_Attribute04.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Icon_Attribute05.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Icon_Attribute06.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Icon_CardColor01.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Icon_CardColor02.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Icon_CardColor03.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Icon_CardColorR.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Icon_CardColorU.png"/>
+                    <br><br>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Collection_Icon_S_00.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Collection_Icon_S_01.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Collection_Icon_S_02.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Collection_Icon_S_03.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/Collection_Icon_S_04.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/ShopBut_Open.png"/>
+                    <br><br>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/StatusIcon01a.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/StatusIcon02a.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/StatusIcon03a.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/StatusIcon04a.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/StatusIcon05a.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/StatusIcon06a.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/StatusIcon07a.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/StatusIcon08a.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/StatusIcon09a.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/StatusIcon10a.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/StatusIcon11a.png"/>
+                    <img class="contentClass" onclick="window.open(this.src)" data-src="./images/assets/ui/StatusIcon12a.png"/>
+                    <br><br>
+                    <img class="contentClass" style="max-width: 300px;" onclick="window.open(this.src)" data-src="./images/assets/ui/Mission_TitleBord01.png"/>
+                    <img class="contentClass" style="max-width: 300px;" onclick="window.open(this.src)" data-src="./images/assets/ui/Mission_TitleBord02.png"/>
+                    <br><br>
+                    <img class="contentClass" style="max-width: 500px;" onclick="window.open(this.src)" data-src="./images/assets/ui/Win21.png"/>
+                    <img class="contentClass" style="max-width: 500px;" onclick="window.open(this.src)" data-src="./images/assets/ui/Win22.png"/>
+
+                </div>
+                <pre></pre>
+
+                <pre></pre>
+
+                <pre></pre>
+
+        </div>
+
+  </body>
+</html>

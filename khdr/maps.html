@@ -34,7 +34,7 @@
 
     <meta property="og:description" content="Browse the many gorgeous maps that KHUχ has to offer.">
 
-    <meta property="og:site_name" content="Roboloid's KHUχ Info Page" >
+    <meta property="og:site_name" content="Roboloid's KHDR Info Page" >
 
     <meta property="og:image" content="https://roboloid.github.io/khux/images/icon/maps_thumb.png">
     <!-- Metadata end -->
@@ -78,7 +78,8 @@
       .maps {
         margin: 5px 5px 5px;
         display: relative;
-        width: 40%;
+        width: 500px;
+        max-width: 40%;
         cursor: pointer;
       }
       .mapButton  {
@@ -117,6 +118,18 @@
 
     </div>
 
+    <script>
+        function mapFunction(value)  {
+            var variable = value + "_Container";
+            document.getElementById(variable).classList.toggle("showMap");
+            $(document).ready(function() {
+              $("#" + variable).find("img").each(function() {
+                  $(this).attr("src", $(this).data("src"));
+                });
+            });
+        }
+    </script>
+
         <div class="whiteOverlay">
 
             <h1 style = "text-align:center;color:black;font-family:Verdana, sans-serif;">Map Gallery</h1>
@@ -130,8 +143,32 @@
                 <div id="Scala_ad_Caelum_Container" class="mapContainer">
                 <pre></pre>
 
-                <img class="maps" onclick="window.open(this.src)" data-src="./images/map/Scala01.jpg"/>
-                <img class="maps" onclick="window.open(this.src)" data-src="./images/map/Scala02.jpg"/>
+                <img class="maps" onclick="window.open(this.src)" data-src="./images/map/Scala_ad_Caelum_01.png"/>
+                <img class="maps" onclick="window.open(this.src)" data-src="./images/map/Scala_ad_Caelum_02.png"/>
+                <img class="maps" onclick="window.open(this.src)" data-src="./images/map/Scala_ad_Caelum_03.png"/>
+                <img class="maps" onclick="window.open(this.src)" data-src="./images/map/Scala_ad_Caelum_04.png"/>
+                <img class="maps" onclick="window.open(this.src)" data-src="./images/map/Scala_ad_Caelum_05.png"/>
+                <img class="maps" onclick="window.open(this.src)" data-src="./images/map/Scala_ad_Caelum_06.png"/>
+
+                </div>
+                <pre></pre>
+
+                <pre></pre>
+
+                <pre></pre>
+
+                <pre></pre>
+
+                <pre></pre>
+
+            <input type="image" class="mapButton" onclick="mapFunction('Destiny_Islands')" id="Destiny_Islands" src ="./images/icon/Logo_Destiny_Islands.png"/>
+
+                <div id="Destiny_Islands_Container" class="mapContainer">
+                <pre></pre>
+
+                <img class="maps" onclick="window.open(this.src)" data-src="./images/map/Destiny_Islands_01.png"/>
+                <img class="maps" onclick="window.open(this.src)" data-src="./images/map/Destiny_Islands_02.png"/>
+                <img class="maps" onclick="window.open(this.src)" data-src="./images/map/Destiny_Islands_03.png"/>
 
                 </div>
                 <pre></pre>
@@ -145,8 +182,6 @@
                 <pre></pre>
 
         </div>
-
-    <script src="./src/maps.js"></script>
 
   </body>
 </html>
