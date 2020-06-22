@@ -76554,7 +76554,7 @@ var medalDatabase = {
                     CountDirection: "Null"
                 }
             },
-            Hits: 1
+            Hits: 11
         },
         Supernova:  {
             Name: "[Mastery] Reversed Strike All P",
