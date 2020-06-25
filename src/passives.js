@@ -18,11 +18,15 @@ function selectKeyblade(value)  {
 
     /* Reset values */
     currentKeyblade = value;
-    grabKeybladeImg(currentKeyblade);
-    var i = 1;
-    while(i < 32)   {
-        document.getElementById("lv" + i).classList.toggle("show" + i, false);
-        i++;
+
+    document.getElementById("dropbtn_container").src = "./images/ui/kbButton_Off.png";
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
     }
 
     document.getElementById("number_container").classList.toggle("showNum", true);
@@ -30,10 +34,6 @@ function selectKeyblade(value)  {
 
     calculatePassives();
   }
-}
-
-function grabKeybladeImg(value)  {
-  document.getElementById("kbImage").src = "./images/icon/" + value + "_icon.png";
 }
 
 function calculatePassives()   {
@@ -89,29 +89,53 @@ function calculatePassives()   {
           break;
       }
 
-      
-      var entries = Object.entries(thisBlade).sort((a, b) => a[0] - b[0]);
-      // console.log(entries);
+      var passiveDiv = document.getElementById("number_container");
+      passiveDiv.innerHTML = "";
+      passiveDiv.className = "number-content";
+      passiveDiv.style = "font-size:20px; text-align:center; color:black; font-family:Verdana, sans-serif";
 
-      var counter = 1;
+      var grabKeyblade = document.createElement('img');
+      grabKeyblade.style = "display: block; text-align: center; margin-left: auto; margin-right: auto";
+      grabKeyblade.className = "shadow";
+      grabKeyblade.src = "./images/icon/" + currentKeyblade + "_icon.png";
+      passiveDiv.appendChild(grabKeyblade);
 
-      // console.log(thisBlade);
+      var tableElement = document.createElement('table');
+      tableElement.style = "margin: 50px; text-align: center; display: inline-block";
+      tableElement.setAttribute('border', '1');
+      var tableBodyElement = document.createElement('tbody');
       
       for(var level in thisBlade)   {
+        var trElement = document.createElement('tr');
           for(var passive in thisBlade[level])  {
-                console.log(thisBlade[level][passive]);
-                document.getElementById("lv" + counter + "_level").innerHTML = level;
-                document.getElementById("lv" + counter + "_img").src = "./images/ui/" + passive + ".png";
-                document.getElementById("lv" + counter + "_img").style.width = "80px";
-                document.getElementById("lv" + counter + "_value").innerHTML = thisBlade[level][passive];
-                document.getElementById("lv" + counter).classList.toggle("show" + counter, true);
-                counter++;
+            var tdElement1 = document.createElement('td');
+            tdElement1.style = "width: 150px; margin-right: 100px";
+            tdElement1.appendChild(document.createTextNode(level));
+            trElement.appendChild(tdElement1);
+
+            
+            var tdElement2 = document.createElement('td');
+            var tdElement2IMG = document.createElement('img');
+            tdElement2IMG.src = "./images/ui/" + passive + ".png";
+            tdElement2IMG.style = "width: 80px";
+            tdElement2.appendChild(tdElement2IMG);
+            trElement.appendChild(tdElement2);
+
+
+            var tdElement3 = document.createElement('td');
+            tdElement3.style = "width: 100px";
+            tdElement3.appendChild(document.createTextNode(" +" + thisBlade[level][passive]));
+            trElement.appendChild(tdElement3);
           }
+          tableBodyElement.appendChild(trElement);
       }
+      tableElement.appendChild(tableBodyElement);
+      passiveDiv.appendChild(tableElement);
 }
 
 // Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
+
+window.addEventListener("click", function(event) {
   if (!event.target.matches('.dropbtn')) {
     document.getElementById("dropbtn_container").src = "./images/ui/kbButton_Off.png";
     var dropdowns = document.getElementsByClassName("dropdown-content");
@@ -123,7 +147,7 @@ window.onclick = function(event) {
       }
     }
   }
-}
+});
 
 var kb1_pass = {      // Keyblade1: Starlight
     "Lv. 35":     {"upSpeed":       50},
