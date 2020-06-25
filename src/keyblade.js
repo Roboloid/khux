@@ -230,7 +230,7 @@ function calculateCost() {
 }
 
 // Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
+window.addEventListener("click", function(event) {
   if (!event.target.matches('.dropbtn')) {
     document.getElementById("dropbtn_container").src = "./images/ui/kbButton_Off.png";
     var dropdowns = document.getElementsByClassName("dropdown-content");
@@ -242,7 +242,7 @@ window.onclick = function(event) {
       }
     }
   }
-}
+});
 
 var kb1_cost = {      // Keyblade1: Starlight
   power:  {
