@@ -159,6 +159,18 @@
 
     </div>
 
+    <script>
+        function showFunction(value)  {
+            var variable = value + "_Container";
+            document.getElementById(variable).classList.toggle("showSection");
+            $(document).ready(function() {
+              $("#" + variable).find("img").each(function() {
+                  $(this).attr("src", $(this).data("src"));
+                });
+            });
+        }
+    </script>
+
         <div class="whiteOverlay">
 
             <h1 style = "text-align:center;color:black;font-family:Verdana, sans-serif;">Assets Gallery</h1>
@@ -7188,8 +7200,6 @@
                 </div>
 
         </div>
-
-    <script src="./src/assets.js"></script>
 
   </body>
 </html>

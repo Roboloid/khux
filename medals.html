@@ -132,6 +132,27 @@
 
     </div>
 
+    <script>
+        function switchDisplay() {
+            var comparator = document.getElementById("swapbtn_container").src.substring(document.getElementById("swapbtn_container").src.length - 5, document.getElementById("swapbtn_container").src.length);
+            if(comparator == "r.png")  {
+                document.getElementById("swapbtn_container").src = "./images/ui/medalButton_toMedal.png";
+                document.getElementById("Medals_Container").classList.toggle("show1");
+                document.getElementById("Renders_Container").classList.toggle("show2");
+                $(document).ready(function() {
+                    $("#Renders_Container").find("img").each(function() {
+                        $(this).attr("src", $(this).data("src"));
+                    });
+                });
+            }
+            else  {
+                document.getElementById("swapbtn_container").src = "./images/ui/medalButton_toRender.png";
+                document.getElementById("Medals_Container").classList.toggle("show1");
+                document.getElementById("Renders_Container").classList.toggle("show2");
+            }
+        }
+    </script>
+
         <div class="whiteOverlay">
 
             <h1 style = "text-align:center;color:black;font-family:Verdana, sans-serif;">Medal and Render Album</h1>
@@ -3011,8 +3032,6 @@
             </div>
             
         </div>
-
-    <script src="./src/medals.js"></script>
 
   </body>
 </html>
