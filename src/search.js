@@ -131,7 +131,7 @@ function lightButtons(value)    {
     }
     var captionContainer = document.getElementById(value + "caption");
     if(captionContainer)    {
-        captionContainer.classList.toggle("show");
+        captionContainer.classList.toggle("showCaption");
     }
 }
 
@@ -139,13 +139,13 @@ function compareDropdown(value) {
     if(value.value == "Up")   {
         var captionContainer = document.getElementById(value.parentNode.id + "caption");
         if(captionContainer)    {
-            captionContainer.classList.toggle("show");
+            captionContainer.classList.toggle("showCaption");
         }
     }
     else if(value.value != "Up")   {
         var captionContainer = document.getElementById(value.parentNode.id + "caption");
         if(captionContainer)    {
-            captionContainer.classList.remove("show");
+            captionContainer.classList.remove("showCaption");
         }
     }
 }
