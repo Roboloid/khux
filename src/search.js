@@ -76478,7 +76478,7 @@ var medalDatabase = {
         Target: "All",
         Ability:    {
             Name: "Dark Slash EX +6",
-            Text: "Deals 11 hits. 1 turn: Medal STR +8000, self [↑ STR, U-, R- & PSM-STR 15], targets [↓ DEF, U-, R- & PSM-DEF 15], SP ATK B +220%. Gauge +3. Count ±0.",
+            Text: "Deals 11 hits. 1 turn: Medal STR +6000, self [↑ STR, U-, R- & PSM-STR 15], targets [↓ DEF, U-, R- & PSM-DEF 15], SP ATK B +220%. Gauge +3. Count ±0.",
             SelfBuffs:  {
                 BuffGA: {
                     BuffCount: 15,
@@ -76512,7 +76512,7 @@ var medalDatabase = {
                 },
                 STRPlus:  {
                     Type: "General",
-                    Amount: 8000,
+                    Amount: 6000,
                     DurationType: "Turn",
                     DurationCount: 1
                 },
