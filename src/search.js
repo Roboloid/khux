@@ -466,7 +466,7 @@ function searchMedal()  {
                 }
             }
             else if(entry[secondaryInfo] != undefined && secondaryInfo == "AlbumNum")   {
-                secondaryFigCaption.innerHTML = "Album: " + entry[secondaryInfo];
+                secondaryFigCaption.innerHTML = "No. " + entry[secondaryInfo];
             }
             else if(secondaryInfo == "Hits" && entry.Ability != undefined && entry.Ability.Hits != undefined)   {
                 secondaryFigCaption.innerHTML = "Hits: " + entry.Ability.Hits;

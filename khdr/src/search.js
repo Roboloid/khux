@@ -341,7 +341,7 @@ function searchCard()  {
                 }
             }
             else if(entry[secondaryInfo] != undefined && secondaryInfo == "AlbumNum")   {
-                secondaryFigCaption.innerHTML = "Album: " + entry[secondaryInfo];
+                secondaryFigCaption.innerHTML = "No. " + entry[secondaryInfo];
             }
             else if(entry[secondaryInfo] != undefined)   {
                 secondaryFigCaption.innerHTML = secondaryInfo + ": " + entry[secondaryInfo];
