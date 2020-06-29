@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>                         <!---------------------- START HEADER ---------------------->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163660070-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-163660070-1');
+    </script>
+
+    <meta charset="utf-8" />
+    <meta name="author" content="Roboloid" />
+    <meta name="description" content="Card Search Tool" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.75, viewport-fit=cover" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://roboloid.github.io/khux/images/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://roboloid.github.io/khux/images/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://roboloid.github.io/khux/images/icon/favicon-16x16.png">
+    <link rel="manifest" href="https://roboloid.github.io/khux/images/icon/site.webmanifest">
+    <link rel="mask-icon" href="https://roboloid.github.io/khux/images/icon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="https://roboloid.github.io/khux/images/icon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="https://roboloid.github.io/khux/images/icon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Metadata start -->
+    <html prefix="og: http://ogp.me/ns#"></html>
+    
+    <meta property="og:title" content="Card Search Tool">
+
+    <meta property="og:description" content="Use this page to search for cards and filter by several features.">
+
+    <meta property="og:site_name" content="Roboloid's KHDR Info Page" >
+
+    <meta property="og:image" content="https://roboloid.github.io/khux/khdr/images/icon/search_thumb.png">
+    <!-- Metadata end -->
+
+    <!-- Site title -->
+    <title>KHDR</title>
+
+    <!-- Script imports -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <!-- Content overlay -->
+    <style type="text/css">
+
+      @font-face {
+        font-family: PRGothIWA;
+        src: url("./images/assets/font/PRGothIWA-Dm.TTF")
+      }
+
+      .whiteOverlay {
+        text-align: center;
+        padding: 15px 15px 15px;
+        margin: 10% 10% 10%;
+        color: #ffffff;
+        background-color: #FFF;
+        background-position: center;
+        margin-left: auto;
+        margin-right: auto;
+        height: 100%;
+        width: 95%;
+        box-shadow: 0px 8px 16px 0px rgba(255, 0, 0, 0.2);
+      }
+      .searchBtn {
+        text-align: center;
+        padding: 10px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .searchTextBox {
+        text-align: center;
+        width: 250px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .resultsListClass {
+        text-align: center;
+        display: block;
+      }
+      .imgClass {
+        width: 200px;
+        display: relative;
+        margin-left: auto;
+        margin-right: auto;
+        cursor: pointer;
+      }
+      .spanHeaderStyle {
+        position: relative;
+        text-align: center;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+      .headerText {
+        font-size: 20px;
+      }
+      .shape1 {
+        border-radius: 15px;
+        background: rgb(99, 102, 246);
+      }
+      .shape2 {
+        border-radius: 10px;
+        background: rgb(18, 36, 62);
+      }
+      .overText {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .buffImage {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .underImage {
+        position: inline-block;
+        margin: 2px;
+      }
+      .buttonText {
+        position: absolute;
+        top: 50%;
+        left: 48%;
+        transform: translate(-50%, -50%);
+        font-size: 18px;
+        text-shadow: 1.50px 1.50px rgb(0, 0, 0);
+      }
+      .styledText {
+        font-size: 18px;
+        text-shadow: 1.50px 1.50px rgb(0, 0, 0);
+      }
+      .cardPopupClass {
+        font-family: Verdana, sans-serif;
+        display: none;
+        border-width: 5px;
+        border-style: solid;
+        border-image: linear-gradient(to bottom, rgb(166, 40, 175), rgb(104, 6, 92));
+        border-image-slice: 1;
+        padding: 5px;
+        width: 1000px;
+        max-width: 80%;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        background: rgb(108, 49, 143);
+        position: fixed;
+        max-height: 100%;
+        overflow-y: auto;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+        z-index: 10001;
+      }
+      .cardSortFilterClass {
+        font-family: Verdana, sans-serif;
+        display: none;
+        border-width: 5px;
+        border-style: solid;
+        border-image: linear-gradient(to bottom, rgb(166, 40, 175), rgb(104, 6, 92));
+        border-image-slice: 1;
+        padding: 5px;
+        width: 1250px;
+        max-width: 80%;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        background: rgb(108, 49, 143);
+        position: fixed;
+        max-height: 100%;
+        overflow-y: auto;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+        z-index: 10001;
+      }
+      .darkOverlayClass {
+        position: fixed;
+        background:rgb(0, 0, 0);
+        display: none;
+        opacity: 50%;
+        width: 100%;
+        height: 100%;
+        z-index: 10000;
+      }
+      .caption  {
+        margin-right: 75px;
+        display: none;
+      }
+      .showCaption  {
+        vertical-align: middle;
+        display: inline-block;
+      }
+      figure{
+        margin: 5px;
+        display: inline-block;
+        vertical-align: top;
+        max-width: 33%;
+      }
+      figcaption {
+        text-align: center;
+        font-family: Verdana, sans-serif;
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        padding: 3px;
+        max-width: 200px;
+        text-shadow: 2px 2px rgb(0, 0, 0);
+      }
+      hr  {
+        border-width: 3px;
+        border-radius: 100px;
+        border-color: rgb(71, 0, 119);
+      }
+
+      input[type=number]::-webkit-inner-spin-button, 
+      input[type=number]::-webkit-outer-spin-button { 
+        -webkit-appearance: none; 
+        margin: 0; 
+      }
+
+      input[type=number] {
+        -moz-appearance:textfield;
+      }
+
+    </style>
+
+    <!-- Backdrop pattern -->
+    <style>
+        body  {
+          background-image: url("../images/other/bg_search.png");
+          background-size: 150px;
+          background-repeat: repeat
+        }
+    </style>
+  </head>                         <!---------------------- END HEADER ---------------------->
+
+  
+
+  <body onload="loadPage()">
+
+    <div id="darkOverlay" class="darkOverlayClass">
+    </div>
+
+    <div id="darkOverlay2" class="darkOverlayClass">
+    </div>
+
+    <script>
+        $(function(){
+            $("#navbar-placeholder").load("./src/navigation.html");
+        });
+    </script>
+
+    <div id="navbar-placeholder">
+
+    </div>
+
+    
+
+        <div id="cardPopup" class="cardPopupClass">
+        </div>
+
+        <img src="./images/ui/search_buffOff.png" style="width: 0px; display: none">
+        <img src="./images/ui/search_buffOn.png" style="width: 0px; display: none">
+        <img src="./images/ui/search_genericOff.png" style="width: 0px; display: none">
+        <img src="./images/ui/search_genericOn.png" style="width: 0px; display: none">
+
+        <div id="cardSortFilterPopup" class="cardSortFilterClass">
+            <div id="upperInfo" style="overflow: hidden; display: block">
+                <br>
+                <span id="upperInfo_secondaryInformation" style="font-size: 24px; text-shadow: 1.50px 1.50px rgb(0, 0, 0); display: inline-block; min-width: 45%">
+                    <p>Select secondary information</p>
+                    <select id="secondaryInformation" style="display: inline-block; margin: 10px">
+                        <option value="AlbumNum">Album Number</option>
+                        <option value="Power">Power</option>
+                    </select>
+                </span>
+                <span id="upperInfo_sortCondition" style="font-size: 24px; text-shadow: 1.50px 1.50px rgb(0, 0, 0); display: inline-block; min-width: 45%">
+                  <p>Select sort condition</p>
+                  <select id="sortCondition" style="display: inline-block; margin: 10px">
+                      <option value="AlbumNum">Album Number</option>
+                      <option value="Power">Power</option>
+                      <option value="Element">Element</option>
+                  </select>
+                  <select id="ascendingOrder" style="display: inline-block; margin: 10px">
+                    <option value="Descending">↓ Descending</option>
+                    <option value="Ascending">↑ Ascending</option>
+                </select>
+              </span>
+            </div>
+
+            <br>
+
+            <span id="searchButtonSpan" onclick="searchFormButton('searchButtonIMG')" style="position: relative; text-align: center; cursor: pointer; margin-right: 50px">
+                <img id="searchButtonIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
+                <p class="buttonText" style="font-size: 24px; margin-left: -2px; top: 10px">Search</p>
+            </span>
+
+            <span id="resetButtonSpan" onclick="resetForm('resetButtonIMG')" style="position: relative; text-align: center; cursor: pointer">
+                <img id="resetButtonIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
+                <p class="buttonText" style="font-size: 24px; top: 10px">Clear</p>
+            </span>
+            
+            <hr>
+
+            <div id="otherFilters" style="overflow: hidden; display: block">
+              <div id="otherFilters_leftSide" style="overflow: hidden; display: inline-block; width: 55%">
+                  <span id="otherFilters_Attribute" style="font-size: 18px; text-shadow: 1.50px 1.50px rgb(0, 0, 0); display: inline-block">
+                      <span id="otherFilters_RedSpan" onclick="lightButtons('Red')" class="spanHeaderStyle">
+                          <img id="Red" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/CardType_Red.png" style="height: 40px; top: 14px">
+                      </span>
+
+                      <span id="otherFilters_GreenSpan" onclick="lightButtons('Green')" class="spanHeaderStyle">
+                          <img id="Green" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/CardType_Green.png" style="height: 40px; top: 14px">
+                      </span>
+
+                      <span id="otherFilters_BlueSpan" onclick="lightButtons('Blue')" class="spanHeaderStyle">
+                          <img id="Blue" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/CardType_Blue.png" style="height: 40px; top: 14px">
+                      </span>
+
+                      <br><br>
+
+                      <span id="otherFilters_LightSpan" onclick="lightButtons('Light')" class="spanHeaderStyle">
+                          <img id="Light" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/CardType_Light.png" style="height: 40px; top: 14px">
+                      </span>
+
+                      <span id="otherFilters_DarkSpan" onclick="lightButtons('Dark')" class="spanHeaderStyle">
+                          <img id="Dark" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/CardType_Dark.png" style="height: 40px; top: 14px">
+                      </span>
+
+                      <br><br>
+
+                      <span id="otherFilters_SwordSpan" onclick="lightButtons('Sword')" class="spanHeaderStyle">
+                          <img id="Sword" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/Icon_Sword.png" style="height: 40px; top: 13px">
+                      </span>
+
+                      <span id="otherFilters_StaffSpan" onclick="lightButtons('Staff')" class="spanHeaderStyle">
+                          <img id="Staff" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/Icon_Staff.png" style="height: 40px; top: 14px">
+                      </span>
+
+                      <span id="otherFilters_ShieldSpan" onclick="lightButtons('Shield')" class="spanHeaderStyle">
+                          <img id="Shield" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/Icon_Shield.png" style="height: 40px; top: 12px">
+                      </span>
+                  </span>
+
+                  
+              </div>
+
+              <div id="otherFilters_rightSide" style="overflow: hidden; display: inline-block; max-width: 35%; vertical-align: top; margin-right: 5%">
+                  <span id="otherFilters_AlbumNum" style="font-size: 18px; text-shadow: 1.50px 1.50px rgb(0, 0, 0); display: table; float: right">
+                      <label for="AlbumNum">Set Album Number: </label>
+                      <select id="AlbumNumOrder" style="display: inline-block; margin: 10px">
+                          <option value=">=">≥</option>
+                          <option value="<=">≤</option>
+                          <option value="=">=</option>
+                      </select>
+                      <input type="number" id="AlbumNum" style="width: 75px">
+                  </span>
+
+                  <span id="otherFilters_Power" style="font-size: 18px; text-shadow: 1.50px 1.50px rgb(0, 0, 0); display: table; float: right">
+                      <label for="Power">Set Power: </label>
+                      <select id="PowerOrder" style="display: inline-block; margin: 10px">
+                          <option value=">=">≥</option>
+                          <option value="<=">≤</option>
+                          <option value="=">=</option>
+                      </select>
+                      <input type="number" id="Power" style="width: 75px">
+                  </span>
+              </div>
+
+              <hr>
+
+              <div id="mainAbility">
+                  <p style="text-shadow: 1.50px 1.50px rgb(0, 0, 0); font-size: 24px; top: 10px">Main Ability</p>
+
+                  <span id="otherFilters_MainAbilityElement" style="font-size: 18px; text-shadow: 1.50px 1.50px rgb(0, 0, 0); display: inline-block">
+                      <span id="otherFilters_FireSpan" onclick="lightButtons('MainAbilityFire')" class="spanHeaderStyle">
+                          <img id="MainAbilityFire" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/Attribute_Fire.png" style="height: 40px; top: 15px">
+                      </span>
+
+                      <span id="otherFilters_WaterSpan" onclick="lightButtons('MainAbilityWater')" class="spanHeaderStyle">
+                          <img id="MainAbilityWater" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/Attribute_Water.png" style="height: 40px; top: 15px">
+                      </span>
+
+                      <span id="otherFilters_LightningSpan" onclick="lightButtons('MainAbilityLightning')" class="spanHeaderStyle">
+                          <img id="MainAbilityLightning" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/Attribute_Lightning.png" style="height: 40px; top: 15px">
+                      </span>
+
+                      <span id="otherFilters_WindSpan" onclick="lightButtons('MainAbilityWind')" class="spanHeaderStyle">
+                          <img id="MainAbilityWind" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/Attribute_Wind.png" style="height: 40px; top: 14px">
+                      </span>
+
+                      <span id="otherFilters_LightSpan" onclick="lightButtons('MainAbilityLight')" class="spanHeaderStyle">
+                          <img id="MainAbilityLight" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/Attribute_Light.png" style="height: 40px; top: 15px">
+                      </span>
+
+                      <span id="otherFilters_DarkSpan" onclick="lightButtons('MainAbilityDark')" class="spanHeaderStyle">
+                          <img id="MainAbilityDark" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/Attribute_Dark.png" style="height: 40px; top: 15px">
+                      </span>
+
+                      <span id="otherFilters_NeutralSpan" onclick="lightButtons('MainAbilityNeutral')" class="spanHeaderStyle">
+                          <img id="MainAbilityNeutral" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                          <img class="overText" src="./images/ui/Attribute_Neutral.png" style="height: 40px; top: 15px">
+                      </span>
+                  </span>
+
+              </div>
+
+              <hr>
+
+              <div id="subAbility">
+                  <span id="otherFilters_HasSubAbilitySpan" onclick="lightButtons('HasSubAbility')" class="spanHeaderStyle">
+                      <img id="HasSubAbility" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                      <p class="buttonText" style="font-size: 18px; top: 11px; margin-left: 3px">Has sub-ability</p>
+                  </span>
+
+                  <br><br>
+              </div>
+
+            </div>
+
+        </div>
+
+        <div class="whiteOverlay">
+
+            <h1 style = "text-align:center;color:black;font-family:Verdana, sans-serif;">Card Search</h1>
+            
+            <h3 style="text-align:center;color:black;font-family:Verdana, sans-serif;">Find cards based on your search conditions</h3>
+
+            <pre></pre>
+
+            <input type="text" id="searchCardString" class="searchTextBox" onkeyup="parseCardName(searchCardString.value);" placeholder="Enter a medal name."/>
+            
+            <input type="image" onclick="searchCard()" class="searchBtn" src="./images/ui/search_searchButton.png" width="150px"/>
+
+            <input type="image" onclick="loadSearchBox()" class="searchBtn" src="./images/ui/search_sortAndFilterButton.png" width="150px"/>
+
+            <div id="resultsList" class="resultsListClass">
+            </div>
+
+        </div>
+
+    <script src="./src/search.js"></script>
+
+  </body>
+</html>
