@@ -76715,7 +76715,7 @@ var medalDatabase = {
         Gauge: 1,
         Target: "All",
         Ability:    {
-            Name: "Light's Sword +6",
+            Name: "Spark Break EX +6",
             Text: "Deals 11 hits. 1 turn: P-Medal STR +5000, self [↑ STR, U- & P-STR 10], SP ATK B +200%. Damage+: 1 enemy or 0 parts left.",
             Condition: "OneEnemy",
             SelfBuffs:  {
