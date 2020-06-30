@@ -2201,4 +2201,126 @@ var cardDatabase = {
             Effect: "A physical attack."
         }
     },
+    38:  {
+        ID: 38,
+        AlbumNum: 38,
+        CardImage: "38_King_Mickey.png",
+        RenderImage: "38_King_Mickey_Render.png",
+        Name: "King Mickey",
+        DirectionType: "Light",
+        ColorType: "Red",
+        AttackType: "Sword",
+        Passive1:   {
+            ReqCount: 1,
+            BuffType: "HP",
+            BuffCount: 1
+        },
+        Passive2:   {
+            ReqCount: 3,
+            BuffType: "HP",
+            BuffCount: 1
+        },
+        Passive3:   {
+            ReqCount: 5,
+            BuffType: "HP",
+            BuffCount: 1
+        },
+        Passive4:   {
+            ReqCount: 10,
+            BuffType: "HP",
+            BuffCount: 1
+        },
+        MainAbility:    {
+            Name: "Attack",
+            AttackType: "Sword",
+            Element: "Neutral",
+            Power: 24,
+            Effect: "A lesser physical attack."
+        }
+    },
+    39:  {
+        ID: 39,
+        AlbumNum: 39,
+        CardImage: "39_Tinker_Bell.png",
+        RenderImage: "39_Tinker_Bell_Render.png",
+        Name: "Tinker Bell",
+        DirectionType: "Light",
+        ColorType: "Green",
+        AttackType: "Shield",
+        MainAbility:    {
+            Name: "Cure",
+            AttackType: "Shield",
+            Element: "Neutral",
+            Power: 50,
+            Effect: "Restores HP. Amount restored is based on Magic."
+        }
+    },
+    40:  {
+        ID: 40,
+        AlbumNum: 40,
+        CardImage: "40_Ariel.png",
+        RenderImage: "40_Ariel_Render.png",
+        Name: "Ariel",
+        DirectionType: "Light",
+        ColorType: "Blue",
+        AttackType: "Staff",
+        MainAbility:    {
+            Name: "Blizzard",
+            AttackType: "Staff",
+            Element: "Water",
+            Power: 45,
+            Effect: "A water-element magic attack."
+        }
+    },
+    41:  {
+        ID: 41,
+        AlbumNum: 41,
+        CardImage: "41_Neoshadow.png",
+        RenderImage: "41_Neoshadow_Render.png",
+        Name: "Neoshadow",
+        DirectionType: "Dark",
+        ColorType: "Blue",
+        AttackType: "Sword",
+        MainAbility:    {
+            Name: "Dark Break",
+            AttackType: "Sword",
+            Element: "Neutral",
+            Power: 30,
+            Effect: "A physical attack."
+        }
+    },
+    42:  {
+        ID: 42,
+        AlbumNum: 42,
+        CardImage: "42_Riku_Replica.png",
+        RenderImage: "42_Riku_Replica_Render.png",
+        Name: "Riku Replica",
+        DirectionType: "Dark",
+        ColorType: "Red",
+        AttackType: "Sword",
+        MainAbility:    {
+            Name: "Ars Arcanum",
+            AttackType: "Sword",
+            Element: "Neutral",
+            Power: 70,
+            Effect: "A powerful physical attack."
+        }
+    },
+    43:  {
+        ID: 43,
+        AlbumNum: 43,
+        CardImage: "43_Key_Art_%233.png",
+        RenderImage: "43_Key_Art_%233_Render.png",
+        Name: "Key Art #3",
+        DirectionType: "Light",
+        ColorType: "Green",
+        AttackType: "Staff",
+        MainAbility:    {
+            Name: "Shining Star",
+            AttackType: "Staff",
+            Element: "Neutral",
+            Power: 60,
+            Effect: "A non-element magic attack."
+        }
+    },
 };
