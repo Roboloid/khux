@@ -2247,6 +2247,26 @@ var cardDatabase = {
         DirectionType: "Light",
         ColorType: "Green",
         AttackType: "Shield",
+        Passive1:   {
+            ReqCount: 1,
+            BuffType: "HP",
+            BuffCount: 1
+        },
+        Passive2:   {
+            ReqCount: 3,
+            BuffType: "HP",
+            BuffCount: 1
+        },
+        Passive3:   {
+            ReqCount: 5,
+            BuffType: "HP",
+            BuffCount: 2
+        },
+        Passive4:   {
+            ReqCount: 10,
+            BuffType: "HP",
+            BuffCount: 2
+        },
         MainAbility:    {
             Name: "Cure",
             AttackType: "Shield",
@@ -2264,6 +2284,26 @@ var cardDatabase = {
         DirectionType: "Light",
         ColorType: "Blue",
         AttackType: "Staff",
+        Passive1:   {
+            ReqCount: 1,
+            BuffType: "HP",
+            BuffCount: 1
+        },
+        Passive2:   {
+            ReqCount: 3,
+            BuffType: "HP",
+            BuffCount: 1
+        },
+        Passive3:   {
+            ReqCount: 5,
+            BuffType: "Magic",
+            BuffCount: 2
+        },
+        Passive4:   {
+            ReqCount: 10,
+            BuffType: "Magic",
+            BuffCount: 2
+        },
         MainAbility:    {
             Name: "Blizzard",
             AttackType: "Staff",
@@ -2281,6 +2321,26 @@ var cardDatabase = {
         DirectionType: "Dark",
         ColorType: "Blue",
         AttackType: "Sword",
+        Passive1:   {
+            ReqCount: 1,
+            BuffType: "HP",
+            BuffCount: 1
+        },
+        Passive2:   {
+            ReqCount: 3,
+            BuffType: "HP",
+            BuffCount: 1
+        },
+        Passive3:   {
+            ReqCount: 5,
+            BuffType: "Strength",
+            BuffCount: 1
+        },
+        Passive4:   {
+            ReqCount: 10,
+            BuffType: "Strength",
+            BuffCount: 1
+        },
         MainAbility:    {
             Name: "Dark Break",
             AttackType: "Sword",
