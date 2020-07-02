@@ -288,14 +288,16 @@
                     <p>Select secondary information</p>
                     <select id="secondaryInformation" style="display: inline-block; margin: 10px">
                         <option value="AlbumNum">Album Number</option>
-                        <option value="Power">Power</option>
+                        <option value="BasePower">Base Power</option>
+                        <option value="MaxPower">Max Power</option>
                     </select>
                 </span>
                 <span id="upperInfo_sortCondition" style="font-size: 24px; text-shadow: 1.50px 1.50px rgb(0, 0, 0); display: inline-block; min-width: 45%">
                   <p>Select sort condition</p>
                   <select id="sortCondition" style="display: inline-block; margin: 10px">
                       <option value="AlbumNum">Album Number</option>
-                      <option value="Power">Power</option>
+                      <option value="BasePower">Base Power</option>
+                      <option value="MaxPower">Max Power</option>
                       <option value="Element">Element</option>
                   </select>
                   <select id="ascendingOrder" style="display: inline-block; margin: 10px">
@@ -459,7 +461,7 @@
 
             <pre></pre>
 
-            <input type="text" id="searchCardString" class="searchTextBox" onkeyup="parseCardName(searchCardString.value);" placeholder="Enter a medal name."/>
+            <input type="text" id="searchCardString" class="searchTextBox" onkeyup="parseCardName(searchCardString.value);" placeholder="Enter a card name."/>
             
             <input type="image" onclick="searchCard()" class="searchBtn" src="./images/ui/search_searchButton.png" width="150px"/>
 

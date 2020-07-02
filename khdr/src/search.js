@@ -168,14 +168,30 @@ function quickSort(originalArr, sortChecker) {
     if (originalArr.length <= 1) {
         return originalArr;
     }
-    else if(sortChecker == "Power") {
+    else if(sortChecker == "BasePower") {
         var leftArr = [];              
         var rightArr = [];
         var newArr = [];
         var pivot = originalArr[0];
         var length = originalArr.length;
         for (var i = 1; i < length; i++) {
-            if (cardDatabase[originalArr[i]].MainAbility.Power >= cardDatabase[pivot].MainAbility.Power) {
+            if (cardDatabase[originalArr[i]].MainAbility.BasePower >= cardDatabase[pivot].MainAbility.BasePower) {
+                leftArr.push(originalArr[i]);
+            }  
+            else {
+                rightArr.push(originalArr[i]);
+            }
+        }
+        return newArr.concat(quickSort(leftArr, sortChecker), pivot, quickSort(rightArr, sortChecker));
+    }
+    else if(sortChecker == "MaxPower") {
+        var leftArr = [];              
+        var rightArr = [];
+        var newArr = [];
+        var pivot = originalArr[0];
+        var length = originalArr.length;
+        for (var i = 1; i < length; i++) {
+            if (cardDatabase[originalArr[i]].MainAbility.MaxPower >= cardDatabase[pivot].MainAbility.MaxPower) {
                 leftArr.push(originalArr[i]);
             }  
             else {
@@ -335,10 +351,11 @@ function searchCard()  {
             var secondaryFigCaption = document.createElement('figcaption');
             secondaryFigCaption.className = "shape2";
 
-            if(secondaryInfo == "Power")    {
-                if(entry.MainAbility != undefined && entry.MainAbility.Power != undefined)  {
-                    secondaryFigCaption.innerHTML = "Power: " + entry.MainAbility.Power;
-                }
+            if(secondaryInfo == "BasePower" && entry.MainAbility != undefined && entry.MainAbility.BasePower != undefined)    {
+                secondaryFigCaption.innerHTML = "Base Power: " + entry.MainAbility.BasePower;
+            }
+            else if(secondaryInfo == "MaxPower" && entry.MainAbility != undefined && entry.MainAbility.MaxPower != undefined)    {
+                secondaryFigCaption.innerHTML = "Max Power: " + entry.MainAbility.MaxPower;
             }
             else if(entry[secondaryInfo] != undefined && secondaryInfo == "AlbumNum")   {
                 secondaryFigCaption.innerHTML = "No. " + entry[secondaryInfo];
@@ -376,17 +393,27 @@ function searchCard()  {
 function checkConditions(CardID)   {
    
     // Filter out invalid conditonals
-    if(cardDatabase[CardID][secondaryInfo] == undefined && secondaryInfo != "Power")   {
+    if(cardDatabase[CardID][secondaryInfo] == undefined && secondaryInfo != "BasePower" && secondaryInfo != "MaxPower")   {
         return 0;
     }
-    else if(cardDatabase[CardID][secondaryInfo] == undefined && secondaryInfo == "Power") {
-        if(cardDatabase[CardID].MainAbility == undefined || cardDatabase[CardID].MainAbility.Power == undefined)  {
+    else if(cardDatabase[CardID][secondaryInfo] == undefined && secondaryInfo == "BasePower") {
+        if(cardDatabase[CardID].MainAbility == undefined || cardDatabase[CardID].MainAbility.BasePower == undefined)  {
+            return 0;
+        }
+    }
+    else if(cardDatabase[CardID][secondaryInfo] == undefined && secondaryInfo == "MaxPower") {
+        if(cardDatabase[CardID].MainAbility == undefined || cardDatabase[CardID].MainAbility.MaxPower == undefined)  {
             return 0;
         }
     }
 
-    if(sortCondition == "Power")   {
-        if(cardDatabase[CardID].MainAbility == undefined || cardDatabase[CardID].MainAbility.Power == undefined)  {
+    if(sortCondition == "BasePower")   {
+        if(cardDatabase[CardID].MainAbility == undefined || cardDatabase[CardID].MainAbility.BasePower == undefined)  {
+            return 0;
+        }
+    }
+    else if(sortCondition == "MaxPower")   {
+        if(cardDatabase[CardID].MainAbility == undefined || cardDatabase[CardID].MainAbility.MaxPower == undefined)  {
             return 0;
         }
     }
@@ -743,11 +770,18 @@ function generateCard(CardID)  {
         cardDiv.appendChild(abilityNameSpan);
     }
 
-    if(cardDatabase[CardID].MainAbility !== undefined && cardDatabase[CardID].MainAbility.Power !== undefined)  {
-        var mainAbilityPower = document.createElement('div');
-        mainAbilityPower.style = "float: center; font-size: 22px; text-shadow: 1.25px 1.25px rgb(0, 0, 0)";
-        mainAbilityPower.appendChild(document.createTextNode("Max Power: " + cardDatabase[CardID].MainAbility.Power));
-        cardDiv.appendChild(mainAbilityPower);
+    if(cardDatabase[CardID].MainAbility !== undefined && cardDatabase[CardID].MainAbility.BasePower !== undefined)  {
+        var mainAbilityBasePower = document.createElement('div');
+        mainAbilityBasePower.style = "float: center; font-size: 18px; text-shadow: 1px 1px rgb(0, 0, 0)";
+        mainAbilityBasePower.appendChild(document.createTextNode("Base Power: " + cardDatabase[CardID].MainAbility.BasePower));
+        cardDiv.appendChild(mainAbilityBasePower);
+    }
+
+    if(cardDatabase[CardID].MainAbility !== undefined && cardDatabase[CardID].MainAbility.MaxPower !== undefined)  {
+        var mainAbilityMaxPower = document.createElement('div');
+        mainAbilityMaxPower.style = "float: center; font-size: 22px; text-shadow: 1.25px 1.25px rgb(0, 0, 0)";
+        mainAbilityMaxPower.appendChild(document.createTextNode("Max Power: " + cardDatabase[CardID].MainAbility.MaxPower));
+        cardDiv.appendChild(mainAbilityMaxPower);
     }
 
     if(cardDatabase[CardID].MainAbility !== undefined && cardDatabase[CardID].MainAbility.Effect !== undefined)  {
@@ -861,7 +895,8 @@ var cardDatabase = {
             Name: "Attack",
             AttackType: "Sword",
             Element: "Neutral",
-            Power: 15,
+            BasePower: 2,
+            MaxPower: 15,
             Effect: "A lesser physical attack."
         }
     },
@@ -898,7 +933,8 @@ var cardDatabase = {
             Name: "Attack",
             AttackType: "Sword",
             Element: "Neutral",
-            Power: 15,
+            BasePower: 2,
+            MaxPower: 15,
             Effect: "A lesser physical attack."
         }
     },
@@ -935,7 +971,8 @@ var cardDatabase = {
             Name: "Attack",
             AttackType: "Sword",
             Element: "Neutral",
-            Power: 15,
+            BasePower: 2,
+            MaxPower: 15,
             Effect: "A lesser physical attack."
         }
     },
@@ -972,7 +1009,8 @@ var cardDatabase = {
             Name: "Attack",
             AttackType: "Sword",
             Element: "Neutral",
-            Power: 15,
+            BasePower: 2,
+            MaxPower: 15,
             Effect: "A lesser physical attack."
         }
     },
@@ -1009,7 +1047,8 @@ var cardDatabase = {
             Name: "Attack",
             AttackType: "Sword",
             Element: "Neutral",
-            Power: 15,
+            BasePower: 2,
+            MaxPower: 15,
             Effect: "A lesser physical attack."
         }
     },
@@ -1046,7 +1085,8 @@ var cardDatabase = {
             Name: "Attack",
             AttackType: "Sword",
             Element: "Neutral",
-            Power: 15,
+            BasePower: 2,
+            MaxPower: 15,
             Effect: "A lesser physical attack."
         }
     },
@@ -1083,7 +1123,8 @@ var cardDatabase = {
             Name: "Attack",
             AttackType: "Sword",
             Element: "Neutral",
-            Power: 18,
+            BasePower: 3,
+            MaxPower: 18,
             Effect: "A lesser physical attack."
         }
     },
@@ -1120,7 +1161,8 @@ var cardDatabase = {
             Name: "Attack",
             AttackType: "Sword",
             Element: "Neutral",
-            Power: 18,
+            BasePower: 3,
+            MaxPower: 18,
             Effect: "A lesser physical attack."
         }
     },
@@ -1157,7 +1199,8 @@ var cardDatabase = {
             Name: "Attack",
             AttackType: "Sword",
             Element: "Neutral",
-            Power: 18,
+            BasePower: 3,
+            MaxPower: 18,
             Effect: "A lesser physical attack."
         }
     },
@@ -1194,7 +1237,8 @@ var cardDatabase = {
             Name: "Attack",
             AttackType: "Sword",
             Element: "Neutral",
-            Power: 18,
+            BasePower: 3,
+            MaxPower: 18,
             Effect: "A lesser physical attack."
         }
     },
@@ -1231,7 +1275,8 @@ var cardDatabase = {
             Name: "Attack",
             AttackType: "Sword",
             Element: "Neutral",
-            Power: 18,
+            BasePower: 3,
+            MaxPower: 18,
             Effect: "A lesser physical attack."
         }
     },
@@ -1268,7 +1313,8 @@ var cardDatabase = {
             Name: "Attack",
             AttackType: "Sword",
             Element: "Neutral",
-            Power: 18,
+            BasePower: 3,
+            MaxPower: 18,
             Effect: "A lesser physical attack."
         }
     },
@@ -1305,7 +1351,8 @@ var cardDatabase = {
             Name: "Attack",
             AttackType: "Sword",
             Element: "Neutral",
-            Power: 20,
+            BasePower: 5,
+            MaxPower: 20,
             Effect: "A lesser physical attack."
         }
     },
@@ -1342,7 +1389,8 @@ var cardDatabase = {
             Name: "Attack",
             AttackType: "Sword",
             Element: "Neutral",
-            Power: 20,
+            BasePower: 5,
+            MaxPower: 20,
             Effect: "A lesser physical attack."
         }
     },
@@ -1379,7 +1427,8 @@ var cardDatabase = {
             Name: "Attack",
             AttackType: "Sword",
             Element: "Neutral",
-            Power: 20,
+            BasePower: 5,
+            MaxPower: 20,
             Effect: "A lesser physical attack."
         }
     },
@@ -1416,7 +1465,8 @@ var cardDatabase = {
             Name: "Sliding Dash",
             AttackType: "Sword",
             Element: "Neutral",
-            Power: 40,
+            BasePower: 9,
+            MaxPower: 40,
             Effect: "A physical attack."
         }
     },
@@ -1453,7 +1503,8 @@ var cardDatabase = {
             Name: "Sliding Dash",
             AttackType: "Sword",
             Element: "Neutral",
-            Power: 40,
+            BasePower: 9,
+            MaxPower: 40,
             Effect: "A physical attack."
         }
     },
@@ -1490,7 +1541,8 @@ var cardDatabase = {
             Name: "Sliding Dash",
             AttackType: "Sword",
             Element: "Neutral",
-            Power: 40,
+            BasePower: 9,
+            MaxPower: 40,
             Effect: "A physical attack."
         }
     },
@@ -1527,7 +1579,8 @@ var cardDatabase = {
             Name: "Fire",
             AttackType: "Sword",
             Element: "Fire",
-            Power: 45,
+            BasePower: 15,
+            MaxPower: 45,
             Effect: "A fire-element magic attack."
         }
     },
@@ -1564,7 +1617,8 @@ var cardDatabase = {
             Name: "Blizzard",
             AttackType: "Sword",
             Element: "Water",
-            Power: 45,
+            BasePower: 15,
+            MaxPower: 45,
             Effect: "A water-element magic attack."
         }
     },
@@ -1601,7 +1655,8 @@ var cardDatabase = {
             Name: "Thunder",
             AttackType: "Sword",
             Element: "Lightning",
-            Power: 45,
+            BasePower: 15,
+            MaxPower: 45,
             Effect: "A lightning-element magic attack."
         }
     },
@@ -1638,7 +1693,8 @@ var cardDatabase = {
             Name: "Potion",
             AttackType: "Sword",
             Element: "Neutral",
-            Power: 0,
+            BasePower: 0,
+            MaxPower: 0,
             Effect: "Restores 50 HP. Stacking Cards does not increase value."
         }
     },
@@ -1675,7 +1731,8 @@ var cardDatabase = {
             Name: "Cure",
             AttackType: "Sword",
             Element: "Neutral",
-            Power: 50,
+            BasePower: 15,
+            MaxPower: 50,
             Effect: "Restores HP. Amount restored is based on Magic."
         }
     },
@@ -1712,7 +1769,8 @@ var cardDatabase = {
             Name: "Protect",
             AttackType: "Sword",
             Element: "Neutral",
-            Power: 0,
+            BasePower: 0,
+            MaxPower: 0,
             Effect: "Defense +1 for 10s. Stacking Cards does not increase value. Can be applied more than once."
         }
     },
@@ -1749,7 +1807,8 @@ var cardDatabase = {
             Name: "Shell",
             AttackType: "Sword",
             Element: "Neutral",
-            Power: 0,
+            BasePower: 0,
+            MaxPower: 0,
             Effect: "Magic Resist +1 for 10s. Stacking Cards does not increase value. Can be applied more than once."
         }
     },
@@ -1786,7 +1845,8 @@ var cardDatabase = {
             Name: "Dark Break",
             AttackType: "Sword",
             Element: "Neutral",
-            Power: 30,
+            BasePower: 10,
+            MaxPower: 30,
             Effect: "A physical attack."
         }
     },
@@ -1823,7 +1883,8 @@ var cardDatabase = {
             Name: "Dark Break",
             AttackType: "Sword",
             Element: "Neutral",
-            Power: 30,
+            BasePower: 10,
+            MaxPower: 30,
             Effect: "A physical attack."
         }
     },
@@ -1860,7 +1921,8 @@ var cardDatabase = {
             Name: "Dark Break",
             AttackType: "Sword",
             Element: "Neutral",
-            Power: 30,
+            BasePower: 10,
+            MaxPower: 30,
             Effect: "A physical attack."
         }
     },
@@ -1897,7 +1959,8 @@ var cardDatabase = {
             Name: "Poisona",
             AttackType: "Sword",
             Element: "Neutral",
-            Power: 0,
+            BasePower: 0,
+            MaxPower: 0,
             Effect: "Cures Poison."
         }
     },
@@ -1934,7 +1997,8 @@ var cardDatabase = {
             Name: "Attack Boost",
             AttackType: "Sword",
             Element: "Neutral",
-            Power: 0,
+            BasePower: 0,
+            MaxPower: 0,
             Effect: "Strength +2 for 10s. Stacking Cards does not increase value. Can be applied more than once."
         }
     },
@@ -1971,7 +2035,8 @@ var cardDatabase = {
             Name: "Magic Boost",
             AttackType: "Sword",
             Element: "Neutral",
-            Power: 0,
+            BasePower: 0,
+            MaxPower: 0,
             Effect: "Magic +2 for 10s. Stacking Cards does not increase value. Can be applied more than once."
         }
     },
@@ -2008,7 +2073,8 @@ var cardDatabase = {
             Name: "Ars Arcanum",
             AttackType: "Sword",
             Element: "Neutral",
-            Power: 60,
+            BasePower: 20,
+            MaxPower: 60,
             Effect: "A powerful physical attack."
         }
     },
@@ -2045,7 +2111,8 @@ var cardDatabase = {
             Name: "Spark Break",
             AttackType: "Sword",
             Element: "Neutral",
-            Power: 60,
+            BasePower: 20,
+            MaxPower: 60,
             Effect: "A powerful physical attack."
         }
     },
@@ -2082,7 +2149,8 @@ var cardDatabase = {
             Name: "Blade of Seven",
             AttackType: "Sword",
             Element: "Neutral",
-            Power: 60,
+            BasePower: 20,
+            MaxPower: 60,
             Effect: "A powerful physical attack."
         }
     },
@@ -2119,7 +2187,8 @@ var cardDatabase = {
             Name: "Strike Raid",
             AttackType: "Sword",
             Element: "Neutral",
-            Power: 60,
+            BasePower: 20,
+            MaxPower: 60,
             Effect: "A powerful physical attack."
         }
     },
@@ -2156,7 +2225,8 @@ var cardDatabase = {
             Name: "Flare",
             AttackType: "Staff",
             Element: "Neutral",
-            Power: 90,
+            BasePower: 18,
+            MaxPower: 90,
             Effect: "A non-element magic attack."
         },
         SubAbility:    {
@@ -2197,7 +2267,8 @@ var cardDatabase = {
             Name: "Dark Break",
             AttackType: "Sword",
             Element: "Neutral",
-            Power: 20,
+            BasePower: 10,
+            MaxPower: 20,
             Effect: "A physical attack."
         }
     },
@@ -2234,7 +2305,8 @@ var cardDatabase = {
             Name: "Attack",
             AttackType: "Sword",
             Element: "Neutral",
-            Power: 24,
+            BasePower: 5,
+            MaxPower: 24,
             Effect: "A lesser physical attack."
         }
     },
@@ -2271,7 +2343,8 @@ var cardDatabase = {
             Name: "Cure",
             AttackType: "Shield",
             Element: "Neutral",
-            Power: 50,
+            BasePower: 15,
+            MaxPower: 50,
             Effect: "Restores HP. Amount restored is based on Magic."
         }
     },
@@ -2308,7 +2381,8 @@ var cardDatabase = {
             Name: "Blizzard",
             AttackType: "Staff",
             Element: "Water",
-            Power: 45,
+            BasePower: 25,
+            MaxPower: 45,
             Effect: "A water-element magic attack."
         }
     },
@@ -2345,7 +2419,8 @@ var cardDatabase = {
             Name: "Dark Break",
             AttackType: "Sword",
             Element: "Neutral",
-            Power: 30,
+            BasePower: 20,
+            MaxPower: 30,
             Effect: "A physical attack."
         }
     },
@@ -2358,11 +2433,32 @@ var cardDatabase = {
         DirectionType: "Dark",
         ColorType: "Red",
         AttackType: "Sword",
+        Passive1:   {
+            ReqCount: 1,
+            BuffType: "HP",
+            BuffCount: 1
+        },
+        Passive2:   {
+            ReqCount: 3,
+            BuffType: "HP",
+            BuffCount: 1
+        },
+        Passive3:   {
+            ReqCount: 5,
+            BuffType: "Strength",
+            BuffCount: 1
+        },
+        Passive4:   {
+            ReqCount: 10,
+            BuffType: "Strength",
+            BuffCount: 1
+        },
         MainAbility:    {
             Name: "Ars Arcanum",
             AttackType: "Sword",
             Element: "Neutral",
-            Power: 70,
+            BasePower: 20,
+            MaxPower: 70,
             Effect: "A powerful physical attack."
         }
     },
@@ -2375,11 +2471,32 @@ var cardDatabase = {
         DirectionType: "Light",
         ColorType: "Green",
         AttackType: "Staff",
+        Passive1:   {
+            ReqCount: 1,
+            BuffType: "HP",
+            BuffCount: 2
+        },
+        Passive2:   {
+            ReqCount: 3,
+            BuffType: "Magic",
+            BuffCount: 1
+        },
+        Passive3:   {
+            ReqCount: 5,
+            BuffType: "Magic",
+            BuffCount: 2
+        },
+        Passive4:   {
+            ReqCount: 10,
+            BuffType: "Magic",
+            BuffCount: 2
+        },
         MainAbility:    {
             Name: "Shining Star",
             AttackType: "Staff",
             Element: "Neutral",
-            Power: 60,
+            BasePower: 30,
+            MaxPower: 60,
             Effect: "A non-element magic attack."
         }
     },
