@@ -171,16 +171,16 @@ function parseMedalName(value)  {
         value = value.replace("sn+", " supernova + ");
         value = value.replace("sn ", " supernova ");
         value = value.replace("#", " # ");
-        value = value.replace("-", " - ");
+        value = value.replace(/-/g, " - ");
         value = value.replace("(", " ( ");
         value = value.replace(")", " ) ");
         value = value.replace("[", " [ ");
         value = value.replace("]", " ] ");
-        value = value.replace(",", " , ");
-        value = value.replace("&", " & ");
+        value = value.replace(/,/g, " , ");
+        value = value.replace(/&/g, " & ");
         value = value.replace("kh2", "kh ii");
         value = value.replace("kh3", "kh iii");
-
+        console.log(value);
         queryArray = value.split(" ");
     }
     else    {
@@ -554,12 +554,13 @@ function checkConditions(MedalID)   {
         }
 
         medalNameHolder = medalNameHolder.replace("#", " # ");
-        medalNameHolder = medalNameHolder.replace("-", " - ");
+        medalNameHolder = medalNameHolder.replace(/-/g, " - ");
         medalNameHolder = medalNameHolder.replace("(", " ( ");
         medalNameHolder = medalNameHolder.replace(")", " ) ");
         medalNameHolder = medalNameHolder.replace("[", " [ ");
         medalNameHolder = medalNameHolder.replace("]", " ] ");
-        medalNameHolder = medalNameHolder.replace(",", " , ");
+        medalNameHolder = medalNameHolder.replace(/&/g, " & ");
+        medalNameHolder = medalNameHolder.replace(/,/g, " , ");
 
         medalNameHolder = medalNameHolder.replace("é", "e");
         medalNameHolder = medalNameHolder.replace("ï", "i");
