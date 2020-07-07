@@ -103,6 +103,7 @@
         cursor: pointer;
       }
       .spanHeaderStyle {
+        display: inline-block;
         position: relative;
         text-align: center;
         cursor: pointer;
@@ -311,12 +312,12 @@
 
             <span id="searchButtonSpan" onclick="searchFormButton('searchButtonIMG')" style="position: relative; text-align: center; cursor: pointer; margin-right: 50px">
                 <img id="searchButtonIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
-                <p class="buttonText" style="font-size: 24px; margin-left: -2px; top: 10px">Search</p>
+                <p class="buttonText" style="font-size: 24px; margin-left: -2px">Search</p>
             </span>
 
             <span id="resetButtonSpan" onclick="resetForm('resetButtonIMG')" style="position: relative; text-align: center; cursor: pointer">
                 <img id="resetButtonIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
-                <p class="buttonText" style="font-size: 24px; top: 10px">Clear</p>
+                <p class="buttonText" style="font-size: 24px">Clear</p>
             </span>
             
             <hr>
@@ -326,46 +327,46 @@
                   <span id="otherFilters_Attribute" style="font-size: 18px; text-shadow: 1.50px 1.50px rgb(0, 0, 0); display: inline-block">
                       <span id="otherFilters_RedSpan" onclick="lightButtons('Red')" class="spanHeaderStyle">
                           <img id="Red" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
-                          <img class="overText" src="./images/ui/CardType_Red.png" style="height: 40px; top: 14px">
+                          <img class="overText" src="./images/ui/CardType_Red.png" style="height: 40px">
                       </span>
 
                       <span id="otherFilters_GreenSpan" onclick="lightButtons('Green')" class="spanHeaderStyle">
                           <img id="Green" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
-                          <img class="overText" src="./images/ui/CardType_Green.png" style="height: 40px; top: 14px">
+                          <img class="overText" src="./images/ui/CardType_Green.png" style="height: 40px">
                       </span>
 
                       <span id="otherFilters_BlueSpan" onclick="lightButtons('Blue')" class="spanHeaderStyle">
                           <img id="Blue" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
-                          <img class="overText" src="./images/ui/CardType_Blue.png" style="height: 40px; top: 14px">
+                          <img class="overText" src="./images/ui/CardType_Blue.png" style="height: 40px">
                       </span>
 
                       <br><br>
 
                       <span id="otherFilters_LightSpan" onclick="lightButtons('Light')" class="spanHeaderStyle">
                           <img id="Light" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
-                          <img class="overText" src="./images/ui/CardType_Light.png" style="height: 40px; top: 14px">
+                          <img class="overText" src="./images/ui/CardType_Light.png" style="height: 40px">
                       </span>
 
                       <span id="otherFilters_DarkSpan" onclick="lightButtons('Dark')" class="spanHeaderStyle">
                           <img id="Dark" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
-                          <img class="overText" src="./images/ui/CardType_Dark.png" style="height: 40px; top: 14px">
+                          <img class="overText" src="./images/ui/CardType_Dark.png" style="height: 40px">
                       </span>
 
                       <br><br>
 
                       <span id="otherFilters_SwordSpan" onclick="lightButtons('Sword')" class="spanHeaderStyle">
                           <img id="Sword" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
-                          <img class="overText" src="./images/ui/Icon_Sword.png" style="height: 40px; top: 13px">
+                          <img class="overText" src="./images/ui/Icon_Sword.png" style="height: 40px">
                       </span>
 
                       <span id="otherFilters_StaffSpan" onclick="lightButtons('Staff')" class="spanHeaderStyle">
                           <img id="Staff" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
-                          <img class="overText" src="./images/ui/Icon_Staff.png" style="height: 40px; top: 14px">
+                          <img class="overText" src="./images/ui/Icon_Staff.png" style="height: 40px">
                       </span>
 
                       <span id="otherFilters_ShieldSpan" onclick="lightButtons('Shield')" class="spanHeaderStyle">
                           <img id="Shield" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
-                          <img class="overText" src="./images/ui/Icon_Shield.png" style="height: 40px; top: 12px">
+                          <img class="overText" src="./images/ui/Icon_Shield.png" style="height: 40px">
                       </span>
                   </span>
 
@@ -397,42 +398,42 @@
               <hr>
 
               <div id="mainAbility">
-                  <p style="text-shadow: 1.50px 1.50px rgb(0, 0, 0); font-size: 24px; top: 10px">Main Ability</p>
+                  <p style="text-shadow: 1.50px 1.50px rgb(0, 0, 0); font-size: 24px">Main Ability</p>
 
                   <span id="otherFilters_MainAbilityElement" style="font-size: 18px; text-shadow: 1.50px 1.50px rgb(0, 0, 0); display: inline-block">
                       <span id="otherFilters_FireSpan" onclick="lightButtons('MainAbilityFire')" class="spanHeaderStyle">
                           <img id="MainAbilityFire" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
-                          <img class="overText" src="./images/ui/Attribute_Fire.png" style="height: 40px; top: 15px">
+                          <img class="overText" src="./images/ui/Attribute_Fire.png" style="height: 40px">
                       </span>
 
                       <span id="otherFilters_WaterSpan" onclick="lightButtons('MainAbilityWater')" class="spanHeaderStyle">
                           <img id="MainAbilityWater" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
-                          <img class="overText" src="./images/ui/Attribute_Water.png" style="height: 40px; top: 15px">
+                          <img class="overText" src="./images/ui/Attribute_Water.png" style="height: 40px">
                       </span>
 
                       <span id="otherFilters_LightningSpan" onclick="lightButtons('MainAbilityLightning')" class="spanHeaderStyle">
                           <img id="MainAbilityLightning" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
-                          <img class="overText" src="./images/ui/Attribute_Lightning.png" style="height: 40px; top: 15px">
+                          <img class="overText" src="./images/ui/Attribute_Lightning.png" style="height: 40px">
                       </span>
 
                       <span id="otherFilters_WindSpan" onclick="lightButtons('MainAbilityWind')" class="spanHeaderStyle">
                           <img id="MainAbilityWind" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
-                          <img class="overText" src="./images/ui/Attribute_Wind.png" style="height: 40px; top: 14px">
+                          <img class="overText" src="./images/ui/Attribute_Wind.png" style="height: 40px">
                       </span>
 
                       <span id="otherFilters_LightSpan" onclick="lightButtons('MainAbilityLight')" class="spanHeaderStyle">
                           <img id="MainAbilityLight" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
-                          <img class="overText" src="./images/ui/Attribute_Light.png" style="height: 40px; top: 15px">
+                          <img class="overText" src="./images/ui/Attribute_Light.png" style="height: 40px">
                       </span>
 
                       <span id="otherFilters_DarkSpan" onclick="lightButtons('MainAbilityDark')" class="spanHeaderStyle">
                           <img id="MainAbilityDark" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
-                          <img class="overText" src="./images/ui/Attribute_Dark.png" style="height: 40px; top: 15px">
+                          <img class="overText" src="./images/ui/Attribute_Dark.png" style="height: 40px">
                       </span>
 
                       <span id="otherFilters_NeutralSpan" onclick="lightButtons('MainAbilityNeutral')" class="spanHeaderStyle">
                           <img id="MainAbilityNeutral" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
-                          <img class="overText" src="./images/ui/Attribute_Neutral.png" style="height: 40px; top: 15px">
+                          <img class="overText" src="./images/ui/Attribute_Neutral.png" style="height: 40px">
                       </span>
                   </span>
 
@@ -443,7 +444,7 @@
               <div id="subAbility">
                   <span id="otherFilters_HasSubAbilitySpan" onclick="lightButtons('HasSubAbility')" class="spanHeaderStyle">
                       <img id="HasSubAbility" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
-                      <p class="buttonText" style="font-size: 18px; top: 11px; margin-left: 3px">Has sub-ability</p>
+                      <p class="buttonText" style="font-size: 18px; margin-left: 3px">Has sub-ability</p>
                   </span>
 
                   <br><br>
