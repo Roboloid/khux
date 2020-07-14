@@ -32,7 +32,7 @@
     
     <meta property="og:title" content="Passives List">
 
-    <meta property="og:description" content="Select a Keyblade to show all of the Passives it gives.">
+    <meta property="og:description" content="Select an icon to show all of the Passives it gives.">
 
     <meta property="og:site_name" content="Roboloid's KHUχ Info Page" >
 
@@ -130,7 +130,23 @@
       .number-content {
         position: relative;
         min-width: 160px;
-        /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+        z-index: 1;
+        margin: 0;
+      }
+
+      .scrollable-content {
+        position: relative;
+        max-height: 750px;
+        overflow-y: auto;
+        min-width: 160px;
+        z-index: 1;
+        margin: 0;
+      }
+
+      .number-contentField {
+        display: none;
+        position: relative;
+        min-width: 160px;
         z-index: 1;
         margin: 0;
       }
@@ -138,6 +154,8 @@
       .gapSpacer {display:none;}
 
       .showNum {display:block;}
+
+      .showLabel {display:inline-block;}
 
       .hidePassive {display:none;}
 
@@ -185,17 +203,18 @@
 
         <div class="whiteOverlay">
 
-            <h1 style="text-align:center;color:black;font-family:Verdana, sans-serif;">List of Keyblade Passives</h1>
+            <h1 style="text-align:center;color:black;font-family:Verdana, sans-serif;">List of Passives</h1>
 
-            <h3 style="text-align:center;color:black;font-family:Verdana, sans-serif;">Select a Keyblade to view its Passives</h3>
+            <h3 style="text-align:center;color:black;font-family:Verdana, sans-serif;">Select an icon to view its Passives</h3>
 
             <pre></pre>
 
             <div class="dropdown">    <!-- Keyblade selection area -->
-                <input type="image" onclick="keybladeDropdown()" class="dropbtn" id ="dropbtn_container" src="./images/ui/kbButton_Off.png" width="40%"/>
+                <input type="image" onclick="keybladeDropdown()" class="dropbtn" id ="dropbtn_container" src="./images/ui/passiveButton_Off.png" width="40%"/>
               <div id="dropdown_container" class="dropdown-content">
                   <pre></pre>
                   <pre></pre>
+                  <input type="image" onclick="selectPlayer()" class="optbtn" src="./images/icon/Player_icon.png" width=25%/>
                   <input type="image" onclick="selectKeyblade('kb1')" class="optbtn" src="./images/icon/kb1_icon.png" width=25%/>
                   <input type="image" onclick="selectKeyblade('kb2')" class="optbtn" src="./images/icon/kb2_icon.png" width=25%/>
                   <input type="image" onclick="selectKeyblade('kb3')" class="optbtn" src="./images/icon/kb3_icon.png" width=25%/>
@@ -221,7 +240,15 @@
               </div>
 
               <div class="numberbox">                     <!-- Cost area -->
+                <div id="number_container1">
+                </div>
+                
+                <input class="number-contentField" style="margin-bottom: 20px" type="number" id="LUXlevel" onkeyup="openPlayerPassives(LUXlevel.value);" placeholder="Enter a LUX level ≥ 350."/>
+                
                 <div id="number_container">
+                </div>
+
+                <div id="scrollable_container">
                 </div>
               </div>
 
