@@ -2500,4 +2500,40 @@ var cardDatabase = {
             Effect: "A non-element magic attack."
         }
     },
+    44:  {
+        ID: 44,
+        AlbumNum: 44,
+        CardImage: "44_Kairi.png",
+        RenderImage: "44_Kairi_Render.png",
+        Name: "Kairi",
+        DirectionType: "Light",
+        ColorType: "Blue",
+        AttackType: "Shield",
+        MainAbility:    {
+            Name: "Gauge Boost",
+            AttackType: "Shield",
+            Element: "Neutral",
+            BasePower: 0,
+            MaxPower: 0,
+            Effect: "Fills the bonus gauge. Stacking Cards does not increase value."
+        }
+    },
+    45:  {
+        ID: 45,
+        AlbumNum: 45,
+        CardImage: "45_Axel.png",
+        RenderImage: "45_Axel_Render.png",
+        Name: "Axel",
+        DirectionType: "Dark",
+        ColorType: "Green",
+        AttackType: "Sword",
+        MainAbility:    {
+            Name: "Ignito Raid",
+            AttackType: "Sword",
+            Element: "Fire",
+            BasePower: 25,
+            MaxPower: 65,
+            Effect: "A powerful fire-element physical attack."
+        }
+    },
 };
