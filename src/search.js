@@ -76868,4 +76868,86 @@ var medalDatabase = {
             Hits: 1
         }
     },
+    1992:  {
+        ID: 1992,
+        AlbumNum: 1860,
+        Reference: [1992],
+        MedalImage: "1860_7Star_SN++_-_KH_III_SF_Sora.png",
+        RenderImage: "1860_7Star_SN++_-_KH_III_SF_Sora_Render.png",
+        Name: "SN++ - KH III SF Sora",
+        Rarity: 7,
+        Direction: "Upright",
+        Attribute: "Speed",
+        Guilt: 10,
+        STR: 44011,
+        DEF: 16591,
+        LowMulti: 19.44,
+        HighMulti: 20.54,
+        Gauge: 2,
+        Target: "All",
+        Ability:    {
+            Name: "Zone Stinger +6",
+            Text: "Deals 6 hits. 1 turn: S-Medal STR +8000, self [↑ STR, U- & S-STR 15], targets [↓ DEF, U- & S-DEF 15], SP ATK B +220%. Damage+: 1 enemy or 0 parts left.",
+            Condition: "OneEnemy",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Speed",
+                    Amount: 8000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 220
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffUD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 6
+        },
+        Supernova:  {
+            Name: "[Mastery] Upright Strike All S",
+            Text: "1 turn: S-Medal STR +12000, SP ATK B +320%. Triggers before slot 1 is activated when defending in PVP.",
+            Multi: 240.00,
+            Timing: 1,
+            Target: "All",
+            SelfBuffs:  {
+                STRPlus:  {
+                    Type: "Speed",
+                    Amount: 12000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320
+            },
+            Hits: 1
+        }
+    },
 };
