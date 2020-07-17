@@ -2509,6 +2509,26 @@ var cardDatabase = {
         DirectionType: "Light",
         ColorType: "Blue",
         AttackType: "Shield",
+        Passive1:   {
+            ReqCount: 1,
+            BuffType: "HP",
+            BuffCount: 1
+        },
+        Passive2:   {
+            ReqCount: 3,
+            BuffType: "HP",
+            BuffCount: 5
+        },
+        Passive3:   {
+            ReqCount: 5,
+            BuffType: "HP",
+            BuffCount: 5
+        },
+        Passive4:   {
+            ReqCount: 10,
+            BuffType: "Strength",
+            BuffCount: 3
+        },
         MainAbility:    {
             Name: "Gauge Boost",
             AttackType: "Shield",
@@ -2527,6 +2547,26 @@ var cardDatabase = {
         DirectionType: "Dark",
         ColorType: "Green",
         AttackType: "Sword",
+        Passive1:   {
+            ReqCount: 1,
+            BuffType: "HP",
+            BuffCount: 1
+        },
+        Passive2:   {
+            ReqCount: 3,
+            BuffType: "Strength",
+            BuffCount: 1
+        },
+        Passive3:   {
+            ReqCount: 5,
+            BuffType: "Strength",
+            BuffCount: 1
+        },
+        Passive4:   {
+            ReqCount: 10,
+            BuffType: "Strength",
+            BuffCount: 1
+        },
         MainAbility:    {
             Name: "Ignito Raid",
             AttackType: "Sword",
