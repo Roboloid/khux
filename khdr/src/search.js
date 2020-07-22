@@ -2576,4 +2576,22 @@ var cardDatabase = {
             Effect: "A powerful fire-element physical attack."
         }
     },
+    46:  {
+        ID: 46,
+        AlbumNum: 46,
+        CardImage: "46_Key_Scene_%234.png",
+        RenderImage: "46_Key_Scene_%234_Render.png",
+        Name: "Key Scene #4",
+        DirectionType: "Light",
+        ColorType: "Red",
+        AttackType: "Staff",
+        MainAbility:    {
+            Name: "Rapid Storm",
+            AttackType: "Staff",
+            Element: "Wind",
+            BasePower: 20,
+            MaxPower: 65,
+            Effect: "A wind-element magic attack."
+        }
+    },
 };
