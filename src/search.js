@@ -76950,4 +76950,188 @@ var medalDatabase = {
             Hits: 1
         }
     },
+    1993:  {
+        ID: 1993,
+        AlbumNum: 1861,
+        Reference: [1993],
+        MedalImage: "1861_7Star_SN++_-_Master_Eraqus.png",
+        RenderImage: "1861_7Star_SN++_-_Master_Eraqus_Render.png",
+        Name: "SN++ - Master Eraqus",
+        Rarity: 7,
+        Direction: "Upright",
+        Attribute: "Power",
+        Guilt: 10,
+        STR: 44011,
+        DEF: 16591,
+        LowMulti: 19.44,
+        HighMulti: 20.54,
+        Gauge: 2,
+        Target: "All",
+        Ability:    {
+            Name: "Tempest EX +6",
+            Text: "Deals 5 hits. 1 turn: P-Medal STR +8000, self [↑ STR, U- & P-STR 15], targets [↓ DEF, U- & P-DEF 15], SP ATK B +220%. Damage+: 1 enemy or 0 parts left.",
+            Condition: "OneEnemy",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffPA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Power",
+                    Amount: 8000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 220
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffUD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffPD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 5
+        },
+        Supernova:  {
+            Name: "[Mastery] Upright Strike All P",
+            Text: "1 turn: S-Medal STR +12000, SP ATK B +320%. Triggers before slot 1 is activated when defending in PVP.",
+            Multi: 240.00,
+            Timing: 1,
+            Target: "All",
+            SelfBuffs:  {
+                STRPlus:  {
+                    Type: "Power",
+                    Amount: 12000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320
+            },
+            Hits: 1
+        }
+    },
+    1994:  {
+        ID: 1994,
+        AlbumNum: 1862,
+        Reference: [1994],
+        MedalImage: "1862_7Star_SN++_-_Setzer.png",
+        RenderImage: "1862_7Star_SN++_-_Setzer_Render.png",
+        Name: "SN++ - Setzer",
+        Rarity: 7,
+        Direction: "Upright",
+        Attribute: "Speed",
+        Guilt: 10,
+        STR: 41758,
+        DEF: 16284,
+        Multi: 20.04,
+        Gauge: 0,
+        Target: "All",
+        Ability:    {
+            Name: "Dive Bomb EX +6",
+            Text: "Deals 5 hits. 1 turn: S-Medal STR +6000, self [↑ U- & S-STR, M-DEF 15], targets [↓ U- & S-DEF, M-STR 15], SP ATK B +220%. Gauge +3. Count +1.",
+            SelfBuffs:  {
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Speed",
+                    Amount: 6000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 220,
+                GaugeRecovery: 3
+            },
+            EnemyBuffs: {
+                DebuffUD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffMA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Counter:    {
+                    CountDirection: "Up",
+                    Count: 1
+                }
+            },
+            Hits: 5
+        },
+        Supernova:  {
+            Name: "[Mastery] Upright Strike All S",
+            Text: "1 turn: S-Medal STR +10000, self [↑ STR 15], targets [↓ DEF 15], SP ATK B +300%. Count +1. Gauge +7. Triggers before slot 5 is activated when defending in PVP.",
+            Multi: 220.00,
+            Timing: 5,
+            Target: "All",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Speed",
+                    Amount: 10000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 300,
+                GaugeRecovery: 7
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Counter:    {
+                    CountDirection: "Up",
+                    Count: 1
+                }
+            },
+            Hits: 1
+        }
+    },
 };
