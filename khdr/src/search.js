@@ -2585,6 +2585,26 @@ var cardDatabase = {
         DirectionType: "Light",
         ColorType: "Red",
         AttackType: "Staff",
+        Passive1:   {
+            ReqCount: 1,
+            BuffType: "Magic",
+            BuffCount: 1
+        },
+        Passive2:   {
+            ReqCount: 3,
+            BuffType: "Magic",
+            BuffCount: 1
+        },
+        Passive3:   {
+            ReqCount: 5,
+            BuffType: "Magic",
+            BuffCount: 2
+        },
+        Passive4:   {
+            ReqCount: 10,
+            BuffType: "Magic",
+            BuffCount: 2
+        },
         MainAbility:    {
             Name: "Rapid Storm",
             AttackType: "Staff",
