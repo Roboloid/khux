@@ -2614,4 +2614,58 @@ var cardDatabase = {
             Effect: "A wind-element magic attack."
         }
     },
+    47:  {
+        ID: 47,
+        AlbumNum: 47,
+        CardImage: "47_Terra.png",
+        RenderImage: "47_Terra_Render.png",
+        Name: "Terra",
+        DirectionType: "Light",
+        ColorType: "Red",
+        AttackType: "Sword",
+        MainAbility:    {
+            Name: "Glacial Arrows Thunder",
+            AttackType: "Sword",
+            Element: "Lightning",
+            BasePower: 25,
+            MaxPower: 65,
+            Effect: "A powerful lightning-element physical attack."
+        }
+    },
+    48:  {
+        ID: 48,
+        AlbumNum: 48,
+        CardImage: "48_Aqua.png",
+        RenderImage: "48_Aqua_Render.png",
+        Name: "Aqua",
+        DirectionType: "Light",
+        ColorType: "Blue",
+        AttackType: "Staff",
+        MainAbility:    {
+            Name: "Magic Pulse",
+            AttackType: "Staff",
+            Element: "Water",
+            BasePower: 25,
+            MaxPower: 65,
+            Effect: "A powerful water-element magic attack."
+        }
+    },
+    49:  {
+        ID: 49,
+        AlbumNum: 49,
+        CardImage: "49_Ventus.png",
+        RenderImage: "49_Ventus_Render.png",
+        Name: "Ventus",
+        DirectionType: "Light",
+        ColorType: "Green",
+        AttackType: "Sword",
+        MainAbility:    {
+            Name: "Air Flair",
+            AttackType: "Sword",
+            Element: "Wind",
+            BasePower: 25,
+            MaxPower: 65,
+            Effect: "A powerful wind-element physical attack."
+        }
+    },
 };
