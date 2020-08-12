@@ -77544,7 +77544,6 @@ var medalDatabase = {
                     CountDirection: "Up",
                     Count: 2
                 }
-
             },
             Hits: 1
         },
@@ -77614,6 +77613,62 @@ var medalDatabase = {
                     DurationType: "Turn",
                     DurationCount: 1
                 }
+            },
+            Hits: 1
+        }
+    },
+    1999:  {
+        ID: 1999,
+        AlbumNum: 1867,
+        Reference: [1999],
+        MedalImage: "1867_7Star_SN++_-_Illustrated_Zexion.png",
+        RenderImage: "1867_7Star_SN++_-_Illustrated_Zexion_Render.png",
+        Name: "SN++ - Illustrated Zexion",
+        Rarity: 7,
+        Direction: "Reversed",
+        Attribute: "Magic",
+        Guilt: 10,
+        STR: 44654,
+        DEF: 16624,
+        LowMulti: 21.52,
+        HighMulti: 37.37,
+        Gauge: 3,
+        Target: "All",
+        Ability:    {
+            Name: "Illusions EX +6",
+            Text: "Deals 6 hits. 1 turn: Medal STR +8000, SP ATK B +220%. Inflicts more damage to paralyzed targets. Pierces Defense Boost 35%.",
+            Condition: "Paralysis",
+            SelfBuffs:  {
+                STRPlus:  {
+                    Type: "General",
+                    Amount: 8000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 220
+            },
+            EnemyBuffs: {
+                DEFPierce: 35
+            },
+            Hits: 6
+        },
+        Supernova:  {
+            Name: "[Mastery] Reversed Strike All M",
+            Text: "1 turn: Medal STR +12000, SP ATK B +320%. Ignores targets' Defense Boost. Triggers before slot 5 is activated when defending in PVP.",
+            Multi: 240.00,
+            Timing: 5,
+            Target: "All",
+            SelfBuffs:  {
+                STRPlus:  {
+                    Type: "General",
+                    Amount: 12000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320
+            },
+            EnemyBuffs: {
+                DEFPierce: 100
             },
             Hits: 1
         }
