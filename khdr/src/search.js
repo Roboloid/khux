@@ -2728,4 +2728,76 @@ var cardDatabase = {
             Effect: "A powerful wind-element physical attack."
         }
     },
+    50:  {
+        ID: 50,
+        AlbumNum: 50,
+        CardImage: "50_Mushu.png",
+        RenderImage: "50_Mushu_Render.png",
+        Name: "Mushu",
+        DirectionType: "Light",
+        ColorType: "Red",
+        AttackType: "Staff",
+        MainAbility:    {
+            Name: "Fire",
+            AttackType: "Staff",
+            Element: "Fire",
+            BasePower: 25,
+            MaxPower: 45,
+            Effect: "A fire-element magic attack."
+        }
+    },
+    51:  {
+        ID: 51,
+        AlbumNum: 51,
+        CardImage: "51_Emerald_Blues.png",
+        RenderImage: "51_Emerald_Blues_Render.png",
+        Name: "Emerald Blues",
+        DirectionType: "Dark",
+        ColorType: "Green",
+        AttackType: "Staff",
+        MainAbility:    {
+            Name: "Aero",
+            AttackType: "Staff",
+            Element: "Wind",
+            BasePower: 15,
+            MaxPower: 45,
+            Effect: "A wind-element magic attack."
+        }
+    },
+    52:  {
+        ID: 52,
+        AlbumNum: 52,
+        CardImage: "52_Hag.png",
+        RenderImage: "52_Hag_Render.png",
+        Name: "Hag",
+        DirectionType: "Dark",
+        ColorType: "Blue",
+        AttackType: "Staff",
+        MainAbility:    {
+            Name: "Poison",
+            AttackType: "Staff",
+            Element: "Neutral",
+            BasePower: 8,
+            MaxPower: 18,
+            Effect: "A lesser non-element magic attack that has a low chance of inflicting poison."
+        }
+    },
+    53:  {
+        ID: 53,
+        AlbumNum: 53,
+        CardImage: "53_Donald_%232.png",
+        RenderImage: "53_Donald_%232_Render.png",
+        Name: "Donald #2",
+        DirectionType: "Light",
+        ColorType: "Green",
+        AttackType: "Staff",
+        MainAbility:    {
+            Name: "Thunder",
+            AttackType: "Staff",
+            Element: "Lightning",
+            BasePower: 12,
+            MaxPower: 40,
+            Effect: "A lightning-element magic attack."
+        }
+    },
 };
