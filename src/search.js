@@ -77673,4 +77673,265 @@ var medalDatabase = {
             Hits: 1
         }
     },
+    2000:  {
+        ID: 2000,
+        AlbumNum: 1868,
+        Reference: [2000],
+        MedalImage: "1868_7Star_SN++_-_Ian_Lightfoot.png",
+        RenderImage: "1868_7Star_SN++_-_Ian_Lightfoot_Render.png",
+        Name: "SN++ - Ian Lightfoot",
+        Rarity: 7,
+        Direction: "Upright",
+        Attribute: "Magic",
+        Guilt: 10,
+        STR: 37070,
+        DEF: 16544,
+        LowMulti: 15.64,
+        HighMulti: 21.11,
+        Gauge: 1,
+        Target: "All",
+        Ability:    {
+            Name: "Mighty STR Magic +6",
+            Text: "1 turn: M-Medal STR +5000, self [↑ STR & M-STR 7], targets [↓ M-DEF 7], SP ATK B +200%. Gauge +2. Inflicts more damage the lower the slot number.",
+            Condition: "LowerSlot",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 7,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 7,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Magic",
+                    Amount: 5000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 200,
+                GaugeRecovery: 2
+            },
+            EnemyBuffs: {
+                DebuffMD: {
+                    BuffCount: 7,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 1
+        },
+        Supernova:  {
+            Name: "[Mastery] Upright Strike All M",
+            Text: "1 turn: M-Medal STR +5000, targets [↓ DEF & U-DEF 7], SP ATK B +300%. Triggers before slot 5 is activated when defending in PVP.",
+            Multi: 220.00,
+            Timing: 5,
+            Target: "All",
+            SelfBuffs:  {
+                STRPlus:  {
+                    Type: "Magic",
+                    Amount: 5000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 300
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 7,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffUD: {
+                    BuffCount: 7,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 1
+        }
+    },
+    2001:  {
+        ID: 2001,
+        AlbumNum: 1869,
+        Reference: [2001],
+        MedalImage: "1869_7Star_SN++_-_Barley_Lightfoot.png",
+        RenderImage: "1869_7Star_SN++_-_Barley_Lightfoot_Render.png",
+        Name: "SN++ - Barley Lightfoot",
+        Rarity: 7,
+        Direction: "Upright",
+        Attribute: "Magic",
+        Guilt: 10,
+        STR: 38233,
+        DEF: 16629,
+        LowMulti: 17.80,
+        HighMulti: 19.47,
+        Gauge: 1,
+        Target: "All",
+        Ability:    {
+            Name: "Mighty STR Magic +6",
+            Text: "1 turn: M-Medal STR +5000, self [↑ U- & M-STR 10], targets [↓ U- & M-DEF 7], SP ATK B +200%. Gauge +3. Count ±0. Inflicts more damage the higher the slot number.",
+            Condition: "HigherSlot",
+            SelfBuffs:  {
+                BuffUA: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Magic",
+                    Amount: 5000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 200,
+                GaugeRecovery: 3
+            },
+            EnemyBuffs: {
+                DebuffUD: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffMD: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Counter:    {
+                    CountDirection: "Null"
+                }
+            },
+            Hits: 1
+        },
+        Supernova:  {
+            Name: "[Mastery] Upright Strike All M",
+            Text: "1 turn: M-Medal STR +5000, targets [↓ DEF & M-DEF 10], SP ATK B +300%. Triggers before slot 2 is activated when defending in PVP.",
+            Multi: 220.00,
+            Timing: 2,
+            Target: "All",
+            SelfBuffs:  {
+                STRPlus:  {
+                    Type: "Magic",
+                    Amount: 5000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 300
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffMD: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 1
+        }
+    },
+    2002:  {
+        ID: 2002,
+        AlbumNum: 1870,
+        Reference: [2002],
+        MedalImage: "1870_7Star_SN++_-_Ian_&_Barley.png",
+        RenderImage: "1870_7Star_SN++_-_Ian_&_Barley_Render.png",
+        Name: "SN++ - Ian & Barley",
+        Rarity: 7,
+        Direction: "Upright",
+        Attribute: "Magic",
+        Guilt: 10,
+        STR: 41784,
+        DEF: 16286,
+        Multi: 18.60,
+        Gauge: 1,
+        Target: "All",
+        Ability:    {
+            Name: "Mighty STR Magic +6",
+            Text: "1 turn: M-Medal STR +8000, self [↑ STR, U- & M-STR 15], targets [↓ U-DEF 15], SP ATK B +220%. Gauge +5. HP recovery LV 3. Count +2.",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Magic",
+                    Amount: 8000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 220,
+                GaugeRecovery: 5,
+                HPRecovery: "Yes"
+            },
+            EnemyBuffs: {
+                DebuffUD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Counter:    {
+                    CountDirection: "Up",
+                    Count: 2
+                }
+            },
+            Hits: 1
+        },
+        Supernova:  {
+            Name: "[Mastery] Upright Strike All M",
+            Text: "1 turn: M-Medal STR +10000, targets [↓ DEF, U- & M-DEF 15], SP ATK B +300%. Triggers before slot 1 is activated when defending in PVP.",
+            Multi: 220.00,
+            Timing: 1,
+            Target: "All",
+            SelfBuffs:  {
+                STRPlus:  {
+                    Type: "Magic",
+                    Amount: 10000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 300
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffUD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffMD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 1
+        }
+    },
 };
