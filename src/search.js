@@ -77772,7 +77772,7 @@ var medalDatabase = {
         Target: "All",
         Ability:    {
             Name: "Mighty STR Magic +6",
-            Text: "1 turn: M-Medal STR +5000, self [↑ U- & M-STR 10], targets [↓ U- & M-DEF 7], SP ATK B +200%. Gauge +3. Count ±0. Inflicts more damage the higher the slot number.",
+            Text: "1 turn: M-Medal STR +5000, self [↑ U- & M-STR 10], targets [↓ U- & M-DEF 10], SP ATK B +200%. Gauge +3. Count ±0. Inflicts more damage the higher the slot number.",
             Condition: "HigherSlot",
             SelfBuffs:  {
                 BuffUA: {
