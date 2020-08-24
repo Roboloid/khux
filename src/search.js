@@ -155,9 +155,11 @@ function parseMedalName(value)  {
     value = value.toLowerCase();
     if(value.length > 0)    {
         if(value.length > 1)    {
+            /*
             if((value.indexOf(" i") != -1 || value.substring(0, 1) == "i") && value.indexOf("ienzo") == -1 && value.indexOf("incredibles") == -1 && value.indexOf("isa") == -1 && value.indexOf("iago") == -1 && value.indexOf("ice") == -1 && value.indexOf("illustrated") == -1 && value.indexOf("kh i") == -1)    {
                 value = value.replace("i", "illustrated ");
             }
+            */
 
             if(value.substring(0, 2) == "ka" && value.indexOf("kairi") == -1 && value.indexOf("wakka") == -1 && value.indexOf("kefka") == -1)    {
                 value = value.replace("ka", "key art ");
