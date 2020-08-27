@@ -77936,4 +77936,125 @@ var medalDatabase = {
             Hits: 1
         }
     },
+    2003:  {
+        ID: 2003,
+        AlbumNum: 1871,
+        Reference: [2003],
+        MedalImage: "1871_7Star_SN++_-_Illus._King_Mickey.png",
+        RenderImage: "1871_7Star_SN++_-_Illus._King_Mickey_Render.png",
+        Name: "SN++ - Illus. King Mickey",
+        Rarity: 7,
+        Direction: "Upright",
+        Attribute: "Speed",
+        Guilt: 10,
+        STR: 42830,
+        DEF: 16338,
+        Multi: 19.80,
+        Gauge: 1,
+        Target: "All",
+        Ability:    {
+            Name: "Radiant Shot +6",
+            Text: "Deals 4 hits that ignore targets' attributes. 1 turn: S-Medal STR +7000, self [↑ STR & PSM-STR 10], targets [↓ DEF & PSM-DEF 10], SP ATK B +220%. Count ±0.",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffPA: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Speed",
+                    Amount: 7000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 220,
+                AttributeAlways: "Super"
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffPD: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSD: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffMD: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Counter:    {
+                    CountDirection: "Null"
+                }
+            },
+            Hits: 4
+        },
+        Supernova:  {
+            Name: "[Mastery] Upright Strike All S",
+            Text: "1 turn: S-Medal STR +10000, self [↑ STR & U-STR 15], targets [↓ DEF & U-DEF 15], SP ATK B +300%. Count +1. Gauge +5. Triggers before slot 1 is activated when defending in PVP.",
+            Multi: 220.00,
+            Timing: 1,
+            Target: "All",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Speed",
+                    Amount: 10000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 300,
+                GaugeRecovery: 5
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffUD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Counter:    {
+                    CountDirection: "Up",
+                    Count: 1
+                }
+            },
+            Hits: 1
+        }
+    },
 };
