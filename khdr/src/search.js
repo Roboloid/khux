@@ -2880,4 +2880,66 @@ var cardDatabase = {
             Effect: "A lightning-element magic attack."
         }
     },
+    54:  {
+        ID: 54,
+        AlbumNum: 54,
+        CardImage: "54_Cloud.png",
+        RenderImage: "54_Cloud_Render.png",
+        Name: "Cloud",
+        DirectionType: "Light",
+        ColorType: "Red",
+        AttackType: "Sword",
+        MainAbility:    {
+            Name: "Cross Slash",
+            AttackType: "Sword",
+            Element: "Neutral",
+            BasePower: 40,
+            MaxPower: 80,
+            Effect: "A powerful non-element physical attack."
+        },
+        SubAbility:    {
+            Name: "Attack Boost+",
+            Effect: "Strength +2 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+        }
+    },
+    55:  {
+        ID: 55,
+        AlbumNum: 55,
+        CardImage: "55_Sephiroth.png",
+        RenderImage: "55_Sephiroth_Render.png",
+        Name: "Sephiroth",
+        DirectionType: "Dark",
+        ColorType: "Red",
+        AttackType: "Staff",
+        MainAbility:    {
+            Name: "Meteor Rain",
+            AttackType: "Staff",
+            Element: "Fire",
+            BasePower: 40,
+            MaxPower: 80,
+            Effect: "A powerful fire-element magic attack."
+        },
+        SubAbility:    {
+            Name: "Magic Boost+",
+            Effect: "Magic +2 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+        }
+    },
+    56:  {
+        ID: 56,
+        AlbumNum: 56,
+        CardImage: "56_Key_Art_%234.png",
+        RenderImage: "56_Key_Art_%234_Render.png",
+        Name: "Key Art #4",
+        DirectionType: "Light",
+        ColorType: "Blue",
+        AttackType: "Sword",
+        MainAbility:    {
+            Name: "Ars Arcanum",
+            AttackType: "Sword",
+            Element: "Neutral",
+            BasePower: 15,
+            MaxPower: 55,
+            Effect: "A powerful physical attack."
+        }
+    },
 };
