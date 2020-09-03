@@ -72313,15 +72313,15 @@ var medalDatabase = {
         Direction: "Upright",
         Attribute: "Power",
         Guilt: 10,
-        STR: 35049,
-        DEF: 16410,
-        LowMulti: 16.64,
-        HighMulti: 18.14,
+        STR: 43549,
+        DEF: 16510,
+        LowMulti: 18.64,
+        HighMulti: 20.14,
         Gauge: 1,
         Target: "All",
         Ability:    {
             Name: "Lightning Drop +6",
-            Text: "Deals 5 hits. 1 turn: self [↑ STR, U- & P-STR 15], targets [↓ DEF, U- & P-DEF 15], SP ATK B +220%. Damage+: 1 enemy or 0 parts left.",
+            Text: "Deals 5 hits. 1 turn: P-Medal STR +5000, self [↑ STR, U- & P-STR 15], targets [↓ DEF, U- & P-DEF 15], SP ATK B +220%. Damage+: 1 enemy or 0 parts left.",
             Condition: "OneEnemy",
             SelfBuffs:  {
                 BuffGA: {
@@ -72336,6 +72336,12 @@ var medalDatabase = {
                 },
                 BuffPA: {
                     BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Power",
+                    Amount: 5000,
                     DurationType: "Turn",
                     DurationCount: 1
                 },
@@ -72362,13 +72368,19 @@ var medalDatabase = {
         },
         Supernova:  {
             Name: "[Mastery] Upright Strike All P",
-            Text: "P Medal: SN Renew. 1 turn: SP ATK B +300%. Triggers before slot 6 is activated when defending in PVP.",
+            Text: "P Medal: SN Renew. 1 turn: P-Medal STR +7000, SP ATK B +320%. Triggers before slot 6 is activated when defending in PVP.",
             Multi: 240.00,
             Timing: 6,
             Target: "All",
             SelfBuffs:  {
                 Renew: "Power",
-                GuiltBuff: 300
+                STRPlus:  {
+                    Type: "Power",
+                    Amount: 7000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320
             },
             Hits: 1
         }
@@ -72384,15 +72396,15 @@ var medalDatabase = {
         Direction: "Upright",
         Attribute: "Speed",
         Guilt: 10,
-        STR: 35029,
-        DEF: 16424,
-        LowMulti: 16.64,
-        HighMulti: 18.14,
+        STR: 43529,
+        DEF: 16524,
+        LowMulti: 18.64,
+        HighMulti: 20.14,
         Gauge: 1,
         Target: "All",
         Ability:    {
             Name: "Cyclone Drop +6",
-            Text: "Deals 5 hits. 1 turn: self [↑ STR, U- & S-STR 15], targets [↓ DEF, U- & S-DEF 15], SP ATK B +220%. Damage+: 1 enemy or 0 parts left.",
+            Text: "Deals 5 hits. 1 turn: S-Medal STR +5000, self [↑ STR, U- & S-STR 15], targets [↓ DEF, U- & S-DEF 15], SP ATK B +220%. Damage+: 1 enemy or 0 parts left.",
             Condition: "OneEnemy",
             SelfBuffs:  {
                 BuffGA: {
@@ -72407,6 +72419,12 @@ var medalDatabase = {
                 },
                 BuffSA: {
                     BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Speed",
+                    Amount: 5000,
                     DurationType: "Turn",
                     DurationCount: 1
                 },
@@ -72433,13 +72451,19 @@ var medalDatabase = {
         },
         Supernova:  {
             Name: "[Mastery] Upright Strike All S",
-            Text: "S Medal: SN Renew. 1 turn: SP ATK B +300%. Triggers before slot 6 is activated when defending in PVP.",
+            Text: "S Medal: SN Renew. 1 turn: S-Medal STR +7000, SP ATK B +320%. Triggers before slot 6 is activated when defending in PVP.",
             Multi: 240.00,
             Timing: 6,
             Target: "All",
             SelfBuffs:  {
                 Renew: "Speed",
-                GuiltBuff: 300
+                STRPlus:  {
+                    Type: "Speed",
+                    Amount: 7000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320
             },
             Hits: 1
         }
@@ -72455,15 +72479,15 @@ var medalDatabase = {
         Direction: "Upright",
         Attribute: "Magic",
         Guilt: 10,
-        STR: 35016,
-        DEF: 16440,
-        LowMulti: 16.64,
-        HighMulti: 18.14,
+        STR: 43516,
+        DEF: 16540,
+        LowMulti: 18.64,
+        HighMulti: 20.14,
         Gauge: 1,
         Target: "All",
         Ability:    {
             Name: "Ice Drop +6",
-            Text: "Deals 5 hits. 1 turn: self [↑ STR, U- & M-STR 15], targets [↓ DEF, U- & M-DEF 15], SP ATK B +220%. Damage+: 1 enemy or 0 parts left.",
+            Text: "Deals 5 hits. 1 turn: M-Medal STR +5000, self [↑ STR, U- & M-STR 15], targets [↓ DEF, U- & M-DEF 15], SP ATK B +220%. Damage+: 1 enemy or 0 parts left.",
             Condition: "OneEnemy",
             SelfBuffs:  {
                 BuffGA: {
@@ -72478,6 +72502,12 @@ var medalDatabase = {
                 },
                 BuffMA: {
                     BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Magic",
+                    Amount: 5000,
                     DurationType: "Turn",
                     DurationCount: 1
                 },
@@ -72504,13 +72534,19 @@ var medalDatabase = {
         },
         Supernova:  {
             Name: "[Mastery] Upright Strike All M",
-            Text: "M Medal: SN Renew. 1 turn: SP ATK B +300%. Triggers before slot 6 is activated when defending in PVP.",
+            Text: "M Medal: SN Renew. 1 turn: M-Medal +7000, SP ATK B +320%. Triggers before slot 6 is activated when defending in PVP.",
             Multi: 240.00,
             Timing: 6,
             Target: "All",
             SelfBuffs:  {
                 Renew: "Magic",
-                GuiltBuff: 300
+                STRPlus:  {
+                    Type: "Magic",
+                    Amount: 7000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320
             },
             Hits: 1
         }
@@ -72526,15 +72562,15 @@ var medalDatabase = {
         Direction: "Upright",
         Attribute: "Speed",
         Guilt: 10,
-        STR: 36243,
-        DEF: 16424,
-        LowMulti: 17.14,
-        HighMulti: 18.64,
+        STR: 45243,
+        DEF: 16524,
+        LowMulti: 19.14,
+        HighMulti: 20.64,
         Gauge: 1,
         Target: "Single",
         Ability:    {
-            Name: "Lance Strike +6",
-            Text: "Deals 7 hits. 1 turn: U-Medal STR +1500, self [↑ STR, U- & PSM-STR 15], target [↓ DEF, U- & PSM-DEF 15], SP ATK B +220%. Damage+: 1 enemy or 0 parts left.",
+            Name: "Lance Strike +7",
+            Text: "Deals 7 hits. 1 turn: U-Medal STR +7000, self [↑ STR, U- & PSM-STR 15], target [↓ DEF, U- & PSM-DEF 15], SP ATK B +220%. Damage+: 1 enemy or 0 parts left.",
             Condition: "OneEnemy",
             SelfBuffs:  {
                 BuffGA: {
@@ -72564,7 +72600,7 @@ var medalDatabase = {
                 },
                 STRPlus:  {
                     Type: "Upright",
-                    Amount: 1500,
+                    Amount: 7000,
                     DurationType: "Turn",
                     DurationCount: 1
                 },
@@ -72601,7 +72637,7 @@ var medalDatabase = {
         },
         Supernova:  {
             Name: "[Mastery] Upright Strike All S",
-            Text: "U Medal: SN Renew. 1 turn: U-Medal STR +2500, SP ATK B +300%. Triggers before slot 6 is activated when defending in PVP.",
+            Text: "U Medal: SN Renew. 1 turn: U-Medal STR +10000, SP ATK B +320%. Triggers before slot 6 is activated when defending in PVP.",
             Multi: 250.00,
             Timing: 6,
             Target: "All",
@@ -72609,11 +72645,11 @@ var medalDatabase = {
                 Renew: "Upright",
                 STRPlus:  {
                     Type: "Upright",
-                    Amount: 2500,
+                    Amount: 10000,
                     DurationType: "Turn",
                     DurationCount: 1
                 },
-                GuiltBuff: 300
+                GuiltBuff: 320
             },
             Hits: 1
         }
@@ -72866,15 +72902,15 @@ var medalDatabase = {
         Direction: "Upright",
         Attribute: "Power",
         Guilt: 10,
-        STR: 35218,
-        DEF: 16454,
-        LowMulti: 15.64,
-        HighMulti: 18.14,
+        STR: 43518,
+        DEF: 16554,
+        LowMulti: 18.64,
+        HighMulti: 20.14,
         Gauge: 1,
         Target: "All",
         Ability:    {
             Name: "Blades of Innocence +6",
-            Text: "Deals 6 hits. 1 turn: Medal STR +2500, self [↑ U- & R-STR 15], targets [↓ U- & R-DEF 15], SP ATK B +220%. Damage+: 1 enemy or 0 parts left.",
+            Text: "Deals 6 hits. 1 turn: Medal STR +5000, self [↑ U- & R-STR 15], targets [↓ U- & R-DEF 15], SP ATK B +220%. Damage+: 1 enemy or 0 parts left.",
             Condition: "OneEnemy",
             SelfBuffs:  {
                 BuffUA: {
@@ -72889,7 +72925,7 @@ var medalDatabase = {
                 },
                 STRPlus:  {
                     Type: "General",
-                    Amount: 2500,
+                    Amount: 5000,
                     DurationType: "Turn",
                     DurationCount: 1
                 },
@@ -72911,13 +72947,19 @@ var medalDatabase = {
         },
         Supernova:  {
             Name: "[Mastery] Upright Strike All P",
-            Text: "R Medal: SN Renew. 1 turn: SP ATK B +300%. Count +3. Triggers before slot 6 is activated when defending in PVP.",
+            Text: "R Medal: SN Renew. 1 turn: R-Medal +7000, SP ATK B +320%. Count +3. Triggers before slot 6 is activated when defending in PVP.",
             Multi: 240.00,
             Timing: 6,
             Target: "All",
             SelfBuffs:  {
                 Renew: "Reversed",
-                GuiltBuff: 300
+                STRPlus:  {
+                    Type: "Reversed",
+                    Amount: 7000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320
             },
             EnemyBuffs: {
                 Counter:    {
