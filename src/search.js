@@ -78663,9 +78663,9 @@ var medalDatabase = {
         ID: 2008,
         AlbumNum: 1876,
         Reference: [2008],
-        MedalImage: "1876_7Star_SN++_-_Illustrated_Terra.png",
-        RenderImage: "1876_7Star_SN++_-_Illustrated_Terra_Render.png",
-        Name: "SN++ - Illustrated Terra",
+        MedalImage: "1876_7Star_SN++_-_Illus._KH_III_Terra.png",
+        RenderImage: "1876_7Star_SN++_-_Illus._KH_III_Terra_Render.png",
+        Name: "SN++ - Illus. KH III Terra",
         Rarity: 7,
         Direction: "Upright",
         Attribute: "Power",
@@ -78676,7 +78676,7 @@ var medalDatabase = {
         Gauge: 3,
         Target: "Single",
         Ability:    {
-            Name: "Ability +6",
+            Name: "Ars Solum EX +6",
             Text: "Deals 13 hits. 1 turn: P-Medal STR +10000, self [↑ STR, U- & P-STR 15], targets [↓ DEF, U- & P-DEF 15], SP ATK B +220%. Count ±0.",
             SelfBuffs:  {
                 BuffGA: {
@@ -78778,9 +78778,9 @@ var medalDatabase = {
         ID: 2009,
         AlbumNum: 1877,
         Reference: [2009],
-        MedalImage: "1877_7Star_SN++_-_Illustrated_Ventus.png",
-        RenderImage: "1877_7Star_SN++_-_Illustrated_Ventus_Render.png",
-        Name: "SN++ - Illustrated Ventus",
+        MedalImage: "1877_7Star_SN++_-_Illus._KH_III_Ventus.png",
+        RenderImage: "1877_7Star_SN++_-_Illus._KH_III_Ventus_Render.png",
+        Name: "SN++ - Illus. KH III Ventus",
         Rarity: 7,
         Direction: "Upright",
         Attribute: "Speed",
@@ -78791,7 +78791,7 @@ var medalDatabase = {
         Gauge: 3,
         Target: "All",
         Ability:    {
-            Name: "Ability +6",
+            Name: "Air Flair EX +6",
             Text: "[Mastery] Deals 13 hits. 1 turn: S-Medal STR +10000, self [↑ STR, U- & S-STR 15], targets [↓ DEF, U- & S-DEF 15], SP ATK B +220%. Count ±0.",
             SelfBuffs:  {
                 BuffGA: {
@@ -78893,9 +78893,9 @@ var medalDatabase = {
         ID: 2010,
         AlbumNum: 1878,
         Reference: [2010],
-        MedalImage: "1878_7Star_SN++_-_Illustrated_Aqua.png",
-        RenderImage: "1878_7Star_SN++_-_Illustrated_Aqua_Render.png",
-        Name: "SN++ - Illustrated Aqua",
+        MedalImage: "1878_7Star_SN++_-_Illus._KH_III_Aqua.png",
+        RenderImage: "1878_7Star_SN++_-_Illus._KH_III_Aqua_Render.png",
+        Name: "SN++ - Illus. KH III Aqua",
         Rarity: 7,
         Direction: "Upright",
         Attribute: "Magic",
@@ -78906,8 +78906,8 @@ var medalDatabase = {
         Gauge: 3,
         Target: "All",
         Ability:    {
-            Name: "Ability +6",
-            Text: "4 hits. 1 turn: M-Medal STR +10000, self [↑ STR, U- & M-STR 15], targets [↓ DEF, U- & M-DEF 15], SP AB +220%, reflects 100% Magic. Count ±0. Pierces DEF Boost 30%. Next Medal turns Magic.",
+            Name: "Magic Pulse EX +6",
+            Text: "Deals 4 hits. 1 turn: M-Medal STR +10000, self [↑ STR, U- & M-STR 15], targets [↓ DEF, U- & M-DEF 15], SAB +220%. Reflects 100% Magic. Count ±0. Pierces DEF Boost 30%. Next Medal turns Magic.",
             SelfBuffs:  {
                 BuffGA: {
                     BuffCount: 15,
