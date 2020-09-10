@@ -79010,4 +79010,17 @@ var medalDatabase = {
             Hits: 1
         }
     },
+    2011:  {
+        ID: 2011,
+        AlbumNum: 1879,
+        Reference: [2011],
+        MedalImage: "1879_6Star_Sora_&_Moogle_B.png",
+        Name: "Sora & Moogle B",
+        Rarity: 6,
+        Direction: "Upright",
+        Attribute: "None",
+        Ability:    {
+            Text: "JP 5th anniversary Medal! Increases strength and defense by 100."
+        }
+    },
 };
