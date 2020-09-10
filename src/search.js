@@ -79023,4 +79023,926 @@ var medalDatabase = {
             Text: "JP 5th anniversary Medal! Increases strength and defense by 100."
         }
     },
+    2012:  {
+        ID: 2012,
+        AlbumNum: 1880,
+        Reference: [2012],
+        MedalImage: "1880_7Star_SN++_-_Donald_&_Goofy.png",
+        RenderImage: "1880_7Star_SN++_-_Donald_&_Goofy_Render.png",
+        Name: "SN++ - Donald & Goofy",
+        Rarity: 7,
+        Direction: "Upright",
+        Attribute: "Speed",
+        Guilt: 10,
+        STR: 38699,
+        DEF: 16661,
+        Multi: 18.80,
+        Gauge: 2,
+        Target: "All",
+        Ability:    {
+            Name: "Heroic Strike EX +6",
+            Text: "Deals 10 hits. 1 turn: U-Medal STR +5000, self [↑ U- & PSM-STR 10], targets [↓ U- & PSM-DEF 10], SP ATK B +200%.",
+            SelfBuffs:  {
+                BuffUA: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffPA: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Upright",
+                    Amount: 5000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 200
+            },
+            EnemyBuffs: {
+                DebuffUD: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffPD: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSD: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffMD: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 10
+        },
+        Supernova:  {
+            Name: "[Mastery] Upright Strike All S",
+            Text: "1 turn: U-Medal STR +7000, self [↑ STR, U- & PSM-STR 10], targets [↓ DEF, U- & PSM-DEF 10], SP ATK B +300%. Count +3. Triggers before slot 1 is activated when defending in PVP.",
+            Multi: 220.00,
+            Timing: 1,
+            Target: "All",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffUA: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffPA: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Upright",
+                    Amount: 7000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 300
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffUD: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffPD: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSD: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffMD: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Counter:    {
+                    CountDirection: "Up",
+                    Count: 3
+                }
+            },
+            Hits: 1
+        }
+    },
+    2013:  {
+        ID: 2013,
+        AlbumNum: 1881,
+        Reference: [2013],
+        MedalImage: "1881_7Star_SN++_-_Grape_Flan.png",
+        RenderImage: "1881_7Star_SN++_-_Grape_Flan_Render.png",
+        Name: "SN++ - Grape Flan",
+        Rarity: 7,
+        Direction: "Reversed",
+        Attribute: "Magic",
+        Guilt: 10,
+        STR: 38466,
+        DEF: 16644,
+        Multi: 15.80,
+        Gauge: 1,
+        Target: "All",
+        Ability:    {
+            Name: "Sweet Hearts +6",
+            Text: "Deals 5 hits. 1 turn: R-Medal STR +5000, self [↑ R- & M-STR 5], targets [↓ R- & M-DEF 5], SP ATK B +200%.",
+            SelfBuffs:  {
+                BuffRA: {
+                    BuffCount: 5,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 5,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Reversed",
+                    Amount: 5000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 200
+            },
+            EnemyBuffs: {
+                DebuffRD: {
+                    BuffCount: 5,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffMD: {
+                    BuffCount: 5,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 5
+        },
+        Supernova:  {
+            Name: "[Mastery] Reversed Strike All M",
+            Text: "1 turn: R-Medal STR +5000, self [↑ R- & M-STR 7], targets [↓ R- & M-DEF 7], SP ATK B +300%. Triggers before slot 2 is activated when defending in PVP.",
+            Multi: 220.00,
+            Timing: 2,
+            Target: "All",
+            SelfBuffs:  {
+                BuffRA: {
+                    BuffCount: 7,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 7,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Reversed",
+                    Amount: 5000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 300
+            },
+            EnemyBuffs: {
+                DebuffRD: {
+                    BuffCount: 7,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffMD: {
+                    BuffCount: 7,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 1
+        }
+    },
+    2014:  {
+        ID: 2014,
+        AlbumNum: 1882,
+        Reference: [2014],
+        MedalImage: "1882_7Star_SN++_-_Banana_Flan.png",
+        RenderImage: "1882_7Star_SN++_-_Banana_Flan_Render.png",
+        Name: "SN++ - Banana Flan",
+        Rarity: 7,
+        Direction: "Reversed",
+        Attribute: "Magic",
+        Guilt: 10,
+        STR: 38466,
+        DEF: 16644,
+        Multi: 15.80,
+        Gauge: 1,
+        Target: "All",
+        Ability:    {
+            Name: "Sweet Hearts +6",
+            Text: "Deals 5 hits. 1 turn: R-Medal STR +5000, self [↑ R- & M-STR 5], targets [↓ R- & M-DEF 5], SP ATK B +200%.",
+            SelfBuffs:  {
+                BuffRA: {
+                    BuffCount: 5,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 5,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Reversed",
+                    Amount: 5000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 200
+            },
+            EnemyBuffs: {
+                DebuffRD: {
+                    BuffCount: 5,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffMD: {
+                    BuffCount: 5,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 5
+        },
+        Supernova:  {
+            Name: "[Mastery] Reversed Strike All M",
+            Text: "1 turn: R-Medal STR +5000, self [↑ R- & M-STR 7], targets [↓ R- & M-DEF 7], SP ATK B +300%. Triggers before slot 2 is activated when defending in PVP.",
+            Multi: 220.00,
+            Timing: 2,
+            Target: "All",
+            SelfBuffs:  {
+                BuffRA: {
+                    BuffCount: 7,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 7,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Reversed",
+                    Amount: 5000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 300
+            },
+            EnemyBuffs: {
+                DebuffRD: {
+                    BuffCount: 7,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffMD: {
+                    BuffCount: 7,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 1
+        }
+    },
+    2015:  {
+        ID: 2015,
+        AlbumNum: 1883,
+        Reference: [2015],
+        MedalImage: "1883_7Star_SN++_-_Watermelon_Flan.png",
+        RenderImage: "1883_7Star_SN++_-_Watermelon_Flan_Render.png",
+        Name: "SN++ - Watermelon Flan",
+        Rarity: 7,
+        Direction: "Reversed",
+        Attribute: "Power",
+        Guilt: 10,
+        STR: 38466,
+        DEF: 16644,
+        Multi: 15.80,
+        Gauge: 1,
+        Target: "All",
+        Ability:    {
+            Name: "Sweet Hearts +6",
+            Text: "Deals 5 hits. 1 turn: R-Medal STR +5000, self [↑ R- & P-STR 5], targets [↓ R- & P-DEF 5], SP ATK B +200%.",
+            SelfBuffs:  {
+                BuffRA: {
+                    BuffCount: 5,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffPA: {
+                    BuffCount: 5,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Reversed",
+                    Amount: 5000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 200
+            },
+            EnemyBuffs: {
+                DebuffRD: {
+                    BuffCount: 5,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffPD: {
+                    BuffCount: 5,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 5
+        },
+        Supernova:  {
+            Name: "[Mastery] Reversed Strike All P",
+            Text: "1 turn: R-Medal STR +5000, self [↑ R- & P-STR 7], targets [↓ R- & P-DEF 7], SP ATK B +300%. Triggers before slot 2 is activated when defending in PVP.",
+            Multi: 220.00,
+            Timing: 2,
+            Target: "All",
+            SelfBuffs:  {
+                BuffRA: {
+                    BuffCount: 7,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffPA: {
+                    BuffCount: 7,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Reversed",
+                    Amount: 5000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 300
+            },
+            EnemyBuffs: {
+                DebuffRD: {
+                    BuffCount: 7,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffPD: {
+                    BuffCount: 7,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 1
+        }
+    },
+    2016:  {
+        ID: 2016,
+        AlbumNum: 1884,
+        Reference: [2016],
+        MedalImage: "1884_7Star_SN++_-_Strawberry_Flan.png",
+        RenderImage: "1884_7Star_SN++_-_Strawberry_Flan_Render.png",
+        Name: "SN++ - Strawberry Flan",
+        Rarity: 7,
+        Direction: "Reversed",
+        Attribute: "Power",
+        Guilt: 10,
+        STR: 38466,
+        DEF: 16644,
+        Multi: 15.80,
+        Gauge: 1,
+        Target: "All",
+        Ability:    {
+            Name: "Sweet Hearts +6",
+            Text: "Deals 5 hits. 1 turn: R-Medal STR +5000, self [↑ R- & P-STR 5], targets [↓ R- & P-DEF 5], SP ATK B +200%.",
+            SelfBuffs:  {
+                BuffRA: {
+                    BuffCount: 5,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffPA: {
+                    BuffCount: 5,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Reversed",
+                    Amount: 5000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 200
+            },
+            EnemyBuffs: {
+                DebuffRD: {
+                    BuffCount: 5,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffPD: {
+                    BuffCount: 5,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 5
+        },
+        Supernova:  {
+            Name: "[Mastery] Reversed Strike All P",
+            Text: "1 turn: R-Medal STR +5000, self [↑ R- & P-STR 7], targets [↓ R- & P-DEF 7], SP ATK B +300%. Triggers before slot 2 is activated when defending in PVP.",
+            Multi: 220.00,
+            Timing: 2,
+            Target: "All",
+            SelfBuffs:  {
+                BuffRA: {
+                    BuffCount: 7,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffPA: {
+                    BuffCount: 7,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Reversed",
+                    Amount: 5000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 300
+            },
+            EnemyBuffs: {
+                DebuffRD: {
+                    BuffCount: 7,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffPD: {
+                    BuffCount: 7,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 1
+        }
+    },
+    2017:  {
+        ID: 2017,
+        AlbumNum: 1885,
+        Reference: [2017],
+        MedalImage: "1885_7Star_SN++_-_Honeydew_Flan.png",
+        RenderImage: "1885_7Star_SN++_-_Honeydew_Flan_Render.png",
+        Name: "SN++ - Honeydew Flan",
+        Rarity: 7,
+        Direction: "Reversed",
+        Attribute: "Power",
+        Guilt: 10,
+        STR: 38466,
+        DEF: 16644,
+        Multi: 15.80,
+        Gauge: 1,
+        Target: "All",
+        Ability:    {
+            Name: "Sweet Hearts +6",
+            Text: "Deals 5 hits. 1 turn: R-Medal STR +5000, self [↑ R- & P-STR 5], targets [↓ R- & P-DEF 5], SP ATK B +200%.",
+            SelfBuffs:  {
+                BuffRA: {
+                    BuffCount: 5,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffPA: {
+                    BuffCount: 5,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Reversed",
+                    Amount: 5000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 200
+            },
+            EnemyBuffs: {
+                DebuffRD: {
+                    BuffCount: 5,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffPD: {
+                    BuffCount: 5,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 5
+        },
+        Supernova:  {
+            Name: "[Mastery] Reversed Strike All P",
+            Text: "1 turn: R-Medal STR +5000, self [↑ R- & P-STR 7], targets [↓ R- & P-DEF 7], SP ATK B +300%. Triggers before slot 2 is activated when defending in PVP.",
+            Multi: 220.00,
+            Timing: 2,
+            Target: "All",
+            SelfBuffs:  {
+                BuffRA: {
+                    BuffCount: 7,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffPA: {
+                    BuffCount: 7,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Reversed",
+                    Amount: 5000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 300
+            },
+            EnemyBuffs: {
+                DebuffRD: {
+                    BuffCount: 7,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffPD: {
+                    BuffCount: 7,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 1
+        }
+    },
+    2018:  {
+        ID: 2018,
+        AlbumNum: 1886,
+        Reference: [2018],
+        MedalImage: "1886_7Star_SN++_-_Orange_Flan.png",
+        RenderImage: "1886_7Star_SN++_-_Orange_Flan_Render.png",
+        Name: "SN++ - Orange Flan",
+        Rarity: 7,
+        Direction: "Reversed",
+        Attribute: "Speed",
+        Guilt: 10,
+        STR: 38466,
+        DEF: 16644,
+        Multi: 15.80,
+        Gauge: 1,
+        Target: "All",
+        Ability:    {
+            Name: "Sweet Hearts +6",
+            Text: "Deals 5 hits. 1 turn: R-Medal STR +5000, self [↑ R- & S-STR 5], targets [↓ R- & S-DEF 5], SP ATK B +200%.",
+            SelfBuffs:  {
+                BuffRA: {
+                    BuffCount: 5,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 5,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Reversed",
+                    Amount: 5000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 200
+            },
+            EnemyBuffs: {
+                DebuffRD: {
+                    BuffCount: 5,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSD: {
+                    BuffCount: 5,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 5
+        },
+        Supernova:  {
+            Name: "[Mastery] Reversed Strike All S",
+            Text: "1 turn: R-Medal STR +5000, self [↑ R- & S-STR 7], targets [↓ R- & S-DEF 7], SP ATK B +300%. Triggers before slot 2 is activated when defending in PVP.",
+            Multi: 220.00,
+            Timing: 2,
+            Target: "All",
+            SelfBuffs:  {
+                BuffRA: {
+                    BuffCount: 7,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 7,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Reversed",
+                    Amount: 5000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 300
+            },
+            EnemyBuffs: {
+                DebuffRD: {
+                    BuffCount: 7,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSD: {
+                    BuffCount: 7,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 1
+        }
+    },
+    2019:  {
+        ID: 2019,
+        AlbumNum: 1887,
+        Reference: [2019],
+        MedalImage: "1887_7Star_SN++_-_Cherry_Flan.png",
+        RenderImage: "1887_7Star_SN++_-_Cherry_Flan_Render.png",
+        Name: "SN++ - Cherry Flan",
+        Rarity: 7,
+        Direction: "Reversed",
+        Attribute: "Speed",
+        Guilt: 10,
+        STR: 38466,
+        DEF: 16644,
+        Multi: 15.80,
+        Gauge: 1,
+        Target: "All",
+        Ability:    {
+            Name: "Sweet Hearts +6",
+            Text: "Deals 5 hits. 1 turn: R-Medal STR +5000, self [↑ R- & S-STR 5], targets [↓ R- & S-DEF 5], SP ATK B +200%.",
+            SelfBuffs:  {
+                BuffRA: {
+                    BuffCount: 5,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 5,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Reversed",
+                    Amount: 5000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 200
+            },
+            EnemyBuffs: {
+                DebuffRD: {
+                    BuffCount: 5,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSD: {
+                    BuffCount: 5,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 5
+        },
+        Supernova:  {
+            Name: "[Mastery] Reversed Strike All S",
+            Text: "1 turn: R-Medal STR +5000, self [↑ R- & S-STR 7], targets [↓ R- & S-DEF 7], SP ATK B +300%. Triggers before slot 2 is activated when defending in PVP.",
+            Multi: 220.00,
+            Timing: 2,
+            Target: "All",
+            SelfBuffs:  {
+                BuffRA: {
+                    BuffCount: 7,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 7,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Reversed",
+                    Amount: 5000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 300
+            },
+            EnemyBuffs: {
+                DebuffRD: {
+                    BuffCount: 7,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSD: {
+                    BuffCount: 7,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 1
+        }
+    },
+    2020:  {
+        ID: 2020,
+        AlbumNum: 1888,
+        Reference: [2020],
+        MedalImage: "1888_7Star_SN++_-_Flantastic_Seven.png",
+        RenderImage: "1888_7Star_SN++_-_Flantastic_Seven_Render.png",
+        Name: "SN++ - Flantastic Seven",
+        Rarity: 7,
+        Direction: "Reversed",
+        Attribute: "Magic",
+        Guilt: 10,
+        STR: 44158,
+        DEF: 16599,
+        Multi: 20.40,
+        Gauge: 4,
+        Target: "All",
+        Ability:    {
+            Name: "Dolce Hearts +6",
+            Text: "Deals 5 hits. 1 turn: R-Medal STR +10000, self [↑ R- & PSM-STR 15], targets [↓ R- & PSM-DEF 15], SP ATK B +200%.",
+            SelfBuffs:  {
+                BuffRA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffPA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Reversed",
+                    Amount: 10000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 200
+            },
+            EnemyBuffs: {
+                DebuffRD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffPD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffMD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 5
+        },
+        Supernova:  {
+            Name: "[Mastery] Reversed Strike All M",
+            Text: "1 turn: R-Medal STR +12000, self [↑ R- & PSM-STR 15], targets [↓ R- & PSM-DEF 15], SP ATK B +300%. Triggers before slot 1 is activated when defending in PVP.",
+            Multi: 240.00,
+            Timing: 1,
+            Target: "All",
+            SelfBuffs:  {
+                BuffRA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffPA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Reversed",
+                    Amount: 12000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 300
+            },
+            EnemyBuffs: {
+                DebuffRD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffPD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffMD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 1
+        }
+    },
 };
