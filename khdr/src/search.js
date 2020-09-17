@@ -3002,4 +3002,48 @@ var cardDatabase = {
             Effect: "A powerful physical attack."
         }
     },
+    57:  {
+        ID: 57,
+        AlbumNum: 57,
+        CardImage: "57_Roxas.png",
+        RenderImage: "57_Roxas_Render.png",
+        Name: "Roxas",
+        DirectionType: "Dark",
+        ColorType: "Blue",
+        AttackType: "Sword",
+        MainAbility:    {
+            Name: "Black Hole",
+            AttackType: "Sword",
+            Element: "Water",
+            BasePower: 40,
+            MaxPower: 80,
+            Effect: "A powerful water-element physical attack."
+        },
+        SubAbility:    {
+            Name: "Attack Boost+",
+            Effect: "Strength +2 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+        }
+    },
+    58:  {
+        ID: 58,
+        AlbumNum: 58,
+        CardImage: "58_Namine.png",
+        RenderImage: "58_Namine_Render.png",
+        Name: "Naminé",
+        DirectionType: "Light",
+        ColorType: "Green",
+        AttackType: "Staff",
+        MainAbility:    {
+            Name: "Circle of Innocence",
+            AttackType: "Staff",
+            Element: "Light",
+            BasePower: 40,
+            MaxPower: 80,
+            Effect: "A powerful light-element magic attack."
+        },
+        SubAbility:    {
+            Name: "Cure",
+            Effect: "Restores HP. Amount restored is based on Magic."
+        }
+    },
 };
