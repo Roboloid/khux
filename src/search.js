@@ -79945,4 +79945,422 @@ var medalDatabase = {
             Hits: 1
         }
     },
+    2021:  {
+        ID: 2021,
+        AlbumNum: 1889,
+        Reference: [2021],
+        MedalImage: "1889_7Star_SN++_-_Illus._KH_III_Lea_(Axel).png",
+        RenderImage: "1889_7Star_SN++_-_Illus._KH_III_Lea_(Axel)_Render.png",
+        Name: "SN++ - Illus. KH III Lea (Axel)",
+        Rarity: 7,
+        Direction: "Upright",
+        Attribute: "Power",
+        Guilt: 10,
+        STR: 45831,
+        DEF: 16690,
+        Multi: 20.20,
+        Gauge: 3,
+        Target: "All",
+        Ability:    {
+            Name: "Fiery Tornado EX +6",
+            Text: "[Fail to imitate SP attack of 3 Medals before] Deals 2 hits. 1 turn: Medal STR +10000, self [↑ STR, U- & PSM-STR 15], targets [↓ DEF, U- & PSM-DEF 15], SAB +220%.",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffPA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "General",
+                    Amount: 10000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Copy: {
+                    Direction: "Previous",
+                    Slot: 3
+                },
+                GuiltBuff: 220
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffUD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffPD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffMD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 2
+        },
+        Supernova:  {
+            Name: "[Mastery] Upright Strike All P",
+            Text: "1 turn: Medal STR +12000, self [↑ STR & U-STR 15], targets [↓ DEF & U-DEF 15], SAB +320%. Ignores targets' Defense Boost. Triggers before slot 1 is activated when defending in PVP.",
+            Multi: 240.00,
+            Timing: 1,
+            Target: "All",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "General",
+                    Amount: 12000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffUD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DEFPierce: 100
+            },
+            Hits: 1
+        }
+    },
+    2022:  {
+        ID: 2022,
+        AlbumNum: 1890,
+        Reference: [2022],
+        MedalImage: "1890_7Star_SN++_-_Illus._KH_III_Roxas.png",
+        RenderImage: "1890_7Star_SN++_-_Illus._KH_III_Roxas_Render.png",
+        Name: "SN++ - Illus. KH III Roxas",
+        Rarity: 7,
+        Direction: "Upright",
+        Attribute: "Speed",
+        Guilt: 10,
+        STR: 45494,
+        DEF: 16739,
+        Multi: 20.80,
+        Gauge: 3,
+        Target: "All",
+        Ability:    {
+            Name: "Swift Hero +6",
+            Text: "Deals 3 hits that ignore targets' attributes. 2 turns: S-Medal STR +6000, self [↑ STR, U- & S-STR 15], targets [↓ DEF, U- & S-DEF 15], SP ATK B +220%. Count +2.",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                BuffSA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                STRPlus:  {
+                    Type: "Speed",
+                    Amount: 6000,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                GuiltBuff: 220,
+                AttributeAlways: "Super"
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                DebuffUD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                DebuffSD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                Counter:    {
+                    CountDirection: "Up",
+                    Count: 2
+                }
+            },
+            Hits: 3
+        },
+        Supernova:  {
+            Name: "[Mastery] Upright Strike All S",
+            Text: "1 turn: S-Medal STR +12000, self [↑ STR, U- & S-STR 15], targets [↓ DEF, U- & S-DEF 15], SP ATK B +320%. Triggers before slot 1 is activated when defending in PVP.",
+            Multi: 240.00,
+            Timing: 1,
+            Target: "All",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Speed",
+                    Amount: 12000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffUD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 1
+        }
+    },
+    2023:  {
+        ID: 2023,
+        AlbumNum: 1891,
+        Reference: [2023],
+        MedalImage: "1891_7Star_SN++_-_Illus._KH_III_Xion.png",
+        RenderImage: "1891_7Star_SN++_-_Illus._KH_III_Xion_Render.png",
+        Name: "SN++ - Illus. KH III Xion",
+        Rarity: 7,
+        Direction: "Upright",
+        Attribute: "Magic",
+        Guilt: 10,
+        STR: 45770,
+        DEF: 16706,
+        Multi: 20.20,
+        Gauge: 3,
+        Target: "All",
+        Ability:    {
+            Name: "Dark Thunder Raid EX +6",
+            Text: "Deals 3 hits. 1 turn: Medal STR +10000, self [↑ STR, U-, R- & PSM-STR 15], targets [↓ DEF, U-, R- & PSM-DEF 15], SAB +220%. Gauge +5. HP MAX. Count +2. Cures ailments.",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffRA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffPA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "General",
+                    Amount: 10000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 220,
+                GaugeRecovery: 5,
+                HPRecovery: "Yes",
+                Esuna: "Yes"
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffUD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffRD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffPD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffMD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Counter:    {
+                    CountDirection: "Up",
+                    Count: 2
+                }
+            },
+            Hits: 3
+        },
+        Supernova:  {
+            Name: "[Mastery] Upright Strike All M",
+            Text: "3 turns: Medal STR +6000, self [↑ STR, U-, & PSM-STR 15], targets [↓ DEF, U-, & PSM-DEF 15], SAB +320%. Count +5. Gauge +5. Triggers before slot 1 is activated when defending in PVP.",
+            Multi: 240.00,
+            Timing: 1,
+            Target: "All",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 3
+                },
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 3
+                },
+                BuffPA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 3
+                },
+                BuffSA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 3
+                },
+                BuffMA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 3
+                },
+                STRPlus:  {
+                    Type: "General",
+                    Amount: 6000,
+                    DurationType: "Turn",
+                    DurationCount: 3
+                },
+                GuiltBuff: 320,
+                GaugeRecovery: 5
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 3
+                },
+                DebuffUD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 3
+                },
+                DebuffPD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 3
+                },
+                DebuffSD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 3
+                },
+                DebuffMD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 3
+                },
+                Counter:    {
+                    CountDirection: "Up",
+                    Count: 5
+                }
+            },
+            Hits: 1
+        }
+    },
 };
