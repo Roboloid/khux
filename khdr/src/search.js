@@ -3042,8 +3042,8 @@ var cardDatabase = {
             Effect: "A powerful light-element magic attack."
         },
         SubAbility:    {
-            Name: "Cure",
-            Effect: "Restores HP. Amount restored is based on Magic."
+            Name: "Magic Boost+",
+            Effect: "Magic +2 for 10s. Stacking Cards does not increase value. Can be applied more than once."
         }
     },
 };
