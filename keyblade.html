@@ -57,6 +57,11 @@
     <!-- Content overlay -->
     <style type="text/css">
 
+        @font-face {
+          font-family: "UI Font";
+            src: url(./images/assets/font/PRGothIWA-Dm.TTF) format("truetype");
+        }
+
       .whiteOverlay {
         padding: 15px 15px 15px;
         margin: 10% 10% 10%;
@@ -162,6 +167,33 @@
         display: block;
         margin: 8px;
         font-size: 20px;
+      }
+
+      #slotMultiSection {
+        width: 90%;
+        margin: 0 auto;
+        vertical-align: center;
+        overflow: hidden;
+        position: relative;
+        display: none;
+      }
+
+      #keybladeMulti1  {
+        width: 400px;
+        height: 500px;
+        float: left;
+        position: relative;
+      }
+
+      #keybladeMulti2  {
+        width: 400px;
+        height: 500px;
+        float: right;
+        position: relative;
+      }
+
+      @media screen and (max-width: 1000px) {
+        #keybladeMulti1, #keybladeMulti2 {width: 400px; float: none; margin: auto;}
       }
 
       input[type=number]::-webkit-inner-spin-button, 
@@ -288,6 +320,22 @@
                 </div>
 
               </div>
+
+              <pre></pre>
+
+                  <div id="slotMultiSection">
+
+                    <div id="keybladeMulti1">
+  
+                    </div>
+  
+  
+                    <div id="keybladeMulti2">
+                      
+                    </div>
+  
+                  </div>
+
             </div>
             
         </div>
