@@ -119,7 +119,7 @@ function calculateCost() {
     document.getElementById("showBrilliant").classList.toggle("showBrilliantNum", false);
   }
   else  {
-    if(cost1 < 0 || cost2 > 50)  { // Inputs full but invalid
+    if(cost1 < 0 || cost2 > 60)  { // Inputs full but invalid
       document.getElementById("displayNumErr").innerHTML = "Level out of bounds.";
       document.getElementById("slotMultiSection").style = "display: none";
       document.getElementById("keybladeMulti1").innerHTML = "";
@@ -271,7 +271,7 @@ function calculateCost() {
 
       if(rainbowCost > 0)  {
         document.getElementById("showRainbow").classList.toggle("showRainbowNum", true);
-        document.getElementById("moonCost_container").innerHTML = moonCost;
+        document.getElementById("rainbowCost_container").innerHTML = rainbowCost;
       }
       else  {
         document.getElementById("showRainbow").classList.toggle("showRainbowNum", false);
@@ -279,7 +279,7 @@ function calculateCost() {
 
       if(brilliantCost > 0)  {
         document.getElementById("showBrilliant").classList.toggle("showBrilliantNum", true);
-        document.getElementById("moonCost_container").innerHTML = moonCost;
+        document.getElementById("brilliantCost_container").innerHTML = brilliantCost;
       }
       else  {
         document.getElementById("showBrilliant").classList.toggle("showBrilliantNum", false);
@@ -289,6 +289,11 @@ function calculateCost() {
         hideBlades = 1;
         document.getElementById("slotMultiSection").style = "display: none";
         document.getElementById("displayNumErr").innerHTML = "There are no gem costs from Lv. " + cost1 + " to Lv. " + cost2 + ".";
+      }
+      else if(powerCost == -1 && speedCost == -1 && magicCost == -1 && sunCost == -1 && moonCost == -1 && cost2 <= 60)  {
+        hideBlades = 1;
+        document.getElementById("slotMultiSection").style = "display: none";
+        document.getElementById("displayNumErr").innerHTML = "Data in progress";
       }
       else if(powerCost == -1 && speedCost == -1 && magicCost == -1 && sunCost == -1 && moonCost == -1)  {
         hideBlades = 1;
@@ -1002,7 +1007,17 @@ var kb1_cost = {      // Keyblade1: Starlight
     49.7	:	6	,
     49.8	:	6	,
     49.9	:	6	,
-    50	:	0
+    50	:	0 ,
+    50.1	:	7	,
+    50.2	:	7	,
+    50.3	:	7	,
+    50.4	:	7	,
+    50.5	:	7	,
+    50.6	:	7	,
+    50.7	:	7	,
+    50.8	:	7	,
+    50.9	:	7	,
+    51	:	0 ,
   },
   speed:  {
     0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0, 13: 0, 
@@ -1167,7 +1182,17 @@ var kb1_cost = {      // Keyblade1: Starlight
     49.7	:	6	,
     49.8	:	6	,
     49.9	:	6	,
-    50	:	0
+    50	:	0 ,
+    50.1	:	7	,
+    50.2	:	7	,
+    50.3	:	7	,
+    50.4	:	7	,
+    50.5	:	7	,
+    50.6	:	7	,
+    50.7	:	7	,
+    50.8	:	7	,
+    50.9	:	7	,
+    51	:	0 ,
   },
   magic:  {
     0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0, 13: 0, 
@@ -1332,7 +1357,17 @@ var kb1_cost = {      // Keyblade1: Starlight
     49.7	:	6	,
     49.8	:	6	,
     49.9	:	6	,
-    50	:	0
+    50	:	0 ,
+    50.1	:	7	,
+    50.2	:	7	,
+    50.3	:	7	,
+    50.4	:	7	,
+    50.5	:	7	,
+    50.6	:	7	,
+    50.7	:	7	,
+    50.8	:	7	,
+    50.9	:	7	,
+    51	:	0 ,
   },
   sun:  {
     0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,
@@ -1352,7 +1387,8 @@ var kb1_cost = {      // Keyblade1: Starlight
     47:1, 47.1:0, 47.2:0, 47.3:0, 47.4:0, 47.5:0, 47.6:0, 47.7:0, 47.8:0, 47.9:0,
     48:1, 48.1:0, 48.2:0, 48.3:0, 48.4:0, 48.5:0, 48.6:0, 48.7:0, 48.8:0, 48.9:0,
     49:1, 49.1:0, 49.2:0, 49.3:0, 49.4:0, 49.5:0, 49.6:0, 49.7:0, 49.8:0, 49.9:0,
-    50:1
+    50:1, 50.1:0, 50.2:0, 50.3:0, 50.4:0, 50.5:0, 50.6:0, 50.7:0, 50.8:0, 50.9:0,
+    51:3
   },
   moon: {
     0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,
@@ -1372,7 +1408,8 @@ var kb1_cost = {      // Keyblade1: Starlight
     47:1, 47.1:0, 47.2:0, 47.3:0, 47.4:0, 47.5:0, 47.6:0, 47.7:0, 47.8:0, 47.9:0,
     48:1, 48.1:0, 48.2:0, 48.3:0, 48.4:0, 48.5:0, 48.6:0, 48.7:0, 48.8:0, 48.9:0,
     49:1, 49.1:0, 49.2:0, 49.3:0, 49.4:0, 49.5:0, 49.6:0, 49.7:0, 49.8:0, 49.9:0,
-    50:1
+    50:1, 50.1:0, 50.2:0, 50.3:0, 50.4:0, 50.5:0, 50.6:0, 50.7:0, 50.8:0, 50.9:0,
+    51:3
   },
   rainbow: {
     0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,
@@ -1392,7 +1429,8 @@ var kb1_cost = {      // Keyblade1: Starlight
     47:0, 47.1:0, 47.2:0, 47.3:0, 47.4:0, 47.5:0, 47.6:0, 47.7:0, 47.8:0, 47.9:0,
     48:0, 48.1:0, 48.2:0, 48.3:0, 48.4:0, 48.5:0, 48.6:0, 48.7:0, 48.8:0, 48.9:0,
     49:0, 49.1:0, 49.2:0, 49.3:0, 49.4:0, 49.5:0, 49.6:0, 49.7:0, 49.8:0, 49.9:0,
-    50:0
+    50:0, 50.1:0, 50.2:0, 50.3:0, 50.4:0, 50.5:0, 50.6:0, 50.7:0, 50.8:0, 50.9:0,
+    51:0
   },
   brilliant: {
     0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,
@@ -1412,7 +1450,8 @@ var kb1_cost = {      // Keyblade1: Starlight
     47:0, 47.1:0, 47.2:0, 47.3:0, 47.4:0, 47.5:0, 47.6:0, 47.7:0, 47.8:0, 47.9:0,
     48:0, 48.1:0, 48.2:0, 48.3:0, 48.4:0, 48.5:0, 48.6:0, 48.7:0, 48.8:0, 48.9:0,
     49:0, 49.1:0, 49.2:0, 49.3:0, 49.4:0, 49.5:0, 49.6:0, 49.7:0, 49.8:0, 49.9:0,
-    50:0
+    50:0, 50.1:0, 50.2:0, 50.3:0, 50.4:0, 50.5:0, 50.6:0, 50.7:0, 50.8:0, 50.9:0,
+    51:1
   }
 };      // Keyblade1: Starlight
 
@@ -3605,7 +3644,8 @@ var kb8_cost = {      // Keyblade8: Sleeping Lion
     47:0, 47.1:0, 47.2:0, 47.3:0, 47.4:0, 47.5:0, 47.6:0, 47.7:0, 47.8:0, 47.9:0,
     48:0, 48.1:0, 48.2:0, 48.3:0, 48.4:0, 48.5:0, 48.6:0, 48.7:0, 48.8:0, 48.9:0,
     49:0, 49.1:0, 49.2:0, 49.3:0, 49.4:0, 49.5:0, 49.6:0, 49.7:0, 49.8:0, 49.9:0,
-    50:0
+    50:0, 50.1:0, 50.2:0, 50.3:0, 50.4:0, 50.5:0, 50.6:0, 50.7:0, 50.8:0, 50.9:0,
+    51:0
   },
   speed: {
     0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0, 13: 0, 
@@ -3770,7 +3810,17 @@ var kb8_cost = {      // Keyblade8: Sleeping Lion
     49.7	:	10	,
     49.8	:	10	,
     49.9	:	10	,
-    50	:	0
+    50	:	0,
+    50.1	:	11	,
+    50.2	:	11	,
+    50.3	:	11	,
+    50.4	:	11	,
+    50.5	:	11	,
+    50.6	:	11	,
+    50.7	:	11	,
+    50.8	:	11	,
+    50.9	:	11	,
+    51	:	0,
   },
   magic: {
     0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,
@@ -3790,7 +3840,8 @@ var kb8_cost = {      // Keyblade8: Sleeping Lion
     47:0, 47.1:0, 47.2:0, 47.3:0, 47.4:0, 47.5:0, 47.6:0, 47.7:0, 47.8:0, 47.9:0,
     48:0, 48.1:0, 48.2:0, 48.3:0, 48.4:0, 48.5:0, 48.6:0, 48.7:0, 48.8:0, 48.9:0,
     49:0, 49.1:0, 49.2:0, 49.3:0, 49.4:0, 49.5:0, 49.6:0, 49.7:0, 49.8:0, 49.9:0,
-    50:0
+    50:0, 50.1:0, 50.2:0, 50.3:0, 50.4:0, 50.5:0, 50.6:0, 50.7:0, 50.8:0, 50.9:0,
+    51:0
   },
   sun: {
     0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0, 13: 0, 
@@ -3820,7 +3871,8 @@ var kb8_cost = {      // Keyblade8: Sleeping Lion
     47:2, 47.1:0, 47.2:0, 47.3:0, 47.4:0, 47.5:0, 47.6:0, 47.7:0, 47.8:0, 47.9:0,
     48:2, 48.1:0, 48.2:0, 48.3:0, 48.4:0, 48.5:0, 48.6:0, 48.7:0, 48.8:0, 48.9:0,
     49:2, 49.1:0, 49.2:0, 49.3:0, 49.4:0, 49.5:0, 49.6:0, 49.7:0, 49.8:0, 49.9:0,
-    50:2
+    50:2, 50.1:0, 50.2:0, 50.3:0, 50.4:0, 50.5:0, 50.6:0, 50.7:0, 50.8:0, 50.9:0,
+    51:7
   },
   moon: {
     0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,
@@ -3840,7 +3892,8 @@ var kb8_cost = {      // Keyblade8: Sleeping Lion
     47:0, 47.1:0, 47.2:0, 47.3:0, 47.4:0, 47.5:0, 47.6:0, 47.7:0, 47.8:0, 47.9:0,
     48:0, 48.1:0, 48.2:0, 48.3:0, 48.4:0, 48.5:0, 48.6:0, 48.7:0, 48.8:0, 48.9:0,
     49:0, 49.1:0, 49.2:0, 49.3:0, 49.4:0, 49.5:0, 49.6:0, 49.7:0, 49.8:0, 49.9:0,
-    50:0
+    50:0, 50.1:0, 50.2:0, 50.3:0, 50.4:0, 50.5:0, 50.6:0, 50.7:0, 50.8:0, 50.9:0,
+    51:0
   },
   rainbow: {
     0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,
@@ -3860,7 +3913,8 @@ var kb8_cost = {      // Keyblade8: Sleeping Lion
     47:0, 47.1:0, 47.2:0, 47.3:0, 47.4:0, 47.5:0, 47.6:0, 47.7:0, 47.8:0, 47.9:0,
     48:0, 48.1:0, 48.2:0, 48.3:0, 48.4:0, 48.5:0, 48.6:0, 48.7:0, 48.8:0, 48.9:0,
     49:0, 49.1:0, 49.2:0, 49.3:0, 49.4:0, 49.5:0, 49.6:0, 49.7:0, 49.8:0, 49.9:0,
-    50:0
+    50:0, 50.1:0, 50.2:0, 50.3:0, 50.4:0, 50.5:0, 50.6:0, 50.7:0, 50.8:0, 50.9:0,
+    51:0
   },
   brilliant: {
     0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,
@@ -3880,7 +3934,8 @@ var kb8_cost = {      // Keyblade8: Sleeping Lion
     47:0, 47.1:0, 47.2:0, 47.3:0, 47.4:0, 47.5:0, 47.6:0, 47.7:0, 47.8:0, 47.9:0,
     48:0, 48.1:0, 48.2:0, 48.3:0, 48.4:0, 48.5:0, 48.6:0, 48.7:0, 48.8:0, 48.9:0,
     49:0, 49.1:0, 49.2:0, 49.3:0, 49.4:0, 49.5:0, 49.6:0, 49.7:0, 49.8:0, 49.9:0,
-    50:0
+    50:0, 50.1:0, 50.2:0, 50.3:0, 50.4:0, 50.5:0, 50.6:0, 50.7:0, 50.8:0, 50.9:0,
+    51:1
   }
 };      // Keyblade8: Sleeping Lion
 
@@ -3904,7 +3959,8 @@ var kb9_cost = {      // Keyblade9: Counterpoint
     47:0, 47.1:0, 47.2:0, 47.3:0, 47.4:0, 47.5:0, 47.6:0, 47.7:0, 47.8:0, 47.9:0,
     48:0, 48.1:0, 48.2:0, 48.3:0, 48.4:0, 48.5:0, 48.6:0, 48.7:0, 48.8:0, 48.9:0,
     49:0, 49.1:0, 49.2:0, 49.3:0, 49.4:0, 49.5:0, 49.6:0, 49.7:0, 49.8:0, 49.9:0,
-    50:0
+    50:0, 50.1:0, 50.2:0, 50.3:0, 50.4:0, 50.5:0, 50.6:0, 50.7:0, 50.8:0, 50.9:0,
+    51:0
   },
   speed: {
     0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,
@@ -3924,7 +3980,8 @@ var kb9_cost = {      // Keyblade9: Counterpoint
     47:0, 47.1:0, 47.2:0, 47.3:0, 47.4:0, 47.5:0, 47.6:0, 47.7:0, 47.8:0, 47.9:0,
     48:0, 48.1:0, 48.2:0, 48.3:0, 48.4:0, 48.5:0, 48.6:0, 48.7:0, 48.8:0, 48.9:0,
     49:0, 49.1:0, 49.2:0, 49.3:0, 49.4:0, 49.5:0, 49.6:0, 49.7:0, 49.8:0, 49.9:0,
-    50:0
+    50:0, 50.1:0, 50.2:0, 50.3:0, 50.4:0, 50.5:0, 50.6:0, 50.7:0, 50.8:0, 50.9:0,
+    51:0
   },
   magic: {
     0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0, 13: 0, 
@@ -4089,7 +4146,17 @@ var kb9_cost = {      // Keyblade9: Counterpoint
     49.7	:	10	,
     49.8	:	10	,
     49.9	:	10	,
-    50	:	0
+    50	:	0,
+    50.1	:	11	,
+    50.2	:	11	,
+    50.3	:	11	,
+    50.4	:	11	,
+    50.5	:	11	,
+    50.6	:	11	,
+    50.7	:	11	,
+    50.8	:	11	,
+    50.9	:	11	,
+    51	:	0,
   },
   sun: {
     0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0, 13: 0, 
@@ -4119,7 +4186,8 @@ var kb9_cost = {      // Keyblade9: Counterpoint
     47:2, 47.1:0, 47.2:0, 47.3:0, 47.4:0, 47.5:0, 47.6:0, 47.7:0, 47.8:0, 47.9:0,
     48:2, 48.1:0, 48.2:0, 48.3:0, 48.4:0, 48.5:0, 48.6:0, 48.7:0, 48.8:0, 48.9:0,
     49:2, 49.1:0, 49.2:0, 49.3:0, 49.4:0, 49.5:0, 49.6:0, 49.7:0, 49.8:0, 49.9:0,
-    50:2
+    50:2, 50.1:0, 50.2:0, 50.3:0, 50.4:0, 50.5:0, 50.6:0, 50.7:0, 50.8:0, 50.9:0,
+    51:7
   },
   moon: {
     0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,
@@ -4139,7 +4207,8 @@ var kb9_cost = {      // Keyblade9: Counterpoint
     47:0, 47.1:0, 47.2:0, 47.3:0, 47.4:0, 47.5:0, 47.6:0, 47.7:0, 47.8:0, 47.9:0,
     48:0, 48.1:0, 48.2:0, 48.3:0, 48.4:0, 48.5:0, 48.6:0, 48.7:0, 48.8:0, 48.9:0,
     49:0, 49.1:0, 49.2:0, 49.3:0, 49.4:0, 49.5:0, 49.6:0, 49.7:0, 49.8:0, 49.9:0,
-    50:0
+    50:0, 50.1:0, 50.2:0, 50.3:0, 50.4:0, 50.5:0, 50.6:0, 50.7:0, 50.8:0, 50.9:0,
+    51:0
   },
   rainbow: {
     0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,
@@ -4159,7 +4228,8 @@ var kb9_cost = {      // Keyblade9: Counterpoint
     47:0, 47.1:0, 47.2:0, 47.3:0, 47.4:0, 47.5:0, 47.6:0, 47.7:0, 47.8:0, 47.9:0,
     48:0, 48.1:0, 48.2:0, 48.3:0, 48.4:0, 48.5:0, 48.6:0, 48.7:0, 48.8:0, 48.9:0,
     49:0, 49.1:0, 49.2:0, 49.3:0, 49.4:0, 49.5:0, 49.6:0, 49.7:0, 49.8:0, 49.9:0,
-    50:0
+    50:0, 50.1:0, 50.2:0, 50.3:0, 50.4:0, 50.5:0, 50.6:0, 50.7:0, 50.8:0, 50.9:0,
+    51:0
   },
   brilliant: {
     0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,
@@ -4179,7 +4249,8 @@ var kb9_cost = {      // Keyblade9: Counterpoint
     47:0, 47.1:0, 47.2:0, 47.3:0, 47.4:0, 47.5:0, 47.6:0, 47.7:0, 47.8:0, 47.9:0,
     48:0, 48.1:0, 48.2:0, 48.3:0, 48.4:0, 48.5:0, 48.6:0, 48.7:0, 48.8:0, 48.9:0,
     49:0, 49.1:0, 49.2:0, 49.3:0, 49.4:0, 49.5:0, 49.6:0, 49.7:0, 49.8:0, 49.9:0,
-    50:0
+    50:0, 50.1:0, 50.2:0, 50.3:0, 50.4:0, 50.5:0, 50.6:0, 50.7:0, 50.8:0, 50.9:0,
+    51:1
   }
 };      // Keyblade9: Counterpoint
 
@@ -4927,7 +4998,17 @@ var kb11_cost = {      // Keyblade11: Fenrir
     49.7	:	10	,
     49.8	:	10	,
     49.9	:	10	,
-    50	:	0
+    50	:	0,
+    50.1	:	11	,
+    50.2	:	11	,
+    50.3	:	11	,
+    50.4	:	11	,
+    50.5	:	11	,
+    50.6	:	11	,
+    50.7	:	11	,
+    50.8	:	11	,
+    50.9	:	11	,
+    51	:	0,
   },
   speed: {
     0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,
@@ -4947,7 +5028,8 @@ var kb11_cost = {      // Keyblade11: Fenrir
     47:0, 47.1:0, 47.2:0, 47.3:0, 47.4:0, 47.5:0, 47.6:0, 47.7:0, 47.8:0, 47.9:0,
     48:0, 48.1:0, 48.2:0, 48.3:0, 48.4:0, 48.5:0, 48.6:0, 48.7:0, 48.8:0, 48.9:0,
     49:0, 49.1:0, 49.2:0, 49.3:0, 49.4:0, 49.5:0, 49.6:0, 49.7:0, 49.8:0, 49.9:0,
-    50:0
+    50:0, 50.1:0, 50.2:0, 50.3:0, 50.4:0, 50.5:0, 50.6:0, 50.7:0, 50.8:0, 50.9:0,
+    51:0
   },
   magic: {
     0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,
@@ -4967,7 +5049,8 @@ var kb11_cost = {      // Keyblade11: Fenrir
     47:0, 47.1:0, 47.2:0, 47.3:0, 47.4:0, 47.5:0, 47.6:0, 47.7:0, 47.8:0, 47.9:0,
     48:0, 48.1:0, 48.2:0, 48.3:0, 48.4:0, 48.5:0, 48.6:0, 48.7:0, 48.8:0, 48.9:0,
     49:0, 49.1:0, 49.2:0, 49.3:0, 49.4:0, 49.5:0, 49.6:0, 49.7:0, 49.8:0, 49.9:0,
-    50:0
+    50:0, 50.1:0, 50.2:0, 50.3:0, 50.4:0, 50.5:0, 50.6:0, 50.7:0, 50.8:0, 50.9:0,
+    51:0
   },
   sun: {
     0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0, 13: 0, 
@@ -4997,7 +5080,8 @@ var kb11_cost = {      // Keyblade11: Fenrir
     47:2, 47.1:0, 47.2:0, 47.3:0, 47.4:0, 47.5:0, 47.6:0, 47.7:0, 47.8:0, 47.9:0,
     48:2, 48.1:0, 48.2:0, 48.3:0, 48.4:0, 48.5:0, 48.6:0, 48.7:0, 48.8:0, 48.9:0,
     49:2, 49.1:0, 49.2:0, 49.3:0, 49.4:0, 49.5:0, 49.6:0, 49.7:0, 49.8:0, 49.9:0,
-    50:2
+    50:2, 50.1:0, 50.2:0, 50.3:0, 50.4:0, 50.5:0, 50.6:0, 50.7:0, 50.8:0, 50.9:0,
+    51:7
   },
   moon: {
     0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,
@@ -5017,7 +5101,8 @@ var kb11_cost = {      // Keyblade11: Fenrir
     47:0, 47.1:0, 47.2:0, 47.3:0, 47.4:0, 47.5:0, 47.6:0, 47.7:0, 47.8:0, 47.9:0,
     48:0, 48.1:0, 48.2:0, 48.3:0, 48.4:0, 48.5:0, 48.6:0, 48.7:0, 48.8:0, 48.9:0,
     49:0, 49.1:0, 49.2:0, 49.3:0, 49.4:0, 49.5:0, 49.6:0, 49.7:0, 49.8:0, 49.9:0,
-    50:0
+    50:0, 50.1:0, 50.2:0, 50.3:0, 50.4:0, 50.5:0, 50.6:0, 50.7:0, 50.8:0, 50.9:0,
+    51:0
   },
   rainbow: {
     0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,
@@ -5037,7 +5122,8 @@ var kb11_cost = {      // Keyblade11: Fenrir
     47:0, 47.1:0, 47.2:0, 47.3:0, 47.4:0, 47.5:0, 47.6:0, 47.7:0, 47.8:0, 47.9:0,
     48:0, 48.1:0, 48.2:0, 48.3:0, 48.4:0, 48.5:0, 48.6:0, 48.7:0, 48.8:0, 48.9:0,
     49:0, 49.1:0, 49.2:0, 49.3:0, 49.4:0, 49.5:0, 49.6:0, 49.7:0, 49.8:0, 49.9:0,
-    50:0
+    50:0, 50.1:0, 50.2:0, 50.3:0, 50.4:0, 50.5:0, 50.6:0, 50.7:0, 50.8:0, 50.9:0,
+    51:0
   },
   brilliant: {
     0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,
@@ -5057,7 +5143,8 @@ var kb11_cost = {      // Keyblade11: Fenrir
     47:0, 47.1:0, 47.2:0, 47.3:0, 47.4:0, 47.5:0, 47.6:0, 47.7:0, 47.8:0, 47.9:0,
     48:0, 48.1:0, 48.2:0, 48.3:0, 48.4:0, 48.5:0, 48.6:0, 48.7:0, 48.8:0, 48.9:0,
     49:0, 49.1:0, 49.2:0, 49.3:0, 49.4:0, 49.5:0, 49.6:0, 49.7:0, 49.8:0, 49.9:0,
-    50:0
+    50:0, 50.1:0, 50.2:0, 50.3:0, 50.4:0, 50.5:0, 50.6:0, 50.7:0, 50.8:0, 50.9:0,
+    51:1
   }
 };      // Keyblade11: Fenrir
 
@@ -5226,7 +5313,17 @@ var kb12_cost = {      // Keyblade12: Darkgnaw
     49.7	:	10	,
     49.8	:	10	,
     49.9	:	10	,
-    50	:	0
+    50	:	0,
+    50.1	:	11	,
+    50.2	:	11	,
+    50.3	:	11	,
+    50.4	:	11	,
+    50.5	:	11	,
+    50.6	:	11	,
+    50.7	:	11	,
+    50.8	:	11	,
+    50.9	:	11	,
+    51	:	0,
   },
   speed: {
     0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,
@@ -5246,7 +5343,8 @@ var kb12_cost = {      // Keyblade12: Darkgnaw
     47:0, 47.1:0, 47.2:0, 47.3:0, 47.4:0, 47.5:0, 47.6:0, 47.7:0, 47.8:0, 47.9:0,
     48:0, 48.1:0, 48.2:0, 48.3:0, 48.4:0, 48.5:0, 48.6:0, 48.7:0, 48.8:0, 48.9:0,
     49:0, 49.1:0, 49.2:0, 49.3:0, 49.4:0, 49.5:0, 49.6:0, 49.7:0, 49.8:0, 49.9:0,
-    50:0
+    50:0, 50.1:0, 50.2:0, 50.3:0, 50.4:0, 50.5:0, 50.6:0, 50.7:0, 50.8:0, 50.9:0,
+    51:0
   },
   magic: {
     0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,
@@ -5266,7 +5364,8 @@ var kb12_cost = {      // Keyblade12: Darkgnaw
     47:0, 47.1:0, 47.2:0, 47.3:0, 47.4:0, 47.5:0, 47.6:0, 47.7:0, 47.8:0, 47.9:0,
     48:0, 48.1:0, 48.2:0, 48.3:0, 48.4:0, 48.5:0, 48.6:0, 48.7:0, 48.8:0, 48.9:0,
     49:0, 49.1:0, 49.2:0, 49.3:0, 49.4:0, 49.5:0, 49.6:0, 49.7:0, 49.8:0, 49.9:0,
-    50:0
+    50:0, 50.1:0, 50.2:0, 50.3:0, 50.4:0, 50.5:0, 50.6:0, 50.7:0, 50.8:0, 50.9:0,
+    51:0
   },
   sun: {
     0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,
@@ -5286,7 +5385,8 @@ var kb12_cost = {      // Keyblade12: Darkgnaw
     47:0, 47.1:0, 47.2:0, 47.3:0, 47.4:0, 47.5:0, 47.6:0, 47.7:0, 47.8:0, 47.9:0,
     48:0, 48.1:0, 48.2:0, 48.3:0, 48.4:0, 48.5:0, 48.6:0, 48.7:0, 48.8:0, 48.9:0,
     49:0, 49.1:0, 49.2:0, 49.3:0, 49.4:0, 49.5:0, 49.6:0, 49.7:0, 49.8:0, 49.9:0,
-    50:0
+    50:0, 50.1:0, 50.2:0, 50.3:0, 50.4:0, 50.5:0, 50.6:0, 50.7:0, 50.8:0, 50.9:0,
+    51:0
   },
   moon: {
     0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0, 13: 0, 
@@ -5316,7 +5416,8 @@ var kb12_cost = {      // Keyblade12: Darkgnaw
     47:2, 47.1:0, 47.2:0, 47.3:0, 47.4:0, 47.5:0, 47.6:0, 47.7:0, 47.8:0, 47.9:0,
     48:2, 48.1:0, 48.2:0, 48.3:0, 48.4:0, 48.5:0, 48.6:0, 48.7:0, 48.8:0, 48.9:0,
     49:2, 49.1:0, 49.2:0, 49.3:0, 49.4:0, 49.5:0, 49.6:0, 49.7:0, 49.8:0, 49.9:0,
-    50:2
+    50:2, 50.1:0, 50.2:0, 50.3:0, 50.4:0, 50.5:0, 50.6:0, 50.7:0, 50.8:0, 50.9:0,
+    51:7
   },
   rainbow: {
     0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,
@@ -5336,7 +5437,8 @@ var kb12_cost = {      // Keyblade12: Darkgnaw
     47:0, 47.1:0, 47.2:0, 47.3:0, 47.4:0, 47.5:0, 47.6:0, 47.7:0, 47.8:0, 47.9:0,
     48:0, 48.1:0, 48.2:0, 48.3:0, 48.4:0, 48.5:0, 48.6:0, 48.7:0, 48.8:0, 48.9:0,
     49:0, 49.1:0, 49.2:0, 49.3:0, 49.4:0, 49.5:0, 49.6:0, 49.7:0, 49.8:0, 49.9:0,
-    50:0
+    50:0, 50.1:0, 50.2:0, 50.3:0, 50.4:0, 50.5:0, 50.6:0, 50.7:0, 50.8:0, 50.9:0,
+    51:1
   },
   brilliant: {
     0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,
@@ -5356,7 +5458,8 @@ var kb12_cost = {      // Keyblade12: Darkgnaw
     47:0, 47.1:0, 47.2:0, 47.3:0, 47.4:0, 47.5:0, 47.6:0, 47.7:0, 47.8:0, 47.9:0,
     48:0, 48.1:0, 48.2:0, 48.3:0, 48.4:0, 48.5:0, 48.6:0, 48.7:0, 48.8:0, 48.9:0,
     49:0, 49.1:0, 49.2:0, 49.3:0, 49.4:0, 49.5:0, 49.6:0, 49.7:0, 49.8:0, 49.9:0,
-    50:0
+    50:0, 50.1:0, 50.2:0, 50.3:0, 50.4:0, 50.5:0, 50.6:0, 50.7:0, 50.8:0, 50.9:0,
+    51:0
   }
 };      // Keyblade12: Darkgnaw
 
@@ -9598,7 +9701,327 @@ var kb1_slots =  {      // Keyblade1: Starlight
             elementMulti: 3.20,
             directionMulti: 3.40
         }
-    }
+    },
+    50.1:  {
+        slot1:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 2.30,
+            directionMulti: 2.80
+        },
+        slot2:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 2.50,
+            directionMulti: 3.00
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.21,
+            directionMulti: 3.41
+        },
+        slot4:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 3.20,
+            directionMulti: 3.40
+        },
+        slot5:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 3.21,
+            directionMulti: 3.41
+        }
+    },
+    50.2:  {
+        slot1:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 2.30,
+            directionMulti: 2.80
+        },
+        slot2:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 2.50,
+            directionMulti: 3.00
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.22,
+            directionMulti: 3.42
+        },
+        slot4:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 3.20,
+            directionMulti: 3.40
+        },
+        slot5:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 3.22,
+            directionMulti: 3.42
+        }
+    },
+    50.3:  {
+        slot1:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 2.30,
+            directionMulti: 2.80
+        },
+        slot2:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 2.50,
+            directionMulti: 3.00
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.23,
+            directionMulti: 3.43
+        },
+        slot4:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 3.20,
+            directionMulti: 3.40
+        },
+        slot5:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 3.23,
+            directionMulti: 3.43
+        }
+    },
+    50.4:  {
+        slot1:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 2.30,
+            directionMulti: 2.80
+        },
+        slot2:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 2.50,
+            directionMulti: 3.00
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.24,
+            directionMulti: 3.44
+        },
+        slot4:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 3.20,
+            directionMulti: 3.40
+        },
+        slot5:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 3.24,
+            directionMulti: 3.44
+        }
+    },
+    50.5:  {
+        slot1:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 2.30,
+            directionMulti: 2.80
+        },
+        slot2:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 2.50,
+            directionMulti: 3.00
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.25,
+            directionMulti: 3.45
+        },
+        slot4:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 3.20,
+            directionMulti: 3.40
+        },
+        slot5:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 3.25,
+            directionMulti: 3.45
+        }
+    },
+    50.6:  {
+        slot1:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 2.30,
+            directionMulti: 2.80
+        },
+        slot2:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 2.50,
+            directionMulti: 3.00
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.26,
+            directionMulti: 3.46
+        },
+        slot4:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 3.20,
+            directionMulti: 3.40
+        },
+        slot5:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 3.26,
+            directionMulti: 3.46
+        }
+    },
+    50.7:  {
+        slot1:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 2.30,
+            directionMulti: 2.80
+        },
+        slot2:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 2.50,
+            directionMulti: 3.00
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.27,
+            directionMulti: 3.47
+        },
+        slot4:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 3.20,
+            directionMulti: 3.40
+        },
+        slot5:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 3.27,
+            directionMulti: 3.47
+        }
+    },
+    50.8:  {
+        slot1:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 2.30,
+            directionMulti: 2.80
+        },
+        slot2:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 2.50,
+            directionMulti: 3.00
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.28,
+            directionMulti: 3.48
+        },
+        slot4:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 3.20,
+            directionMulti: 3.40
+        },
+        slot5:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 3.28,
+            directionMulti: 3.48
+        }
+    },
+    50.9:  {
+        slot1:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 2.30,
+            directionMulti: 2.80
+        },
+        slot2:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 2.50,
+            directionMulti: 3.00
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.29,
+            directionMulti: 3.49
+        },
+        slot4:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 3.20,
+            directionMulti: 3.40
+        },
+        slot5:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 3.29,
+            directionMulti: 3.49
+        }
+    },
+    51:  {
+        slot1:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 2.30,
+            directionMulti: 2.80
+        },
+        slot2:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 2.50,
+            directionMulti: 3.00
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.30,
+            directionMulti: 3.50
+        },
+        slot4:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 3.20,
+            directionMulti: 3.40
+        },
+        slot5:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 3.30,
+            directionMulti: 3.50
+        }
+    },
 }      // Keyblade1: Starlight
 
 
@@ -33676,6 +34099,326 @@ var kb8_slots =  {      // Keyblade8: Sleeping Lion
             directionMulti: 3.80
         }
     },
+    50.1:  {
+        slot1:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.11,
+            directionMulti: 2.51
+        },
+        slot3:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.70
+        },
+        slot5:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.11,
+            directionMulti: 3.81
+        }
+    },
+    50.2:  {
+        slot1:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.12,
+            directionMulti: 2.52
+        },
+        slot3:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.70
+        },
+        slot5:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.12,
+            directionMulti: 3.82
+        }
+    },
+    50.3:  {
+        slot1:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.13,
+            directionMulti: 2.53
+        },
+        slot3:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.70
+        },
+        slot5:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.13,
+            directionMulti: 3.83
+        }
+    },
+    50.4:  {
+        slot1:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.14,
+            directionMulti: 2.54
+        },
+        slot3:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.70
+        },
+        slot5:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.14,
+            directionMulti: 3.84
+        }
+    },
+    50.5:  {
+        slot1:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.15,
+            directionMulti: 2.55
+        },
+        slot3:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.70
+        },
+        slot5:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.15,
+            directionMulti: 3.85
+        }
+    },
+    50.6:  {
+        slot1:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.16,
+            directionMulti: 2.56
+        },
+        slot3:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.70
+        },
+        slot5:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.16,
+            directionMulti: 3.86
+        }
+    },
+    50.7:  {
+        slot1:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.17,
+            directionMulti: 2.57
+        },
+        slot3:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.70
+        },
+        slot5:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.17,
+            directionMulti: 3.87
+        }
+    },
+    50.8:  {
+        slot1:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.18,
+            directionMulti: 2.58
+        },
+        slot3:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.70
+        },
+        slot5:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.18,
+            directionMulti: 3.88
+        }
+    },
+    50.9:  {
+        slot1:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.19,
+            directionMulti: 2.59
+        },
+        slot3:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.70
+        },
+        slot5:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.19,
+            directionMulti: 3.89
+        }
+    },
+    51:  {
+        slot1:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.20,
+            directionMulti: 2.60
+        },
+        slot3:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.70
+        },
+        slot5:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.20,
+            directionMulti: 3.90
+        }
+    },
 }      // Keyblade8: Sleeping Lion
 
 
@@ -39588,6 +40331,326 @@ var kb9_slots =  {      // Keyblade9: Counterpoint
             direction: "Upright",
             elementMulti: 1.10,
             directionMulti: 3.80
+        }
+    },
+    50.1:  {
+        slot1:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 1.80
+        },
+        slot2:  {
+            element: "Magic",
+            direction: "Reversed",
+            elementMulti: 1.11,
+            directionMulti: 2.61
+        },
+        slot3:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.00
+        },
+        slot4:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.80
+        },
+        slot5:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.11,
+            directionMulti: 3.81
+        }
+    },
+    50.2:  {
+        slot1:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 1.80
+        },
+        slot2:  {
+            element: "Magic",
+            direction: "Reversed",
+            elementMulti: 1.12,
+            directionMulti: 2.62
+        },
+        slot3:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.00
+        },
+        slot4:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.80
+        },
+        slot5:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.12,
+            directionMulti: 3.82
+        }
+    },
+    50.3:  {
+        slot1:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 1.80
+        },
+        slot2:  {
+            element: "Magic",
+            direction: "Reversed",
+            elementMulti: 1.13,
+            directionMulti: 2.63
+        },
+        slot3:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.00
+        },
+        slot4:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.80
+        },
+        slot5:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.13,
+            directionMulti: 3.83
+        }
+    },
+    50.4:  {
+        slot1:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 1.80
+        },
+        slot2:  {
+            element: "Magic",
+            direction: "Reversed",
+            elementMulti: 1.14,
+            directionMulti: 2.64
+        },
+        slot3:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.00
+        },
+        slot4:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.80
+        },
+        slot5:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.14,
+            directionMulti: 3.84
+        }
+    },
+    50.5:  {
+        slot1:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 1.80
+        },
+        slot2:  {
+            element: "Magic",
+            direction: "Reversed",
+            elementMulti: 1.15,
+            directionMulti: 2.65
+        },
+        slot3:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.00
+        },
+        slot4:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.80
+        },
+        slot5:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.15,
+            directionMulti: 3.85
+        }
+    },
+    50.6:  {
+        slot1:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 1.80
+        },
+        slot2:  {
+            element: "Magic",
+            direction: "Reversed",
+            elementMulti: 1.16,
+            directionMulti: 2.66
+        },
+        slot3:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.00
+        },
+        slot4:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.80
+        },
+        slot5:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.16,
+            directionMulti: 3.86
+        }
+    },
+    50.7:  {
+        slot1:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 1.80
+        },
+        slot2:  {
+            element: "Magic",
+            direction: "Reversed",
+            elementMulti: 1.17,
+            directionMulti: 2.67
+        },
+        slot3:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.00
+        },
+        slot4:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.80
+        },
+        slot5:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.17,
+            directionMulti: 3.87
+        }
+    },
+    50.8:  {
+        slot1:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 1.80
+        },
+        slot2:  {
+            element: "Magic",
+            direction: "Reversed",
+            elementMulti: 1.18,
+            directionMulti: 2.68
+        },
+        slot3:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.00
+        },
+        slot4:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.80
+        },
+        slot5:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.18,
+            directionMulti: 3.88
+        }
+    },
+    50.9:  {
+        slot1:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 1.80
+        },
+        slot2:  {
+            element: "Magic",
+            direction: "Reversed",
+            elementMulti: 1.19,
+            directionMulti: 2.69
+        },
+        slot3:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.00
+        },
+        slot4:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.80
+        },
+        slot5:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.19,
+            directionMulti: 3.89
+        }
+    },
+    51:  {
+        slot1:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 1.80
+        },
+        slot2:  {
+            element: "Magic",
+            direction: "Reversed",
+            elementMulti: 1.20,
+            directionMulti: 2.70
+        },
+        slot3:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.00
+        },
+        slot4:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.80
+        },
+        slot5:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.20,
+            directionMulti: 3.90
         }
     },
 }      // Keyblade9: Counterpoint
@@ -48280,6 +49343,326 @@ var kb11_slots =  {      // Keyblade11: Fenrir
             directionMulti: 3.90
         }
     },
+    50.1:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 1.90
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.11,
+            directionMulti: 2.01
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.70
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.11,
+            directionMulti: 3.51
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.90
+        }
+    },
+    50.2:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 1.90
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.12,
+            directionMulti: 2.02
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.70
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.12,
+            directionMulti: 3.52
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.90
+        }
+    },
+    50.3:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 1.90
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.13,
+            directionMulti: 2.03
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.70
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.13,
+            directionMulti: 3.53
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.90
+        }
+    },
+    50.4:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 1.90
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.14,
+            directionMulti: 2.04
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.70
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.14,
+            directionMulti: 3.54
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.90
+        }
+    },
+    50.5:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 1.90
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.15,
+            directionMulti: 2.05
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.70
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.15,
+            directionMulti: 3.55
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.90
+        }
+    },
+    50.6:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 1.90
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.16,
+            directionMulti: 2.06
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.70
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.16,
+            directionMulti: 3.56
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.90
+        }
+    },
+    50.7:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 1.90
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.17,
+            directionMulti: 2.07
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.70
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.17,
+            directionMulti: 3.57
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.90
+        }
+    },
+    50.8:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 1.90
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.18,
+            directionMulti: 2.08
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.70
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.18,
+            directionMulti: 3.58
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.90
+        }
+    },
+    50.9:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 1.90
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.19,
+            directionMulti: 2.09
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.70
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.19,
+            directionMulti: 3.59
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.90
+        }
+    },
+    51:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 1.90
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.20,
+            directionMulti: 2.10
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.70
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.20,
+            directionMulti: 3.60
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.90
+        }
+    },
 }      // Keyblade11: Fenrir
 
 
@@ -54205,6 +55588,326 @@ var kb12_slots =  {      // Keyblade12: Darkgnaw
             direction: "Reversed",
             elementMulti: 1.10,
             directionMulti: 3.90
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 4.00
+        }
+    },
+    50.1:  {
+        slot1:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 2.60
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.11,
+            directionMulti: 3.01
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.11,
+            directionMulti: 3.91
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 4.00
+        }
+    },
+    50.2:  {
+        slot1:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 2.60
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.12,
+            directionMulti: 3.02
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.12,
+            directionMulti: 3.92
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 4.00
+        }
+    },
+    50.3:  {
+        slot1:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 2.60
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.13,
+            directionMulti: 3.03
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.13,
+            directionMulti: 3.93
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 4.00
+        }
+    },
+    50.4:  {
+        slot1:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 2.60
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.14,
+            directionMulti: 3.04
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.14,
+            directionMulti: 3.94
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 4.00
+        }
+    },
+    50.5:  {
+        slot1:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 2.60
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.15,
+            directionMulti: 3.05
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.15,
+            directionMulti: 3.95
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 4.00
+        }
+    },
+    50.6:  {
+        slot1:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 2.60
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.16,
+            directionMulti: 3.06
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.16,
+            directionMulti: 3.96
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 4.00
+        }
+    },
+    50.7:  {
+        slot1:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 2.60
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.17,
+            directionMulti: 3.07
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.17,
+            directionMulti: 3.97
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 4.00
+        }
+    },
+    50.8:  {
+        slot1:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 2.60
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.18,
+            directionMulti: 3.08
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.18,
+            directionMulti: 3.98
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 4.00
+        }
+    },
+    50.9:  {
+        slot1:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 2.60
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.19,
+            directionMulti: 3.09
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.19,
+            directionMulti: 3.99
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 4.00
+        }
+    },
+    51:  {
+        slot1:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 2.60
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.20,
+            directionMulti: 3.10
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.20,
+            directionMulti: 4.00
         },
         slot5:  {
             element: "Power",
