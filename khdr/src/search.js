@@ -3046,4 +3046,44 @@ var cardDatabase = {
             Effect: "Magic +2 for 10s. Stacking Cards does not increase value. Can be applied more than once."
         }
     },
+    59:  {
+        ID: 59,
+        AlbumNum: 59,
+        CardImage: "59_Winnie_the_Pooh.png",
+        RenderImage: "59_Winnie_the_Pooh_Render.png",
+        Name: "Winnie the Pooh",
+        DirectionType: "Light",
+        ColorType: "Blue",
+        AttackType: "Shield",
+        MainAbility:    {
+            Name: "Magic DEF Sap",
+            AttackType: "Shield",
+            Element: "Neutral",
+            BasePower: 0,
+            MaxPower: 0,
+            Effect: "Target's Magic Resist -5 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+        }
+    },
+    60:  {
+        ID: 60,
+        AlbumNum: 60,
+        CardImage: "60_Xion.png",
+        RenderImage: "60_Xion_Render.png",
+        Name: "Xion",
+        DirectionType: "Dark",
+        ColorType: "Green",
+        AttackType: "Staff",
+        MainAbility:    {
+            Name: "Thundaga",
+            AttackType: "Staff",
+            Element: "Lightning",
+            BasePower: 40,
+            MaxPower: 80,
+            Effect: "A powerful lightning-element magic attack."
+        },
+        SubAbility:    {
+            Name: "Magic Boost+",
+            Effect: "Magic +2 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+        }
+    },
 };
