@@ -424,12 +424,12 @@ function popupMaterial(value)    {
 
     var materialItemBox = document.createElement('img');
     materialItemBox.src = "./images/ui/itemBox.png";
-    materialItemBox.style = "width: 100px; position: absolute; z-index: 10; transform: translate(-50%, -50%); left: 50%; top: 33%";
+    materialItemBox.style = "width: 100px; position: absolute; z-index: 10; transform: translate(-50%, -50%); left: 50%; top: 200px";
     popupDiv.appendChild(materialItemBox);
 
     var accessoryImage = document.createElement('img');
     accessoryImage.src = "./images/assets/material/" + materialDatabase[value].Image;
-    accessoryImage.style = "width: 100px; position: absolute; z-index: 15; transform: translate(-50%, -50%); left: 50%; top: 33%";
+    accessoryImage.style = "width: 100px; position: absolute; z-index: 15; transform: translate(-50%, -50%); left: 50%; top: 200px";
     popupDiv.appendChild(accessoryImage);
     
     popupDiv.appendChild(blankSpacer.cloneNode());
