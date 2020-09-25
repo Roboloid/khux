@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>                         <!---------------------- START HEADER ---------------------->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163660070-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-163660070-1');
+    </script>
+    
+    <meta charset="utf-8" />
+    <meta name="author" content="Roboloid" />
+    <meta name="description" content="Card Gallery" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.75, viewport-fit=cover" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://roboloid.github.io/khux/images/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://roboloid.github.io/khux/images/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://roboloid.github.io/khux/images/icon/favicon-16x16.png">
+    <link rel="manifest" href="https://roboloid.github.io/khux/images/icon/site.webmanifest">
+    <link rel="mask-icon" href="https://roboloid.github.io/khux/images/icon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="https://roboloid.github.io/khux/images/icon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="https://roboloid.github.io/khux/images/icon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Metadata start -->
+    <html prefix="og: http://ogp.me/ns#"></html>
+    
+    <meta property="og:title" content="KHDR Crafting List">
+
+    <meta property="og:description" content="Take a look at Dark Road's accessories and required ingredients.">
+
+    <meta property="og:site_name" content="Roboloid's KHDR Info Page" >
+
+    <meta property="og:image" content="https://roboloid.github.io/khux/khdr/images/icon/crafting_thumb.png">
+    <!-- Metadata end -->
+
+    <!-- Site title -->
+    <title>KHDR</title>
+
+    <!-- Script imports -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <!-- Content overlay -->
+    <style type="text/css">
+
+        @font-face {
+          font-family: "UI Font";
+          src: url(../images/assets/font/PRGothIWA-Dm.TTF) format("truetype");
+        }
+
+      .blackOverlay {
+        padding: 15px 15px 15px;
+        margin: 10% 10% 10%;
+        color: #000000;
+        background-color: rgb(0, 0, 0);
+        background-position: center;
+        margin-left: auto;
+        margin-right: auto;
+        height: 100%;
+        width: 95%;
+        box-shadow: 0px 8px 16px 0px #ddaafa33;
+        text-align:  center;
+      }
+      
+      .darkOverlayClass {
+        position: fixed;
+        background:rgb(0, 0, 0);
+        display: none;
+        opacity: 50%;
+        width: 100%;
+        height: 100%;
+        z-index: 10000;
+      }
+
+      #scrollHider  {
+        overflow: hidden;
+      }
+
+      .materialPopupClass {
+        display: none;
+        width: 1000px;
+        max-width: 80%;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        border-width: 10px;
+        border: double 7px transparent;
+        border-radius: 25px;
+        background-image:   linear-gradient(to bottom, rgb(167, 122, 238), rgb(72, 22, 114)), 
+                            linear-gradient(to bottom, rgb(65, 0, 119), rgb(161, 102, 255));
+        background-origin: border-box;
+        background-position: center;
+        background-clip: content-box, border-box;
+        position: fixed;
+        height: 75%;
+        overflow-y: scroll;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+        z-index: 10001;
+      }
+
+      .materialPopupClass::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+      }
+
+      #container  {
+        width: 95%;
+        margin: 0 auto;
+        vertical-align: center;
+        overflow: hidden;
+        position: relative;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+
+      #leftSide::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+      }
+
+      #rightSide::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+      }
+
+      #leftButtons  {
+        width: 60%;
+        height: auto;
+      }
+
+      #leftSide  {
+        width: 60%;
+        height: 500px;
+        float: left;
+        position: relative;
+        overflow-y: scroll;
+      }
+
+      #rightSide  {
+        width: 40%;
+        height: 525px;
+        float: right;
+        position: relative;
+        overflow-y: scroll;
+        border-width: 5px;
+        border: double 5px transparent;
+        border-radius: 25px;
+        background-image:   linear-gradient(to bottom, rgb(161, 102, 255), rgb(65, 0, 119)), 
+                            linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 0, 0));
+        background-origin: border-box;
+        background-position: center;
+        background-clip: content-box, border-box;
+      }
+
+      @media screen and (max-width: 1000px) {
+        #leftSide {width: 80%; height: 400px; float: none; margin: auto; margin-bottom: 100px}
+        #rightSide {width: 80%; height: 600px; float: none; margin: auto; margin-bottom: 100px}
+        #leftButtons {width: 80%; float: none; margin: auto}
+        #leftAccessoryID, #leftMaterialID {float: none; margin-left: 0%; margin-right: 0%; width: 125px}
+      }
+
+    </style>
+
+    <!-- Backdrop pattern -->
+    <style>
+        body  {
+          background-image: url("./images/other/bg_crafting.png");
+          background-size: 150px;
+          background-repeat: repeat
+        }
+    </style>
+  </head>                         <!---------------------- END HEADER ---------------------->
+
+  
+
+  <body onload="loadPage()">
+
+    <div id="darkOverlay" class="darkOverlayClass">
+    </div>
+
+    <div id="scrollHider">
+      <div id="materialPopup" class="materialPopupClass">
+      </div>
+    </div>
+
+    <script>
+        $(function(){
+            $("#navbar-placeholder").load("./src/navigation.html");
+        });
+    </script>
+
+    <div id="navbar-placeholder">
+
+    </div>
+
+    <!-- Preload images -->
+    <img src="./images/ui/crafting_AccessoryOff.png"  style="width: 0px; display: none; visibility: hidden">
+    <img src="./images/ui/crafting_AccessoryOn.png"   style="width: 0px; display: none; visibility: hidden">
+    <img src="./images/ui/crafting_MaterialOff.png"   style="width: 0px; display: none; visibility: hidden">
+    <img src="./images/ui/crafting_MaterialOn.png"    style="width: 0px; display: none; visibility: hidden">
+    <img src="./images/assets/material/Dark_Material_1.png"    style="width: 0px; display: none; visibility: hidden">
+    <img src="./images/assets/material/Dark_Material_2.png"    style="width: 0px; display: none; visibility: hidden">
+    <img src="./images/assets/material/Dark_Material_3.png"    style="width: 0px; display: none; visibility: hidden">
+    <img src="./images/assets/material/Dark_Material_102.png"    style="width: 0px; display: none; visibility: hidden">
+    <img src="./images/assets/material/Dark_Material_203.png"    style="width: 0px; display: none; visibility: hidden">
+    <img src="./images/assets/material/Dark_Material_302.png"    style="width: 0px; display: none; visibility: hidden">
+    <img src="./images/assets/material/Dark_Material_601.png"    style="width: 0px; display: none; visibility: hidden">
+
+        <div class="blackOverlay">
+
+            <h1 style = "text-align:center;color:white;font-family:Verdana, sans-serif;">Crafting List</h1>
+            
+            <h3 style="text-align:center;color:white;font-family:Verdana, sans-serif;">Check out accessories and associated ingredients</h3>
+
+            <pre></pre>
+
+            <pre></pre>
+
+            <pre></pre>
+            
+            <div id="container">
+
+              <div id="leftButtons">
+                  <input type="image" onclick="switchLeftSide('toAccessory')" id="leftAccessoryID" src="./images/ui/crafting_AccessoryOn.png" width="150px" style="margin-right: 5%"/>
+                  <input type="image" onclick="switchLeftSide('toMaterial')" id="leftMaterialID" src="./images/ui/crafting_MaterialOff.png" width="150px" style="margin-left: 5%"/>
+              </div>
+
+              <div id="leftSide">
+
+              </div>
+
+              <div id="rightSide">
+                
+              </div>
+
+            </div>
+            
+        </div>
+
+    <script src="./src/crafting.js"></script>
+
+  </body>
+</html>
