@@ -1162,6 +1162,7 @@ var enemyDatabase = {
         Image: "27_High_Wizard.png",
         Items:  [
             3,
+            13
         ]
     },
     28: {
@@ -1279,6 +1280,7 @@ var enemyDatabase = {
         Name: "Heat Saber",
         Image: "46_Heat_Saber.png",
         Items:  [
+            7,
             10,
         ]
     },
