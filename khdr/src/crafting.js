@@ -1070,6 +1070,7 @@ var enemyDatabase = {
         Name: "Large Armor",
         Image: "14_Large_Armor.png",
         Items:  [
+            1,
             10,
         ]
     },
