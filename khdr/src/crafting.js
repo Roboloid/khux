@@ -1045,7 +1045,10 @@ var enemyDatabase = {
     },
     11: {
         Name: "Possessor",
-        Image: "11_Possessor.png"
+        Image: "11_Possessor.png",
+        Items:  [
+            3,
+        ]
     },
     12: {
         Name: "Armored Knight",
