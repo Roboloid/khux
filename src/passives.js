@@ -2497,7 +2497,8 @@ var kb13_pass = {      // Keyblade13: Missing Ache
     "Lv. 48.5":   {"revSpeed":      50},
     "Lv. 49":     {"revSpeed":      50},
     "Lv. 49.5":   {"revSpeed":      50},
-    "Lv. 50":     {"genRev":      	200}
+    "Lv. 50":     {"genRev":      	200},
+    "Lv. 50.5":   {"revSpeed":      50}
 };      // Keyblade13: Missing Ache
 
 var kb14_pass = {      // Keyblade14: Fairy Stars
@@ -2565,7 +2566,8 @@ var kb15_pass = {      // Keyblade15: Diamond Dust
     "Lv. 48.5":   {"revMagic":      50},
     "Lv. 49":     {"revMagic":      50},
     "Lv. 49.5":   {"revMagic":      50},
-    "Lv. 50":     {"genRev":      	200}
+    "Lv. 50":     {"genRev":      	200},
+    "Lv. 50.5":   {"revMagic":      50}
 };      // Keyblade15: Diamond Dust
 
 var kb16_pass = {      // Keyblade16: Bad Guy Breaker
