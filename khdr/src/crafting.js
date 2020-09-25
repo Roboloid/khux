@@ -1243,7 +1243,10 @@ var enemyDatabase = {
     },
     42: {
         Name: "Paralysis Archer",
-        Image: "42_Paralysis_Archer.png"
+        Image: "42_Paralysis_Archer.png",
+        Items:  [
+            2,
+        ]
     },
     43: {
         Name: "Sleep Archer",
