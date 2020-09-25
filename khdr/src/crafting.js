@@ -1354,6 +1354,7 @@ var enemyDatabase = {
         Name: "Gigas Shadow",
         Image: "62_Gigas_Shadow.png",
         Items:  [
+            10,
             13,
         ]
     },
