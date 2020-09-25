@@ -1097,6 +1097,7 @@ var enemyDatabase = {
         Image: "18_Dire_Plant.png",
         Items:  [
             6,
+            13
         ]
     },
     19: {
