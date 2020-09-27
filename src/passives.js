@@ -2324,7 +2324,11 @@ var kb8_pass = {      // Keyblade8: Sleeping Lion
     "Lv. 49":     {"upSpeed":      	50},
     "Lv. 49.5":   {"upSpeed":      	50},
     "Lv. 50":     {"genUp":      	200},
-    "Lv. 50.5":   {"upSpeed":      	50}
+    "Lv. 50.5":   {"upSpeed":      	50},
+    "Lv. 51":     {"upSpeed":      	50},
+    "Lv. 51.5":   {"upSpeed":      	50},
+    "Lv. 52":     {"upSpeed":      	50},
+    "Lv. 52.5":   {"upSpeed":      	50}
 };      // Keyblade8: Sleeping Lion
 
 var kb9_pass = {      // Keyblade9: Counterpoint
@@ -2359,7 +2363,11 @@ var kb9_pass = {      // Keyblade9: Counterpoint
     "Lv. 49":     {"upMagic":      	50},
     "Lv. 49.5":   {"upMagic":      	50},
     "Lv. 50":     {"genUp":      	200},
-    "Lv. 50.5":   {"upMagic":      	50}
+    "Lv. 50.5":   {"upMagic":      	50},
+    "Lv. 51":     {"upMagic":      	50},
+    "Lv. 51.5":   {"upMagic":      	50},
+    "Lv. 52":     {"upMagic":      	50},
+    "Lv. 52.5":   {"upMagic":      	50}
 };      // Keyblade9: Counterpoint
 
 var kb10_pass = {      // Keyblade10: Stroke of Midnight
@@ -2428,7 +2436,11 @@ var kb11_pass = {      // Keyblade11: Fenrir
     "Lv. 49":     {"upPower":      	50},
     "Lv. 49.5":   {"upPower":      	50},
     "Lv. 50":     {"genUp":      	200},
-    "Lv. 50.5":   {"upPower":      	50}
+    "Lv. 50.5":   {"upPower":      	50},
+    "Lv. 51":     {"upPower":      	50},
+    "Lv. 51.5":   {"upPower":      	50},
+    "Lv. 52":     {"upPower":      	50},
+    "Lv. 52.5":   {"upPower":      	50}
 };      // Keyblade11: Fenrir
 
 var kb12_pass = {      // Keyblade12: Darkgnaw
