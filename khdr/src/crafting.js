@@ -995,6 +995,7 @@ var enemyDatabase = {
         Name: "Fat Bandit",
         Image: "2_Fat_Bandit.png",
         Items:  [
+            5,
             8,
         ]
     },
@@ -1076,6 +1077,7 @@ var enemyDatabase = {
             1,
             3,
             10,
+            11
         ]
     },
     15: {
@@ -1242,6 +1244,7 @@ var enemyDatabase = {
         Image: "39_Emerald_Sonata.png",
         Items:  [
             2,
+            3,
             4,
             7
         ]
