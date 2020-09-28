@@ -180,6 +180,7 @@ function parseMedalName(value)  {
         value = value.replace("]", " ] ");
         value = value.replace(/,/g, " , ");
         value = value.replace(/&/g, " & ");
+        value = value.replace(/é/g, " e ");
         value = value.replace("kh2", "kh ii");
         value = value.replace("kh3", "kh iii");
         console.log(value);
