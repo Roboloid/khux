@@ -1147,6 +1147,7 @@ var enemyDatabase = {
         Items:  [
             3,
             5,
+            8
         ]
     },
     25: {
@@ -1241,7 +1242,8 @@ var enemyDatabase = {
         Image: "39_Emerald_Sonata.png",
         Items:  [
             2,
-            4
+            4,
+            7
         ]
     },
     40: {
@@ -1293,7 +1295,10 @@ var enemyDatabase = {
     },
     48: {
         Name: "Pot Scorpion",
-        Image: "48_Pot_Scorpion.png"
+        Image: "48_Pot_Scorpion.png",
+        Items:  [
+            2,
+        ]
     },
     49: {
         Name: "Pot Centipede",
