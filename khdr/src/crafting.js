@@ -422,15 +422,20 @@ function popupMaterial(value)    {
     materialDescription.appendChild(document.createTextNode(materialDatabase[value].Text));
     popupDiv.appendChild(materialDescription);
 
+    var materialPicDiv = document.createElement('div');
+    materialPicDiv.style = "position: relative; display: block";
+
     var materialItemBox = document.createElement('img');
     materialItemBox.src = "./images/ui/itemBox.png";
-    materialItemBox.style = "width: 100px; position: absolute; z-index: 10; transform: translate(-50%, -50%); left: 50%; top: 200px";
-    popupDiv.appendChild(materialItemBox);
+    materialItemBox.style = "width: 100px; position: absolute; z-index: 10; transform: translate(-50%, -50%); top: 100px";
+    materialPicDiv.appendChild(materialItemBox);
 
     var accessoryImage = document.createElement('img');
     accessoryImage.src = "./images/assets/material/" + materialDatabase[value].Image;
-    accessoryImage.style = "width: 100px; position: absolute; z-index: 15; transform: translate(-50%, -50%); left: 50%; top: 200px";
-    popupDiv.appendChild(accessoryImage);
+    accessoryImage.style = "width: 100px; position: absolute; z-index: 15; transform: translate(-50%, -50%); top: 100px";
+    materialPicDiv.appendChild(accessoryImage);
+
+    popupDiv.appendChild(materialPicDiv);
     
     popupDiv.appendChild(blankSpacer.cloneNode());
     popupDiv.appendChild(blankSpacer.cloneNode());
@@ -440,6 +445,61 @@ function popupMaterial(value)    {
     popupDiv.appendChild(blankSpacer.cloneNode());
     popupDiv.appendChild(blankSpacer.cloneNode());
     popupDiv.appendChild(blankSpacer.cloneNode());
+    popupDiv.appendChild(blankSpacer.cloneNode());
+    popupDiv.appendChild(blankSpacer.cloneNode());
+
+    var materialWorldHeader = document.createElement('span');
+    materialWorldHeader.style = "display: inline-block; color: white; font-size: 1.75em; text-shadow: 1.75px 1.75px rgb(0, 0, 0); vertical-align: middle";
+    materialWorldHeader.appendChild(document.createTextNode("Where to find this material"));
+    popupDiv.appendChild(materialWorldHeader);
+
+    popupDiv.appendChild(blankSpacer.cloneNode());
+    popupDiv.appendChild(blankSpacer.cloneNode());
+    
+    for(var worldName of Object.keys(worldBattleDatabase))    {
+        var checker = 0;
+        var rankSize = Object.keys(worldBattleDatabase[worldName]).length;
+        for(var worldRank of Object.keys(worldBattleDatabase[worldName])) {
+            for(var entry of worldBattleDatabase[worldName][worldRank].Items)   {
+                if(entry == value)  {
+                    checker = checker + 1;
+                }
+            }
+        }
+        if(checker > 0 && checker <= rankSize - 1)    {        // Rank 2 Star and higher
+            var worldDiv = document.createElement('div');
+            worldDiv.style = "position: relative; width: 326px; height: 150px; display: inline-block";
+
+            var worldMatch = document.createElement('img');
+            worldMatch.src = "./images/icon/Logo_" + worldName + ".png";
+            worldMatch.style = "position: absolute; width: 75%; transform: translate(-50%, -50%); top: 35%";
+            worldDiv.appendChild(worldMatch);
+
+            var worldRarity = document.createElement('img');
+            worldRarity.src = "./images/ui/2StarAndUp.png";
+            worldRarity.style = "position: absolute; width: 75%; transform: translate(-50%, -50%); top: 35%";
+            worldDiv.appendChild(worldRarity);
+
+            popupDiv.appendChild(worldDiv);
+        }
+        else if(checker > 0 && checker <= rankSize)   {        // Rank 1 Star and higher
+            var worldDiv = document.createElement('div');
+            worldDiv.style = "position: relative; width: 326px; height: 150px; display: inline-block";
+
+            var worldMatch = document.createElement('img');
+            worldMatch.src = "./images/icon/Logo_" + worldName + ".png";
+            worldMatch.style = "position: absolute; width: 75%; transform: translate(-50%, -50%); top: 35%";
+            worldDiv.appendChild(worldMatch);
+
+            var worldRarity = document.createElement('img');
+            worldRarity.src = "./images/ui/1StarAndUp.png";
+            worldRarity.style = "position: absolute; width: 75%; transform: translate(-50%, -50%); top: 35%";
+            worldDiv.appendChild(worldRarity);
+
+            popupDiv.appendChild(worldDiv);
+        }
+    }
+
     popupDiv.appendChild(blankSpacer.cloneNode());
     popupDiv.appendChild(blankSpacer.cloneNode());
 
@@ -449,16 +509,14 @@ function popupMaterial(value)    {
     popupDiv.appendChild(materialEnemyHeader);
 
     popupDiv.appendChild(blankSpacer.cloneNode());
-    popupDiv.appendChild(blankSpacer.cloneNode());
     
     for(var i = 1; i < Object.keys(enemyDatabase).length + 1; i++)   {
         if(enemyDatabase[i].Items != undefined) {
             for(var entry of enemyDatabase[i].Items)    {
                 if(entry == value)  {
-                    console.log(i)
                     var enemyMatch = document.createElement('img');
                     enemyMatch.src = "./images/enemies/" + enemyDatabase[i].Image;
-                    enemyMatch.style = "max-height: 200px; max-width: 200px; margin: 5%; display: inline-block";
+                    enemyMatch.style = "max-height: 100px; max-width: 100px; margin: 5%; display: inline-block";
                     popupDiv.appendChild(enemyMatch);
                 }
             }
@@ -483,6 +541,15 @@ $(document).mouseup(function (e) {
         container2.fadeOut(200);
     }
 });
+
+/*
+           _____ _____ ______  _____ _____  ____  _____  _____ ______  _____ 
+     /\   / ____/ ____|  ____|/ ____/ ____|/ __ \|  __ \|_   _|  ____|/ ____|
+    /  \ | |   | |    | |__  | (___| (___ | |  | | |__) | | | | |__  | (___  
+   / /\ \| |   | |    |  __|  \___ \\___ \| |  | |  _  /  | | |  __|  \___ \ 
+  / ____ \ |___| |____| |____ ____) |___) | |__| | | \ \ _| |_| |____ ____) |
+ /_/    \_\_____\_____|______|_____/_____/ \____/|_|  \_\_____|______|_____/ 
+*/
 
 var accessoryDatabase = {
     1:  {
@@ -890,10 +957,14 @@ var accessoryDatabase = {
     },
 }
 
-
-
-
-
+/*
+  __  __       _______ ______ _____  _____          _       _____ 
+ |  \/  |   /\|__   __|  ____|  __ \|_   _|   /\   | |     / ____|
+ | \  / |  /  \  | |  | |__  | |__) | | |    /  \  | |    | (___  
+ | |\/| | / /\ \ | |  |  __| |  _  /  | |   / /\ \ | |     \___ \ 
+ | |  | |/ ____ \| |  | |____| | \ \ _| |_ / ____ \| |____ ____) |
+ |_|  |_/_/    \_\_|  |______|_|  \_\_____/_/    \_\______|_____/ 
+*/
 
 var materialDatabase = {
     1:  {
@@ -976,10 +1047,14 @@ var materialDatabase = {
     },
 }
 
-
-
-
-
+/*
+  ______ _   _ ______ __  __ _____ ______  _____ 
+ |  ____| \ | |  ____|  \/  |_   _|  ____|/ ____|
+ | |__  |  \| | |__  | \  / | | | | |__  | (___  
+ |  __| | . ` |  __| | |\/| | | | |  __|  \___ \ 
+ | |____| |\  | |____| |  | |_| |_| |____ ____) |
+ |______|_| \_|______|_|  |_|_____|______|_____/ 
+*/
 
 var enemyDatabase = {
     1: {
@@ -1380,6 +1455,121 @@ var enemyDatabase = {
             1,
             2
         ]
+    },
+}
+
+/*
+ __          ______  _____  _      _____   _____ 
+ \ \        / / __ \|  __ \| |    |  __ \ / ____|
+  \ \  /\  / / |  | | |__) | |    | |  | | (___  
+   \ \/  \/ /| |  | |  _  /| |    | |  | |\___ \ 
+    \  /\  / | |__| | | \ \| |____| |__| |____) |
+     \/  \/   \____/|_|  \_\______|_____/|_____/ 
+*/
+
+var worldBattleDatabase = {
+    "Agrabah":  {
+        OneStar:    {
+            Items:  [
+                1,
+                2
+            ]
+        },
+        TwoStar:    {
+            Items:  [
+                1,
+                2,
+                3,
+                4,
+                5,
+                7,
+                8,
+                10,
+                11,
+                13
+            ]
+        },
+        ThreeStar:    {
+            Items:  [
+                1,
+                2,
+                3,
+                4,
+                5,
+                7,
+                8,
+                10,
+                11,
+                13
+            ]
+        },
+        FourStar:    {
+            Items:  [
+                1,
+                2,
+                3,
+                4,
+                5,
+                7,
+                8,
+                10,
+                11,
+                13
+            ]
+        }
+    },
+    "Wonderland":  {
+        OneStar:    {
+            Items:  [
+                1,
+                2
+            ]
+        },
+        TwoStar:    {
+            Items:  [
+                1,
+                2,
+                3,
+                4,
+                6,
+                7,
+                9,
+                10,
+                11,
+                12,
+                13
+            ]
+        },
+        ThreeStar:    {
+            Items:  [
+                1,
+                2,
+                3,
+                4,
+                6,
+                7,
+                9,
+                10,
+                11,
+                12,
+                13
+            ]
+        },
+        FourStar:    {
+            Items:  [
+                1,
+                2,
+                3,
+                4,
+                6,
+                7,
+                9,
+                10,
+                11,
+                12,
+                13
+            ]
+        }
     },
 }
 
