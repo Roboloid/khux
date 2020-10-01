@@ -1932,6 +1932,8 @@ var enemyDatabase = {
         Image: "66_Margoyle.png",
         Items:  [
             1,
+            2,
+            4,
             15
         ]
     }
