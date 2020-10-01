@@ -1813,7 +1813,10 @@ var enemyDatabase = {
     },
     34: {
         Name: "Powerwild",
-        Image: "34_Powerwild.png"
+        Image: "34_Powerwild.png",
+        Items:  [
+            5
+        ]
     },
     35: {
         Name: "Nimble Bee",
@@ -1901,6 +1904,7 @@ var enemyDatabase = {
         Items:  [
             7,
             10,
+            17
         ]
     },
     47: {
@@ -1924,6 +1928,8 @@ var enemyDatabase = {
         Image: "49_Pot_Centipede.png",
         Items:  [
             3,
+            5,
+            8
         ]
     },
     50: {
