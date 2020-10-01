@@ -1142,6 +1142,7 @@ var enemyDatabase = {
             6,
             9,
             10,
+            12,
             13
         ]
     },
@@ -1279,7 +1280,8 @@ var enemyDatabase = {
         Image: "32_Ice_Plant.png",
         Items:  [
             9,
-            10
+            10,
+            12
         ]
     },
     33: {
