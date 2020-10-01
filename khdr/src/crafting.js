@@ -1578,7 +1578,9 @@ var enemyDatabase = {
         Image: "7_Large_Body.png",
         Items:  [
             1,
-            2
+            2,
+            7,
+            13
         ]
     },
     8: {
@@ -1799,7 +1801,10 @@ var enemyDatabase = {
     },
     36: {
         Name: "Stinging Bee",
-        Image: "36_Stinging_Bee.png"
+        Image: "36_Stinging_Bee.png",
+        Items:  [
+            12
+        ]
     },
     37: {
         Name: "Mega-Shadow",
