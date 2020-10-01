@@ -1536,6 +1536,7 @@ var enemyDatabase = {
         Items:  [
             1,
             7,
+            10,
             13
         ]
     },
@@ -1549,7 +1550,10 @@ var enemyDatabase = {
     },
     3: {
         Name: "Yellow Opera",
-        Image: "3_Yellow_Opera.png"
+        Image: "3_Yellow_Opera.png",
+        Items:  [
+            7
+        ]
     },
     4: {
         Name: "Red Nocturne",
@@ -1557,7 +1561,9 @@ var enemyDatabase = {
         Items:  [
             1,
             2,
-            7
+            3,
+            7,
+            10
         ]
     },
     5: {
@@ -1618,13 +1624,16 @@ var enemyDatabase = {
         Image: "12_Armored_Knight.png",
         Items:  [
             10,
+            13
         ]
     },
     13: {
         Name: "Flower Rider",
         Image: "13_Flower_Rider.png",
         Items:  [
+            4,
             6,
+            7,
             9,
             10,
             12,
@@ -1637,6 +1646,7 @@ var enemyDatabase = {
         Items:  [
             1,
             3,
+            7,
             10,
             11
         ]
@@ -1645,6 +1655,7 @@ var enemyDatabase = {
         Name: "Armored Archer",
         Image: "15_Armored_Archer.png",
         Items:  [
+            1,
             2,
             4,
             7,
@@ -1673,7 +1684,10 @@ var enemyDatabase = {
         Items:  [
             6,
             9,
-            13
+            12,
+            13,
+            14,
+            18
         ]
     },
     19: {
@@ -1694,7 +1708,8 @@ var enemyDatabase = {
         Name: "Chomper Egg",
         Image: "21_Chomper_Egg.png",
         Items:  [
-            2,
+            1,
+            2
         ]
     },
     22: {
@@ -1710,6 +1725,7 @@ var enemyDatabase = {
         Image: "23_White_Rose.png",
         Items:  [
             9,
+            11
         ]
     },
     24: {
@@ -1776,9 +1792,11 @@ var enemyDatabase = {
         Image: "32_Ice_Plant.png",
         Items:  [
             4,
+            6,
             9,
             10,
-            12
+            12,
+            13
         ]
     },
     33: {
@@ -1786,9 +1804,11 @@ var enemyDatabase = {
         Image: "33_Dark_Plant.png",
         Items:  [
             4,
+            6,
             9,
             11,
-            12
+            12,
+            13
         ]
     },
     34: {
@@ -1811,6 +1831,7 @@ var enemyDatabase = {
         Image: "37_Mega-Shadow.png",
         Items:  [
             2,
+            7
         ]
     },
     38: {
@@ -1821,21 +1842,27 @@ var enemyDatabase = {
         Name: "Emerald Sonata",
         Image: "39_Emerald_Sonata.png",
         Items:  [
+            1,
             2,
             3,
             4,
-            7
+            7,
+            11
         ]
     },
     40: {
         Name: "Sparkler",
-        Image: "40_Sparkler.png"
+        Image: "40_Sparkler.png",
+        Items:  [
+            1,
+            3
+        ]
     },
     41: {
         Name: "Poison Archer",
         Image: "41_Poison_Archer.png",
         Items:  [
-            2,
+            2
         ]
     },
     42: {
@@ -1863,6 +1890,7 @@ var enemyDatabase = {
         Name: "Chill Ripper",
         Image: "45_Chill_Ripper.png",
         Items:  [
+            3,
             10,
             11,
         ]
