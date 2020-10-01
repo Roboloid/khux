@@ -1572,6 +1572,7 @@ var enemyDatabase = {
         Name: "Wizard",
         Image: "10_Wizard.png",
         Items:  [
+            1,
             2,
             7
         ]
@@ -1616,6 +1617,7 @@ var enemyDatabase = {
         Name: "Armored Archer",
         Image: "15_Armored_Archer.png",
         Items:  [
+            2,
             4,
             7,
             10
@@ -1681,6 +1683,7 @@ var enemyDatabase = {
         Name: "Morning Star",
         Image: "24_Morning_Star.png",
         Items:  [
+            1,
             3,
             5,
             8
@@ -1710,6 +1713,7 @@ var enemyDatabase = {
         Image: "28_Wyvern.png",
         Items:  [
             7,
+            11
         ]
     },
     29: {
@@ -1804,6 +1808,7 @@ var enemyDatabase = {
         Name: "Sleep Archer",
         Image: "43_Sleep_Archer.png",
         Items:  [
+            3,
             4,
             10,
         ]
@@ -1830,13 +1835,18 @@ var enemyDatabase = {
     },
     47: {
         Name: "Pot Spider",
-        Image: "47_Pot_Spider.png"
+        Image: "47_Pot_Spider.png",
+        Items:  [
+            5,
+            8
+        ]
     },
     48: {
         Name: "Pot Scorpion",
         Image: "48_Pot_Scorpion.png",
         Items:  [
             2,
+            5
         ]
     },
     49: {
@@ -1981,7 +1991,8 @@ var worldBattleDatabase = {
                 8,
                 10,
                 11,
-                13
+                13,
+                16
             ]
         },
         FourStar:    {
@@ -2033,7 +2044,8 @@ var worldBattleDatabase = {
                 10,
                 11,
                 12,
-                13
+                13,
+                18
             ]
         },
         FourStar:    {
