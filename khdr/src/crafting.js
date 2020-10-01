@@ -171,55 +171,55 @@ function loadAccessory(value)    {
     accessoryEffect.appendChild(document.createTextNode("Effect: " + accessoryDatabase[value].Effect.BuffType + " +" + accessoryDatabase[value].Effect.BuffCount));
     rightSideContainer.appendChild(accessoryEffect);
 
+    var accessoryIMGContainer = document.createElement('div');
+    accessoryIMGContainer.style = "position: relative; display: block; width: 150px; height: 100px; margin-top: 50px; margin-left: auto; margin-right: auto";
+
     var accessoryItemBox = document.createElement('img');
     accessoryItemBox.src = "./images/ui/itemBox.png";
     accessoryItemBox.style = "width: 100px; position: absolute; z-index: 10; transform: translate(-50%, -50%); left: 50%; top: 33%";
-    rightSideContainer.appendChild(accessoryItemBox);
+    accessoryIMGContainer.appendChild(accessoryItemBox);
 
     var accessoryImage = document.createElement('img');
     accessoryImage.src = "./images/assets/material/" + accessoryDatabase[value].Image;
     accessoryImage.style = "width: 94px; position: absolute; z-index: 15; transform: translate(-50%, -50%); left: 50%; top: 33%";
-    rightSideContainer.appendChild(accessoryImage);
+    accessoryIMGContainer.appendChild(accessoryImage);
 
     if(accessoryDatabase[value].Rarity == 1)    {
         var accessoryRarity = document.createElement('img');
         accessoryRarity.src = "./images/ui/RarityStar.png";
-        accessoryRarity.style = "width: 30px; position: absolute; z-index: 20; transform: translate(-50%, -50%); left: 50%; top: 42%";
-        rightSideContainer.appendChild(accessoryRarity);
+        accessoryRarity.style = "width: 30px; position: absolute; z-index: 20; transform: translate(-50%, -50%); left: 50%; top: 77%";
+        accessoryIMGContainer.appendChild(accessoryRarity);
     }
     else if(accessoryDatabase[value].Rarity == 2)    {
         var accessoryRarity1 = document.createElement('img');
         accessoryRarity1.src = "./images/ui/RarityStar.png";
-        accessoryRarity1.style = "width: 30px; position: absolute; z-index: 20; transform: translate(-50%, -50%); left: 47%; top: 42%";
-        rightSideContainer.appendChild(accessoryRarity1);
+        accessoryRarity1.style = "width: 30px; position: absolute; z-index: 20; transform: translate(-50%, -50%); left: 47%; top: 77%";
+        accessoryIMGContainer.appendChild(accessoryRarity1);
 
         var accessoryRarity2 = document.createElement('img');
         accessoryRarity2.src = "./images/ui/RarityStar.png";
-        accessoryRarity2.style = "width: 30px; position: absolute; z-index: 20; transform: translate(-50%, -50%); left: 53%; top: 42%";
-        rightSideContainer.appendChild(accessoryRarity2);
+        accessoryRarity2.style = "width: 30px; position: absolute; z-index: 20; transform: translate(-50%, -50%); left: 53%; top: 77%";
+        accessoryIMGContainer.appendChild(accessoryRarity2);
     }
     else if(accessoryDatabase[value].Rarity == 3)    {
         var accessoryRarity1 = document.createElement('img');
         accessoryRarity1.src = "./images/ui/RarityStar.png";
-        accessoryRarity1.style = "width: 30px; position: absolute; z-index: 20; transform: translate(-50%, -50%); left: 45%; top: 42%";
-        rightSideContainer.appendChild(accessoryRarity1);
+        accessoryRarity1.style = "width: 30px; position: absolute; z-index: 20; transform: translate(-50%, -50%); left: 45%; top: 77%";
+        accessoryIMGContainer.appendChild(accessoryRarity1);
 
         var accessoryRarity2 = document.createElement('img');
         accessoryRarity2.src = "./images/ui/RarityStar.png";
-        accessoryRarity2.style = "width: 30px; position: absolute; z-index: 20; transform: translate(-50%, -50%); left: 50%; top: 42%";
-        rightSideContainer.appendChild(accessoryRarity2);
+        accessoryRarity2.style = "width: 30px; position: absolute; z-index: 20; transform: translate(-50%, -50%); left: 50%; top: 77%";
+        accessoryIMGContainer.appendChild(accessoryRarity2);
 
         var accessoryRarity3 = document.createElement('img');
         accessoryRarity3.src = "./images/ui/RarityStar.png";
-        accessoryRarity3.style = "width: 30px; position: absolute; z-index: 20; transform: translate(-50%, -50%); left: 55%; top: 43%";
-        rightSideContainer.appendChild(accessoryRarity3);
+        accessoryRarity3.style = "width: 30px; position: absolute; z-index: 20; transform: translate(-50%, -50%); left: 55%; top: 77%";
+        accessoryIMGContainer.appendChild(accessoryRarity3);
     }
-    
-    rightSideContainer.appendChild(blankSpacer.cloneNode());
-    rightSideContainer.appendChild(blankSpacer.cloneNode());
-    rightSideContainer.appendChild(blankSpacer.cloneNode());
-    rightSideContainer.appendChild(blankSpacer.cloneNode());
-    rightSideContainer.appendChild(blankSpacer.cloneNode());
+
+    rightSideContainer.appendChild(accessoryIMGContainer);
+
     rightSideContainer.appendChild(blankSpacer.cloneNode());
     rightSideContainer.appendChild(blankSpacer.cloneNode());
 
@@ -1788,9 +1788,9 @@ var enemyDatabase = {
         Name: "Poison Archer",
         Image: "41_Poison_Archer.png"
     },
-    42: {
+    77: {
         Name: "Paralysis Archer",
-        Image: "42_Paralysis_Archer.png",
+        Image: "77_Paralysis_Archer.png",
         Items:  [
             2,
         ]
