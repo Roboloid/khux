@@ -1648,7 +1648,10 @@ var enemyDatabase = {
     },
     19: {
         Name: "Fire Plant",
-        Image: "19_Fire_Plant.png"
+        Image: "19_Fire_Plant.png",
+        Items:  [
+            1
+        ]
     },
     20: {
         Name: "Gift Shadow",
