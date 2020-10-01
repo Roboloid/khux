@@ -5580,7 +5580,8 @@ var kb13_cost = {      // Keyblade13: Missing Ache
     48:0, 48.1:0, 48.2:0, 48.3:0, 48.4:0, 48.5:0, 48.6:0, 48.7:0, 48.8:0, 48.9:0,
     49:0, 49.1:0, 49.2:0, 49.3:0, 49.4:0, 49.5:0, 49.6:0, 49.7:0, 49.8:0, 49.9:0,
     50:0, 50.1:0, 50.2:0, 50.3:0, 50.4:0, 50.5:0, 50.6:0, 50.7:0, 50.8:0, 50.9:0,
-    51:0
+    51:0, 51.1:0, 51.2:0, 51.3:0, 51.4:0, 51.5:0, 51.6:0, 51.7:0, 51.8:0, 51.9:0,
+    52:0
   },
   speed: {
     0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0, 13: 0, 
@@ -5756,6 +5757,16 @@ var kb13_cost = {      // Keyblade13: Missing Ache
     50.8	:	11	,
     50.9	:	11	,
     51	:	0,
+    51.1	:	11	,
+    51.2	:	11	,
+    51.3	:	11	,
+    51.4	:	11	,
+    51.5	:	11	,
+    51.6	:	11	,
+    51.7	:	11	,
+    51.8	:	11	,
+    51.9	:	11	,
+    52	:	0,
   },
   magic: {
     0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,
@@ -5776,7 +5787,8 @@ var kb13_cost = {      // Keyblade13: Missing Ache
     48:0, 48.1:0, 48.2:0, 48.3:0, 48.4:0, 48.5:0, 48.6:0, 48.7:0, 48.8:0, 48.9:0,
     49:0, 49.1:0, 49.2:0, 49.3:0, 49.4:0, 49.5:0, 49.6:0, 49.7:0, 49.8:0, 49.9:0,
     50:0, 50.1:0, 50.2:0, 50.3:0, 50.4:0, 50.5:0, 50.6:0, 50.7:0, 50.8:0, 50.9:0,
-    51:0
+    51:0, 51.1:0, 51.2:0, 51.3:0, 51.4:0, 51.5:0, 51.6:0, 51.7:0, 51.8:0, 51.9:0,
+    52:0
   },
   sun: {
     0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,
@@ -5797,7 +5809,8 @@ var kb13_cost = {      // Keyblade13: Missing Ache
     48:0, 48.1:0, 48.2:0, 48.3:0, 48.4:0, 48.5:0, 48.6:0, 48.7:0, 48.8:0, 48.9:0,
     49:0, 49.1:0, 49.2:0, 49.3:0, 49.4:0, 49.5:0, 49.6:0, 49.7:0, 49.8:0, 49.9:0,
     50:0, 50.1:0, 50.2:0, 50.3:0, 50.4:0, 50.5:0, 50.6:0, 50.7:0, 50.8:0, 50.9:0,
-    51:0
+    51:0, 51.1:0, 51.2:0, 51.3:0, 51.4:0, 51.5:0, 51.6:0, 51.7:0, 51.8:0, 51.9:0,
+    52:0
   },
   moon: {
     0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0, 13: 0, 
@@ -5828,7 +5841,8 @@ var kb13_cost = {      // Keyblade13: Missing Ache
     48:2, 48.1:0, 48.2:0, 48.3:0, 48.4:0, 48.5:0, 48.6:0, 48.7:0, 48.8:0, 48.9:0,
     49:2, 49.1:0, 49.2:0, 49.3:0, 49.4:0, 49.5:0, 49.6:0, 49.7:0, 49.8:0, 49.9:0,
     50:2, 50.1:0, 50.2:0, 50.3:0, 50.4:0, 50.5:0, 50.6:0, 50.7:0, 50.8:0, 50.9:0,
-    51:7
+    51:7, 51.1:0, 51.2:0, 51.3:0, 51.4:0, 51.5:0, 51.6:0, 51.7:0, 51.8:0, 51.9:0,
+    52:9
   },
   rainbow: {
     0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,
@@ -5849,7 +5863,8 @@ var kb13_cost = {      // Keyblade13: Missing Ache
     48:0, 48.1:0, 48.2:0, 48.3:0, 48.4:0, 48.5:0, 48.6:0, 48.7:0, 48.8:0, 48.9:0,
     49:0, 49.1:0, 49.2:0, 49.3:0, 49.4:0, 49.5:0, 49.6:0, 49.7:0, 49.8:0, 49.9:0,
     50:0, 50.1:0, 50.2:0, 50.3:0, 50.4:0, 50.5:0, 50.6:0, 50.7:0, 50.8:0, 50.9:0,
-    51:1
+    51:1, 51.1:0, 51.2:0, 51.3:0, 51.4:0, 51.5:0, 51.6:0, 51.7:0, 51.8:0, 51.9:0,
+    52:1
   },
   brilliant: {
     0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,
@@ -5870,7 +5885,8 @@ var kb13_cost = {      // Keyblade13: Missing Ache
     48:0, 48.1:0, 48.2:0, 48.3:0, 48.4:0, 48.5:0, 48.6:0, 48.7:0, 48.8:0, 48.9:0,
     49:0, 49.1:0, 49.2:0, 49.3:0, 49.4:0, 49.5:0, 49.6:0, 49.7:0, 49.8:0, 49.9:0,
     50:0, 50.1:0, 50.2:0, 50.3:0, 50.4:0, 50.5:0, 50.6:0, 50.7:0, 50.8:0, 50.9:0,
-    51:0
+    51:0, 51.1:0, 51.2:0, 51.3:0, 51.4:0, 51.5:0, 51.6:0, 51.7:0, 51.8:0, 51.9:0,
+    52:0
   }
 };      // Keyblade13: Missing Ache
 
@@ -64226,6 +64242,326 @@ var kb13_slots =  {      // Keyblade13: Missing Ache
             direction: "Reversed",
             elementMulti: 1.10,
             directionMulti: 4.00
+        }
+    },
+    51.1:  {
+        slot1:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.20,
+            directionMulti: 3.10
+        },
+        slot3:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.11,
+            directionMulti: 3.81
+        },
+        slot4:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.20,
+            directionMulti: 4.10
+        },
+        slot5:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.11,
+            directionMulti: 4.01
+        }
+    },
+    51.2:  {
+        slot1:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.20,
+            directionMulti: 3.10
+        },
+        slot3:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.12,
+            directionMulti: 3.82
+        },
+        slot4:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.20,
+            directionMulti: 4.10
+        },
+        slot5:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.12,
+            directionMulti: 4.02
+        }
+    },
+    51.3:  {
+        slot1:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.20,
+            directionMulti: 3.10
+        },
+        slot3:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.13,
+            directionMulti: 3.83
+        },
+        slot4:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.20,
+            directionMulti: 4.10
+        },
+        slot5:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.13,
+            directionMulti: 4.03
+        }
+    },
+    51.4:  {
+        slot1:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.20,
+            directionMulti: 3.10
+        },
+        slot3:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.14,
+            directionMulti: 3.84
+        },
+        slot4:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.20,
+            directionMulti: 4.10
+        },
+        slot5:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.14,
+            directionMulti: 4.04
+        }
+    },
+    51.5:  {
+        slot1:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.20,
+            directionMulti: 3.10
+        },
+        slot3:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.15,
+            directionMulti: 3.85
+        },
+        slot4:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.20,
+            directionMulti: 4.10
+        },
+        slot5:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.15,
+            directionMulti: 4.05
+        }
+    },
+    51.6:  {
+        slot1:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.20,
+            directionMulti: 3.10
+        },
+        slot3:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.16,
+            directionMulti: 3.86
+        },
+        slot4:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.20,
+            directionMulti: 4.10
+        },
+        slot5:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.16,
+            directionMulti: 4.06
+        }
+    },
+    51.7:  {
+        slot1:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.20,
+            directionMulti: 3.10
+        },
+        slot3:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.17,
+            directionMulti: 3.87
+        },
+        slot4:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.20,
+            directionMulti: 4.10
+        },
+        slot5:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.17,
+            directionMulti: 4.07
+        }
+    },
+    51.8:  {
+        slot1:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.20,
+            directionMulti: 3.10
+        },
+        slot3:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.18,
+            directionMulti: 3.88
+        },
+        slot4:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.20,
+            directionMulti: 4.10
+        },
+        slot5:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.18,
+            directionMulti: 4.08
+        }
+    },
+    51.9:  {
+        slot1:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.20,
+            directionMulti: 3.10
+        },
+        slot3:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.19,
+            directionMulti: 3.89
+        },
+        slot4:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.20,
+            directionMulti: 4.10
+        },
+        slot5:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.19,
+            directionMulti: 4.09
+        }
+    },
+    52:  {
+        slot1:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.20,
+            directionMulti: 3.10
+        },
+        slot3:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.20,
+            directionMulti: 3.90
+        },
+        slot4:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.20,
+            directionMulti: 4.10
+        },
+        slot5:  {
+            element: "Speed",
+            direction: "Reversed",
+            elementMulti: 1.20,
+            directionMulti: 4.10
         }
     },
 }      // Keyblade13: Missing Ache

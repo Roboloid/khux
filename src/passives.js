@@ -2475,7 +2475,9 @@ var kb12_pass = {      // Keyblade12: Darkgnaw
     "Lv. 49":     {"revPower":      50},
     "Lv. 49.5":   {"revPower":      50},
     "Lv. 50":     {"genRev":      	200},
-    "Lv. 50.5":   {"revPower":      50}
+    "Lv. 50.5":   {"revPower":      50},
+    "Lv. 51":     {"revPower":      50},
+    "Lv. 51.5":   {"revPower":      50}
 };      // Keyblade12: Darkgnaw
 
 var kb13_pass = {      // Keyblade13: Missing Ache
@@ -2510,7 +2512,9 @@ var kb13_pass = {      // Keyblade13: Missing Ache
     "Lv. 49":     {"revSpeed":      50},
     "Lv. 49.5":   {"revSpeed":      50},
     "Lv. 50":     {"genRev":      	200},
-    "Lv. 50.5":   {"revSpeed":      50}
+    "Lv. 50.5":   {"revSpeed":      50},
+    "Lv. 51":     {"revSpeed":      50},
+    "Lv. 51.5":   {"revSpeed":      50}
 };      // Keyblade13: Missing Ache
 
 var kb14_pass = {      // Keyblade14: Fairy Stars

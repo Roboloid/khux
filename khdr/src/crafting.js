@@ -1650,6 +1650,7 @@ var enemyDatabase = {
         Name: "Red Bandit",
         Image: "16_Red_Bandit.png",
         Items:  [
+            2,
             3,
             8,
         ]
@@ -1681,7 +1682,7 @@ var enemyDatabase = {
         Name: "Gift Shadow",
         Image: "20_Gift_Shadow.png",
         Items:  [
-            1,
+            1
         ]
     },
     21: {
@@ -1964,8 +1965,8 @@ var enemyDatabase = {
         Items:  [
             1,
             2,
-            14,
-            16
+            13,
+            15
         ]
     },
     66: {
@@ -1975,7 +1976,7 @@ var enemyDatabase = {
             1,
             2,
             4,
-            15
+            16
         ]
     }
 }
