@@ -1585,6 +1585,7 @@ var enemyDatabase = {
         Image: "8_Bandit.png",
         Items:  [
             2,
+            5,
             17
         ]
     },
@@ -1892,7 +1893,10 @@ var enemyDatabase = {
     },
     50: {
         Name: "Defender",
-        Image: "50_Defender.png"
+        Image: "50_Defender.png",
+        Items:  [
+            13
+        ]
     },
     51: {
         Name: "Flame Core",
