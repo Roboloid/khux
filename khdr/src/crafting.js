@@ -1835,6 +1835,7 @@ var enemyDatabase = {
         Image: "42_Paralysis_Archer.png",
         Items:  [
             2,
+            7
         ]
     },
     43: {
