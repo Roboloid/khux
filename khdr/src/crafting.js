@@ -1005,7 +1005,7 @@ var accessoryDatabase = {
                 quantity: 5
             },
             Item2:  {
-                materialId: 15,
+                materialID: 15,
                 quantity: 3
             },
             Item3:  {
@@ -1030,7 +1030,7 @@ var accessoryDatabase = {
                 quantity: 5
             },
             Item2:  {
-                materialId: 15,
+                materialID: 15,
                 quantity: 3
             },
             Item3:  {
@@ -1063,7 +1063,7 @@ var accessoryDatabase = {
                 quantity: 5
             },
             Item2:  {
-                materialId: 15,
+                materialID: 15,
                 quantity: 3
             },
             Item3:  {
@@ -1096,7 +1096,7 @@ var accessoryDatabase = {
                 quantity: 5
             },
             Item2:  {
-                materialId: 15,
+                materialID: 15,
                 quantity: 3
             },
             Item3:  {
@@ -1129,7 +1129,7 @@ var accessoryDatabase = {
                 quantity: 5
             },
             Item2:  {
-                materialId: 15,
+                materialID: 15,
                 quantity: 3
             },
             Item3:  {
@@ -1162,11 +1162,11 @@ var accessoryDatabase = {
                 quantity: 5
             },
             Item2:  {
-                materialId: 15,
+                materialID: 15,
                 quantity: 3
             },
             Item3:  {
-                materialId: 16,
+                materialID: 16,
                 quantity: 1
             },
             Item4:  {
@@ -1191,11 +1191,11 @@ var accessoryDatabase = {
                 quantity: 5
             },
             Item2:  {
-                materialId: 15,
+                materialID: 15,
                 quantity: 5
             },
             Item3:  {
-                materialId: 16,
+                materialID: 16,
                 quantity: 3
             },
             Item4:  {
@@ -1224,11 +1224,11 @@ var accessoryDatabase = {
                 quantity: 5
             },
             Item2:  {
-                materialId: 15,
+                materialID: 15,
                 quantity: 5
             },
             Item3:  {
-                materialId: 16,
+                materialID: 16,
                 quantity: 3
             },
             Item4:  {
@@ -1257,11 +1257,11 @@ var accessoryDatabase = {
                 quantity: 5
             },
             Item2:  {
-                materialId: 15,
+                materialID: 15,
                 quantity: 5
             },
             Item3:  {
-                materialId: 16,
+                materialID: 16,
                 quantity: 3
             },
             Item4:  {
@@ -1290,11 +1290,11 @@ var accessoryDatabase = {
                 quantity: 5
             },
             Item2:  {
-                materialId: 15,
+                materialID: 15,
                 quantity: 5
             },
             Item3:  {
-                materialId: 16,
+                materialID: 16,
                 quantity: 3
             },
             Item4:  {
@@ -1318,15 +1318,15 @@ var accessoryDatabase = {
         },
         Components: {
             Item1:  {
-                materialId: 17,
+                materialID: 17,
                 quantity: 10
             },
             Item2:  {
-                materialId: 15,
+                materialID: 15,
                 quantity: 5
             },
             Item3:  {
-                materialId: 16,
+                materialID: 16,
                 quantity: 5
             },
             Item4:  {
@@ -1346,15 +1346,15 @@ var accessoryDatabase = {
         },
         Components: {
             Item1:  {
-                materialId: 18,
+                materialID: 18,
                 quantity: 10
             },
             Item2:  {
-                materialId: 15,
+                materialID: 15,
                 quantity: 5
             },
             Item3:  {
-                materialId: 16,
+                materialID: 16,
                 quantity: 5
             },
             Item4:  {
@@ -1374,15 +1374,15 @@ var accessoryDatabase = {
         },
         Components: {
             Item1:  {
-                materialId: 19,
+                materialID: 19,
                 quantity: 10
             },
             Item2:  {
-                materialId: 15,
+                materialID: 15,
                 quantity: 5
             },
             Item3:  {
-                materialId: 16,
+                materialID: 16,
                 quantity: 5
             },
             Item4:  {
