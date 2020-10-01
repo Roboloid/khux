@@ -482,7 +482,24 @@ function popupMaterial(value)    {
                     }
                 }
             }
-            if(checker > 0 && checker <= rankSize - 1)    {        // Rank 2 Star and higher
+
+            if(checker > 0 && checker <= rankSize - 2)    {        // Rank 3 Star and higher
+                var worldDiv = document.createElement('div');
+                worldDiv.style = "position: relative; width: 326px; height: 150px; display: inline-block";
+
+                var worldMatch = document.createElement('img');
+                worldMatch.src = "./images/icon/Logo_" + worldName + ".png";
+                worldMatch.style = "position: absolute; width: 75%; transform: translate(-50%, -50%); top: 35%";
+                worldDiv.appendChild(worldMatch);
+
+                var worldRarity = document.createElement('img');
+                worldRarity.src = "./images/ui/3StarAndUp.png";
+                worldRarity.style = "position: absolute; width: 75%; transform: translate(-50%, -50%); top: 35%";
+                worldDiv.appendChild(worldRarity);
+
+                popupDiv.appendChild(worldDiv);
+            }
+            else if(checker > 0 && checker <= rankSize - 1)    {        // Rank 2 Star and higher
                 var worldDiv = document.createElement('div');
                 worldDiv.style = "position: relative; width: 326px; height: 150px; display: inline-block";
 
@@ -988,7 +1005,7 @@ var accessoryDatabase = {
                 quantity: 5
             },
             Item2:  {
-                materialID: 14,
+                materialId: 15,
                 quantity: 3
             },
             Item3:  {
@@ -1013,7 +1030,7 @@ var accessoryDatabase = {
                 quantity: 5
             },
             Item2:  {
-                materialID: 14,
+                materialId: 15,
                 quantity: 3
             },
             Item3:  {
@@ -1025,7 +1042,7 @@ var accessoryDatabase = {
                 quantity: 30
             },
             Item5:  {
-                materialID: 12,
+                materialID: 14,
                 quantity: 8
             }
         },
@@ -1046,7 +1063,7 @@ var accessoryDatabase = {
                 quantity: 5
             },
             Item2:  {
-                materialID: 14,
+                materialId: 15,
                 quantity: 3
             },
             Item3:  {
@@ -1058,7 +1075,7 @@ var accessoryDatabase = {
                 quantity: 30
             },
             Item5:  {
-                materialID: 12,
+                materialID: 14,
                 quantity: 8
             }
         },
@@ -1079,7 +1096,7 @@ var accessoryDatabase = {
                 quantity: 5
             },
             Item2:  {
-                materialID: 14,
+                materialId: 15,
                 quantity: 3
             },
             Item3:  {
@@ -1091,7 +1108,7 @@ var accessoryDatabase = {
                 quantity: 30
             },
             Item5:  {
-                materialID: 12,
+                materialID: 14,
                 quantity: 8
             }
         },
@@ -1112,7 +1129,7 @@ var accessoryDatabase = {
                 quantity: 5
             },
             Item2:  {
-                materialID: 14,
+                materialId: 15,
                 quantity: 3
             },
             Item3:  {
@@ -1124,7 +1141,7 @@ var accessoryDatabase = {
                 quantity: 30
             },
             Item5:  {
-                materialID: 12,
+                materialID: 14,
                 quantity: 8
             }
         },
@@ -1145,15 +1162,15 @@ var accessoryDatabase = {
                 quantity: 5
             },
             Item2:  {
-                materialID: 14,
+                materialId: 15,
                 quantity: 3
             },
             Item3:  {
-                materialID: 15,
+                materialId: 16,
                 quantity: 1
             },
             Item4:  {
-                materialID: 12,
+                materialID: 14,
                 quantity: 5
             }
         },
@@ -1174,11 +1191,11 @@ var accessoryDatabase = {
                 quantity: 5
             },
             Item2:  {
-                materialID: 14,
+                materialId: 15,
                 quantity: 5
             },
             Item3:  {
-                materialID: 15,
+                materialId: 16,
                 quantity: 3
             },
             Item4:  {
@@ -1207,11 +1224,11 @@ var accessoryDatabase = {
                 quantity: 5
             },
             Item2:  {
-                materialID: 14,
+                materialId: 15,
                 quantity: 5
             },
             Item3:  {
-                materialID: 15,
+                materialId: 16,
                 quantity: 3
             },
             Item4:  {
@@ -1240,11 +1257,11 @@ var accessoryDatabase = {
                 quantity: 5
             },
             Item2:  {
-                materialID: 14,
+                materialId: 15,
                 quantity: 5
             },
             Item3:  {
-                materialID: 15,
+                materialId: 16,
                 quantity: 3
             },
             Item4:  {
@@ -1273,11 +1290,11 @@ var accessoryDatabase = {
                 quantity: 5
             },
             Item2:  {
-                materialID: 14,
+                materialId: 15,
                 quantity: 5
             },
             Item3:  {
-                materialID: 15,
+                materialId: 16,
                 quantity: 3
             },
             Item4:  {
@@ -1301,19 +1318,19 @@ var accessoryDatabase = {
         },
         Components: {
             Item1:  {
-                materialID: 16,
+                materialId: 17,
                 quantity: 10
             },
             Item2:  {
-                materialID: 14,
+                materialId: 15,
                 quantity: 5
             },
             Item3:  {
-                materialID: 15,
+                materialId: 16,
                 quantity: 5
             },
             Item4:  {
-                materialID: 12,
+                materialID: 14,
                 quantity: 5
             }
         },
@@ -1329,15 +1346,15 @@ var accessoryDatabase = {
         },
         Components: {
             Item1:  {
-                materialID: 17,
+                materialId: 18,
                 quantity: 10
             },
             Item2:  {
-                materialID: 14,
+                materialId: 15,
                 quantity: 5
             },
             Item3:  {
-                materialID: 15,
+                materialId: 16,
                 quantity: 5
             },
             Item4:  {
@@ -1357,15 +1374,15 @@ var accessoryDatabase = {
         },
         Components: {
             Item1:  {
-                materialID: 18,
+                materialId: 19,
                 quantity: 10
             },
             Item2:  {
-                materialID: 14,
+                materialId: 15,
                 quantity: 5
             },
             Item3:  {
-                materialID: 15,
+                materialId: 16,
                 quantity: 5
             },
             Item4:  {
@@ -1454,7 +1471,7 @@ var materialDatabase = {
         Text: "Ore from a copper deposit."
     },
     12:  {
-        Name: "White Flower Nectar",
+        Name: "White Flower Dew",
         NameJP: "白い花のつゆ",
         Image: "Dark_Material_2.png",
         Text: "A phial of morning dew gathered from the petals of a white flower."
@@ -1466,30 +1483,36 @@ var materialDatabase = {
         Text: "A shard from a gem brimming with a twilit essence."
     },
     14:  {
+        Name: "White Flower Nectar",
+        NameJP: "白い花のみつ",
+        Image: "Dark_Material_2.png",
+        Text: "A phial of sweet nectar gathered from a white flower."
+    },
+    15:  {
         Name: "Mythril Shard",
         NameJP: "ミスリルのかけら",
         Image: "Dark_Material_1.png",
         Text: "A shard of mythril ore."
     },
-    15:  {
+    16:  {
         Name: "Mythril Stone",
         NameJP: "ミスリルのしずく",
         Image: "Dark_Material_2.png",
         Text: "A stone carved from mythril ore."
     },
-    16:  {
+    17:  {
         Name: "Writhing Stone",
         NameJP: "うこめくしすく",
         Image: "Dark_Material_2.png",
         Text: "A stone filled with darkness."
     },
-    17:  {
+    18:  {
         Name: "Betwixt Stone",
         NameJP: "はざまのしすく",
         Image: "Dark_Material_2.png",
         Text: "A stone brimming with the power of the in-between."
     },
-    18:  {
+    19:  {
         Name: "Stormy Stone",
         NameJP: "吹き荒れるしすく",
         Image: "Dark_Material_2.png",
@@ -1996,7 +2019,9 @@ var worldBattleDatabase = {
                 10,
                 11,
                 13,
-                16
+                17,
+                18,
+                19
             ]
         },
         FourStar:    {
@@ -2010,7 +2035,10 @@ var worldBattleDatabase = {
                 8,
                 10,
                 11,
-                13
+                13,
+                17,
+                18,
+                19
             ]
         }
     },
@@ -2049,7 +2077,10 @@ var worldBattleDatabase = {
                 11,
                 12,
                 13,
-                18
+                14,
+                17,
+                18,
+                19
             ]
         },
         FourStar:    {
@@ -2064,14 +2095,18 @@ var worldBattleDatabase = {
                 10,
                 11,
                 12,
-                13
+                13,
+                14,
+                17,
+                18,
+                19
             ]
         }
     },
     "Events":  {
         Items:  [
-            14,
-            15
+            15,
+            16
         ]
     },
 }
