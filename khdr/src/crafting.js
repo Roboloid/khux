@@ -61,7 +61,7 @@ function loadLeftMaterial() {
         accessoryBaseDiv.appendChild(accessoryBaseIMG);
 
         var accessoryName = document.createElement('span');
-        accessoryName.style = "font-family: UI Font; position: absolute; color: white; font-size: 1.3em; text-shadow: 1.25px 1.25px rgb(0, 0, 0); z-index: 15; text-align: left; left: 10%; top: 14.5%";
+        accessoryName.style = "width: 210px; font-family: UI Font; position: absolute; color: white; font-size: 1.3em; text-shadow: 1.25px 1.25px rgb(0, 0, 0); z-index: 15; text-align: left; left: 10%; top: 14.5%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis";
         accessoryName.appendChild(document.createTextNode(materialDatabase[i].Name));
         accessoryBaseDiv.appendChild(accessoryName);
         
@@ -91,7 +91,7 @@ function loadLeftAccessory()   {
         accessoryBaseDiv.appendChild(accessoryBaseIMG);
 
         var accessoryName = document.createElement('span');
-        accessoryName.style = "font-family: UI Font; position: absolute; color: white; font-size: 1.3em; text-shadow: 1.25px 1.25px rgb(0, 0, 0); z-index: 15; text-align: left; left: 10%; top: 14.5%";
+        accessoryName.style = "width: 210px; font-family: UI Font; position: absolute; color: white; font-size: 1.3em; text-shadow: 1.25px 1.25px rgb(0, 0, 0); z-index: 15; text-align: left; left: 10%; top: 14.5%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis";
         accessoryName.appendChild(document.createTextNode(accessoryDatabase[i].Name));
         accessoryBaseDiv.appendChild(accessoryName);
         
@@ -372,7 +372,7 @@ function addIngredients(value)  {
             materialBaseDiv.appendChild(accessoryIMG);
         
             var materialTitle = document.createElement('span');
-            materialTitle.style = "font-family: UI Font; display: inline-block; position: absolute; color: white; font-size: 1.25em; text-shadow: 1.25px 1.25px rgb(0, 0, 0); left: 15%; top: 6.5%; text-align: left; z-index: 35";
+            materialTitle.style = "width: 175px; font-family: UI Font; display: inline-block; position: absolute; color: white; font-size: 1.25em; text-shadow: 1.25px 1.25px rgb(0, 0, 0); left: 15%; top: 6.5%; text-align: left; z-index: 35; white-space: nowrap; overflow: hidden; text-overflow: ellipsis";
             materialTitle.appendChild(document.createTextNode(materialDatabase[j].Name));
             materialBaseDiv.appendChild(materialTitle);
         
@@ -457,47 +457,65 @@ function popupMaterial(value)    {
     popupDiv.appendChild(blankSpacer.cloneNode());
     
     for(var worldName of Object.keys(worldBattleDatabase))    {
-        var checker = 0;
-        var rankSize = Object.keys(worldBattleDatabase[worldName]).length;
-        for(var worldRank of Object.keys(worldBattleDatabase[worldName])) {
-            for(var entry of worldBattleDatabase[worldName][worldRank].Items)   {
+        if(worldName == "Events")   {
+            for(var entry of worldBattleDatabase[worldName].Items)  {
                 if(entry == value)  {
-                    checker = checker + 1;
+                    var worldDiv = document.createElement('div');
+                    worldDiv.style = "position: relative; width: 326px; height: 150px; display: inline-block";
+
+                    var worldMatch = document.createElement('img');
+                    worldMatch.src = "./images/icon/Logo_" + worldName + ".png";
+                    worldMatch.style = "position: absolute; width: 75%; transform: translate(-50%, -50%); top: 35%";
+                    worldDiv.appendChild(worldMatch);
+
+                    popupDiv.appendChild(worldDiv);
                 }
             }
         }
-        if(checker > 0 && checker <= rankSize - 1)    {        // Rank 2 Star and higher
-            var worldDiv = document.createElement('div');
-            worldDiv.style = "position: relative; width: 326px; height: 150px; display: inline-block";
+        else    {
+            var checker = 0;
+            var rankSize = Object.keys(worldBattleDatabase[worldName]).length;
+            for(var worldRank of Object.keys(worldBattleDatabase[worldName])) {
+                for(var entry of worldBattleDatabase[worldName][worldRank].Items)   {
+                    if(entry == value)  {
+                        checker = checker + 1;
+                    }
+                }
+            }
+            if(checker > 0 && checker <= rankSize - 1)    {        // Rank 2 Star and higher
+                var worldDiv = document.createElement('div');
+                worldDiv.style = "position: relative; width: 326px; height: 150px; display: inline-block";
 
-            var worldMatch = document.createElement('img');
-            worldMatch.src = "./images/icon/Logo_" + worldName + ".png";
-            worldMatch.style = "position: absolute; width: 75%; transform: translate(-50%, -50%); top: 35%";
-            worldDiv.appendChild(worldMatch);
+                var worldMatch = document.createElement('img');
+                worldMatch.src = "./images/icon/Logo_" + worldName + ".png";
+                worldMatch.style = "position: absolute; width: 75%; transform: translate(-50%, -50%); top: 35%";
+                worldDiv.appendChild(worldMatch);
 
-            var worldRarity = document.createElement('img');
-            worldRarity.src = "./images/ui/2StarAndUp.png";
-            worldRarity.style = "position: absolute; width: 75%; transform: translate(-50%, -50%); top: 35%";
-            worldDiv.appendChild(worldRarity);
+                var worldRarity = document.createElement('img');
+                worldRarity.src = "./images/ui/2StarAndUp.png";
+                worldRarity.style = "position: absolute; width: 75%; transform: translate(-50%, -50%); top: 35%";
+                worldDiv.appendChild(worldRarity);
 
-            popupDiv.appendChild(worldDiv);
+                popupDiv.appendChild(worldDiv);
+            }
+            else if(checker > 0 && checker <= rankSize)   {        // Rank 1 Star and higher
+                var worldDiv = document.createElement('div');
+                worldDiv.style = "position: relative; width: 326px; height: 150px; display: inline-block";
+
+                var worldMatch = document.createElement('img');
+                worldMatch.src = "./images/icon/Logo_" + worldName + ".png";
+                worldMatch.style = "position: absolute; width: 75%; transform: translate(-50%, -50%); top: 35%";
+                worldDiv.appendChild(worldMatch);
+
+                var worldRarity = document.createElement('img');
+                worldRarity.src = "./images/ui/1StarAndUp.png";
+                worldRarity.style = "position: absolute; width: 75%; transform: translate(-50%, -50%); top: 35%";
+                worldDiv.appendChild(worldRarity);
+
+                popupDiv.appendChild(worldDiv);
+            }
         }
-        else if(checker > 0 && checker <= rankSize)   {        // Rank 1 Star and higher
-            var worldDiv = document.createElement('div');
-            worldDiv.style = "position: relative; width: 326px; height: 150px; display: inline-block";
-
-            var worldMatch = document.createElement('img');
-            worldMatch.src = "./images/icon/Logo_" + worldName + ".png";
-            worldMatch.style = "position: absolute; width: 75%; transform: translate(-50%, -50%); top: 35%";
-            worldDiv.appendChild(worldMatch);
-
-            var worldRarity = document.createElement('img');
-            worldRarity.src = "./images/ui/1StarAndUp.png";
-            worldRarity.style = "position: absolute; width: 75%; transform: translate(-50%, -50%); top: 35%";
-            worldDiv.appendChild(worldRarity);
-
-            popupDiv.appendChild(worldDiv);
-        }
+        
     }
 
     popupDiv.appendChild(blankSpacer.cloneNode());
@@ -640,7 +658,7 @@ var accessoryDatabase = {
         BPCost: 25000
     },
     4:  {
-        Name: "Earring",
+        Name: "Earrings",
         NameJP: "ピアス",
         Rarity: 1,
         Image: "Dark_Material_203.png",
@@ -781,7 +799,7 @@ var accessoryDatabase = {
         BPCost: 50000
     },
     9:  {
-        Name: "Earring II",
+        Name: "Earrings II",
         NameJP: "ピアスII",
         Rarity: 1,
         Image: "Dark_Material_203.png",
@@ -906,7 +924,7 @@ var accessoryDatabase = {
         BPCost: 100000
     },
     14:  {
-        Name: "Earring III",
+        Name: "Earrings III",
         NameJP: "ピアスIII",
         Rarity: 1,
         Image: "Dark_Material_203.png",
@@ -955,6 +973,408 @@ var accessoryDatabase = {
         },
         BPCost: 100000
     },
+    16:  {
+        Name: "Badge IV",
+        NameJP: "バッジIV",
+        Rarity: 1,
+        Image: "Dark_Material_601.png",
+        Effect: {
+            BuffType: "HP",
+            BuffCount: 6
+        },
+        Components: {
+            Item1:  {
+                accessoryID: 11,
+                quantity: 5
+            },
+            Item2:  {
+                materialID: 14,
+                quantity: 3
+            },
+            Item3:  {
+                materialID: 2,
+                quantity: 20
+            }
+        },
+        BPCost: 450000
+    },
+    17:  {
+        Name: "Ring IV",
+        NameJP: "リングIV",
+        Rarity: 1,
+        Image: "Dark_Material_102.png",
+        Effect: {
+            BuffType: "Strength",
+            BuffCount: 4
+        },
+        Components: {
+            Item1:  {
+                accessoryID: 12,
+                quantity: 5
+            },
+            Item2:  {
+                materialID: 14,
+                quantity: 3
+            },
+            Item3:  {
+                materialID: 4,
+                quantity: 10
+            },
+            Item4:  {
+                materialID: 5,
+                quantity: 30
+            },
+            Item5:  {
+                materialID: 12,
+                quantity: 8
+            }
+        },
+        BPCost: 750000
+    },
+    18:  {
+        Name: "Necklace IV",
+        NameJP: "ネックレスIV",
+        Rarity: 1,
+        Image: "Dark_Material_302.png",
+        Effect: {
+            BuffType: "Defense",
+            BuffCount: 4
+        },
+        Components: {
+            Item1:  {
+                accessoryID: 13,
+                quantity: 5
+            },
+            Item2:  {
+                materialID: 14,
+                quantity: 3
+            },
+            Item3:  {
+                materialID: 4,
+                quantity: 10
+            },
+            Item4:  {
+                materialID: 8,
+                quantity: 30
+            },
+            Item5:  {
+                materialID: 12,
+                quantity: 8
+            }
+        },
+        BPCost: 750000
+    },
+    19:  {
+        Name: "Earrings IV",
+        NameJP: "ピアスIV",
+        Rarity: 1,
+        Image: "Dark_Material_203.png",
+        Effect: {
+            BuffType: "Magic",
+            BuffCount: 4
+        },
+        Components: {
+            Item1:  {
+                accessoryID: 14,
+                quantity: 5
+            },
+            Item2:  {
+                materialID: 14,
+                quantity: 3
+            },
+            Item3:  {
+                materialID: 11,
+                quantity: 10
+            },
+            Item4:  {
+                materialID: 5,
+                quantity: 30
+            },
+            Item5:  {
+                materialID: 12,
+                quantity: 8
+            }
+        },
+        BPCost: 750000
+    },
+    20:  {
+        Name: "Chain IV",
+        NameJP: "チェーンIV",
+        Rarity: 1,
+        Image: "Dark_Material_403.png",
+        Effect: {
+            BuffType: "Magic Resist",
+            BuffCount: 4
+        },
+        Components: {
+            Item1:  {
+                accessoryID: 15,
+                quantity: 5
+            },
+            Item2:  {
+                materialID: 14,
+                quantity: 3
+            },
+            Item3:  {
+                materialID: 11,
+                quantity: 10
+            },
+            Item4:  {
+                materialID: 6,
+                quantity: 30
+            },
+            Item5:  {
+                materialID: 12,
+                quantity: 8
+            }
+        },
+        BPCost: 750000
+    },
+    21:  {
+        Name: "Badge V",
+        NameJP: "バッジV",
+        Rarity: 1,
+        Image: "Dark_Material_601.png",
+        Effect: {
+            BuffType: "HP",
+            BuffCount: 8
+        },
+        Components: {
+            Item1:  {
+                accessoryID: 16,
+                quantity: 5
+            },
+            Item2:  {
+                materialID: 14,
+                quantity: 3
+            },
+            Item3:  {
+                materialID: 15,
+                quantity: 1
+            },
+            Item4:  {
+                materialID: 12,
+                quantity: 5
+            }
+        },
+        BPCost: 1000000
+    },
+    22:  {
+        Name: "Ring V",
+        NameJP: "リングV",
+        Rarity: 1,
+        Image: "Dark_Material_102.png",
+        Effect: {
+            BuffType: "Strength",
+            BuffCount: 5
+        },
+        Components: {
+            Item1:  {
+                accessoryID: 17,
+                quantity: 5
+            },
+            Item2:  {
+                materialID: 14,
+                quantity: 5
+            },
+            Item3:  {
+                materialID: 15,
+                quantity: 3
+            },
+            Item4:  {
+                materialID: 4,
+                quantity: 10
+            },
+            Item5:  {
+                materialID: 5,
+                quantity: 50
+            }
+        },
+        BPCost: 2000000
+    },
+    23:  {
+        Name: "Necklace V",
+        NameJP: "ネックレスV",
+        Rarity: 1,
+        Image: "Dark_Material_302.png",
+        Effect: {
+            BuffType: "Defense",
+            BuffCount: 5
+        },
+        Components: {
+            Item1:  {
+                accessoryID: 18,
+                quantity: 5
+            },
+            Item2:  {
+                materialID: 14,
+                quantity: 5
+            },
+            Item3:  {
+                materialID: 15,
+                quantity: 3
+            },
+            Item4:  {
+                materialID: 4,
+                quantity: 10
+            },
+            Item5:  {
+                materialID: 8,
+                quantity: 50
+            }
+        },
+        BPCost: 2000000
+    },
+    24:  {
+        Name: "Earrings V",
+        NameJP: "ピアスV",
+        Rarity: 1,
+        Image: "Dark_Material_203.png",
+        Effect: {
+            BuffType: "Magic",
+            BuffCount: 5
+        },
+        Components: {
+            Item1:  {
+                accessoryID: 19,
+                quantity: 5
+            },
+            Item2:  {
+                materialID: 14,
+                quantity: 5
+            },
+            Item3:  {
+                materialID: 15,
+                quantity: 3
+            },
+            Item4:  {
+                materialID: 11,
+                quantity: 10
+            },
+            Item5:  {
+                materialID: 5,
+                quantity: 50
+            }
+        },
+        BPCost: 2000000
+    },
+    25:  {
+        Name: "Chain V",
+        NameJP: "チェーンV",
+        Rarity: 1,
+        Image: "Dark_Material_403.png",
+        Effect: {
+            BuffType: "Magic Resist",
+            BuffCount: 5
+        },
+        Components: {
+            Item1:  {
+                accessoryID: 20,
+                quantity: 5
+            },
+            Item2:  {
+                materialID: 14,
+                quantity: 5
+            },
+            Item3:  {
+                materialID: 15,
+                quantity: 3
+            },
+            Item4:  {
+                materialID: 11,
+                quantity: 10
+            },
+            Item5:  {
+                materialID: 6,
+                quantity: 50
+            }
+        },
+        BPCost: 2000000
+    },
+    26:  {
+        Name: "Poison Ward Necklace",
+        Rarity: 1,
+        Image: "Dark_Material_304.png",
+        Effect: {
+            BuffType: "Poison Resist",
+            BuffCount: "8%"
+        },
+        Components: {
+            Item1:  {
+                materialID: 16,
+                quantity: 10
+            },
+            Item2:  {
+                materialID: 14,
+                quantity: 5
+            },
+            Item3:  {
+                materialID: 15,
+                quantity: 5
+            },
+            Item4:  {
+                materialID: 12,
+                quantity: 5
+            }
+        },
+        BPCost: 1000000
+    },
+    27:  {
+        Name: "Sleep Ward Ring",
+        Rarity: 1,
+        Image: "Dark_Material_104.png",
+        Effect: {
+            BuffType: "Sleep Resist",
+            BuffCount: "8%"
+        },
+        Components: {
+            Item1:  {
+                materialID: 17,
+                quantity: 10
+            },
+            Item2:  {
+                materialID: 14,
+                quantity: 5
+            },
+            Item3:  {
+                materialID: 15,
+                quantity: 5
+            },
+            Item4:  {
+                materialID: 5,
+                quantity: 5
+            }
+        },
+        BPCost: 1000000
+    },
+    28:  {
+        Name: "Paralysis Ward Earrings",
+        Rarity: 1,
+        Image: "Dark_Material_204.png",
+        Effect: {
+            BuffType: "Paralysis Resist",
+            BuffCount: "8%"
+        },
+        Components: {
+            Item1:  {
+                materialID: 18,
+                quantity: 10
+            },
+            Item2:  {
+                materialID: 14,
+                quantity: 5
+            },
+            Item3:  {
+                materialID: 15,
+                quantity: 5
+            },
+            Item4:  {
+                materialID: 8,
+                quantity: 5
+            }
+        },
+        BPCost: 750000
+    },
 }
 
 /*
@@ -968,10 +1388,10 @@ var accessoryDatabase = {
 
 var materialDatabase = {
     1:  {
-        Name: "Soothing Shard",
+        Name: "Bright Shard",
         NameJP: "うるおいのかけら",
         Image: "Dark_Material_1.png",
-        Text: "A gem fragment filled with brightness."
+        Text: "A shard brimming with a strong energy."
     },
     2:  {
         Name: "Starry Sand",
@@ -980,10 +1400,10 @@ var materialDatabase = {
         Text: "A bag of rare star-shaped sand."
     },
     3:  {
-        Name: "Pulsing Shard",
+        Name: "Power Shard",
         NameJP: "力のかけら",
         Image: "Dark_Material_1.png",
-        Text: "A gem fragment filled with power."
+        Text: "A shard from a gem brimming with power."
     },
     4:  {
         Name: "Iron Ore",
@@ -1004,10 +1424,10 @@ var materialDatabase = {
         Text: "A leaf from a wild plant that grows in the forest."
     },
     7:  {
-        Name: "Wellspring Shard",
+        Name: "Energy Shard",
         NameJP: "みなぎるかけら",
         Image: "Dark_Material_1.png",
-        Text: "A gem fragment filled with energy."
+        Text: "A shard from a gem brimming with strength and determination."
     },
     8:  {
         Name: "Scorching Sand",
@@ -1022,10 +1442,10 @@ var materialDatabase = {
         Text: "A bulb from a wild plant that grows in the forest."
     },
     10:  {
-        Name: "Hungry Shard",
+        Name: "Serenity Shard",
         NameJP: "満たされるかけら",
         Image: "Dark_Material_1.png",
-        Text: "A gem fragment filled with contentment."
+        Text: "A shard from a gem brimming with tranquility."
     },
     11:  {
         Name: "Copper Ore",
@@ -1034,7 +1454,7 @@ var materialDatabase = {
         Text: "Ore from a copper deposit."
     },
     12:  {
-        Name: "White Flower Dew",
+        Name: "White Flower Nectar",
         NameJP: "白い花のつゆ",
         Image: "Dark_Material_2.png",
         Text: "A phial of morning dew gathered from the petals of a white flower."
@@ -1043,8 +1463,35 @@ var materialDatabase = {
         Name: "Twilight Shard",
         NameJP: "たそがれのかけら",
         Image: "Dark_Material_1.png",
-        Text: "A gem fragment filled with twilight."
+        Text: "A shard from a gem brimming with a twilit essence."
     },
+    14:  {
+        Name: "Mythril Shard",
+        NameJP: "ミスリルのかけら",
+        Image: "Dark_Material_1.png",
+        Text: "A shard of mythril ore."
+    },
+    15:  {
+        Name: "Mythril Stone",
+        NameJP: "ミスリルのしずく",
+        Image: "Dark_Material_2.png",
+        Text: "A stone carved from mythril ore."
+    },
+    16:  {
+        Name: "Writhing Stone",
+        Image: "Dark_Material_2.png",
+        Text: "A stone filled with darkness."
+    },
+    17:  {
+        Name: "Betwixt Stone",
+        Image: "Dark_Material_2.png",
+        Text: "A stone brimming with the power of the in-between."
+    },
+    18:  {
+        Name: "Stormy Stone",
+        Image: "Dark_Material_2.png",
+        Text: "A stone brimming with the power of wind."
+    }
 }
 
 /*
@@ -1465,6 +1912,20 @@ var enemyDatabase = {
             2
         ]
     },
+    65: {
+        Name: "Eliminator",
+        Image: "65_Eliminator.png",
+        Items:  [
+            14
+        ]
+    },
+    66: {
+        Name: "Margoyle",
+        Image: "66_Margoyle.png",
+        Items:  [
+            15
+        ]
+    },
 }
 
 /*
@@ -1579,6 +2040,12 @@ var worldBattleDatabase = {
                 13
             ]
         }
+    },
+    "Events":  {
+        Items:  [
+            14,
+            15
+        ]
     },
 }
 
