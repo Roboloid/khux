@@ -1553,7 +1553,8 @@ var enemyDatabase = {
         Name: "Yellow Opera",
         Image: "3_Yellow_Opera.png",
         Items:  [
-            7
+            7,
+            17
         ]
     },
     4: {
@@ -1641,7 +1642,8 @@ var enemyDatabase = {
             9,
             10,
             12,
-            13
+            13,
+            19
         ]
     },
     14: {
@@ -1721,7 +1723,8 @@ var enemyDatabase = {
         Image: "22_Red_Rose.png",
         Items:  [
             9,
-            12
+            12,
+            13
         ]
     },
     23: {
@@ -1833,13 +1836,15 @@ var enemyDatabase = {
         Name: "Nimble Bee",
         Image: "35_Nimble_Bee.png",
         Items:  [
-            7
+            7,
+            9
         ]
     },
     36: {
         Name: "Stinging Bee",
         Image: "36_Stinging_Bee.png",
         Items:  [
+            6,
             12
         ]
     },
@@ -1848,6 +1853,7 @@ var enemyDatabase = {
         Image: "37_Mega-Shadow.png",
         Items:  [
             2,
+            3,
             7
         ]
     },
@@ -1959,7 +1965,12 @@ var enemyDatabase = {
     },
     51: {
         Name: "Flame Core",
-        Image: "51_Flame_Core.png"
+        Image: "51_Flame_Core.png",
+        Items:  [
+            1,
+            3,
+            7
+        ]
     },
     52: {
         Name: "Wicked Watermelon",
