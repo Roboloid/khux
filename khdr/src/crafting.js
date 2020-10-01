@@ -1479,16 +1479,19 @@ var materialDatabase = {
     },
     16:  {
         Name: "Writhing Stone",
+        NameJP: "うこめくしすく",
         Image: "Dark_Material_2.png",
         Text: "A stone filled with darkness."
     },
     17:  {
         Name: "Betwixt Stone",
+        NameJP: "はざまのしすく",
         Image: "Dark_Material_2.png",
         Text: "A stone brimming with the power of the in-between."
     },
     18:  {
         Name: "Stormy Stone",
+        NameJP: "吹き荒れるしすく",
         Image: "Dark_Material_2.png",
         Text: "A stone brimming with the power of wind."
     }
@@ -1614,6 +1617,7 @@ var enemyDatabase = {
         Image: "15_Armored_Archer.png",
         Items:  [
             4,
+            7,
             10
         ]
     },
@@ -1733,6 +1737,7 @@ var enemyDatabase = {
         Name: "Ice Plant",
         Image: "32_Ice_Plant.png",
         Items:  [
+            4,
             9,
             10,
             12
@@ -1916,13 +1921,17 @@ var enemyDatabase = {
         Name: "Eliminator",
         Image: "65_Eliminator.png",
         Items:  [
-            14
+            1,
+            2,
+            14,
+            16
         ]
     },
     66: {
         Name: "Margoyle",
         Image: "66_Margoyle.png",
         Items:  [
+            1,
             15
         ]
     }
