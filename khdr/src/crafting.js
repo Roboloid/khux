@@ -1535,6 +1535,7 @@ var enemyDatabase = {
         Image: "1_Shadow.png",
         Items:  [
             1,
+            3,
             7,
             10,
             13
@@ -1595,6 +1596,7 @@ var enemyDatabase = {
         Items:  [
             2,
             5,
+            8,
             17
         ]
     },
@@ -1623,6 +1625,8 @@ var enemyDatabase = {
         Name: "Armored Knight",
         Image: "12_Armored_Knight.png",
         Items:  [
+            2,
+            7,
             10,
             13
         ]
@@ -1668,7 +1672,7 @@ var enemyDatabase = {
         Items:  [
             2,
             3,
-            8,
+            8
         ]
     },
     17: {
@@ -1733,6 +1737,7 @@ var enemyDatabase = {
         Image: "24_Morning_Star.png",
         Items:  [
             1,
+            2,
             3,
             5,
             8
@@ -1761,6 +1766,7 @@ var enemyDatabase = {
         Name: "Wyvern",
         Image: "28_Wyvern.png",
         Items:  [
+            3,
             7,
             11
         ]
@@ -1771,7 +1777,8 @@ var enemyDatabase = {
         Items:  [
             2,
             3,
-            13,
+            4,
+            13
         ]
     },
     30: {
@@ -1784,7 +1791,8 @@ var enemyDatabase = {
         Items:  [
             1,
             2,
-            3
+            3,
+            10
         ]
     },
     32: {
@@ -1815,12 +1823,18 @@ var enemyDatabase = {
         Name: "Powerwild",
         Image: "34_Powerwild.png",
         Items:  [
-            5
+            1,
+            2,
+            5,
+            8
         ]
     },
     35: {
         Name: "Nimble Bee",
-        Image: "35_Nimble_Bee.png"
+        Image: "35_Nimble_Bee.png",
+        Items:  [
+            7
+        ]
     },
     36: {
         Name: "Stinging Bee",
@@ -1882,12 +1896,15 @@ var enemyDatabase = {
         Items:  [
             3,
             4,
-            10,
+            10
         ]
     },
     44: {
         Name: "Blitz Spear",
-        Image: "44_Blitz_Spear.png"
+        Image: "44_Blitz_Spear.png",
+        Items:  [
+            2
+        ]
     },
     45: {
         Name: "Chill Ripper",
@@ -1936,6 +1953,7 @@ var enemyDatabase = {
         Name: "Defender",
         Image: "50_Defender.png",
         Items:  [
+            2,
             13
         ]
     },
@@ -2003,7 +2021,8 @@ var enemyDatabase = {
         Image: "64_Ogre.png",
         Items:  [
             1,
-            2
+            2,
+            3
         ]
     },
     65: {
