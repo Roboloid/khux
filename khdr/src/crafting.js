@@ -1627,6 +1627,7 @@ var enemyDatabase = {
         Name: "Red Bandit",
         Image: "16_Red_Bandit.png",
         Items:  [
+            3,
             8,
         ]
     },
