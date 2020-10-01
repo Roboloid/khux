@@ -1100,7 +1100,10 @@ var enemyDatabase = {
     },
     7: {
         Name: "Large Body",
-        Image: "7_Large_Body.png"
+        Image: "7_Large_Body.png",
+        Items:  [
+            1
+        ]
     },
     8: {
         Name: "Bandit",
@@ -1183,6 +1186,7 @@ var enemyDatabase = {
         Image: "18_Dire_Plant.png",
         Items:  [
             6,
+            9,
             13
         ]
     },
