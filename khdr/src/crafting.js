@@ -1788,9 +1788,9 @@ var enemyDatabase = {
         Name: "Poison Archer",
         Image: "41_Poison_Archer.png"
     },
-    77: {
+    42: {
         Name: "Paralysis Archer",
-        Image: "77_Paralysis_Archer.png",
+        Image: "42_Paralysis_Archer.png",
         Items:  [
             2,
         ]
@@ -1925,7 +1925,7 @@ var enemyDatabase = {
         Items:  [
             15
         ]
-    },
+    }
 }
 
 /*
