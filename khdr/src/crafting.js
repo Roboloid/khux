@@ -1555,6 +1555,8 @@ var enemyDatabase = {
         Image: "3_Yellow_Opera.png",
         Items:  [
             7,
+            10,
+            11,
             17,
             19
         ]
@@ -1592,6 +1594,7 @@ var enemyDatabase = {
         Items:  [
             1,
             2,
+            3,
             7,
             13,
             19
@@ -1611,6 +1614,7 @@ var enemyDatabase = {
         Name: "Air Soldier",
         Image: "9_Air_Soldier.png",
         Items:  [
+            5,
             8
         ]
     },
@@ -1620,7 +1624,8 @@ var enemyDatabase = {
         Items:  [
             1,
             2,
-            7
+            7,
+            13
         ]
     },
     11: {
@@ -1664,7 +1669,8 @@ var enemyDatabase = {
             3,
             7,
             10,
-            11
+            11,
+            13
         ]
     },
     15: {
@@ -1870,7 +1876,8 @@ var enemyDatabase = {
         Items:  [
             2,
             3,
-            7
+            7,
+            13
         ]
     },
     38: {
@@ -1886,7 +1893,8 @@ var enemyDatabase = {
             3,
             4,
             7,
-            11
+            11,
+            13
         ]
     },
     40: {
@@ -1902,7 +1910,8 @@ var enemyDatabase = {
         Name: "Poison Archer",
         Image: "41_Poison_Archer.png",
         Items:  [
-            2
+            2,
+            4
         ]
     },
     42: {
@@ -2057,7 +2066,8 @@ var enemyDatabase = {
             1,
             2,
             3,
-            11
+            11,
+            13
         ]
     },
     65: {
