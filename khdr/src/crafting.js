@@ -1545,8 +1545,9 @@ var enemyDatabase = {
         Name: "Fat Bandit",
         Image: "2_Fat_Bandit.png",
         Items:  [
+            2,
             5,
-            8,
+            8
         ]
     },
     3: {
@@ -1554,7 +1555,8 @@ var enemyDatabase = {
         Image: "3_Yellow_Opera.png",
         Items:  [
             7,
-            17
+            17,
+            19
         ]
     },
     4: {
@@ -1570,7 +1572,10 @@ var enemyDatabase = {
     },
     5: {
         Name: "Blue Rhapsody",
-        Image: "5_Blue_Rhapsody.png"
+        Image: "5_Blue_Rhapsody.png",
+        Items:  [
+            1
+        ]
     },
     6: {
         Name: "Soldier",
@@ -1588,7 +1593,8 @@ var enemyDatabase = {
             1,
             2,
             7,
-            13
+            13,
+            19
         ]
     },
     8: {
@@ -1603,7 +1609,10 @@ var enemyDatabase = {
     },
     9: {
         Name: "Air Soldier",
-        Image: "9_Air_Soldier.png"
+        Image: "9_Air_Soldier.png",
+        Items:  [
+            8
+        ]
     },
     10: {
         Name: "Wizard",
@@ -1626,6 +1635,7 @@ var enemyDatabase = {
         Name: "Armored Knight",
         Image: "12_Armored_Knight.png",
         Items:  [
+            1,
             2,
             7,
             10,
@@ -1700,7 +1710,8 @@ var enemyDatabase = {
         Name: "Fire Plant",
         Image: "19_Fire_Plant.png",
         Items:  [
-            1
+            1,
+            2
         ]
     },
     20: {
@@ -1754,13 +1765,15 @@ var enemyDatabase = {
         Name: "Gargoyle",
         Image: "26_Gargoyle.png",
         Items:  [
-            11,
+            3,
+            11
         ]
     },
     27: {
         Name: "High Wizard",
         Image: "27_High_Wizard.png",
         Items:  [
+            1,
             3,
             13
         ]
@@ -1786,7 +1799,10 @@ var enemyDatabase = {
     },
     30: {
         Name: "Lance Soldier",
-        Image: "30_Lance_Soldier.png"
+        Image: "30_Lance_Soldier.png",
+        Items:  [
+            2
+        ]
     },
     31: {
         Name: "Aeroplane",
@@ -1878,7 +1894,8 @@ var enemyDatabase = {
         Image: "40_Sparkler.png",
         Items:  [
             1,
-            3
+            3,
+            10
         ]
     },
     41: {
@@ -1900,9 +1917,11 @@ var enemyDatabase = {
         Name: "Sleep Archer",
         Image: "43_Sleep_Archer.png",
         Items:  [
+            2,
             3,
             4,
-            10
+            10,
+            13
         ]
     },
     44: {
@@ -1934,6 +1953,7 @@ var enemyDatabase = {
         Name: "Pot Spider",
         Image: "47_Pot_Spider.png",
         Items:  [
+            1,
             5,
             8
         ]
@@ -1950,6 +1970,7 @@ var enemyDatabase = {
         Name: "Pot Centipede",
         Image: "49_Pot_Centipede.png",
         Items:  [
+            2,
             3,
             5,
             8
@@ -1968,6 +1989,7 @@ var enemyDatabase = {
         Image: "51_Flame_Core.png",
         Items:  [
             1,
+            2,
             3,
             7
         ]
@@ -2024,7 +2046,8 @@ var enemyDatabase = {
         Name: "Icy Beast",
         Image: "63_Icy_Beast.png",
         Items:  [
-            2,
+            1,
+            2
         ]
     },
     64: {
@@ -2033,7 +2056,8 @@ var enemyDatabase = {
         Items:  [
             1,
             2,
-            3
+            3,
+            11
         ]
     },
     65: {
