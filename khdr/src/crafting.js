@@ -2079,6 +2079,7 @@ var enemyDatabase = {
         Items:  [
             1,
             2,
+            11,
             13,
             15
         ]
@@ -2090,6 +2091,7 @@ var enemyDatabase = {
             1,
             2,
             4,
+            11,
             16
         ]
     }
