@@ -2001,6 +2001,7 @@ var enemyDatabase = {
             2,
             3,
             7,
+            11,
             17,
             19
         ]
