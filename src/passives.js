@@ -2583,7 +2583,9 @@ var kb15_pass = {      // Keyblade15: Diamond Dust
     "Lv. 49":     {"revMagic":      50},
     "Lv. 49.5":   {"revMagic":      50},
     "Lv. 50":     {"genRev":      	200},
-    "Lv. 50.5":   {"revMagic":      50}
+    "Lv. 50.5":   {"revMagic":      50},
+    "Lv. 51":     {"revMagic":      50},
+    "Lv. 51.5":   {"revMagic":      50}
 };      // Keyblade15: Diamond Dust
 
 var kb16_pass = {      // Keyblade16: Bad Guy Breaker
