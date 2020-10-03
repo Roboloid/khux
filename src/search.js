@@ -340,11 +340,14 @@ function searchMedal()  {
 
     secondaryInfo = document.getElementById("secondaryInformation").value;
 
-    sortCondition = document.getElementById("sortCondition").value;
+    if(maxResults == -1)    {       // Ignore if page load
+        sortCondition = document.getElementById("sortCondition").value;
+    }
+    else    {
+        sortCondition = "ID";
+    }
 
     
-
-    // console.log("Secondary: " + secondaryInfo + " / Sort: " + sortCondition);
 
     var workingArray = [];
 
@@ -1430,7 +1433,7 @@ function generateCard(MedalID)  {
         multiText.appendChild(blankSpacer.cloneNode());
         multiText.appendChild(document.createTextNode("Max Multiplier (w/ Guilt): " + (processGuilt(medalDatabase[MedalID].Guilt) * medalDatabase[MedalID].Multi).toFixed(2) + "x"));
         multiText.appendChild(blankSpacer.cloneNode());
-        multiText.appendChild(document.createTextNode("Max Multiplier + 300% Guilt Buff: " + ((3.00 + processGuilt(medalDatabase[MedalID].Guilt)) * medalDatabase[MedalID].Multi).toFixed(2) + "x"));
+        multiText.appendChild(document.createTextNode("Max Multiplier + 320% Guilt Buff: " + ((3.20 + processGuilt(medalDatabase[MedalID].Guilt)) * medalDatabase[MedalID].Multi).toFixed(2) + "x"));
         sideSpan.appendChild(multiText);
     }               // (10.8).toFixed(2);
     else if(medalDatabase[MedalID].HighMulti !== undefined)  {
@@ -1440,7 +1443,7 @@ function generateCard(MedalID)  {
         multiText.appendChild(blankSpacer.cloneNode());
         multiText.appendChild(document.createTextNode("Max Multiplier (w/ Guilt): " + (processGuilt(medalDatabase[MedalID].Guilt) *  medalDatabase[MedalID].LowMulti).toFixed(2) + "x — " +  (processGuilt(medalDatabase[MedalID].Guilt) * medalDatabase[MedalID].HighMulti).toFixed(2) + "x"));
         multiText.appendChild(blankSpacer.cloneNode());
-        multiText.appendChild(document.createTextNode("Max Multiplier + 300% Guilt: " + ((3.00 + processGuilt(medalDatabase[MedalID].Guilt)) *  medalDatabase[MedalID].LowMulti).toFixed(2) + "x — " +  ((3.00 + processGuilt(medalDatabase[MedalID].Guilt)) * medalDatabase[MedalID].HighMulti).toFixed(2) + "x"));
+        multiText.appendChild(document.createTextNode("Max Multiplier + 320% Guilt: " + ((3.20 + processGuilt(medalDatabase[MedalID].Guilt)) *  medalDatabase[MedalID].LowMulti).toFixed(2) + "x — " +  ((3.00 + processGuilt(medalDatabase[MedalID].Guilt)) * medalDatabase[MedalID].HighMulti).toFixed(2) + "x"));
         sideSpan.appendChild(multiText);
     }
     else if(medalDatabase[MedalID].FixedMulti !== undefined)  {
@@ -1450,7 +1453,7 @@ function generateCard(MedalID)  {
         multiText.appendChild(blankSpacer.cloneNode());
         multiText.appendChild(document.createTextNode("Max Multiplier (w/ Guilt): " + (processGuilt(medalDatabase[MedalID].Guilt) * medalDatabase[MedalID].FixedMulti).toFixed(0)));
         multiText.appendChild(blankSpacer.cloneNode());
-        multiText.appendChild(document.createTextNode("Max Multiplier + 300% Guilt Buff: " + ((3.00 + processGuilt(medalDatabase[MedalID].Guilt)) * medalDatabase[MedalID].FixedMulti).toFixed(0)));
+        multiText.appendChild(document.createTextNode("Max Multiplier + 320% Guilt Buff: " + ((3.20 + processGuilt(medalDatabase[MedalID].Guilt)) * medalDatabase[MedalID].FixedMulti).toFixed(0)));
         sideSpan.appendChild(multiText);
     }
 
@@ -30979,7 +30982,7 @@ var medalDatabase = {
     1024:  {
         ID: 1024,
         AlbumNum: 717,
-        Reference: [1024, 1025],
+        Reference: [1024, 1025, 2031],
         MedalImage: "717_6Star_Axel_Art_[EX].png",
         RenderImage: "717_6Star_Axel_Art_[EX]_Render.png",
         KeyArtImage: "Art_717_Axel_Art_[EX].png",
@@ -31018,7 +31021,7 @@ var medalDatabase = {
     1025:  {
         ID: 1025,
         AlbumNum: 1295,
-        Reference: [1024, 1025],
+        Reference: [1024, 1025, 2031],
         MedalImage: "1295_7Star_Axel_Art_[EX].png",
         RenderImage: "717_6Star_Axel_Art_[EX]_Render.png",
         KeyArtImage: "Art_717_Axel_Art_[EX].png",
@@ -34666,7 +34669,7 @@ var medalDatabase = {
     1115:  {
         ID: 1115,
         AlbumNum: 767,
-        Reference: [1115, 1116],
+        Reference: [1115, 1116, 2032],
         MedalImage: "767_6Star_Roxas_Art_[EX].png",
         RenderImage: "767_6Star_Roxas_Art_[EX]_Render.png",
         KeyArtImage: "Art_767_Roxas_Art_[EX].png",
@@ -34716,7 +34719,7 @@ var medalDatabase = {
     1116:  {
         ID: 1116,
         AlbumNum: 1334,
-        Reference: [1115, 1116],
+        Reference: [1115, 1116, 2032],
         MedalImage: "1334_7Star_Roxas_Art_[EX].png",
         RenderImage: "767_6Star_Roxas_Art_[EX]_Render.png",
         KeyArtImage: "Art_767_Roxas_Art_[EX].png",
@@ -35291,7 +35294,7 @@ var medalDatabase = {
     1131:  {
         ID: 1131,
         AlbumNum: 775,
-        Reference: [1131, 1132],
+        Reference: [1131, 1132, 2033],
         MedalImage: "775_6Star_Final_Boss_Xion.png",
         RenderImage: "775_6Star_Final_Boss_Xion_Render.png",
         MusicLink: "(KH358)_Vector_to_the_Heavens.mp3",
@@ -35323,7 +35326,7 @@ var medalDatabase = {
     1132:  {
         ID: 1132,
         AlbumNum: 1342,
-        Reference: [1131, 1132],
+        Reference: [1131, 1132, 2033],
         MedalImage: "1342_7Star_Final_Boss_Xion.png",
         RenderImage: "775_6Star_Final_Boss_Xion_Render.png",
         MusicLink: "(KH358)_Vector_to_the_Heavens.mp3",
@@ -36910,7 +36913,7 @@ var medalDatabase = {
     1172:  {
         ID: 1172,
         AlbumNum: 798,
-        Reference: [1172, 1173],
+        Reference: [1172, 1173, 2029],
         MedalImage: "798_6Star_Illustrated_Kairi_[EX].png",
         RenderImage: "798_6Star_Illustrated_Kairi_[EX]_Render.png",
         MusicLink: "(KH1.5)_Kairi_(Piano).mp3",
@@ -36988,7 +36991,7 @@ var medalDatabase = {
     1173:  {
         ID: 1173,
         AlbumNum: 1382,
-        Reference: [1172, 1173],
+        Reference: [1172, 1173, 2029],
         MedalImage: "1382_7Star_Illustrated_Kairi_[EX].png",
         RenderImage: "798_6Star_Illustrated_Kairi_[EX]_Render.png",
         MusicLink: "(KH1.5)_Kairi_(Piano).mp3",
@@ -37117,7 +37120,7 @@ var medalDatabase = {
     1176:  {
         ID: 1176,
         AlbumNum: 800,
-        Reference: [1176, 1177, 1178, 1179],
+        Reference: [1176, 1177, 1178, 1179, 2030],
         MedalImage: "800_6Star_Illustrated_KH_II_Sora_&_Riku_[EX].png",
         RenderImage: "800_6Star_Illustrated_KH_II_Sora_&_Riku_[EX]_Render.png",
         MusicLink: "(KH2.5)_Darkness_of_the_Unknown.mp3",
@@ -37154,7 +37157,7 @@ var medalDatabase = {
     1177:  {
         ID: 1177,
         AlbumNum: 1375,
-        Reference: [1176, 1177, 1178, 1179],
+        Reference: [1176, 1177, 1178, 1179, 2030],
         MedalImage: "1375_7Star_Illustrated_KH_II_Sora_&_Riku_[EX].png",
         RenderImage: "800_6Star_Illustrated_KH_II_Sora_&_Riku_[EX]_Render.png",
         MusicLink: "(KH2.5)_Darkness_of_the_Unknown.mp3",
@@ -37198,7 +37201,7 @@ var medalDatabase = {
     1178:  {
         ID: 1178,
         AlbumNum: 1375,
-        Reference: [1176, 1177, 1178, 1179],
+        Reference: [1176, 1177, 1178, 1179, 2030],
         MedalImage: "1375_7Star_Illustrated_KH_II_Sora_&_Riku_[EX].png",
         RenderImage: "800_6Star_Illustrated_KH_II_Sora_&_Riku_[EX]_Render.png",
         MusicLink: "(KH2.5)_Darkness_of_the_Unknown.mp3",
@@ -37278,7 +37281,7 @@ var medalDatabase = {
     1179:  {
         ID: 1179,
         AlbumNum: 1375,
-        Reference: [1176, 1177, 1178, 1179],
+        Reference: [1176, 1177, 1178, 1179, 2030],
         MedalImage: "1375_7Star_Illustrated_KH_II_Sora_&_Riku_[EX].png",
         RenderImage: "800_6Star_Illustrated_KH_II_Sora_&_Riku_[EX]_Render.png",
         MusicLink: "(KH2.5)_Darkness_of_the_Unknown.mp3",
@@ -72306,7 +72309,7 @@ var medalDatabase = {
     1941:  {
         ID: 1941,
         AlbumNum: 1809,
-        Reference: [1941],
+        Reference: [1941, 2008],
         MedalImage: "1809_7Star_SN++_-_KH_III_Terra.png",
         RenderImage: "1809_7Star_SN++_-_KH_III_Terra_Render.png",
         Name: "SN++ - KH III Terra",
@@ -72314,15 +72317,15 @@ var medalDatabase = {
         Direction: "Upright",
         Attribute: "Power",
         Guilt: 10,
-        STR: 43549,
-        DEF: 16510,
-        LowMulti: 18.64,
-        HighMulti: 20.14,
+        STR: 35049,
+        DEF: 16410,
+        LowMulti: 16.64,
+        HighMulti: 18.14,
         Gauge: 1,
         Target: "All",
         Ability:    {
             Name: "Lightning Drop +6",
-            Text: "Deals 5 hits. 1 turn: P-Medal STR +5000, self [↑ STR, U- & P-STR 15], targets [↓ DEF, U- & P-DEF 15], SP ATK B +220%. Damage+: 1 enemy or 0 parts left.",
+            Text: "Deals 5 hits. 1 turn: self [↑ STR, U- & P-STR 15], targets [↓ DEF, U- & P-DEF 15], SP ATK B +220%. Damage+: 1 enemy or 0 parts left.",
             Condition: "OneEnemy",
             SelfBuffs:  {
                 BuffGA: {
@@ -72337,12 +72340,6 @@ var medalDatabase = {
                 },
                 BuffPA: {
                     BuffCount: 15,
-                    DurationType: "Turn",
-                    DurationCount: 1
-                },
-                STRPlus:  {
-                    Type: "Power",
-                    Amount: 5000,
                     DurationType: "Turn",
                     DurationCount: 1
                 },
@@ -72369,19 +72366,13 @@ var medalDatabase = {
         },
         Supernova:  {
             Name: "[Mastery] Upright Strike All P",
-            Text: "P Medal: SN Renew. 1 turn: P-Medal STR +7000, SP ATK B +320%. Triggers before slot 6 is activated when defending in PVP.",
+            Text: "P Medal: SN Renew. 1 turn: SP ATK B +300%. Triggers before slot 6 is activated when defending in PVP.",
             Multi: 240.00,
             Timing: 6,
             Target: "All",
             SelfBuffs:  {
                 Renew: "Power",
-                STRPlus:  {
-                    Type: "Power",
-                    Amount: 7000,
-                    DurationType: "Turn",
-                    DurationCount: 1
-                },
-                GuiltBuff: 320
+                GuiltBuff: 300
             },
             Hits: 1
         }
@@ -72389,7 +72380,7 @@ var medalDatabase = {
     1942:  {
         ID: 1942,
         AlbumNum: 1810,
-        Reference: [1942],
+        Reference: [1942, 2009],
         MedalImage: "1810_7Star_SN++_-_KH_III_Ventus.png",
         RenderImage: "1810_7Star_SN++_-_KH_III_Ventus_Render.png",
         Name: "SN++ - KH III Ventus",
@@ -72397,15 +72388,15 @@ var medalDatabase = {
         Direction: "Upright",
         Attribute: "Speed",
         Guilt: 10,
-        STR: 43529,
-        DEF: 16524,
-        LowMulti: 18.64,
-        HighMulti: 20.14,
+        STR: 35029,
+        DEF: 16424,
+        LowMulti: 16.64,
+        HighMulti: 18.14,
         Gauge: 1,
         Target: "All",
         Ability:    {
             Name: "Cyclone Drop +6",
-            Text: "Deals 5 hits. 1 turn: S-Medal STR +5000, self [↑ STR, U- & S-STR 15], targets [↓ DEF, U- & S-DEF 15], SP ATK B +220%. Damage+: 1 enemy or 0 parts left.",
+            Text: "Deals 5 hits. 1 turn: self [↑ STR, U- & S-STR 15], targets [↓ DEF, U- & S-DEF 15], SP ATK B +220%. Damage+: 1 enemy or 0 parts left.",
             Condition: "OneEnemy",
             SelfBuffs:  {
                 BuffGA: {
@@ -72420,12 +72411,6 @@ var medalDatabase = {
                 },
                 BuffSA: {
                     BuffCount: 15,
-                    DurationType: "Turn",
-                    DurationCount: 1
-                },
-                STRPlus:  {
-                    Type: "Speed",
-                    Amount: 5000,
                     DurationType: "Turn",
                     DurationCount: 1
                 },
@@ -72452,19 +72437,13 @@ var medalDatabase = {
         },
         Supernova:  {
             Name: "[Mastery] Upright Strike All S",
-            Text: "S Medal: SN Renew. 1 turn: S-Medal STR +7000, SP ATK B +320%. Triggers before slot 6 is activated when defending in PVP.",
+            Text: "S Medal: SN Renew. 1 turn: SP ATK B +300%. Triggers before slot 6 is activated when defending in PVP.",
             Multi: 240.00,
             Timing: 6,
             Target: "All",
             SelfBuffs:  {
                 Renew: "Speed",
-                STRPlus:  {
-                    Type: "Speed",
-                    Amount: 7000,
-                    DurationType: "Turn",
-                    DurationCount: 1
-                },
-                GuiltBuff: 320
+                GuiltBuff: 300
             },
             Hits: 1
         }
@@ -72472,7 +72451,7 @@ var medalDatabase = {
     1943:  {
         ID: 1943,
         AlbumNum: 1811,
-        Reference: [1943],
+        Reference: [1943, 2010],
         MedalImage: "1811_7Star_SN++_-_KH_III_Aqua.png",
         RenderImage: "1811_7Star_SN++_-_KH_III_Aqua_Render.png",
         Name: "SN++ - KH III Aqua",
@@ -72480,15 +72459,15 @@ var medalDatabase = {
         Direction: "Upright",
         Attribute: "Magic",
         Guilt: 10,
-        STR: 43516,
-        DEF: 16540,
-        LowMulti: 18.64,
-        HighMulti: 20.14,
+        STR: 35016,
+        DEF: 16440,
+        LowMulti: 16.64,
+        HighMulti: 1820.14,
         Gauge: 1,
         Target: "All",
         Ability:    {
             Name: "Ice Drop +6",
-            Text: "Deals 5 hits. 1 turn: M-Medal STR +5000, self [↑ STR, U- & M-STR 15], targets [↓ DEF, U- & M-DEF 15], SP ATK B +220%. Damage+: 1 enemy or 0 parts left.",
+            Text: "Deals 5 hits. 1 turn: self [↑ STR, U- & M-STR 15], targets [↓ DEF, U- & M-DEF 15], SP ATK B +220%. Damage+: 1 enemy or 0 parts left.",
             Condition: "OneEnemy",
             SelfBuffs:  {
                 BuffGA: {
@@ -72503,12 +72482,6 @@ var medalDatabase = {
                 },
                 BuffMA: {
                     BuffCount: 15,
-                    DurationType: "Turn",
-                    DurationCount: 1
-                },
-                STRPlus:  {
-                    Type: "Magic",
-                    Amount: 5000,
                     DurationType: "Turn",
                     DurationCount: 1
                 },
@@ -72535,19 +72508,13 @@ var medalDatabase = {
         },
         Supernova:  {
             Name: "[Mastery] Upright Strike All M",
-            Text: "M Medal: SN Renew. 1 turn: M-Medal +7000, SP ATK B +320%. Triggers before slot 6 is activated when defending in PVP.",
+            Text: "M Medal: SN Renew. 1 turn: SP ATK B +300%. Triggers before slot 6 is activated when defending in PVP.",
             Multi: 240.00,
             Timing: 6,
             Target: "All",
             SelfBuffs:  {
                 Renew: "Magic",
-                STRPlus:  {
-                    Type: "Magic",
-                    Amount: 7000,
-                    DurationType: "Turn",
-                    DurationCount: 1
-                },
-                GuiltBuff: 320
+                GuiltBuff: 300
             },
             Hits: 1
         }
@@ -72555,7 +72522,7 @@ var medalDatabase = {
     1944:  {
         ID: 1944,
         AlbumNum: 1812,
-        Reference: [1944],
+        Reference: [1944, 2011],
         MedalImage: "1812_7Star_SN++_-_Terra,_Ven,_Aqua.png",
         RenderImage: "1812_7Star_SN++_-_Terra,_Ven,_Aqua_Render.png",
         Name: "SN++ - Terra, Ven, Aqua",
@@ -72563,15 +72530,15 @@ var medalDatabase = {
         Direction: "Upright",
         Attribute: "Speed",
         Guilt: 10,
-        STR: 45243,
-        DEF: 16524,
-        LowMulti: 19.14,
-        HighMulti: 20.64,
+        STR: 36243,
+        DEF: 16424,
+        LowMulti: 17.14,
+        HighMulti: 18.64,
         Gauge: 1,
         Target: "Single",
         Ability:    {
-            Name: "Lance Strike +7",
-            Text: "Deals 7 hits. 1 turn: U-Medal STR +7000, self [↑ STR, U- & PSM-STR 15], target [↓ DEF, U- & PSM-DEF 15], SP ATK B +220%. Damage+: 1 enemy or 0 parts left.",
+            Name: "Lance Strike +6",
+            Text: "Deals 7 hits. 1 turn: U-Medal STR +1500, self [↑ STR, U- & PSM-STR 15], target [↓ DEF, U- & PSM-DEF 15], SP ATK B +220%. Damage+: 1 enemy or 0 parts left.",
             Condition: "OneEnemy",
             SelfBuffs:  {
                 BuffGA: {
@@ -72601,7 +72568,7 @@ var medalDatabase = {
                 },
                 STRPlus:  {
                     Type: "Upright",
-                    Amount: 7000,
+                    Amount: 1500,
                     DurationType: "Turn",
                     DurationCount: 1
                 },
@@ -72638,7 +72605,7 @@ var medalDatabase = {
         },
         Supernova:  {
             Name: "[Mastery] Upright Strike All S",
-            Text: "U Medal: SN Renew. 1 turn: U-Medal STR +10000, SP ATK B +320%. Triggers before slot 6 is activated when defending in PVP.",
+            Text: "U Medal: SN Renew. 1 turn: U-Medal STR +2500, SP ATK B +300%. Triggers before slot 6 is activated when defending in PVP.",
             Multi: 250.00,
             Timing: 6,
             Target: "All",
@@ -72646,11 +72613,11 @@ var medalDatabase = {
                 Renew: "Upright",
                 STRPlus:  {
                     Type: "Upright",
-                    Amount: 10000,
+                    Amount: 2500,
                     DurationType: "Turn",
                     DurationCount: 1
                 },
-                GuiltBuff: 320
+                GuiltBuff: 300
             },
             Hits: 1
         }
@@ -72895,7 +72862,7 @@ var medalDatabase = {
     1948:  {
         ID: 1948,
         AlbumNum: 1816,
-        Reference: [1948],
+        Reference: [1948, 2012],
         MedalImage: "1816_7Star_SN++_-_KH_III_Xion.png",
         RenderImage: "1816_7Star_SN++_-_KH_III_Xion_Render.png",
         Name: "SN++ - KH III Xion",
@@ -72903,15 +72870,15 @@ var medalDatabase = {
         Direction: "Upright",
         Attribute: "Power",
         Guilt: 10,
-        STR: 43518,
-        DEF: 16554,
-        LowMulti: 18.64,
-        HighMulti: 20.14,
+        STR: 35218,
+        DEF: 16454,
+        LowMulti: 15.64,
+        HighMulti: 18.14,
         Gauge: 1,
         Target: "All",
         Ability:    {
             Name: "Blades of Innocence +6",
-            Text: "Deals 6 hits. 1 turn: Medal STR +5000, self [↑ U- & R-STR 15], targets [↓ U- & R-DEF 15], SP ATK B +220%. Damage+: 1 enemy or 0 parts left.",
+            Text: "Deals 6 hits. 1 turn: Medal STR +2500, self [↑ U- & R-STR 15], targets [↓ U- & R-DEF 15], SP ATK B +220%. Damage+: 1 enemy or 0 parts left.",
             Condition: "OneEnemy",
             SelfBuffs:  {
                 BuffUA: {
@@ -72926,7 +72893,7 @@ var medalDatabase = {
                 },
                 STRPlus:  {
                     Type: "General",
-                    Amount: 5000,
+                    Amount: 2500,
                     DurationType: "Turn",
                     DurationCount: 1
                 },
@@ -78662,8 +78629,439 @@ var medalDatabase = {
     },
     2008:  {
         ID: 2008,
+        AlbumNum: 1809,
+        Reference: [1941, 2008],
+        MedalImage: "1809_7Star_SN++_-_KH_III_Terra.png",
+        RenderImage: "1809_7Star_SN++_-_KH_III_Terra_Render.png",
+        Name: "SN++ - KH III Terra",
+        Rarity: 7,
+        Direction: "Upright",
+        Attribute: "Power",
+        Guilt: 10,
+        STR: 43549,
+        DEF: 16510,
+        LowMulti: 18.64,
+        HighMulti: 20.14,
+        Gauge: 1,
+        Target: "All",
+        Ability:    {
+            Name: "Lightning Drop +7",
+            Text: "Deals 5 hits. 1 turn: P-Medal STR +5000, self [↑ STR, U- & P-STR 15], targets [↓ DEF, U- & P-DEF 15], SP ATK B +220%. Damage+: 1 enemy or 0 parts left.",
+            Condition: "OneEnemy",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffPA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Power",
+                    Amount: 5000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 220
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffUD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffPD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 5
+        },
+        Supernova:  {
+            Name: "[Mastery] Upright Strike All P",
+            Text: "P Medal: SN Renew. 1 turn: P-Medal STR +7000, SP ATK B +320%. Triggers before slot 6 is activated when defending in PVP.",
+            Multi: 240.00,
+            Timing: 6,
+            Target: "All",
+            SelfBuffs:  {
+                Renew: "Power",
+                STRPlus:  {
+                    Type: "Power",
+                    Amount: 7000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320
+            },
+            Hits: 1
+        }
+    },
+    2009:  {
+        ID: 2009,
+        AlbumNum: 1810,
+        Reference: [1942, 2009],
+        MedalImage: "1810_7Star_SN++_-_KH_III_Ventus.png",
+        RenderImage: "1810_7Star_SN++_-_KH_III_Ventus_Render.png",
+        Name: "SN++ - KH III Ventus",
+        Rarity: 7,
+        Direction: "Upright",
+        Attribute: "Speed",
+        Guilt: 10,
+        STR: 43529,
+        DEF: 16524,
+        LowMulti: 18.64,
+        HighMulti: 20.14,
+        Gauge: 1,
+        Target: "All",
+        Ability:    {
+            Name: "Cyclone Drop +7",
+            Text: "Deals 5 hits. 1 turn: S-Medal STR +5000, self [↑ STR, U- & S-STR 15], targets [↓ DEF, U- & S-DEF 15], SP ATK B +220%. Damage+: 1 enemy or 0 parts left.",
+            Condition: "OneEnemy",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Speed",
+                    Amount: 5000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 220
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffUD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 5
+        },
+        Supernova:  {
+            Name: "[Mastery] Upright Strike All S",
+            Text: "S Medal: SN Renew. 1 turn: S-Medal STR +7000, SP ATK B +320%. Triggers before slot 6 is activated when defending in PVP.",
+            Multi: 240.00,
+            Timing: 6,
+            Target: "All",
+            SelfBuffs:  {
+                Renew: "Speed",
+                STRPlus:  {
+                    Type: "Speed",
+                    Amount: 7000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320
+            },
+            Hits: 1
+        }
+    },
+    2010:  {
+        ID: 2010,
+        AlbumNum: 1811,
+        Reference: [1943, 2010],
+        MedalImage: "1811_7Star_SN++_-_KH_III_Aqua.png",
+        RenderImage: "1811_7Star_SN++_-_KH_III_Aqua_Render.png",
+        Name: "SN++ - KH III Aqua",
+        Rarity: 7,
+        Direction: "Upright",
+        Attribute: "Magic",
+        Guilt: 10,
+        STR: 43516,
+        DEF: 16540,
+        LowMulti: 18.64,
+        HighMulti: 20.14,
+        Gauge: 1,
+        Target: "All",
+        Ability:    {
+            Name: "Ice Drop +7",
+            Text: "Deals 5 hits. 1 turn: M-Medal STR +5000, self [↑ STR, U- & M-STR 15], targets [↓ DEF, U- & M-DEF 15], SP ATK B +220%. Damage+: 1 enemy or 0 parts left.",
+            Condition: "OneEnemy",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Magic",
+                    Amount: 5000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 220
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffUD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffMD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 5
+        },
+        Supernova:  {
+            Name: "[Mastery] Upright Strike All M",
+            Text: "M Medal: SN Renew. 1 turn: M-Medal +7000, SP ATK B +320%. Triggers before slot 6 is activated when defending in PVP.",
+            Multi: 240.00,
+            Timing: 6,
+            Target: "All",
+            SelfBuffs:  {
+                Renew: "Magic",
+                STRPlus:  {
+                    Type: "Magic",
+                    Amount: 7000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320
+            },
+            Hits: 1
+        }
+    },
+    2011:  {
+        ID: 2011,
+        AlbumNum: 1812,
+        Reference: [1944, 2011],
+        MedalImage: "1812_7Star_SN++_-_Terra,_Ven,_Aqua.png",
+        RenderImage: "1812_7Star_SN++_-_Terra,_Ven,_Aqua_Render.png",
+        Name: "SN++ - Terra, Ven, Aqua",
+        Rarity: 7,
+        Direction: "Upright",
+        Attribute: "Speed",
+        Guilt: 10,
+        STR: 45243,
+        DEF: 16524,
+        LowMulti: 19.14,
+        HighMulti: 20.64,
+        Gauge: 1,
+        Target: "Single",
+        Ability:    {
+            Name: "Lance Strike +7",
+            Text: "Deals 7 hits. 1 turn: U-Medal STR +7000, self [↑ STR, U- & PSM-STR 15], target [↓ DEF, U- & PSM-DEF 15], SP ATK B +220%. Damage+: 1 enemy or 0 parts left.",
+            Condition: "OneEnemy",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffPA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Upright",
+                    Amount: 7000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 220
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffUD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffPD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffMD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 7
+        },
+        Supernova:  {
+            Name: "[Mastery] Upright Strike All S",
+            Text: "U Medal: SN Renew. 1 turn: U-Medal STR +10000, SP ATK B +320%. Triggers before slot 6 is activated when defending in PVP.",
+            Multi: 250.00,
+            Timing: 6,
+            Target: "All",
+            SelfBuffs:  {
+                Renew: "Upright",
+                STRPlus:  {
+                    Type: "Upright",
+                    Amount: 10000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320
+            },
+            Hits: 1
+        }
+    },
+    2012:  {
+        ID: 2012,
+        AlbumNum: 1816,
+        Reference: [1948, 2012],
+        MedalImage: "1816_7Star_SN++_-_KH_III_Xion.png",
+        RenderImage: "1816_7Star_SN++_-_KH_III_Xion_Render.png",
+        Name: "SN++ - KH III Xion",
+        Rarity: 7,
+        Direction: "Upright",
+        Attribute: "Power",
+        Guilt: 10,
+        STR: 43518,
+        DEF: 16554,
+        LowMulti: 18.64,
+        HighMulti: 20.14,
+        Gauge: 1,
+        Target: "All",
+        Ability:    {
+            Name: "Blades of Innocence +6",
+            Text: "Deals 6 hits. 1 turn: Medal STR +5000, self [↑ U- & R-STR 15], targets [↓ U- & R-DEF 15], SP ATK B +220%. Damage+: 1 enemy or 0 parts left.",
+            Condition: "OneEnemy",
+            SelfBuffs:  {
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffRA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "General",
+                    Amount: 5000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 220
+            },
+            EnemyBuffs: {
+                DebuffUD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffRD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 6
+        },
+        Supernova:  {
+            Name: "[Mastery] Upright Strike All P",
+            Text: "R Medal: SN Renew. 1 turn: R-Medal +7000, SP ATK B +320%. Count +3. Triggers before slot 6 is activated when defending in PVP.",
+            Multi: 240.00,
+            Timing: 6,
+            Target: "All",
+            SelfBuffs:  {
+                Renew: "Reversed",
+                STRPlus:  {
+                    Type: "Reversed",
+                    Amount: 7000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320
+            },
+            EnemyBuffs: {
+                Counter:    {
+                    CountDirection: "Up",
+                    Count: 3
+                }
+            },
+            Hits: 1
+        }
+    },
+    2013:  {
+        ID: 2013,
         AlbumNum: 1876,
-        Reference: [2008],
+        Reference: [2013],
         MedalImage: "1876_7Star_SN++_-_Illus._KH_III_Terra.png",
         RenderImage: "1876_7Star_SN++_-_Illus._KH_III_Terra_Render.png",
         Name: "SN++ - Illus. KH III Terra",
@@ -78775,10 +79173,10 @@ var medalDatabase = {
             Hits: 1
         }
     },
-    2009:  {
-        ID: 2009,
+    2014:  {
+        ID: 2014,
         AlbumNum: 1877,
-        Reference: [2009],
+        Reference: [2014],
         MedalImage: "1877_7Star_SN++_-_Illus._KH_III_Ventus.png",
         RenderImage: "1877_7Star_SN++_-_Illus._KH_III_Ventus_Render.png",
         Name: "SN++ - Illus. KH III Ventus",
@@ -78890,10 +79288,10 @@ var medalDatabase = {
             Hits: 1
         }
     },
-    2010:  {
-        ID: 2010,
+    2015:  {
+        ID: 2015,
         AlbumNum: 1878,
-        Reference: [2010],
+        Reference: [2015],
         MedalImage: "1878_7Star_SN++_-_Illus._KH_III_Aqua.png",
         RenderImage: "1878_7Star_SN++_-_Illus._KH_III_Aqua_Render.png",
         Name: "SN++ - Illus. KH III Aqua",
@@ -79011,10 +79409,10 @@ var medalDatabase = {
             Hits: 1
         }
     },
-    2011:  {
-        ID: 2011,
+    2016:  {
+        ID: 2016,
         AlbumNum: 1879,
-        Reference: [2011],
+        Reference: [2016],
         MedalImage: "1879_6Star_Sora_&_Moogle_B.png",
         Name: "Sora & Moogle B",
         Rarity: 6,
@@ -79024,10 +79422,10 @@ var medalDatabase = {
             Text: "JP 5th anniversary Medal! Increases strength and defense by 100."
         }
     },
-    2012:  {
-        ID: 2012,
+    2017:  {
+        ID: 2017,
         AlbumNum: 1880,
-        Reference: [2012],
+        Reference: [2017],
         MedalImage: "1880_7Star_SN++_-_Donald_&_Goofy.png",
         RenderImage: "1880_7Star_SN++_-_Donald_&_Goofy_Render.png",
         Name: "SN++ - Donald & Goofy",
@@ -79170,10 +79568,10 @@ var medalDatabase = {
             Hits: 1
         }
     },
-    2013:  {
-        ID: 2013,
+    2018:  {
+        ID: 2018,
         AlbumNum: 1881,
-        Reference: [2013],
+        Reference: [2018],
         MedalImage: "1881_7Star_SN++_-_Grape_Flan.png",
         RenderImage: "1881_7Star_SN++_-_Grape_Flan_Render.png",
         Name: "SN++ - Grape Flan",
@@ -79262,10 +79660,10 @@ var medalDatabase = {
             Hits: 1
         }
     },
-    2014:  {
-        ID: 2014,
+    2019:  {
+        ID: 2019,
         AlbumNum: 1882,
-        Reference: [2014],
+        Reference: [2019],
         MedalImage: "1882_7Star_SN++_-_Banana_Flan.png",
         RenderImage: "1882_7Star_SN++_-_Banana_Flan_Render.png",
         Name: "SN++ - Banana Flan",
@@ -79354,10 +79752,10 @@ var medalDatabase = {
             Hits: 1
         }
     },
-    2015:  {
-        ID: 2015,
+    2020:  {
+        ID: 2020,
         AlbumNum: 1883,
-        Reference: [2015],
+        Reference: [2020],
         MedalImage: "1883_7Star_SN++_-_Watermelon_Flan.png",
         RenderImage: "1883_7Star_SN++_-_Watermelon_Flan_Render.png",
         Name: "SN++ - Watermelon Flan",
@@ -79446,10 +79844,10 @@ var medalDatabase = {
             Hits: 1
         }
     },
-    2016:  {
-        ID: 2016,
+    2021:  {
+        ID: 2021,
         AlbumNum: 1884,
-        Reference: [2016],
+        Reference: [2021],
         MedalImage: "1884_7Star_SN++_-_Strawberry_Flan.png",
         RenderImage: "1884_7Star_SN++_-_Strawberry_Flan_Render.png",
         Name: "SN++ - Strawberry Flan",
@@ -79538,10 +79936,10 @@ var medalDatabase = {
             Hits: 1
         }
     },
-    2017:  {
-        ID: 2017,
+    2022:  {
+        ID: 2022,
         AlbumNum: 1885,
-        Reference: [2017],
+        Reference: [2022],
         MedalImage: "1885_7Star_SN++_-_Honeydew_Flan.png",
         RenderImage: "1885_7Star_SN++_-_Honeydew_Flan_Render.png",
         Name: "SN++ - Honeydew Flan",
@@ -79630,10 +80028,10 @@ var medalDatabase = {
             Hits: 1
         }
     },
-    2018:  {
-        ID: 2018,
+    2023:  {
+        ID: 2023,
         AlbumNum: 1886,
-        Reference: [2018],
+        Reference: [2023],
         MedalImage: "1886_7Star_SN++_-_Orange_Flan.png",
         RenderImage: "1886_7Star_SN++_-_Orange_Flan_Render.png",
         Name: "SN++ - Orange Flan",
@@ -79722,10 +80120,10 @@ var medalDatabase = {
             Hits: 1
         }
     },
-    2019:  {
-        ID: 2019,
+    2024:  {
+        ID: 2024,
         AlbumNum: 1887,
-        Reference: [2019],
+        Reference: [2024],
         MedalImage: "1887_7Star_SN++_-_Cherry_Flan.png",
         RenderImage: "1887_7Star_SN++_-_Cherry_Flan_Render.png",
         Name: "SN++ - Cherry Flan",
@@ -79814,10 +80212,10 @@ var medalDatabase = {
             Hits: 1
         }
     },
-    2020:  {
-        ID: 2020,
+    2025:  {
+        ID: 2025,
         AlbumNum: 1888,
-        Reference: [2020],
+        Reference: [2025],
         MedalImage: "1888_7Star_SN++_-_Flantastic_Seven.png",
         RenderImage: "1888_7Star_SN++_-_Flantastic_Seven_Render.png",
         Name: "SN++ - Flantastic Seven",
@@ -79946,10 +80344,10 @@ var medalDatabase = {
             Hits: 1
         }
     },
-    2021:  {
-        ID: 2021,
+    2026:  {
+        ID: 2026,
         AlbumNum: 1889,
-        Reference: [2021],
+        Reference: [2026],
         MedalImage: "1889_7Star_SN++_-_Illus._KH_III_Lea_(Axel).png",
         RenderImage: "1889_7Star_SN++_-_Illus._KH_III_Lea_(Axel)_Render.png",
         Name: "SN++ - Illus. KH III Lea (Axel)",
@@ -80073,10 +80471,10 @@ var medalDatabase = {
             Hits: 1
         }
     },
-    2022:  {
-        ID: 2022,
+    2027:  {
+        ID: 2027,
         AlbumNum: 1890,
-        Reference: [2022],
+        Reference: [2027],
         MedalImage: "1890_7Star_SN++_-_Illus._KH_III_Roxas.png",
         RenderImage: "1890_7Star_SN++_-_Illus._KH_III_Roxas_Render.png",
         Name: "SN++ - Illus. KH III Roxas",
@@ -80190,10 +80588,10 @@ var medalDatabase = {
             Hits: 1
         }
     },
-    2023:  {
-        ID: 2023,
+    2028:  {
+        ID: 2028,
         AlbumNum: 1891,
-        Reference: [2023],
+        Reference: [2028],
         MedalImage: "1891_7Star_SN++_-_Illus._KH_III_Xion.png",
         RenderImage: "1891_7Star_SN++_-_Illus._KH_III_Xion_Render.png",
         Name: "SN++ - Illus. KH III Xion",
@@ -80359,6 +80757,656 @@ var medalDatabase = {
                 Counter:    {
                     CountDirection: "Up",
                     Count: 5
+                }
+            },
+            Hits: 1
+        }
+    },
+    2029:  {
+        ID: 2029,
+        AlbumNum: 1382,
+        Reference: [1172, 1173, 2029],
+        MedalImage: "1382_7Star_Illustrated_Kairi_[EX].png",
+        RenderImage: "798_6Star_Illustrated_Kairi_[EX]_Render.png",
+        MusicLink: "(KH1.5)_Kairi_(Piano).mp3",
+        Name: "SN++ - Illus. KH Kairi",
+        Rarity: 7,
+        Direction: "Upright",
+        Attribute: "Magic",
+        Guilt: 7,
+        STR: 43671,
+        DEF: 16380,
+        Multi: 19.00,
+        Gauge: 0,
+        Target: "All",
+        Ability:    {
+            Name: "Nature's Favor +7",
+            Text: "2 turns: M-Medal STR +6000, self [↑ STR, U- & PSM-STR 15], targets [↓ DEF, U- & PSM-DEF 15], SP ATK B +220%. Gauge +5. HP MAX. Count +2. Next Medal turns Magic.",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                BuffPA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                BuffSA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                BuffMA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                STRPlus:  {
+                    Type: "Magic",
+                    Amount: 6000,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                GuiltBuff: 220,
+                GaugeRecovery: 5,
+                NextMedal: "Magic",
+                HPRecovery: "Yes"
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                DebuffUD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                DebuffPD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                DebuffSD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                DebuffMD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                Counter:    {
+                    CountDirection: "Up",
+                    Count: 2
+                }
+            },
+            Hits: 1
+        },
+        Supernova:  {
+            Name: "[Mastery] Upright Strike All M",
+            Text: "2 turns: Medal STR +7000, self [↑ STR, U- & PSM-STR 15], targets [↓ DEF, U- & PSM-DEF 15], SP ATK B +320%. Triggers before slot 1 is activated when defending in PVP.",
+            Multi: 240.00,
+            Timing: 1,
+            Target: "All",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                BuffPA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                BuffSA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                BuffMA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                STRPlus:  {
+                    Type: "Magic",
+                    Amount: 7000,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                GuiltBuff: 320
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                DebuffUD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                DebuffPD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                DebuffSD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                DebuffMD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                }
+            },
+            Hits: 1
+        }
+    },
+    2030:  {
+        ID: 2030,
+        AlbumNum: 1375,
+        Reference: [1176, 1177, 1178, 1179, 2030],
+        MedalImage: "1375_7Star_Illustrated_KH_II_Sora_&_Riku_[EX].png",
+        RenderImage: "800_6Star_Illustrated_KH_II_Sora_&_Riku_[EX]_Render.png",
+        MusicLink: "(KH2.5)_Darkness_of_the_Unknown.mp3",
+        Name: "SN++ - Ill. KH II Sora & Riku",
+        Rarity: 7,
+        Direction: "Upright",
+        Attribute: "Speed",
+        Guilt: 9,
+        STR: 44103,
+        DEF: 16991,
+        LowMulti: 13.51,
+        HighMulti: 19.25,
+        Gauge: 1,
+        Target: "All",
+        Ability:    {
+            Name: "Eternal Session +8",
+            Text: "1 turn: Medal STR +10000, self [↑ STR, U- & S-STR 15], targets [↓ DEF, U- & S-DEF 15], SP ATK B +220%. Count +3. Damage+: Higher HP. Ignores targets' attributes.",
+            Condition: "HigherHP",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "General",
+                    Amount: 10000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 220,
+                AttributeAlways: "Super"
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffUD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Counter:  {
+                    CountDirection: "Up",
+                    Count: 3
+                }
+            },
+            Hits: 1
+        },
+        Supernova:  {
+            Name: "[Mastery] Upright Strike S",
+            Text: "1 turn: S-Medal STR +12000, self [↑ STR, U- & S-STR 15], SP ATK B +320%. Triggers before slot 1 is activated when defending in PVP.",
+            Multi: 260.00,
+            Timing: 1,
+            Target: "Single",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Speed",
+                    Amount: 12000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffUD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 1
+        }
+    },
+    2031:  {
+        ID: 2031,
+        AlbumNum: 1295,
+        Reference: [1024, 1025, 2031],
+        MedalImage: "1295_7Star_Axel_Art_[EX].png",
+        RenderImage: "717_6Star_Axel_Art_[EX]_Render.png",
+        KeyArtImage: "Art_717_Axel_Art_[EX].png",
+        Name: "SN++ - Axel Art",
+        Rarity: 7,
+        Direction: "Reversed",
+        Attribute: "Speed",
+        Guilt: 5,
+        STR: 44394,
+        DEF: 16229,
+        LowMulti: 13.51,
+        HighMulti: 19.25,
+        Gauge: 2,
+        Target: "All",
+        Ability:    {
+            Name: "Prison of Flames +7",
+            Text: "[Mastery] 1 turn: S-Medal STR +10000, self [↑ STR, R- & S-STR 15], targets [↓ DEF, R- & S-DEF 15], SP ATK B +220%. Count ±0. Damage+: Higher HP.",
+            Condition: "HigherHP",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffRA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Speed",
+                    Amount: 10000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 220
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffRD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Counter:  {
+                    CountDirection: "Null"
+                }
+            },
+            Hits: 1
+        },
+        Supernova:  {
+            Name: "[Mastery] Reversed Strike All S",
+            Text: "1 turn: S-Medal STR +12000, self [↑ STR, R- & S-STR 15], targets [↓ DEF, R- & S-DEF 15], SP ATK B +320%. Count +1. Triggers before slot 1 is activated when defending in PVP.",
+            Multi: 240.00,
+            Timing: 1,
+            Target: "All",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffRA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Speed",
+                    Amount: 12000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffRD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Counter:  {
+                    CountDirection: "Up",
+                    Count: 1
+                }
+            },
+            Hits: 1
+        }
+    },
+    2032:  {
+        ID: 2032,
+        AlbumNum: 1334,
+        Reference: [1115, 1116, 2032],
+        MedalImage: "1334_7Star_Roxas_Art_[EX].png",
+        RenderImage: "767_6Star_Roxas_Art_[EX]_Render.png",
+        KeyArtImage: "Art_767_Roxas_Art_[EX].png",
+        MusicLink: "(KH2.5)_The_Other_Promise_(Drammatica).mp3",
+        Name: "SN++ - Roxas Art",
+        Rarity: 7,
+        Direction: "Upright",
+        Attribute: "Speed",
+        Guilt: 6,
+        STR: 44249,
+        DEF: 16281,
+        LowMulti: 13.49,
+        HighMulti: 19.63,
+        Gauge: 3,
+        Target: "All",
+        Ability:    {
+            Name: "Pulsing Barrel +7",
+            Text: "Deals 4 hits. 1 turn: S-Medal STR +10000, self [↑ STR, U- & S-STR 15], targets [↓ DEF, U- & S-DEF 15], SP ATK B +220%. Count ±0. Damage+: Higher HP.",
+            Condition: "HigherHP",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Speed",
+                    Amount: 10000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 220
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffUD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Counter:  {
+                    CountDirection: "Null"
+                }
+            },
+            Hits: 4
+        },
+        Supernova:  {
+            Name: "[Mastery] Upright Strike All S",
+            Text: "1 turn: S-Medal STR +12000, targets [↓ DEF, U- & S-DEF 15], SP ATK B +320%. Pierces Defense Boost 50%. Count +3. Gauge +1. Triggers before slot 1 is activated when defending in PVP.",
+            Multi: 240.00,
+            Timing: 1,
+            Target: "All",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Speed",
+                    Amount: 12000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320,
+                GaugeRecovery: 1
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffUD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Counter:  {
+                    CountDirection: "Up",
+                    Count: 3
+                },
+                DEFPierce: 50
+            },
+            Hits: 1
+        }
+    },
+    2033:  {
+        ID: 2033,
+        AlbumNum: 1342,
+        Reference: [1131, 1132, 2033],
+        MedalImage: "1342_7Star_Final_Boss_Xion.png",
+        RenderImage: "775_6Star_Final_Boss_Xion_Render.png",
+        MusicLink: "(KH358)_Vector_to_the_Heavens.mp3",
+        Name: "SN++ - Final Boss Xion",
+        Rarity: 7,
+        Direction: "Reversed",
+        Attribute: "Speed",
+        Guilt: 6,
+        STR: 44219,
+        DEF: 16318,
+        LowMulti: 18.55,
+        HighMulti: 19.24,
+        Gauge: 4,
+        Target: "All",
+        Ability:    {
+            Name: "Dark Horizon +7",
+            Text: "2 turns: S-Medal STR +6000, self [↑ STR, R- & S-STR 15], targets [↓ DEF, R- & S-DEF 15], SP ATK B +220%. Count ±0. Damage+: the more gauges are full. Pierces Defense Boost 30%.",
+            Condition: "GaugesFull",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                BuffRA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                BuffSA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                STRPlus:  {
+                    Type: "Speed",
+                    Amount: 6000,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                GuiltBuff: 220
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                DebuffRD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                DebuffSD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                Counter:  {
+                    CountDirection: "Null"
+                },
+                DEFPierce: 30
+            },
+            Hits: 1
+        },
+        Supernova:  {
+            Name: "[Mastery] Reversed Strike All S",
+            Text: "2 turns: S-Medal STR +7000, self [↑ STR, R- & S-STR 15], targets [↓ DEF, R- & S-DEF 15], SP ATK B +320%. Count +2. Triggers before slot 1 is activated when defending in PVP.",
+            Multi: 240.00,
+            Timing: 1,
+            Target: "All",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                BuffRA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                BuffSA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                STRPlus:  {
+                    Type: "Speed",
+                    Amount: 7000,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                GuiltBuff: 320
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                DebuffRD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                DebuffSD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                Counter:  {
+                    CountDirection: "Up",
+                    Count: 2
                 }
             },
             Hits: 1
