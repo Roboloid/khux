@@ -2477,7 +2477,9 @@ var kb12_pass = {      // Keyblade12: Darkgnaw
     "Lv. 50":     {"genRev":      	200},
     "Lv. 50.5":   {"revPower":      50},
     "Lv. 51":     {"revPower":      50},
-    "Lv. 51.5":   {"revPower":      50}
+    "Lv. 51.5":   {"revPower":      50},
+    "Lv. 52":     {"revPower":      50},
+    "Lv. 52.5":   {"revPower":      50}
 };      // Keyblade12: Darkgnaw
 
 var kb13_pass = {      // Keyblade13: Missing Ache
