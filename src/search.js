@@ -81714,7 +81714,7 @@ var medalDatabase = {
         Reference: [1162, 1163, 2037],
         MedalImage: "793_6Star_Sora_&_Donald_&_Goofy_C.png",
         RenderImage: "793_6Star_Sora_&_Donald_&_Goofy_C_Render.png",
-        Name: "Sora & Donald & Goofy C",
+        Name: "SN++ - Halloween Sora & Pals",
         Rarity: 7,
         Direction: "Upright",
         Attribute: "Power",
