@@ -36488,7 +36488,7 @@ var medalDatabase = {
     1162:  {
         ID: 1162,
         AlbumNum: 793,
-        Reference: [1162, 1163],
+        Reference: [1162, 1163, 2037],
         MedalImage: "793_6Star_Sora_&_Donald_&_Goofy_C.png",
         RenderImage: "793_6Star_Sora_&_Donald_&_Goofy_C_Render.png",
         Name: "Sora & Donald & Goofy C",
@@ -36531,7 +36531,7 @@ var medalDatabase = {
     1163:  {
         ID: 1163,
         AlbumNum: 1389,
-        Reference: [1162, 1163],
+        Reference: [1162, 1163, 2037],
         MedalImage: "1389_7Star_Sora_&_Donald_&_Goofy_C.png",
         RenderImage: "793_6Star_Sora_&_Donald_&_Goofy_C_Render.png",
         Name: "Sora & Donald & Goofy C",
@@ -81692,6 +81692,139 @@ var medalDatabase = {
                     DurationCount: 1
                 },
                 GuiltBuff: 330
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffUD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 1
+        }
+    },
+    2037:  {
+        ID: 2037,
+        AlbumNum: 793,
+        Reference: [1162, 1163, 2037],
+        MedalImage: "793_6Star_Sora_&_Donald_&_Goofy_C.png",
+        RenderImage: "793_6Star_Sora_&_Donald_&_Goofy_C_Render.png",
+        Name: "Sora & Donald & Goofy C",
+        Rarity: 7,
+        Direction: "Upright",
+        Attribute: "Power",
+        Guilt: 10,
+        STR: 42360,
+        DEF: 16236,
+        Multi: 18.80,
+        Gauge: 5,
+        Target: "All",
+        Ability:    {
+            Name: "Pumpkin Pummel EX +7",
+            Text: "Deals 7 hits that ignore targets' attributes. 1 turn: Medal STR +8000, targets [-15 STR, PSM-STR, DEF, U-, R- & PSM-DEF], SP ATK B +220%.",
+            SelfBuffs:  {
+                STRPlus:  {
+                    Type: "General",
+                    Amount: 8000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 220,
+                AttributeAlways: "Super"
+            },
+            EnemyBuffs: {
+                DebuffGA: {
+                    BuffCount: 15,
+                    Overwrite: "Yes",
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffPA: {
+                    BuffCount: 15,
+                    Overwrite: "Yes",
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSA: {
+                    BuffCount: 15,
+                    Overwrite: "Yes",
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffMA: {
+                    BuffCount: 15,
+                    Overwrite: "Yes",
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffGD: {
+                    BuffCount: 15,
+                    Overwrite: "Yes",
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffUD: {
+                    BuffCount: 15,
+                    Overwrite: "Yes",
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffRD: {
+                    BuffCount: 15,
+                    Overwrite: "Yes",
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffPD: {
+                    BuffCount: 15,
+                    Overwrite: "Yes",
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSD: {
+                    BuffCount: 15,
+                    Overwrite: "Yes",
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffMD: {
+                    BuffCount: 15,
+                    Overwrite: "Yes",
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 7
+        },
+        Supernova:  {
+            Name: "[Mastery] Upright Strike All P",
+            Text: "1 turn: Medal STR +10000, self [↑ STR & U-STR 15], targets [↓ DEF & U-DEF 15], SP ATK B +300%. Triggers before slot 1 is activated when defending in PVP.",
+            Multi: 220.00,
+            Timing: 1,
+            Target: "All",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "General",
+                    Amount: 10000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 300
             },
             EnemyBuffs: {
                 DebuffGD: {
