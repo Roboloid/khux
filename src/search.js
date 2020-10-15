@@ -81841,4 +81841,131 @@ var medalDatabase = {
             Hits: 1
         }
     },
+    2038:  {
+        ID: 2038,
+        AlbumNum: 1895,
+        Reference: [2038],
+        MedalImage: "1895_7Star_SN++_-_Axel.png",
+        RenderImage: "1895_7Star_SN++_-_Axel_Render.png",
+        Name: "SN++ - Axel",
+        Rarity: 7,
+        Direction: "Reversed",
+        Attribute: "Power",
+        Guilt: 10,
+        STR: 46359,
+        DEF: 16671,
+        Multi: 20.20,
+        Gauge: 3,
+        Target: "All",
+        Ability:    {
+            Name: "Flame Arcanum EX +6",
+            Text: "[Fail to imitate SP attack of 3 Medals before] Deals 13 hits. 1 turn: Medal STR +10000, self [↑ STR, R- & PSM-STR 15], targets [↓ DEF, R- & PSM-DEF 15], SP ATK B +220%.",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffRA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffPA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "General",
+                    Amount: 10000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Copy: {
+                    Direction: "Previous",
+                    Slot: 3
+                },
+                GuiltBuff: 220
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffRD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffPD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffMD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 13
+        },
+        Supernova:  {
+            Name: "[Mastery] Reversed Strike All P",
+            Text: "1 turn: Medal STR +12000, self [↑ STR & R-STR 15], targets [↓ DEF & R-DEF 15], SP ATK B +320%. Ignores targets' Defense Boost. Triggers before slot 1 is activated when defending in PVP.",
+            Multi: 240.00,
+            Timing: 1,
+            Target: "All",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffRA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "General",
+                    Amount: 12000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffRD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DEFPierce: 100
+            },
+            Hits: 1
+        }
+    },
 };
