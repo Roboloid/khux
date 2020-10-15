@@ -3095,6 +3095,26 @@ var cardDatabase = {
         DirectionType: "Light",
         ColorType: "Blue",
         AttackType: "Shield",
+        Passive1:   {
+            ReqCount: 1,
+            BuffType: "HP",
+            BuffCount: 1
+        },
+        Passive2:   {
+            ReqCount: 3,
+            BuffType: "Magic Resist",
+            BuffCount: 1
+        },
+        Passive3:   {
+            ReqCount: 5,
+            BuffType: "Magic Resist",
+            BuffCount: 1
+        },
+        Passive4:   {
+            ReqCount: 10,
+            BuffType: "Magic Resist",
+            BuffCount: 1
+        },
         MainAbility:    {
             Name: "Magic DEF Sap",
             AttackType: "Shield",
@@ -3113,6 +3133,26 @@ var cardDatabase = {
         DirectionType: "Dark",
         ColorType: "Green",
         AttackType: "Staff",
+        Passive1:   {
+            ReqCount: 1,
+            BuffType: "HP",
+            BuffCount: 1
+        },
+        Passive2:   {
+            ReqCount: 3,
+            BuffType: "Magic",
+            BuffCount: 1
+        },
+        Passive3:   {
+            ReqCount: 5,
+            BuffType: "Magic",
+            BuffCount: 1
+        },
+        Passive4:   {
+            ReqCount: 10,
+            BuffType: "Magic",
+            BuffCount: 2
+        },
         MainAbility:    {
             Name: "Thundaga",
             AttackType: "Staff",
@@ -3120,6 +3160,72 @@ var cardDatabase = {
             BasePower: 40,
             MaxPower: 80,
             Effect: "A powerful lightning-element magic attack."
+        },
+        SubAbility:    {
+            Name: "Magic Boost+",
+            Effect: "Magic +2 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+        }
+    },
+    61:  {
+        ID: 61,
+        AlbumNum: 61,
+        CardImage: "61_Marluxia.png",
+        RenderImage: "61_Marluxia_Render.png",
+        Name: "Marluxia",
+        DirectionType: "Dark",
+        ColorType: "Green",
+        AttackType: "Sword",
+        MainAbility:    {
+            Name: "Blossom of Thorns",
+            AttackType: "Sword",
+            Element: "Wind",
+            BasePower: 38,
+            MaxPower: 80,
+            Effect: "A powerful wind-element physical attack."
+        },
+        SubAbility:    {
+            Name: "Attack Boost+",
+            Effect: "Strength +2 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+        }
+    },
+    62:  {
+        ID: 62,
+        AlbumNum: 62,
+        CardImage: "62_Larxene.png",
+        RenderImage: "62_Larxene_Render.png",
+        Name: "Larxene",
+        DirectionType: "Dark",
+        ColorType: "Green",
+        AttackType: "Sword",
+        MainAbility:    {
+            Name: "Savage Knives",
+            AttackType: "Sword",
+            Element: "Lightning",
+            BasePower: 38,
+            MaxPower: 80,
+            Effect: "A powerful lightning-element physical attack."
+        },
+        SubAbility:    {
+            Name: "Attack Boost+",
+            Effect: "Strength +2 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+        }
+    },
+    63:  {
+        ID: 63,
+        AlbumNum: 63,
+        CardImage: "63_Zexion.png",
+        RenderImage: "63_Zexion_Render.png",
+        Name: "Zexion",
+        DirectionType: "Dark",
+        ColorType: "Blue",
+        AttackType: "Staff",
+        MainAbility:    {
+            Name: "Meteor Mirage",
+            AttackType: "Staff",
+            Element: "Fire",
+            BasePower: 38,
+            MaxPower: 80,
+            Effect: "A powerful fire-element magic attack."
         },
         SubAbility:    {
             Name: "Magic Boost+",
