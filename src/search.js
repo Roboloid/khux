@@ -25899,7 +25899,7 @@ var medalDatabase = {
     866:  {
         ID: 866,
         AlbumNum: 623,
-        Reference: [866, 867, 868],
+        Reference: [866, 867, 868, 2041],
         MedalImage: "623_5Star_Halloween_Goofy_B.png",
         RenderImage: "623_5Star_Halloween_Goofy_B_Render.png",
         Name: "Halloween Goofy B",
@@ -25921,7 +25921,7 @@ var medalDatabase = {
     867:  {
         ID: 867,
         AlbumNum: 624,
-        Reference: [866, 867, 868],
+        Reference: [866, 867, 868, 2041],
         MedalImage: "624_6Star_Halloween_Goofy_B.png",
         RenderImage: "624_6Star_Halloween_Goofy_B_Render.png",
         Name: "Halloween Goofy B",
@@ -25943,7 +25943,7 @@ var medalDatabase = {
     868:  {
         ID: 868,
         AlbumNum: 1227,
-        Reference: [866, 867, 868],
+        Reference: [866, 867, 868, 2041],
         MedalImage: "1227_7Star_Halloween_Goofy_B.png",
         RenderImage: "624_6Star_Halloween_Goofy_B_Render.png",
         Name: "Halloween Goofy B",
@@ -25965,7 +25965,7 @@ var medalDatabase = {
     869:  {
         ID: 869,
         AlbumNum: 625,
-        Reference: [869, 870, 871],
+        Reference: [869, 870, 871, 2040],
         MedalImage: "625_5Star_Halloween_Donald_B.png",
         RenderImage: "625_5Star_Halloween_Donald_B_Render.png",
         Name: "Halloween Donald B",
@@ -25987,7 +25987,7 @@ var medalDatabase = {
     870:  {
         ID: 870,
         AlbumNum: 626,
-        Reference: [869, 870, 871],
+        Reference: [869, 870, 871, 2040],
         MedalImage: "626_6Star_Halloween_Donald_B.png",
         RenderImage: "626_6Star_Halloween_Donald_B_Render.png",
         Name: "Halloween Donald B",
@@ -26009,7 +26009,7 @@ var medalDatabase = {
     871:  {
         ID: 871,
         AlbumNum: 1235,
-        Reference: [869, 870, 871],
+        Reference: [869, 870, 871, 2040],
         MedalImage: "1235_7Star_Halloween_Donald_B.png",
         RenderImage: "626_6Star_Halloween_Donald_B_Render.png",
         Name: "Halloween Donald B",
@@ -28892,7 +28892,7 @@ var medalDatabase = {
     962:  {
         ID: 962,
         AlbumNum: 682,
-        Reference: [962, 963],
+        Reference: [962, 963, 2039],
         MedalImage: "682_6Star_Illustrated_Halloween_Sora.png",
         RenderImage: "682_6Star_Illustrated_Halloween_Sora_Render.png",
         Name: "Illustrated Halloween Sora",
@@ -28914,7 +28914,7 @@ var medalDatabase = {
     963:  {
         ID: 963,
         AlbumNum: 1230,
-        Reference: [962, 963],
+        Reference: [962, 963, 2039],
         MedalImage: "1230_7Star_Illustrated_Halloween_Sora.png",
         RenderImage: "682_6Star_Illustrated_Halloween_Sora_Render.png",
         Name: "Illustrated Halloween Sora",
@@ -81964,6 +81964,370 @@ var medalDatabase = {
                     DurationCount: 1
                 },
                 DEFPierce: 100
+            },
+            Hits: 1
+        }
+    },
+    2039:  {
+        ID: 2039,
+        AlbumNum: 1230,
+        Reference: [962, 963, 2039],
+        MedalImage: "1230_7Star_Illustrated_Halloween_Sora.png",
+        RenderImage: "682_6Star_Illustrated_Halloween_Sora_Render.png",
+        Name: "SN++ - Illus. Halloween Sora",
+        Rarity: 7,
+        Direction: "Upright",
+        Attribute: "Speed",
+        Guilt: 10,
+        STR: 44794,
+        DEF: 16730,
+        Multi: 17.60,
+        Gauge: 3,
+        Target: "All",
+        Ability:    {
+            Name: "Pumpkin Pummel +7",
+            Text: "[Target: All] Deals 7 hits. 2 attacks: S-Medal STR +15000. 1 turn: self [↑ STR, U- & S-STR 15], targets [↓ DEF, U- & S-DEF 15], SP ATK B +220%. Count +1.",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Speed",
+                    Amount: 15000,
+                    DurationType: "Attack",
+                    DurationCount: 2
+                },
+                GuiltBuff: 220
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffUD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Counter:  {
+                    CountDirection: "Up",
+                    Count: 1
+                }
+            },
+            Hits: 7
+        },
+        Supernova:  {
+            Name: "[Mastery] Upright Strike All S",
+            Text: "[Mastery] 1 attack: S-Medal STR +20000. 1 turn: SP ATK B +320%. Triggers before slot 5 is activated when defending in PVP.",
+            Multi: 240.00,
+            Timing: 5,
+            Target: "All",
+            SelfBuffs:  {
+                STRPlus:  {
+                    Type: "Speed",
+                    Amount: 20000,
+                    DurationType: "Attack",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320
+            },
+            Hits: 1
+        }
+    },
+    2040:  {
+        ID: 2040,
+        AlbumNum: 1235,
+        Reference: [869, 870, 871, 2040],
+        MedalImage: "1235_7Star_Halloween_Donald_B.png",
+        RenderImage: "626_6Star_Halloween_Donald_B_Render.png",
+        Name: "SN++ - Halloween Donald B",
+        Rarity: 7,
+        Direction: "Upright",
+        Attribute: "Magic",
+        Guilt: 10,
+        STR: 44451,
+        DEF: 16778,
+        Multi: 19.00,
+        Gauge: 2,
+        Target: "Random",
+        Ability:    {
+            Name: "Charging Rush +7",
+            Text: "Deals 8 hits. 1 turn: M-Medal STR +10000, self [↑ STR, U- & M-STR 15], targets [↓ STR & P-STR 15], SP ATK B +220%. Count ±0.",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Magic",
+                    Amount: 10000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 220
+            },
+            EnemyBuffs: {
+                DebuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffPA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Counter:  {
+                    CountDirection: "Null"
+                }
+            },
+            Hits: 8
+        },
+        Supernova:  {
+            Name: "[Mastery] Upright Strike All M",
+            Text: "1 turn: M-Medal STR +12000, self [↑ M-STR & M-DEF 15], targets [↓ M-STR & M-DEF 15], SP ATK B +320%. Triggers before slot 1 is activated when defending in PVP.",
+            Multi: 240.00,
+            Timing: 1,
+            Target: "All",
+            SelfBuffs:  {
+                BuffMA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Magic",
+                    Amount: 12000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320
+            },
+            EnemyBuffs: {
+                DebuffMA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffMD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 1
+        }
+    },
+    2041:  {
+        ID: 2041,
+        AlbumNum: 1227,
+        Reference: [866, 867, 868, 2041],
+        MedalImage: "1227_7Star_Halloween_Goofy_B.png",
+        RenderImage: "624_6Star_Halloween_Goofy_B_Render.png",
+        Name: "SN++ - Halloween Goofy B",
+        Rarity: 7,
+        Direction: "Upright",
+        Attribute: "Power",
+        Guilt: 10,
+        STR: 44514,
+        DEF: 16724,
+        Multi: 19.00,
+        Gauge: 2,
+        Target: "Random",
+        Ability:    {
+            Name: "Charging Rush +7",
+            Text: "Deals 8 hits. 1 turn: P-Medal STR +10000, self [↑ STR, U- & P-STR, DEF & S-DEF 15], SP ATK B +220%. Count ±0.",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffPA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Power",
+                    Amount: 10000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 220
+            },
+            EnemyBuffs: {
+                Counter:  {
+                    CountDirection: "Null"
+                }
+            },
+            Hits: 8
+        },
+        Supernova:  {
+            Name: "[Mastery] Upright Strike All P",
+            Text: "1 turn: P-Medal STR +12000, SP ATK B +320%. Count +5. Triggers before slot 2 is activated when defending in PVP.",
+            Multi: 250.00,
+            Timing: 2,
+            Target: "All",
+            SelfBuffs:  {
+                STRPlus:  {
+                    Type: "Power",
+                    Amount: 12000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320
+            },
+            EnemyBuffs: {
+                Counter:  {
+                    CountDirection: "Up",
+                    Count: 5
+                }
+            },
+            Hits: 1
+        }
+    },
+    2042:  {
+        ID: 2042,
+        AlbumNum: 1896,
+        Reference: [2042],
+        MedalImage: "1896_7Star_SN++_-_KH_III_Pirate_Donald.png",
+        RenderImage: "1896_7Star_SN++_-_KH_III_Pirate_Donald_Render.png",
+        Name: "SN++ - KH III Pirate Donald",
+        Rarity: 7,
+        Direction: "Upright",
+        Attribute: "Magic",
+        Guilt: 10,
+        STR: 43666,
+        DEF: 16351,
+        Multi: 20.20,
+        Gauge: 0,
+        Target: "All",
+        Ability:    {
+            Name: "Arctic Raid +6",
+            Text: "[Mastery] Deals 8 hits. 1 turn: M-Medal STR +10000, self [↑ U- & M-STR 15], targets [↓ U- & M-DEF 15], SP ATK B +220%.",
+            SelfBuffs:  {
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Magic",
+                    Amount: 10000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 220
+            },
+            EnemyBuffs: {
+                DebuffUD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffMD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 8
+        },
+        Supernova:  {
+            Name: "[Mastery] Upright Strike All M",
+            Text: "1 turn: M-Medal STR +12000, self [↑ STR & M-STR 15], targets [↓ DEF & M-DEF 15], SP ATK B +320%. Count +2. Triggers before slot 1 is activated when defending in PVP.",
+            Multi: 220.00,
+            Timing: 1,
+            Target: "All",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Magic",
+                    Amount: 12000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffMD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Counter:  {
+                    CountDirection: "Up",
+                    Count: 2
+                }
             },
             Hits: 1
         }
