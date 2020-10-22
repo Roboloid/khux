@@ -870,6 +870,12 @@ function checkConditions(MedalID)   {
         }
     }
 
+    if(document.getElementById("abilityFilters_SelfBuffs_MasteryIMG").src.indexOf("On.png") != -1)   {
+        if(medalDatabase[MedalID].Ability == undefined || medalDatabase[MedalID].Ability.SelfBuffs == undefined || medalDatabase[MedalID].Ability.SelfBuffs.Mastery == undefined) {
+            return 0;
+        }
+    }
+
     if(document.getElementById("abilityFilters_SelfBuffs_AttributeSuperIMG").src.indexOf("On.png") != -1)   {
         if(medalDatabase[MedalID].Ability == undefined || medalDatabase[MedalID].Ability.SelfBuffs == undefined || medalDatabase[MedalID].Ability.SelfBuffs.AttributeAlways != "Super") {
             return 0;
@@ -78248,7 +78254,8 @@ var medalDatabase = {
                     DurationType: "Turn",
                     DurationCount: 1
                 },
-                GuiltBuff: 220
+                GuiltBuff: 220,
+                Mastery: "Yes"
             },
             EnemyBuffs: {
                 DebuffGD: {
@@ -79214,7 +79221,8 @@ var medalDatabase = {
                     DurationType: "Turn",
                     DurationCount: 1
                 },
-                GuiltBuff: 220
+                GuiltBuff: 220,
+                Mastery: "Yes"
             },
             EnemyBuffs: {
                 DebuffGD: {
@@ -81086,7 +81094,8 @@ var medalDatabase = {
                     DurationType: "Turn",
                     DurationCount: 1
                 },
-                GuiltBuff: 220
+                GuiltBuff: 220,
+                Mastery: "Yes"
             },
             EnemyBuffs: {
                 DebuffGD: {
@@ -81449,7 +81458,8 @@ var medalDatabase = {
                     DurationCount: 1
                 },
                 GuiltBuff: 220,
-                GaugeRecovery: 5
+                GaugeRecovery: 5,
+                Mastery: "Yes"
             },
             EnemyBuffs: {
                 DebuffGD: {
@@ -82036,7 +82046,7 @@ var medalDatabase = {
         },
         Supernova:  {
             Name: "[Mastery] Upright Strike All S",
-            Text: "[Mastery] 1 attack: S-Medal STR +20000. 1 turn: SP ATK B +320%. Triggers before slot 5 is activated when defending in PVP.",
+            Text: "1 attack: S-Medal STR +20000. 1 turn: SP ATK B +320%. Triggers before slot 5 is activated when defending in PVP.",
             Multi: 240.00,
             Timing: 5,
             Target: "All",
@@ -82272,7 +82282,8 @@ var medalDatabase = {
                     DurationType: "Turn",
                     DurationCount: 1
                 },
-                GuiltBuff: 220
+                GuiltBuff: 220,
+                Mastery: "Yes"
             },
             EnemyBuffs: {
                 DebuffUD: {
