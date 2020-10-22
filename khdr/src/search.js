@@ -3232,4 +3232,26 @@ var cardDatabase = {
             Effect: "Magic +2 for 10s. Stacking Cards does not increase value. Can be applied more than once."
         }
     },
+    64:  {
+        ID: 64,
+        AlbumNum: 64,
+        CardImage: "64_Halloween_Sora.png",
+        RenderImage: "64_Halloween_Sora_Render.png",
+        Name: "Halloween Sora",
+        DirectionType: "Light",
+        ColorType: "Red",
+        AttackType: "Sword",
+        MainAbility:    {
+            Name: "Pumpkin Pummel",
+            AttackType: "Sword",
+            Element: "Neutral",
+            BasePower: 38,
+            MaxPower: 78,
+            Effect: "Consumes 10% of the bonus gauge to unleash a powerful non-element physical attack. Power +5."
+        },
+        SubAbility:    {
+            Name: "Attack Boost+",
+            Effect: "Strength +2 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+        }
+    },
 };
