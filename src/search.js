@@ -81720,9 +81720,9 @@ var medalDatabase = {
     },
     2037:  {
         ID: 2037,
-        AlbumNum: 793,
+        AlbumNum: 1389,
         Reference: [1162, 1163, 2037],
-        MedalImage: "793_6Star_Sora_&_Donald_&_Goofy_C.png",
+        MedalImage: "1389_7Star_Sora_&_Donald_&_Goofy_C.png",
         RenderImage: "793_6Star_Sora_&_Donald_&_Goofy_C_Render.png",
         Name: "SN++ - Halloween Sora & Pals",
         Rarity: 7,
