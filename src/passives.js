@@ -2221,7 +2221,27 @@ var kb5_pass = {      // Keyblade5: Olympia
     "Lv. 48.5":   {"upPower":       50},
     "Lv. 49":     {"upSpeed":       50},
     "Lv. 49.5":   {"revPower":      50},
-    "Lv. 50":     {"genSpeed":      200}
+    "Lv. 50":     {"genSpeed":      200},
+    "Lv. 50.5":   {"upPower":       50},
+    "Lv. 51":     {"upSpeed":       50},
+    "Lv. 51.5":   {"revPower":      50},
+    "Lv. 52":     {"revSpeed":      50},
+    "Lv. 52.5":   {"upPower":       50},
+    "Lv. 53":     {"upSpeed":       50},
+    "Lv. 53.5":   {"revPower":      50},
+    "Lv. 54":     {"revSpeed":      50},
+    "Lv. 54.5":   {"upPower":       50},
+    "Lv. 55":     {"upSpeed":       50},
+    "Lv. 55.5":   {"revPower":      50},
+    "Lv. 56":     {"revSpeed":      50},
+    "Lv. 56.5":   {"upPower":       50},
+    "Lv. 57":     {"upSpeed":       50},
+    "Lv. 57.5":   {"revPower":      50},
+    "Lv. 58":     {"revSpeed":      50},
+    "Lv. 58.5":   {"upPower":       50},
+    "Lv. 59":     {"upSpeed":       50},
+    "Lv. 59.5":   {"revPower":      50},
+    "Lv. 60":     {"genPower":      200}
 };      // Keyblade5: Olympia
 
 var kb6_pass = {      // Keyblade6: Divine Rose
@@ -2255,7 +2275,27 @@ var kb6_pass = {      // Keyblade6: Divine Rose
     "Lv. 48.5":   {"upMagic":       50},
     "Lv. 49":     {"revMagic":      50},
     "Lv. 49.5":   {"revSpeed":      50},
-    "Lv. 50":     {"genSpeed":      200}
+    "Lv. 50":     {"genSpeed":      200},
+    "Lv. 50.5":   {"upMagic":       50},
+    "Lv. 51":     {"upMagic":       50},
+    "Lv. 51.5":   {"revSpeed":      50},
+    "Lv. 52":     {"upMagic":       50},
+    "Lv. 52.5":   {"revMagic":      50},
+    "Lv. 53":     {"revSpeed":      50},
+    "Lv. 53.5":   {"upMagic":       50},
+    "Lv. 54":     {"upMagic":       50},
+    "Lv. 54.5":   {"revSpeed":      50},
+    "Lv. 55":     {"upMagic":       50},
+    "Lv. 55.5":   {"revMagic":      50},
+    "Lv. 56":     {"revSpeed":      50},
+    "Lv. 56.5":   {"upMagic":       50},
+    "Lv. 57":     {"upMagic":       50},
+    "Lv. 57.5":   {"revSpeed":      50},
+    "Lv. 58":     {"upMagic":       50},
+    "Lv. 58.5":   {"revMagic":      50},
+    "Lv. 59":     {"revSpeed":      50},
+    "Lv. 59.5":   {"upMagic":       50},
+    "Lv. 60":     {"genSpeed":      200}
 };      // Keyblade6: Divine Rose
 
 var kb7_pass = {      // Keyblade7: Moogle O' Glory
@@ -2289,7 +2329,27 @@ var kb7_pass = {      // Keyblade7: Moogle O' Glory
     "Lv. 48.5":   {"upPower":       50},
     "Lv. 49":     {"revMagic":      50},
     "Lv. 49.5":   {"revPower":      50},
-    "Lv. 50":     {"genPower":      200}
+    "Lv. 50":     {"genPower":      200},
+    "Lv. 50.5":   {"revMagic":      50},
+    "Lv. 51":     {"revPower":      50},
+    "Lv. 51.5":   {"upMagic":       50},
+    "Lv. 52":     {"upPower":       50},
+    "Lv. 52.5":   {"revMagic":      50},
+    "Lv. 53":     {"revPower":      50},
+    "Lv. 53.5":   {"upMagic":       50},
+    "Lv. 54":     {"upPower":       50},
+    "Lv. 54.5":   {"revMagic":      50},
+    "Lv. 55":     {"revPower":      50},
+    "Lv. 55.5":   {"upMagic":       50},
+    "Lv. 56":     {"upPower":       50},
+    "Lv. 56.5":   {"revMagic":      50},
+    "Lv. 57":     {"revPower":      50},
+    "Lv. 57.5":   {"upMagic":       50},
+    "Lv. 58":     {"upPower":       50},
+    "Lv. 58.5":   {"revMagic":      50},
+    "Lv. 59":     {"revPower":      50},
+    "Lv. 59.5":   {"upMagic":       50},
+    "Lv. 60":     {"genMagic":      200}
 };      // Keyblade7: Moogle O' Glory
 
 var kb8_pass = {      // Keyblade8: Sleeping Lion
