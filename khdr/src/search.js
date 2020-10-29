@@ -3254,4 +3254,48 @@ var cardDatabase = {
             Effect: "Strength +2 for 10s. Stacking Cards does not increase value. Can be applied more than once."
         }
     },
+    65:  {
+        ID: 65,
+        AlbumNum: 65,
+        CardImage: "65_Xemnas.png",
+        RenderImage: "65_Xemnas_Render.png",
+        Name: "Xemnas",
+        DirectionType: "Dark",
+        ColorType: "Red",
+        AttackType: "Sword",
+        MainAbility:    {
+            Name: "Rosea Arcanum",
+            AttackType: "Sword",
+            Element: "Neutral",
+            BasePower: 38,
+            MaxPower: 78,
+            Effect: "Consumes 10% HP to unleash a powerful non-element physical attack. Power +5."
+        },
+        SubAbility:    {
+            Name: "Attack Boost+",
+            Effect: "Strength +2 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+        }
+    },
+    66:  {
+        ID: 66,
+        AlbumNum: 66,
+        CardImage: "66_Saix.png",
+        RenderImage: "66_Saix_Render.png",
+        Name: "Saïx",
+        DirectionType: "Dark",
+        ColorType: "Red",
+        AttackType: "Sword",
+        MainAbility:    {
+            Name: "Dark Break",
+            AttackType: "Sword",
+            Element: "Neutral",
+            BasePower: 45,
+            MaxPower: 85,
+            Effect: "Exchanges Defense for a powerful non-element attack."
+        },
+        SubAbility:    {
+            Name: "Attack Boost+",
+            Effect: "Strength +2 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+        }
+    },
 };
