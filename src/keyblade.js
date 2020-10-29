@@ -14482,6 +14482,1574 @@ var kb2_slots =  {      // Keyblade2: Treasure Trove
             directionMulti: 3.40
         }
     },
+    45.1:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.52,
+            directionMulti: 2.00
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.60,
+            directionMulti: 2.20
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.00,
+            directionMulti: 2.72
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.00,
+            directionMulti: 3.30
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.40,
+            directionMulti: 3.40
+        }
+    },
+    45.2:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.54,
+            directionMulti: 2.00
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.60,
+            directionMulti: 2.20
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.00,
+            directionMulti: 2.74
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.00,
+            directionMulti: 3.30
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.40,
+            directionMulti: 3.40
+        }
+    },
+    45.3:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.56,
+            directionMulti: 2.00
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.60,
+            directionMulti: 2.20
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.00,
+            directionMulti: 2.76
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.00,
+            directionMulti: 3.30
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.40,
+            directionMulti: 3.40
+        }
+    },
+    45.4:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.58,
+            directionMulti: 2.00
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.60,
+            directionMulti: 2.20
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.00,
+            directionMulti: 2.78
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.00,
+            directionMulti: 3.30
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.40,
+            directionMulti: 3.40
+        }
+    },
+    45.5:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.60,
+            directionMulti: 2.00
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.60,
+            directionMulti: 2.20
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.00,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.00,
+            directionMulti: 3.30
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.40,
+            directionMulti: 3.40
+        }
+    },
+    45.6:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.62,
+            directionMulti: 2.00
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.60,
+            directionMulti: 2.22
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.00,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.00,
+            directionMulti: 3.30
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.40,
+            directionMulti: 3.40
+        }
+    },
+    45.7:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.64,
+            directionMulti: 2.00
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.60,
+            directionMulti: 2.24
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.00,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.00,
+            directionMulti: 3.30
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.40,
+            directionMulti: 3.40
+        }
+    },
+    45.8:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.66,
+            directionMulti: 2.00
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.60,
+            directionMulti: 2.26
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.00,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.00,
+            directionMulti: 3.30
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.40,
+            directionMulti: 3.40
+        }
+    },
+    45.9:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.68,
+            directionMulti: 2.00
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.60,
+            directionMulti: 2.28
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.00,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.00,
+            directionMulti: 3.30
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.40,
+            directionMulti: 3.40
+        }
+    },
+    46:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.70,
+            directionMulti: 2.00
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.60,
+            directionMulti: 2.30
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.00,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.00,
+            directionMulti: 3.30
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.40,
+            directionMulti: 3.40
+        }
+    },
+    46.1:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.70,
+            directionMulti: 2.02
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.62,
+            directionMulti: 2.30
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.00,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.00,
+            directionMulti: 3.30
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.40,
+            directionMulti: 3.40
+        }
+    },
+    46.2:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.70,
+            directionMulti: 2.04
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.64,
+            directionMulti: 2.30
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.00,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.00,
+            directionMulti: 3.30
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.40,
+            directionMulti: 3.40
+        }
+    },
+    46.3:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.70,
+            directionMulti: 2.06
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.66,
+            directionMulti: 2.30
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.00,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.00,
+            directionMulti: 3.30
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.40,
+            directionMulti: 3.40
+        }
+    },
+    46.4:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.70,
+            directionMulti: 2.08
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.68,
+            directionMulti: 2.30
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.00,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.00,
+            directionMulti: 3.30
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.40,
+            directionMulti: 3.40
+        }
+    },
+    46.5:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.70,
+            directionMulti: 2.10
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.70,
+            directionMulti: 2.30
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.00,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.00,
+            directionMulti: 3.30
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.40,
+            directionMulti: 3.40
+        }
+    },
+    46.6:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.70,
+            directionMulti: 2.10
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.70,
+            directionMulti: 2.30
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.02,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.00,
+            directionMulti: 3.32
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.40,
+            directionMulti: 3.40
+        }
+    },
+    46.7:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.70,
+            directionMulti: 2.10
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.70,
+            directionMulti: 2.30
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.04,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.00,
+            directionMulti: 3.34
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.40,
+            directionMulti: 3.40
+        }
+    },
+    46.8:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.70,
+            directionMulti: 2.10
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.70,
+            directionMulti: 2.30
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.06,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.00,
+            directionMulti: 3.36
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.40,
+            directionMulti: 3.40
+        }
+    },
+    46.9:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.70,
+            directionMulti: 2.10
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.70,
+            directionMulti: 2.30
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.08,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.00,
+            directionMulti: 3.38
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.40,
+            directionMulti: 3.40
+        }
+    },
+    47:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.70,
+            directionMulti: 2.10
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.70,
+            directionMulti: 2.30
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.00,
+            directionMulti: 3.40
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.40,
+            directionMulti: 3.40
+        }
+    },
+    47.1:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.70,
+            directionMulti: 2.10
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.70,
+            directionMulti: 2.32
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.02,
+            directionMulti: 3.40
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.40,
+            directionMulti: 3.40
+        }
+    },
+    47.2:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.70,
+            directionMulti: 2.10
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.70,
+            directionMulti: 2.34
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.04,
+            directionMulti: 3.40
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.40,
+            directionMulti: 3.40
+        }
+    },
+    47.3:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.70,
+            directionMulti: 2.10
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.70,
+            directionMulti: 2.36
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.06,
+            directionMulti: 3.40
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.40,
+            directionMulti: 3.40
+        }
+    },
+    47.4:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.70,
+            directionMulti: 2.10
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.70,
+            directionMulti: 2.38
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.08,
+            directionMulti: 3.40
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.40,
+            directionMulti: 3.40
+        }
+    },
+    47.5:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.70,
+            directionMulti: 2.10
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.70,
+            directionMulti: 2.40
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.10,
+            directionMulti: 3.40
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.40,
+            directionMulti: 3.40
+        }
+    },
+    47.6:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.70,
+            directionMulti: 2.12
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.70,
+            directionMulti: 2.40
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.12,
+            directionMulti: 3.40
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.40,
+            directionMulti: 3.40
+        }
+    },
+    47.7:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.70,
+            directionMulti: 2.14
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.70,
+            directionMulti: 2.40
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.14,
+            directionMulti: 3.40
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.40,
+            directionMulti: 3.40
+        }
+    },
+    47.8:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.70,
+            directionMulti: 2.16
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.70,
+            directionMulti: 2.40
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.16,
+            directionMulti: 3.40
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.40,
+            directionMulti: 3.40
+        }
+    },
+    47.9:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.70,
+            directionMulti: 2.18
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.70,
+            directionMulti: 2.40
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.18,
+            directionMulti: 3.40
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.40,
+            directionMulti: 3.40
+        }
+    },
+    48:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.70,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.70,
+            directionMulti: 2.40
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.20,
+            directionMulti: 3.40
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.40,
+            directionMulti: 3.40
+        }
+    },
+    48.1:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.70,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.70,
+            directionMulti: 2.40
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.20,
+            directionMulti: 3.40
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.42,
+            directionMulti: 3.42
+        }
+    },
+    48.2:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.70,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.70,
+            directionMulti: 2.40
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.20,
+            directionMulti: 3.40
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.44,
+            directionMulti: 3.44
+        }
+    },
+    48.3:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.70,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.70,
+            directionMulti: 2.40
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.20,
+            directionMulti: 3.40
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.46,
+            directionMulti: 3.46
+        }
+    },
+    48.4:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.70,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.70,
+            directionMulti: 2.40
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.20,
+            directionMulti: 3.40
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.48,
+            directionMulti: 3.48
+        }
+    },
+    48.5:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.70,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.70,
+            directionMulti: 2.40
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.20,
+            directionMulti: 3.40
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.50,
+            directionMulti: 3.50
+        }
+    },
+    48.6:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.70,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.72,
+            directionMulti: 2.42
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.20,
+            directionMulti: 3.40
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.50,
+            directionMulti: 3.50
+        }
+    },
+    48.7:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.70,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.74,
+            directionMulti: 2.44
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.20,
+            directionMulti: 3.40
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.50,
+            directionMulti: 3.50
+        }
+    },
+    48.8:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.70,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.76,
+            directionMulti: 2.46
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.20,
+            directionMulti: 3.40
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.50,
+            directionMulti: 3.50
+        }
+    },
+    48.9:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.70,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.78,
+            directionMulti: 2.48
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.20,
+            directionMulti: 3.40
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.50,
+            directionMulti: 3.50
+        }
+    },
+    49:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.70,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.80,
+            directionMulti: 2.50
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.20,
+            directionMulti: 3.40
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.50,
+            directionMulti: 3.50
+        }
+    },
+    49.1:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.72,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.80,
+            directionMulti: 2.50
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.20,
+            directionMulti: 3.42
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.50,
+            directionMulti: 3.50
+        }
+    },
+    49.2:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.74,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.80,
+            directionMulti: 2.50
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.20,
+            directionMulti: 3.44
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.50,
+            directionMulti: 3.50
+        }
+    },
+    49.3:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.76,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.80,
+            directionMulti: 2.50
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.20,
+            directionMulti: 3.46
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.50,
+            directionMulti: 3.50
+        }
+    },
+    49.4:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.78,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.80,
+            directionMulti: 2.50
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.20,
+            directionMulti: 3.48
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.50,
+            directionMulti: 3.50
+        }
+    },
+    49.5:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.80,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.80,
+            directionMulti: 2.50
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.20,
+            directionMulti: 3.50
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.50,
+            directionMulti: 3.50
+        }
+    },
+    49.6:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.80,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.80,
+            directionMulti: 2.50
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.20,
+            directionMulti: 3.50
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.52,
+            directionMulti: 3.52
+        }
+    },
+    49.7:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.80,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.80,
+            directionMulti: 2.50
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.20,
+            directionMulti: 3.50
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.54,
+            directionMulti: 3.54
+        }
+    },
+    49.8:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.80,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.80,
+            directionMulti: 2.50
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.20,
+            directionMulti: 3.50
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.56,
+            directionMulti: 3.56
+        }
+    },
+    49.9:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.80,
+            directionMulti: 2.20
+        },
+        slot2:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.80,
+            directionMulti: 2.50
+        },
+        slot3:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.10,
+            directionMulti: 2.80
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 2.20,
+            directionMulti: 3.50
+        },
+        slot5:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 3.58,
+            directionMulti: 3.58
+        }
+    },
     50:  {
         slot1:  {
             element: "Power",
@@ -28593,7 +30161,7 @@ var kb7_slots =  {      // Keyblade7: Moogle O' Glory
             element: "Magic",
             direction: "Reversed",
             elementMulti: 1.80,
-            directionMulti: 2.20
+            directionMulti: 2.30
         },
         slot5:  {
             element: "Power",
@@ -72866,6 +74434,454 @@ var kb14_slots =  {      // Keyblade14: Fairy Stars
             direction: "Upright",
             elementMulti: 1.10,
             directionMulti: 3.80
+        }
+    },
+    48.6:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 2.42
+        },
+        slot2:  {
+            element: "Magic",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.00
+        },
+        slot3:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot5:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.80
+        }
+    },
+    48.7:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 2.44
+        },
+        slot2:  {
+            element: "Magic",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.00
+        },
+        slot3:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot5:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.80
+        }
+    },
+    48.8:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 2.46
+        },
+        slot2:  {
+            element: "Magic",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.00
+        },
+        slot3:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot5:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.80
+        }
+    },
+    48.9:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 2.48
+        },
+        slot2:  {
+            element: "Magic",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.00
+        },
+        slot3:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot5:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.80
+        }
+    },
+    49:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 2.50
+        },
+        slot2:  {
+            element: "Magic",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.00
+        },
+        slot3:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot5:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.80
+        }
+    },
+    49.1:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 2.50
+        },
+        slot2:  {
+            element: "Magic",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.00
+        },
+        slot3:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot5:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.82
+        }
+    },
+    49.2:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 2.50
+        },
+        slot2:  {
+            element: "Magic",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.00
+        },
+        slot3:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot5:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.84
+        }
+    },
+    49.3:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 2.50
+        },
+        slot2:  {
+            element: "Magic",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.00
+        },
+        slot3:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot5:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.86
+        }
+    },
+    49.4:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 2.50
+        },
+        slot2:  {
+            element: "Magic",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.00
+        },
+        slot3:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot5:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.88
+        }
+    },
+    49.5:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 2.50
+        },
+        slot2:  {
+            element: "Magic",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.00
+        },
+        slot3:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot5:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.90
+        }
+    },
+    49.6:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 2.50
+        },
+        slot2:  {
+            element: "Magic",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.00
+        },
+        slot3:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot5:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.92
+        }
+    },
+    49.7:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 2.50
+        },
+        slot2:  {
+            element: "Magic",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.00
+        },
+        slot3:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot5:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.94
+        }
+    },
+    49.8:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 2.50
+        },
+        slot2:  {
+            element: "Magic",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.00
+        },
+        slot3:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot5:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.96
+        }
+    },
+    49.9:  {
+        slot1:  {
+            element: "Power",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 2.50
+        },
+        slot2:  {
+            element: "Magic",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.00
+        },
+        slot3:  {
+            element: "Magic",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot4:  {
+            element: "Power",
+            direction: "Reversed",
+            elementMulti: 1.10,
+            directionMulti: 3.50
+        },
+        slot5:  {
+            element: "Speed",
+            direction: "Upright",
+            elementMulti: 1.10,
+            directionMulti: 3.98
         }
     },
     50:  {
