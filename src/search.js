@@ -82457,7 +82457,7 @@ var medalDatabase = {
         MedalImage: "1222_7Star_Key_Art_%233.png",
         RenderImage: "620_6Star_Key_Art_%233_Render.png",
         KeyArtImage: "Art_620_Key_Art_%233.png",
-        Name: "Key Art #3",
+        Name: "SN++ - Key Art #3",
         Rarity: 7,
         Direction: "Reversed",
         Attribute: "Speed",
