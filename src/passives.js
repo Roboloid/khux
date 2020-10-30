@@ -2085,7 +2085,26 @@ var kb1_pass = {      // Keyblade1: Starlight
     "Lv. 49":     {"revMagic":      50},
     "Lv. 49.5":   {"revMagic":      50},
     "Lv. 50":     {"genSpeed":      200},
-    "Lv. 50.5":   {"upSpeed":       50}
+    "Lv. 50.5":   {"upSpeed":       50},
+    "Lv. 51":     {"upSpeed":       50},
+    "Lv. 51.5":   {"upMagic":       50},
+    "Lv. 52":     {"revPower":      50},
+    "Lv. 52.5":   {"upPower":       50},
+    "Lv. 53":     {"revMagic":      50},
+    "Lv. 53.5":   {"upSpeed":       50},
+    "Lv. 54":     {"upSpeed":       50},
+    "Lv. 54.5":   {"upMagic":       50},
+    "Lv. 55":     {"revPower":      50},
+    "Lv. 55.5":   {"revSpeed":      50},
+    "Lv. 56":     {"revMagic":      50},
+    "Lv. 56.5":   {"upSpeed":       50},
+    "Lv. 57":     {"upSpeed":       50},
+    "Lv. 57.5":   {"upMagic":       50},
+    "Lv. 58":     {"revPower":      50},
+    "Lv. 58.5":   {"revSpeed":      50},
+    "Lv. 59":     {"revMagic":      50},
+    "Lv. 59.5":   {"revMagic":      50},
+    "Lv. 60":     {"genMagic":      200}
 };      // Keyblade1: Starlight
 
 var kb2_pass = {      // Keyblade2: Treasure Trove
@@ -2461,7 +2480,27 @@ var kb10_pass = {      // Keyblade10: Stroke of Midnight
     "Lv. 48.5":   {"revPower":      50},
     "Lv. 49":     {"upPower":       50},
     "Lv. 49.5":   {"upMagic":       50},
-    "Lv. 50":     {"genPower":      200}
+    "Lv. 50":     {"genPower":      200},
+    "Lv. 50.5":   {"upPower":       50},
+    "Lv. 51":     {"upMagic":       50},
+    "Lv. 51.5":   {"revSpeed":      50},
+    "Lv. 52":     {"revPower":      50},
+    "Lv. 52.5":   {"upPower":       50},
+    "Lv. 53":     {"upMagic":       50},
+    "Lv. 53.5":   {"revSpeed":      50},
+    "Lv. 54":     {"revPower":      50},
+    "Lv. 54.5":   {"upPower":       50},
+    "Lv. 55":     {"upMagic":       50},
+    "Lv. 55.5":   {"revSpeed":      50},
+    "Lv. 56":     {"revPower":      50},
+    "Lv. 56.5":   {"upPower":       50},
+    "Lv. 57":     {"upMagic":       50},
+    "Lv. 57.5":   {"revSpeed":      50},
+    "Lv. 58":     {"revPower":      50},
+    "Lv. 58.5":   {"upPower":       50},
+    "Lv. 59":     {"upMagic":       50},
+    "Lv. 59.5":   {"revSpeed":      50},
+    "Lv. 60":     {"genMagic":      200}
 };      // Keyblade10: Stroke of Midnight
 
 var kb11_pass = {      // Keyblade11: Fenrir
@@ -2610,7 +2649,27 @@ var kb14_pass = {      // Keyblade14: Fairy Stars
     "Lv. 48.5":   {"revMagic":      50},
     "Lv. 49":     {"revMagic":      50},
     "Lv. 49.5":   {"upSpeed":       50},
-    "Lv. 50":     {"genMagic":      200}
+    "Lv. 50":     {"genMagic":      200},
+    "Lv. 50.5":   {"revMagic":      50},
+    "Lv. 51":     {"upSpeed":       50},
+    "Lv. 51.5":   {"revMagic":      50},
+    "Lv. 52":     {"upSpeed":       50},
+    "Lv. 52.5":   {"revPower":      50},
+    "Lv. 53":     {"upPower":       50},
+    "Lv. 53.5":   {"revMagic":      50},
+    "Lv. 54":     {"revMagic":      50},
+    "Lv. 54.5":   {"upSpeed":       50},
+    "Lv. 55":     {"revMagic":      50},
+    "Lv. 55.5":   {"upSpeed":       50},
+    "Lv. 56":     {"revPower":      50},
+    "Lv. 56.5":   {"upPower":       50},
+    "Lv. 57":     {"revMagic":      50},
+    "Lv. 57.5":   {"revMagic":      50},
+    "Lv. 58":     {"upSpeed":       50},
+    "Lv. 58.5":   {"revMagic":      50},
+    "Lv. 59":     {"upSpeed":       50},
+    "Lv. 59.5":   {"revPower":      50},
+    "Lv. 60":     {"genSpeed":      200}
 };      // Keyblade14: Fairy Stars
 
 var kb15_pass = {      // Keyblade15: Diamond Dust
