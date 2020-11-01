@@ -2138,7 +2138,27 @@ var kb2_pass = {      // Keyblade2: Treasure Trove
     "Lv. 48.5":   {"revPower":      50},
     "Lv. 49":     {"upPower":       50},
     "Lv. 49.5":   {"revPower":      50},
-    "Lv. 50":     {"genPower":      200}
+    "Lv. 50":     {"genPower":      200},
+    "Lv. 50.5":   {"upPower":       50},
+    "Lv. 51":     {"revPower":      50},
+    "Lv. 51.5":   {"upPower":       50},
+    "Lv. 52":     {"revPower":      50},
+    "Lv. 52.5":   {"upPower":       50},
+    "Lv. 53":     {"revPower":      50},
+    "Lv. 53.5":   {"upPower":       50},
+    "Lv. 54":     {"revPower":      50},
+    "Lv. 54.5":   {"upPower":       50},
+    "Lv. 55":     {"revPower":      50},
+    "Lv. 55.5":   {"upPower":       50},
+    "Lv. 56":     {"revPower":      50},
+    "Lv. 56.5":   {"upPower":       50},
+    "Lv. 57":     {"revPower":      50},
+    "Lv. 57.5":   {"upPower":       50},
+    "Lv. 58":     {"revPower":      50},
+    "Lv. 58.5":   {"upPower":       50},
+    "Lv. 59":     {"revPower":      50},
+    "Lv. 59.5":   {"upPower":       50},
+    "Lv. 60":     {"genPower":      200}
 };      // Keyblade2: Treasure Trove
 
 var kb3_pass = {      // Keyblade3: Lady Luck
@@ -2172,7 +2192,27 @@ var kb3_pass = {      // Keyblade3: Lady Luck
     "Lv. 48.5":   {"revSpeed":      50},
     "Lv. 49":     {"upSpeed":       50},
     "Lv. 49.5":   {"revSpeed":      50},
-    "Lv. 50":     {"genSpeed":      200}
+    "Lv. 50":     {"genSpeed":      200},
+    "Lv. 50.5":   {"upSpeed":       50},
+    "Lv. 51":     {"revSpeed":      50},
+    "Lv. 51.5":   {"upSpeed":       50},
+    "Lv. 52":     {"revSpeed":      50},
+    "Lv. 52.5":   {"upSpeed":       50},
+    "Lv. 53":     {"revSpeed":      50},
+    "Lv. 53.5":   {"upSpeed":       50},
+    "Lv. 54":     {"revSpeed":      50},
+    "Lv. 54.5":   {"upSpeed":       50},
+    "Lv. 55":     {"revSpeed":      50},
+    "Lv. 55.5":   {"upSpeed":       50},
+    "Lv. 56":     {"revSpeed":      50},
+    "Lv. 56.5":   {"upSpeed":       50},
+    "Lv. 57":     {"revSpeed":      50},
+    "Lv. 57.5":   {"upSpeed":       50},
+    "Lv. 58":     {"revSpeed":      50},
+    "Lv. 58.5":   {"upSpeed":       50},
+    "Lv. 59":     {"revSpeed":      50},
+    "Lv. 59.5":   {"upSpeed":       50},
+    "Lv. 60":     {"genSpeed":      200}
 };      // Keyblade3: Lady Luck
 
 var kb4_pass = {      // Keyblade4: Three Wishes
@@ -2206,7 +2246,27 @@ var kb4_pass = {      // Keyblade4: Three Wishes
     "Lv. 48.5":   {"revMagic":      50},
     "Lv. 49":     {"upMagic":       50},
     "Lv. 49.5":   {"revMagic":      50},
-    "Lv. 50":     {"genMagic":      200}
+    "Lv. 50":     {"genMagic":      200},
+    "Lv. 50.5":   {"upMagic":       50},
+    "Lv. 51":     {"revMagic":      50},
+    "Lv. 51.5":   {"upMagic":       50},
+    "Lv. 52":     {"revMagic":      50},
+    "Lv. 52.5":   {"upMagic":       50},
+    "Lv. 53":     {"revMagic":      50},
+    "Lv. 53.5":   {"upMagic":       50},
+    "Lv. 54":     {"revMagic":      50},
+    "Lv. 54.5":   {"upMagic":       50},
+    "Lv. 55":     {"revMagic":      50},
+    "Lv. 55.5":   {"upMagic":       50},
+    "Lv. 56":     {"revMagic":      50},
+    "Lv. 56.5":   {"upMagic":       50},
+    "Lv. 57":     {"revMagic":      50},
+    "Lv. 57.5":   {"upMagic":       50},
+    "Lv. 58":     {"revMagic":      50},
+    "Lv. 58.5":   {"upMagic":       50},
+    "Lv. 59":     {"revMagic":      50},
+    "Lv. 59.5":   {"upMagic":       50},
+    "Lv. 60":     {"genMagic":      200}
 };      // Keyblade4: Three Wishes
 
 var kb5_pass = {      // Keyblade5: Olympia
