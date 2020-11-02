@@ -16042,7 +16042,7 @@ var medalDatabase = {
                     DurationType: "Turn",
                     DurationCount: 1
                 },
-                GuiltBuff: 380,
+                GuiltBuff: 230,
                 GaugeRecovery: 5,
                 HPRecovery: "Yes"
             },
