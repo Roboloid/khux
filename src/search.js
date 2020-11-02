@@ -72468,7 +72468,7 @@ var medalDatabase = {
         STR: 35016,
         DEF: 16440,
         LowMulti: 16.64,
-        HighMulti: 1820.14,
+        HighMulti: 18.14,
         Gauge: 1,
         Target: "All",
         Ability:    {
