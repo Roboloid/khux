@@ -2467,7 +2467,22 @@ var kb8_pass = {      // Keyblade8: Sleeping Lion
     "Lv. 51":     {"upSpeed":      	50},
     "Lv. 51.5":   {"upSpeed":      	50},
     "Lv. 52":     {"upSpeed":      	50},
-    "Lv. 52.5":   {"upSpeed":      	50}
+    "Lv. 52.5":   {"upSpeed":      	50},
+    "Lv. 53":     {"upSpeed":      	50},
+    "Lv. 53.5":   {"upSpeed":      	50},
+    "Lv. 54":     {"upSpeed":      	50},
+    "Lv. 54.5":   {"upSpeed":      	50},
+    "Lv. 55":     {"upSpeed":      	50},
+    "Lv. 55.5":   {"upSpeed":      	50},
+    "Lv. 56":     {"upSpeed":      	50},
+    "Lv. 56.5":   {"upSpeed":      	50},
+    "Lv. 57":     {"upSpeed":      	50},
+    "Lv. 57.5":   {"upSpeed":      	50},
+    "Lv. 58":     {"upSpeed":      	50},
+    "Lv. 58.5":   {"upSpeed":      	50},
+    "Lv. 59":     {"upSpeed":      	50},
+    "Lv. 59.5":   {"upSpeed":      	50},
+    "Lv. 60":     {"genUp":      	200}
 };      // Keyblade8: Sleeping Lion
 
 var kb9_pass = {      // Keyblade9: Counterpoint
@@ -2506,7 +2521,22 @@ var kb9_pass = {      // Keyblade9: Counterpoint
     "Lv. 51":     {"upMagic":      	50},
     "Lv. 51.5":   {"upMagic":      	50},
     "Lv. 52":     {"upMagic":      	50},
-    "Lv. 52.5":   {"upMagic":      	50}
+    "Lv. 52.5":   {"upMagic":      	50},
+    "Lv. 53":     {"upMagic":      	50},
+    "Lv. 53.5":   {"upMagic":      	50},
+    "Lv. 54":     {"upMagic":      	50},
+    "Lv. 54.5":   {"upMagic":      	50},
+    "Lv. 55":     {"upMagic":      	50},
+    "Lv. 55.5":   {"upMagic":      	50},
+    "Lv. 56":     {"upMagic":      	50},
+    "Lv. 56.5":   {"upMagic":      	50},
+    "Lv. 57":     {"upMagic":      	50},
+    "Lv. 57.5":   {"upMagic":      	50},
+    "Lv. 58":     {"upMagic":      	50},
+    "Lv. 58.5":   {"upMagic":      	50},
+    "Lv. 59":     {"upMagic":      	50},
+    "Lv. 59.5":   {"upMagic":      	50},
+    "Lv. 60":     {"genUp":      	200}
 };      // Keyblade9: Counterpoint
 
 var kb10_pass = {      // Keyblade10: Stroke of Midnight
@@ -2599,7 +2629,22 @@ var kb11_pass = {      // Keyblade11: Fenrir
     "Lv. 51":     {"upPower":      	50},
     "Lv. 51.5":   {"upPower":      	50},
     "Lv. 52":     {"upPower":      	50},
-    "Lv. 52.5":   {"upPower":      	50}
+    "Lv. 52.5":   {"upPower":      	50},
+    "Lv. 53":     {"upPower":      	50},
+    "Lv. 53.5":   {"upPower":      	50},
+    "Lv. 54":     {"upPower":      	50},
+    "Lv. 54.5":   {"upPower":      	50},
+    "Lv. 55":     {"upPower":      	50},
+    "Lv. 55.5":   {"upPower":      	50},
+    "Lv. 56":     {"upPower":      	50},
+    "Lv. 56.5":   {"upPower":      	50},
+    "Lv. 57":     {"upPower":      	50},
+    "Lv. 57.5":   {"upPower":      	50},
+    "Lv. 58":     {"upPower":      	50},
+    "Lv. 58.5":   {"upPower":      	50},
+    "Lv. 59":     {"upPower":      	50},
+    "Lv. 59.5":   {"upPower":      	50},
+    "Lv. 60":     {"genUp":      	200}
 };      // Keyblade11: Fenrir
 
 var kb12_pass = {      // Keyblade12: Darkgnaw
@@ -2638,7 +2683,22 @@ var kb12_pass = {      // Keyblade12: Darkgnaw
     "Lv. 51":     {"revPower":      50},
     "Lv. 51.5":   {"revPower":      50},
     "Lv. 52":     {"revPower":      50},
-    "Lv. 52.5":   {"revPower":      50}
+    "Lv. 52.5":   {"revPower":      50},
+    "Lv. 53":     {"revPower":      50},
+    "Lv. 53.5":   {"revPower":      50},
+    "Lv. 54":     {"revPower":      50},
+    "Lv. 54.5":   {"revPower":      50},
+    "Lv. 55":     {"revPower":      50},
+    "Lv. 55.5":   {"revPower":      50},
+    "Lv. 56":     {"revPower":      50},
+    "Lv. 56.5":   {"revPower":      50},
+    "Lv. 57":     {"revPower":      50},
+    "Lv. 57.5":   {"revPower":      50},
+    "Lv. 58":     {"revPower":      50},
+    "Lv. 58.5":   {"revPower":      50},
+    "Lv. 59":     {"revPower":      50},
+    "Lv. 59.5":   {"revPower":      50},
+    "Lv. 60":     {"genRev":      	200}
 };      // Keyblade12: Darkgnaw
 
 var kb13_pass = {      // Keyblade13: Missing Ache
@@ -2675,7 +2735,24 @@ var kb13_pass = {      // Keyblade13: Missing Ache
     "Lv. 50":     {"genRev":      	200},
     "Lv. 50.5":   {"revSpeed":      50},
     "Lv. 51":     {"revSpeed":      50},
-    "Lv. 51.5":   {"revSpeed":      50}
+    "Lv. 51.5":   {"revSpeed":      50},
+    "Lv. 52":     {"revSpeed":      50},
+    "Lv. 52.5":   {"revSpeed":      50},
+    "Lv. 53":     {"revSpeed":      50},
+    "Lv. 53.5":   {"revSpeed":      50},
+    "Lv. 54":     {"revSpeed":      50},
+    "Lv. 54.5":   {"revSpeed":      50},
+    "Lv. 55":     {"revSpeed":      50},
+    "Lv. 55.5":   {"revSpeed":      50},
+    "Lv. 56":     {"revSpeed":      50},
+    "Lv. 56.5":   {"revSpeed":      50},
+    "Lv. 57":     {"revSpeed":      50},
+    "Lv. 57.5":   {"revSpeed":      50},
+    "Lv. 58":     {"revSpeed":      50},
+    "Lv. 58.5":   {"revSpeed":      50},
+    "Lv. 59":     {"revSpeed":      50},
+    "Lv. 59.5":   {"revSpeed":      50},
+    "Lv. 60":     {"genRev":      	200}
 };      // Keyblade13: Missing Ache
 
 var kb14_pass = {      // Keyblade14: Fairy Stars
@@ -2766,7 +2843,24 @@ var kb15_pass = {      // Keyblade15: Diamond Dust
     "Lv. 50":     {"genRev":      	200},
     "Lv. 50.5":   {"revMagic":      50},
     "Lv. 51":     {"revMagic":      50},
-    "Lv. 51.5":   {"revMagic":      50}
+    "Lv. 51.5":   {"revMagic":      50},
+    "Lv. 52":     {"revMagic":      50},
+    "Lv. 52.5":   {"revMagic":      50},
+    "Lv. 53":     {"revMagic":      50},
+    "Lv. 53.5":   {"revMagic":      50},
+    "Lv. 54":     {"revMagic":      50},
+    "Lv. 54.5":   {"revMagic":      50},
+    "Lv. 55":     {"revMagic":      50},
+    "Lv. 55.5":   {"revMagic":      50},
+    "Lv. 56":     {"revMagic":      50},
+    "Lv. 56.5":   {"revMagic":      50},
+    "Lv. 57":     {"revMagic":      50},
+    "Lv. 57.5":   {"revMagic":      50},
+    "Lv. 58":     {"revMagic":      50},
+    "Lv. 58.5":   {"revMagic":      50},
+    "Lv. 59":     {"revMagic":      50},
+    "Lv. 59.5":   {"revMagic":      50},
+    "Lv. 60":     {"genRev":      	200}
 };      // Keyblade15: Diamond Dust
 
 var kb16_pass = {      // Keyblade16: Bad Guy Breaker
