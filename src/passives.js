@@ -2889,5 +2889,5 @@ var kb16_pass = {      // Keyblade16: Bad Guy Breaker
     "Lv. 57":     {"revSpeed":      50},
     "Lv. 58":     {"revSpeed":      50},
     "Lv. 59":     {"upSpeed":       50},
-    "Lv. 60":     {"genMagic":      100}
+    "Lv. 60":     {"genMagic":      200}
 };      // Keyblade16: Bad Guy Breaker
