@@ -11,6 +11,7 @@ function keybladeDropdown() {
 }
 
 var currentKeyblade = "";
+var addSubslots = 0;
 var cost1 = "";
 var cost2 = "";
 
@@ -25,6 +26,11 @@ function selectKeyblade(value)  {
     document.getElementById("keybladeMulti2").innerHTML = "";
     document.getElementById("slotMultiSection").style = "display: none";
     document.getElementById("displayNumErr").innerHTML = "";
+
+    var button = document.getElementById("subButton");
+    button.innerHTML = "Add Max Subslots";
+    addSubslots = 0;
+
     currentKeyblade = value;
     grabKeybladeImg(currentKeyblade);
     cost1 = "";
@@ -55,7 +61,6 @@ function inputValue(value)  {
     cost1 = parseFloat(value);
   }
   calculateCost();
-  // document.getElementById("displayValue_container").innerHTML = value;
 }
 
 function inputValue2(value)  {
@@ -66,7 +71,43 @@ function inputValue2(value)  {
     cost2 = parseFloat(value);
   }
   calculateCost();
-  // document.getElementById("displayValue_container2").innerHTML = value;
+}
+
+function toggleSubslots()  {
+  var button = document.getElementById("subButton");
+  if(button.innerHTML.includes("Add"))  {
+    button.innerHTML = "Subtract Max Subslots";
+    switch(currentKeyblade) {
+      case "kb1":
+      case "kb10":
+      case "kb14":
+      case "kb16":
+        addSubslots = 4.2;
+        break;
+      case "kb5":
+      case "kb6":
+      case "kb7":
+        addSubslots = 5.04;
+        break;
+      case "kb2":
+      case "kb3":
+      case "kb4":
+      case "kb8":
+      case "kb9":
+      case "kb11":
+      case "kb12":
+      case "kb13":
+      case "kb15":
+        addSubslots = 6.72;
+        break;
+    }
+  }
+  else  {
+    button.innerHTML = "Add Max Subslots";
+    addSubslots = 0;
+  }
+
+  calculateCost();
 }
 
 function sumCost(keyblade, base, target) {
@@ -345,7 +386,7 @@ function calculateCost() {
           
           var keybladeSlots1_Slot1ElementMultiText = document.createElement('span');
           keybladeSlots1_Slot1ElementMultiText.style = "font-family: UI Font; color: rgb(255, 255, 255); text-shadow: 1px 1px rgb(0, 0, 0); font-size: 17px; top: 15.60%; left: 46%; z-index: 104; position: absolute;";
-          keybladeSlots1_Slot1ElementMultiText.appendChild(document.createTextNode("x " + thisBladeSlot[cost1].slot1.elementMulti.toFixed(3)));
+          keybladeSlots1_Slot1ElementMultiText.appendChild(document.createTextNode("x" + (addSubslots + thisBladeSlot[cost1].slot1.elementMulti).toFixed(3)));
           slotsDivContainer1.appendChild(keybladeSlots1_Slot1ElementMultiText);
         }
 
@@ -363,7 +404,7 @@ function calculateCost() {
             
             var keybladeSlots1_Slot1ElementDirectionText = document.createElement('span');
             keybladeSlots1_Slot1ElementDirectionText.style = "font-family: UI Font; color: rgb(255, 255, 255); text-shadow: 1px 1px rgb(0, 0, 0); font-size: 17px; top: 19.80%; left: 46%; z-index: 106; position: absolute;";
-            keybladeSlots1_Slot1ElementDirectionText.appendChild(document.createTextNode("x " + thisBladeSlot[cost1].slot1.directionMulti.toFixed(3)));
+            keybladeSlots1_Slot1ElementDirectionText.appendChild(document.createTextNode("x" + (addSubslots + thisBladeSlot[cost1].slot1.directionMulti).toFixed(3)));
             slotsDivContainer1.appendChild(keybladeSlots1_Slot1ElementDirectionText);
           }
         }
@@ -389,7 +430,7 @@ function calculateCost() {
           
           var keybladeSlots1_Slot1ElementMultiText = document.createElement('span');
           keybladeSlots1_Slot1ElementMultiText.style = "font-family: UI Font; color: rgb(255, 255, 255); text-shadow: 1px 1px rgb(0, 0, 0); font-size: 17px; top: 33.60%; left: 77%; z-index: 204; position: absolute;";
-          keybladeSlots1_Slot1ElementMultiText.appendChild(document.createTextNode("x " + thisBladeSlot[cost1].slot2.elementMulti.toFixed(3)));
+          keybladeSlots1_Slot1ElementMultiText.appendChild(document.createTextNode("x" + (addSubslots + thisBladeSlot[cost1].slot2.elementMulti).toFixed(3)));
           slotsDivContainer1.appendChild(keybladeSlots1_Slot1ElementMultiText);
         }
 
@@ -407,7 +448,7 @@ function calculateCost() {
             
             var keybladeSlots1_Slot2ElementDirectionText = document.createElement('span');
             keybladeSlots1_Slot2ElementDirectionText.style = "font-family: UI Font; color: rgb(255, 255, 255); text-shadow: 1px 1px rgb(0, 0, 0); font-size: 17px; top: 38%; left: 77%; z-index: 206; position: absolute;";
-            keybladeSlots1_Slot2ElementDirectionText.appendChild(document.createTextNode("x " + thisBladeSlot[cost1].slot2.directionMulti.toFixed(3)));
+            keybladeSlots1_Slot2ElementDirectionText.appendChild(document.createTextNode("x" + (addSubslots + thisBladeSlot[cost1].slot2.directionMulti).toFixed(3)));
             slotsDivContainer1.appendChild(keybladeSlots1_Slot2ElementDirectionText);
           }
         }
@@ -433,7 +474,7 @@ function calculateCost() {
           
           var keybladeSlots1_Slot3ElementMultiText = document.createElement('span');
           keybladeSlots1_Slot3ElementMultiText.style = "font-family: UI Font; color: rgb(255, 255, 255); text-shadow: 1px 1px rgb(0, 0, 0); font-size: 17px; top: 62.60%; left: 65%; z-index: 304; position: absolute;";
-          keybladeSlots1_Slot3ElementMultiText.appendChild(document.createTextNode("x " + thisBladeSlot[cost1].slot3.elementMulti.toFixed(3)));
+          keybladeSlots1_Slot3ElementMultiText.appendChild(document.createTextNode("x" + (addSubslots + thisBladeSlot[cost1].slot3.elementMulti).toFixed(3)));
           slotsDivContainer1.appendChild(keybladeSlots1_Slot3ElementMultiText);
         }
 
@@ -451,7 +492,7 @@ function calculateCost() {
             
             var keybladeSlots1_Slot3ElementDirectionText = document.createElement('span');
             keybladeSlots1_Slot3ElementDirectionText.style = "font-family: UI Font; color: rgb(255, 255, 255); text-shadow: 1px 1px rgb(0, 0, 0); font-size: 17px; top: 67%; left: 65%; z-index: 306; position: absolute;";
-            keybladeSlots1_Slot3ElementDirectionText.appendChild(document.createTextNode("x " + thisBladeSlot[cost1].slot3.directionMulti.toFixed(3)));
+            keybladeSlots1_Slot3ElementDirectionText.appendChild(document.createTextNode("x" + (addSubslots + thisBladeSlot[cost1].slot3.directionMulti).toFixed(3)));
             slotsDivContainer1.appendChild(keybladeSlots1_Slot3ElementDirectionText);
           }
         }
@@ -477,7 +518,7 @@ function calculateCost() {
           
           var keybladeSlots1_Slot4ElementMultiText = document.createElement('span');
           keybladeSlots1_Slot4ElementMultiText.style = "font-family: UI Font; color: rgb(255, 255, 255); text-shadow: 1px 1px rgb(0, 0, 0); font-size: 17px; top: 62.60%; left: 26.5%; z-index: 304; position: absolute;";
-          keybladeSlots1_Slot4ElementMultiText.appendChild(document.createTextNode("x " + thisBladeSlot[cost1].slot4.elementMulti.toFixed(3)));
+          keybladeSlots1_Slot4ElementMultiText.appendChild(document.createTextNode("x" + (addSubslots + thisBladeSlot[cost1].slot4.elementMulti).toFixed(3)));
           slotsDivContainer1.appendChild(keybladeSlots1_Slot4ElementMultiText);
         }
 
@@ -495,7 +536,7 @@ function calculateCost() {
             
             var keybladeSlots1_Slot4ElementDirectionText = document.createElement('span');
             keybladeSlots1_Slot4ElementDirectionText.style = "font-family: UI Font; color: rgb(255, 255, 255); text-shadow: 1px 1px rgb(0, 0, 0); font-size: 17px; top: 67%; left: 26.5%; z-index: 306; position: absolute;";
-            keybladeSlots1_Slot4ElementDirectionText.appendChild(document.createTextNode("x " + thisBladeSlot[cost1].slot4.directionMulti.toFixed(3)));
+            keybladeSlots1_Slot4ElementDirectionText.appendChild(document.createTextNode("x" + (addSubslots + thisBladeSlot[cost1].slot4.directionMulti).toFixed(3)));
             slotsDivContainer1.appendChild(keybladeSlots1_Slot4ElementDirectionText);
           }
         }
@@ -521,7 +562,7 @@ function calculateCost() {
           
           var keybladeSlots1_Slot1ElementMultiText = document.createElement('span');
           keybladeSlots1_Slot1ElementMultiText.style = "font-family: UI Font; color: rgb(255, 255, 255); text-shadow: 1px 1px rgb(0, 0, 0); font-size: 17px; top: 33.60%; left: 15.3%; z-index: 204; position: absolute;";
-          keybladeSlots1_Slot1ElementMultiText.appendChild(document.createTextNode("x " + thisBladeSlot[cost1].slot5.elementMulti.toFixed(3)));
+          keybladeSlots1_Slot1ElementMultiText.appendChild(document.createTextNode("x" + (addSubslots + thisBladeSlot[cost1].slot5.elementMulti).toFixed(3)));
           slotsDivContainer1.appendChild(keybladeSlots1_Slot1ElementMultiText);
         }
 
@@ -539,7 +580,7 @@ function calculateCost() {
             
             var keybladeSlots1_Slot5ElementDirectionText = document.createElement('span');
             keybladeSlots1_Slot5ElementDirectionText.style = "font-family: UI Font; color: rgb(255, 255, 255); text-shadow: 1px 1px rgb(0, 0, 0); font-size: 17px; top: 38%; left: 15.3%; z-index: 206; position: absolute;";
-            keybladeSlots1_Slot5ElementDirectionText.appendChild(document.createTextNode("x " + thisBladeSlot[cost1].slot5.directionMulti.toFixed(3)));
+            keybladeSlots1_Slot5ElementDirectionText.appendChild(document.createTextNode("x" + (addSubslots + thisBladeSlot[cost1].slot5.directionMulti).toFixed(3)));
             slotsDivContainer1.appendChild(keybladeSlots1_Slot5ElementDirectionText);
           }
         }
@@ -603,7 +644,7 @@ function calculateCost() {
           
           var keybladeSlots2_Slot1ElementMultiText = document.createElement('span');
           keybladeSlots2_Slot1ElementMultiText.style = "font-family: UI Font; color: rgb(255, 255, 255); text-shadow: 1px 1px rgb(0, 0, 0); font-size: 17px; top: 15.60%; left: 46%; z-index: 104; position: absolute;";
-          keybladeSlots2_Slot1ElementMultiText.appendChild(document.createTextNode("x " + thisBladeSlot[cost2].slot1.elementMulti.toFixed(3)));
+          keybladeSlots2_Slot1ElementMultiText.appendChild(document.createTextNode("x" + (addSubslots + thisBladeSlot[cost2].slot1.elementMulti).toFixed(3)));
           slotsDivContainer2.appendChild(keybladeSlots2_Slot1ElementMultiText);
         }
 
@@ -621,7 +662,7 @@ function calculateCost() {
             
             var keybladeSlots2_Slot1ElementDirectionText = document.createElement('span');
             keybladeSlots2_Slot1ElementDirectionText.style = "font-family: UI Font; color: rgb(255, 255, 255); text-shadow: 1px 1px rgb(0, 0, 0); font-size: 17px; top: 19.80%; left: 46%; z-index: 106; position: absolute;";
-            keybladeSlots2_Slot1ElementDirectionText.appendChild(document.createTextNode("x " + thisBladeSlot[cost2].slot1.directionMulti.toFixed(3)));
+            keybladeSlots2_Slot1ElementDirectionText.appendChild(document.createTextNode("x" + (addSubslots + thisBladeSlot[cost2].slot1.directionMulti).toFixed(3)));
             slotsDivContainer2.appendChild(keybladeSlots2_Slot1ElementDirectionText);
           }
         }
@@ -647,7 +688,7 @@ function calculateCost() {
           
           var keybladeSlots2_Slot1ElementMultiText = document.createElement('span');
           keybladeSlots2_Slot1ElementMultiText.style = "font-family: UI Font; color: rgb(255, 255, 255); text-shadow: 1px 1px rgb(0, 0, 0); font-size: 17px; top: 33.60%; left: 77%; z-index: 204; position: absolute;";
-          keybladeSlots2_Slot1ElementMultiText.appendChild(document.createTextNode("x " + thisBladeSlot[cost2].slot2.elementMulti.toFixed(3)));
+          keybladeSlots2_Slot1ElementMultiText.appendChild(document.createTextNode("x" + (addSubslots + thisBladeSlot[cost2].slot2.elementMulti).toFixed(3)));
           slotsDivContainer2.appendChild(keybladeSlots2_Slot1ElementMultiText);
         }
 
@@ -665,7 +706,7 @@ function calculateCost() {
             
             var keybladeSlots2_Slot2ElementDirectionText = document.createElement('span');
             keybladeSlots2_Slot2ElementDirectionText.style = "font-family: UI Font; color: rgb(255, 255, 255); text-shadow: 1px 1px rgb(0, 0, 0); font-size: 17px; top: 38%; left: 77%; z-index: 206; position: absolute;";
-            keybladeSlots2_Slot2ElementDirectionText.appendChild(document.createTextNode("x " + thisBladeSlot[cost2].slot2.directionMulti.toFixed(3)));
+            keybladeSlots2_Slot2ElementDirectionText.appendChild(document.createTextNode("x" + (addSubslots + thisBladeSlot[cost2].slot2.directionMulti).toFixed(3)));
             slotsDivContainer2.appendChild(keybladeSlots2_Slot2ElementDirectionText);
           }
         }
@@ -691,7 +732,7 @@ function calculateCost() {
           
           var keybladeSlots2_Slot3ElementMultiText = document.createElement('span');
           keybladeSlots2_Slot3ElementMultiText.style = "font-family: UI Font; color: rgb(255, 255, 255); text-shadow: 1px 1px rgb(0, 0, 0); font-size: 17px; top: 62.60%; left: 65%; z-index: 304; position: absolute;";
-          keybladeSlots2_Slot3ElementMultiText.appendChild(document.createTextNode("x " + thisBladeSlot[cost2].slot3.elementMulti.toFixed(3)));
+          keybladeSlots2_Slot3ElementMultiText.appendChild(document.createTextNode("x" + (addSubslots + thisBladeSlot[cost2].slot3.elementMulti).toFixed(3)));
           slotsDivContainer2.appendChild(keybladeSlots2_Slot3ElementMultiText);
         }
 
@@ -709,7 +750,7 @@ function calculateCost() {
             
             var keybladeSlots2_Slot3ElementDirectionText = document.createElement('span');
             keybladeSlots2_Slot3ElementDirectionText.style = "font-family: UI Font; color: rgb(255, 255, 255); text-shadow: 1px 1px rgb(0, 0, 0); font-size: 17px; top: 67%; left: 65%; z-index: 306; position: absolute;";
-            keybladeSlots2_Slot3ElementDirectionText.appendChild(document.createTextNode("x " + thisBladeSlot[cost2].slot3.directionMulti.toFixed(3)));
+            keybladeSlots2_Slot3ElementDirectionText.appendChild(document.createTextNode("x" + (addSubslots + thisBladeSlot[cost2].slot3.directionMulti).toFixed(3)));
             slotsDivContainer2.appendChild(keybladeSlots2_Slot3ElementDirectionText);
           }
         }
@@ -735,7 +776,7 @@ function calculateCost() {
           
           var keybladeSlots2_Slot4ElementMultiText = document.createElement('span');
           keybladeSlots2_Slot4ElementMultiText.style = "font-family: UI Font; color: rgb(255, 255, 255); text-shadow: 1px 1px rgb(0, 0, 0); font-size: 17px; top: 62.60%; left: 26.5%; z-index: 304; position: absolute;";
-          keybladeSlots2_Slot4ElementMultiText.appendChild(document.createTextNode("x " + thisBladeSlot[cost2].slot4.elementMulti.toFixed(3)));
+          keybladeSlots2_Slot4ElementMultiText.appendChild(document.createTextNode("x" + (addSubslots + thisBladeSlot[cost2].slot4.elementMulti).toFixed(3)));
           slotsDivContainer2.appendChild(keybladeSlots2_Slot4ElementMultiText);
         }
 
@@ -753,7 +794,7 @@ function calculateCost() {
             
             var keybladeSlots2_Slot4ElementDirectionText = document.createElement('span');
             keybladeSlots2_Slot4ElementDirectionText.style = "font-family: UI Font; color: rgb(255, 255, 255); text-shadow: 1px 1px rgb(0, 0, 0); font-size: 17px; top: 67%; left: 26.5%; z-index: 306; position: absolute;";
-            keybladeSlots2_Slot4ElementDirectionText.appendChild(document.createTextNode("x " + thisBladeSlot[cost2].slot4.directionMulti.toFixed(3)));
+            keybladeSlots2_Slot4ElementDirectionText.appendChild(document.createTextNode("x" + (addSubslots + thisBladeSlot[cost2].slot4.directionMulti).toFixed(3)));
             slotsDivContainer2.appendChild(keybladeSlots2_Slot4ElementDirectionText);
           }
         }
@@ -779,7 +820,7 @@ function calculateCost() {
           
           var keybladeSlots2_Slot1ElementMultiText = document.createElement('span');
           keybladeSlots2_Slot1ElementMultiText.style = "font-family: UI Font; color: rgb(255, 255, 255); text-shadow: 1px 1px rgb(0, 0, 0); font-size: 17px; top: 33.60%; left: 15.3%; z-index: 204; position: absolute;";
-          keybladeSlots2_Slot1ElementMultiText.appendChild(document.createTextNode("x " + thisBladeSlot[cost2].slot5.elementMulti.toFixed(3)));
+          keybladeSlots2_Slot1ElementMultiText.appendChild(document.createTextNode("x" + (addSubslots + thisBladeSlot[cost2].slot5.elementMulti).toFixed(3)));
           slotsDivContainer2.appendChild(keybladeSlots2_Slot1ElementMultiText);
         }
 
@@ -797,7 +838,7 @@ function calculateCost() {
             
             var keybladeSlots2_Slot5ElementDirectionText = document.createElement('span');
             keybladeSlots2_Slot5ElementDirectionText.style = "font-family: UI Font; color: rgb(255, 255, 255); text-shadow: 1px 1px rgb(0, 0, 0); font-size: 17px; top: 38%; left: 15.3%; z-index: 206; position: absolute;";
-            keybladeSlots2_Slot5ElementDirectionText.appendChild(document.createTextNode("x " + thisBladeSlot[cost2].slot5.directionMulti.toFixed(3)));
+            keybladeSlots2_Slot5ElementDirectionText.appendChild(document.createTextNode("x" + (addSubslots + thisBladeSlot[cost2].slot5.directionMulti).toFixed(3)));
             slotsDivContainer2.appendChild(keybladeSlots2_Slot5ElementDirectionText);
           }
         }
