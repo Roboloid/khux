@@ -3175,6 +3175,26 @@ var cardDatabase = {
         DirectionType: "Dark",
         ColorType: "Green",
         AttackType: "Sword",
+        Passive1:   {
+            ReqCount: 1,
+            BuffType: "HP",
+            BuffCount: 1
+        },
+        Passive2:   {
+            ReqCount: 3,
+            BuffType: "Strength",
+            BuffCount: 1
+        },
+        Passive3:   {
+            ReqCount: 5,
+            BuffType: "Strength",
+            BuffCount: 1
+        },
+        Passive4:   {
+            ReqCount: 10,
+            BuffType: "Strength",
+            BuffCount: 2
+        },
         MainAbility:    {
             Name: "Blossom of Thorns",
             AttackType: "Sword",
@@ -3197,6 +3217,26 @@ var cardDatabase = {
         DirectionType: "Dark",
         ColorType: "Green",
         AttackType: "Sword",
+        Passive1:   {
+            ReqCount: 1,
+            BuffType: "HP",
+            BuffCount: 1
+        },
+        Passive2:   {
+            ReqCount: 3,
+            BuffType: "Strength",
+            BuffCount: 1
+        },
+        Passive3:   {
+            ReqCount: 5,
+            BuffType: "Strength",
+            BuffCount: 1
+        },
+        Passive4:   {
+            ReqCount: 10,
+            BuffType: "Strength",
+            BuffCount: 2
+        },
         MainAbility:    {
             Name: "Savage Knives",
             AttackType: "Sword",
@@ -3219,6 +3259,26 @@ var cardDatabase = {
         DirectionType: "Dark",
         ColorType: "Blue",
         AttackType: "Staff",
+        Passive1:   {
+            ReqCount: 1,
+            BuffType: "HP",
+            BuffCount: 1
+        },
+        Passive2:   {
+            ReqCount: 3,
+            BuffType: "Magic",
+            BuffCount: 1
+        },
+        Passive3:   {
+            ReqCount: 5,
+            BuffType: "Magic",
+            BuffCount: 1
+        },
+        Passive4:   {
+            ReqCount: 10,
+            BuffType: "Magic",
+            BuffCount: 2
+        },
         MainAbility:    {
             Name: "Meteor Mirage",
             AttackType: "Staff",
@@ -3263,6 +3323,26 @@ var cardDatabase = {
         DirectionType: "Dark",
         ColorType: "Red",
         AttackType: "Sword",
+        Passive1:   {
+            ReqCount: 1,
+            BuffType: "HP",
+            BuffCount: 1
+        },
+        Passive2:   {
+            ReqCount: 3,
+            BuffType: "Strength",
+            BuffCount: 1
+        },
+        Passive3:   {
+            ReqCount: 5,
+            BuffType: "Strength",
+            BuffCount: 1
+        },
+        Passive4:   {
+            ReqCount: 10,
+            BuffType: "Strength",
+            BuffCount: 2
+        },
         MainAbility:    {
             Name: "Rosea Arcanum",
             AttackType: "Sword",
@@ -3285,6 +3365,26 @@ var cardDatabase = {
         DirectionType: "Dark",
         ColorType: "Red",
         AttackType: "Sword",
+        Passive1:   {
+            ReqCount: 1,
+            BuffType: "HP",
+            BuffCount: 1
+        },
+        Passive2:   {
+            ReqCount: 3,
+            BuffType: "Strength",
+            BuffCount: 1
+        },
+        Passive3:   {
+            ReqCount: 5,
+            BuffType: "Strength",
+            BuffCount: 1
+        },
+        Passive4:   {
+            ReqCount: 10,
+            BuffType: "Strength",
+            BuffCount: 2
+        },
         MainAbility:    {
             Name: "Dark Break",
             AttackType: "Sword",
