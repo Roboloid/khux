@@ -12,6 +12,8 @@ var guiltOff = "False";
 
 var maxResults = -1;
 
+var amSwapper = 0;
+
 var saveSearchForm;
 
 function loadPage()   {
@@ -183,7 +185,6 @@ function parseMedalName(value)  {
         value = value.replace(/é/g, " e ");
         value = value.replace("kh2", "kh ii");
         value = value.replace("kh3", "kh iii");
-        console.log(value);
         queryArray = value.split(" ");
     }
     else    {
@@ -1291,6 +1292,11 @@ function switchImage(value) {
     }
 }
 
+function swapCard(MedalID)  {
+    amSwapper = 1;
+    generateCard(MedalID);
+}
+
 var currentDisplayedImagePath;
 var currentImage;
 var medalButtonImage;
@@ -1317,19 +1323,43 @@ function generateCard(MedalID)  {
 
     var blankSpacer = document.createElement('br');
 
-    var medalName = document.createElement('span');
-    medalName.style = "font-size: 36px; text-shadow: 3px 3px rgb(0, 0, 0)";
+    var upperMedalDiv = document.createElement('div');
+    var medalName = document.createElement('div');
+    medalName.style = "display: inline-block; position: relative; font-size: 2.25em; text-shadow: 3px 3px rgb(0, 0, 0); text-align: center; width: 80%; height: auto; margin: 0 auto";
     medalName.appendChild(document.createTextNode("No. " + medalDatabase[MedalID].AlbumNum + ": \xa0\xa0\xa0" + medalDatabase[MedalID].Name));
-    medalDiv.appendChild(medalName);
+    upperMedalDiv.appendChild(medalName);
 
-    /*
-    var downloadButton = document.createElement('img');
-    downloadButton.src = "./images/icon/downloadButton.png";
-    downloadButton.style = "cursor: pointer; float: right; margin-right: 20px";
-    downloadButton.setAttribute("onclick", "downloadCard()");
-    medalDiv.appendChild(downloadButton);
-    */
+    
+    // Evolution buttons
+    if(medalDatabase[MedalID].Reference.indexOf(MedalID) > 0)   {   // Medal has preevolution
+        var previousMedal = document.createElement('img');
+        previousMedal.src = "./images/icon/skip_RW.png";
+        previousMedal.style = "cursor: pointer; display: inline-block; position: relative; height: 60px; float: left; margin-left: 2%";
+        previousMedal.setAttribute("onclick", "swapCard(" + medalDatabase[medalDatabase[MedalID].Reference[medalDatabase[MedalID].Reference.indexOf(MedalID) - 1]].ID + ")");
+        upperMedalDiv.appendChild(previousMedal);
+    }
+    else    {
+        var previousMedal = document.createElement('img');
+        previousMedal.src = "./images/icon/skip_RW.png";
+        previousMedal.style = "visibility: hidden; display: inline-block; position: relative; height: 60px; float: left; margin-left: 2%";
+        upperMedalDiv.appendChild(previousMedal);
+    }
 
+    if(medalDatabase[MedalID].Reference.indexOf(MedalID) < medalDatabase[MedalID].Reference.length - 1)   {   // Medal has evolution
+        var nextMedal = document.createElement('img');
+        nextMedal.src = "./images/icon/skip_FF.png";
+        nextMedal.style = "cursor: pointer; display: inline-block; position: relative; height: 60px; float: right; margin-right: 2%";
+        nextMedal.setAttribute("onclick", "swapCard(" + medalDatabase[medalDatabase[MedalID].Reference[medalDatabase[MedalID].Reference.indexOf(MedalID) + 1]].ID + ")");
+        upperMedalDiv.appendChild(nextMedal);
+    }
+    else    {   // Medal next preevolution
+        var nextMedal = document.createElement('img');
+        nextMedal.src = "./images/icon/skip_FF.png";
+        nextMedal.style = "visibility: hidden; display: inline-block; position: relative; height: 60px; float: right; margin-right: 2%";
+        upperMedalDiv.appendChild(nextMedal);
+    }
+
+    medalDiv.appendChild(upperMedalDiv);
     medalDiv.appendChild(blankSpacer);
     medalDiv.appendChild(blankSpacer.cloneNode());
 
@@ -2485,9 +2515,10 @@ if(medalDatabase[MedalID].Supernova !== undefined)  {
 
 
 
-
-    $('#medalPopup').fadeToggle(200);
-    $('#darkOverlay2').fadeToggle(200);
+    if(amSwapper == 0)  {
+        $('#medalPopup').fadeToggle(200);
+        $('#darkOverlay2').fadeToggle(200);
+    }
 }
 
 function loadSearchBox()    {
@@ -2511,6 +2542,7 @@ $(document).mouseup(function (e) {
 
 // Close the medal popup when the user clicks outside of the window
 $(document).mouseup(function (e) {
+    amSwapper = 0;
     var container3 = $("#medalPopup");
     var container4 = $("#darkOverlay2");
 
