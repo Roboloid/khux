@@ -305,6 +305,22 @@ function quickSort(originalArr, sortChecker) {
         }
         return newArr.concat(quickSort(leftArr, sortChecker), pivot, quickSort(rightArr, sortChecker));
     }
+    else if(sortChecker == "Date") {
+        var leftArr = [];              
+        var rightArr = [];
+        var newArr = [];
+        var pivot = originalArr[0];
+        var length = originalArr.length;
+        for (var i = 1; i < length; i++) {
+            if (medalDatabase[originalArr[i]].ID >= medalDatabase[pivot].ID) {
+                leftArr.push(originalArr[i]);
+            }  
+            else {
+                rightArr.push(originalArr[i]);
+            }
+        }
+        return newArr.concat(quickSort(leftArr, sortChecker), pivot, quickSort(rightArr, sortChecker));
+    }
     else {
         var leftArr = [];              
         var rightArr = [];
@@ -535,7 +551,7 @@ function checkConditions(MedalID)   {
             return 0;
         }
     }
-    else if(medalDatabase[MedalID][sortCondition] == undefined)  {
+    else if(medalDatabase[MedalID][sortCondition] == undefined && sortCondition != "Date")  {
         return 0;
     }
 
@@ -652,6 +668,24 @@ function checkConditions(MedalID)   {
             if(medalDatabase[medalDatabase[MedalID].Reference[i]].ID == medalDatabase[MedalID].ID)    {
                 if(i < medalDatabase[MedalID].Reference.length - 1 && medalDatabase[MedalID].Reference.length != 1) {
                     return 0;
+                }
+            }
+        }
+    }
+
+    if(document.getElementById("Upgradeable").checked != undefined && document.getElementById("Upgradeable").checked == true)   {
+        if(medalDatabase[MedalID].Name.includes("SN++") || medalDatabase[MedalID].Name.includes("Supernova++"))   {     // Check if the current medal is SN++; if yes, exclude
+            return 0;
+        }
+        else    {
+            for(var i = 0; i < medalDatabase[MedalID].Reference.length; i++)   {
+                if(medalDatabase[medalDatabase[MedalID].Reference[i]].ID == medalDatabase[MedalID].ID)    {
+                    if(i >= medalDatabase[MedalID].Reference.length - 1)    {   // Check if the current medal cannot be evolved further; if yes, exclude
+                        return 0;
+                    }
+                    else if(!(medalDatabase[medalDatabase[MedalID].Reference[i + 1]].Name.includes("SN++") || medalDatabase[medalDatabase[MedalID].Reference[i + 1]].Name.includes("Supernova++"))) { // Check if the next medal in the evolution line is SN++; if not, exclude
+                        return 0;
+                    }
                 }
             }
         }
