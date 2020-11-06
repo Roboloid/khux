@@ -674,16 +674,16 @@ function checkConditions(MedalID)   {
     }
 
     if(document.getElementById("Upgradeable").checked != undefined && document.getElementById("Upgradeable").checked == true)   {
-        if(medalDatabase[MedalID].Name.includes("SN++") || medalDatabase[MedalID].Name.includes("Supernova++"))   {     // Check if the current medal is SN++; if yes, exclude
+        if(!(medalDatabase[MedalID].Name.includes("SN++") || medalDatabase[MedalID].Name.includes("Supernova++")))   {     // Check if the current medal is not SN++; if yes, exclude
             return 0;
         }
         else    {
             for(var i = 0; i < medalDatabase[MedalID].Reference.length; i++)   {
                 if(medalDatabase[medalDatabase[MedalID].Reference[i]].ID == medalDatabase[MedalID].ID)    {
-                    if(i >= medalDatabase[MedalID].Reference.length - 1)    {   // Check if the current medal cannot be evolved further; if yes, exclude
+                    if(i == 0)    {   // Check if the current medal is the base medal / cannot be evolved; if yes, exclude
                         return 0;
                     }
-                    else if(!(medalDatabase[medalDatabase[MedalID].Reference[i + 1]].Name.includes("SN++") || medalDatabase[medalDatabase[MedalID].Reference[i + 1]].Name.includes("Supernova++"))) { // Check if the next medal in the evolution line is SN++; if not, exclude
+                    else if(medalDatabase[medalDatabase[MedalID].Reference[i - 1]].Name.includes("SN++") || medalDatabase[medalDatabase[MedalID].Reference[i - 1]].Name.includes("Supernova++")) { // Check if the next medal in the evolution line is SN++; if not, exclude
                         return 0;
                     }
                 }
