@@ -1178,13 +1178,13 @@ function checkConditions(MedalID)   {
             if(medalDatabase[MedalID].Supernova == undefined || medalDatabase[MedalID].Supernova.SelfBuffs == undefined || medalDatabase[MedalID].Supernova.SelfBuffs["Buff" + tempElementValue] == undefined) {
                 return 0;
             }
-            if(document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/BuffCount").value != undefined && document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/BuffCount").value != "" && medalDatabase[MedalID].Supernova.SelfBuffs["Debuff" + tempElementValue].BuffCount != document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/BuffCount").value)   {
+            if(document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/BuffCount").value != undefined && document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/BuffCount").value != "" && medalDatabase[MedalID].Supernova.SelfBuffs["Buff" + tempElementValue].BuffCount != document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/BuffCount").value)   {
                 return 0;
             }
-            if(document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationType").value != undefined && document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationType").value != "" && medalDatabase[MedalID].Supernova.SelfBuffs["Debuff" + tempElementValue].DurationType != document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationType").value)   {
+            if(document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationType").value != undefined && document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationType").value != "" && medalDatabase[MedalID].Supernova.SelfBuffs["Buff" + tempElementValue].DurationType != document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationType").value)   {
                 return 0;
             }
-            if(document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationCount").value != undefined && document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationCount").value != "" && medalDatabase[MedalID].Supernova.SelfBuffs["Debuff" + tempElementValue].DurationCount != document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationCount").value)   {
+            if(document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationCount").value != undefined && document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationCount").value != "" && medalDatabase[MedalID].Supernova.SelfBuffs["Buff" + tempElementValue].DurationCount != document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationCount").value)   {
                 return 0;
             }
         }
@@ -1228,10 +1228,10 @@ function checkConditions(MedalID)   {
             if(document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/BuffCount").value != undefined && document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/BuffCount").value != "" && medalDatabase[MedalID].Supernova.EnemyBuffs["Debuff" + tempElementValue].BuffCount != document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/BuffCount").value)   {
                 return 0;
             }
-            if(document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationType").value != undefined && document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationType").value != "" && medalDatabase[MedalID].Supernova.SelfBuffs["Debuff" + tempElementValue].DurationType != document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationType").value)   {
+            if(document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationType").value != undefined && document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationType").value != "" && medalDatabase[MedalID].Supernova.EnemyBuffs["Debuff" + tempElementValue].DurationType != document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationType").value)   {
                 return 0;
             }
-            if(document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationCount").value != undefined && document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationCount").value != "" && medalDatabase[MedalID].Supernova.SelfBuffs["Debuff" + tempElementValue].DurationCount != document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationCount").value)   {
+            if(document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationCount").value != undefined && document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationCount").value != "" && medalDatabase[MedalID].Supernova.EnemyBuffs["Debuff" + tempElementValue].DurationCount != document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationCount").value)   {
                 return 0;
             }
         }
