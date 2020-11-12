@@ -3418,4 +3418,26 @@ var cardDatabase = {
             Effect: "Strength +2 for 10s. Stacking Cards does not increase value. Can be applied more than once."
         }
     },
+    67:  {
+        ID: 67,
+        AlbumNum: 67,
+        CardImage: "67_King_Mickey_B.png",
+        RenderImage: "67_King_Mickey_B_Render.png",
+        Name: "King Mickey B",
+        DirectionType: "Light",
+        ColorType: "Blue",
+        AttackType: "Staff",
+        MainAbility:    {
+            Name: "Pulsing Flame",
+            AttackType: "Staff",
+            Element: "Water",
+            BasePower: 40,
+            MaxPower: 80,
+            Effect: "A powerful water-element magic attack."
+        },
+        SubAbility:    {
+            Name: "Cure",
+            Effect: "Restores HP. Amount restored is based on Magic."
+        }
+    },
 };
