@@ -193,12 +193,12 @@ function loadAccessory(value)    {
     else if(accessoryDatabase[value].Rarity == 2)    {
         var accessoryRarity1 = document.createElement('img');
         accessoryRarity1.src = "./images/ui/RarityStar.png";
-        accessoryRarity1.style = "width: 30px; position: absolute; z-index: 20; transform: translate(-50%, -50%); left: 47%; top: 77%";
+        accessoryRarity1.style = "width: 30px; position: absolute; z-index: 20; transform: translate(-50%, -50%); left: 42%; top: 77%";
         accessoryIMGContainer.appendChild(accessoryRarity1);
 
         var accessoryRarity2 = document.createElement('img');
         accessoryRarity2.src = "./images/ui/RarityStar.png";
-        accessoryRarity2.style = "width: 30px; position: absolute; z-index: 20; transform: translate(-50%, -50%); left: 53%; top: 77%";
+        accessoryRarity2.style = "width: 30px; position: absolute; z-index: 20; transform: translate(-50%, -50%); left: 58%; top: 77%";
         accessoryIMGContainer.appendChild(accessoryRarity2);
     }
     else if(accessoryDatabase[value].Rarity == 3)    {
@@ -1458,7 +1458,7 @@ var accessoryDatabase = {
     },
     32:  {
         Name: "Blizzaga Ring+",
-        Rarity: 1,
+        Rarity: 2,
         Image: "Dark_Material_103.png",
         Effect: {
             BuffType: "Water Resist 8% Strength +3 Magic",
