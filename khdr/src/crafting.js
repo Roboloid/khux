@@ -1392,6 +1392,90 @@ var accessoryDatabase = {
         },
         BPCost: 750000
     },
+    29:  {
+        Name: "Blizzard Ring",
+        Rarity: 1,
+        Image: "Dark_Material_103.png",
+        Effect: {
+            BuffType: "Water Resist",
+            BuffCount: "2%"
+        },
+        Components: {
+            Item1:  {
+                accessoryID: 1,
+                quantity: 1
+            },
+            Item2:  {
+                materialID: 20,
+                quantity: 10
+            }
+        },
+        BPCost: 1000
+    },
+    30:  {
+        Name: "Blizzara Ring",
+        Rarity: 1,
+        Image: "Dark_Material_103.png",
+        Effect: {
+            BuffType: "Water Resist",
+            BuffCount: "4%"
+        },
+        Components: {
+            Item1:  {
+                accessoryID: 29,
+                quantity: 2
+            },
+            Item2:  {
+                materialID: 21,
+                quantity: 10
+            }
+        },
+        BPCost: 3000
+    },
+    31:  {
+        Name: "Blizzaga Ring",
+        Rarity: 1,
+        Image: "Dark_Material_103.png",
+        Effect: {
+            BuffType: "Water Resist",
+            BuffCount: "8%"
+        },
+        Components: {
+            Item1:  {
+                accessoryID: 30,
+                quantity: 3
+            },
+            Item2:  {
+                materialID: 22,
+                quantity: 10
+            },
+            Item3:  {
+                materialID: 16,
+                quantity: 1
+            }
+        },
+        BPCost: 5000
+    },
+    32:  {
+        Name: "Blizzaga Ring+",
+        Rarity: 1,
+        Image: "Dark_Material_103.png",
+        Effect: {
+            BuffType: "Water Resist 8% Strength +3 Magic",
+            BuffCount: "3"
+        },
+        Components: {
+            Item1:  {
+                accessoryID: 31,
+                quantity: 1
+            },
+            Item2:  {
+                materialID: 22,
+                quantity: 99
+            }
+        },
+        BPCost: 100000
+    }
 }
 
 /*
@@ -1517,6 +1601,21 @@ var materialDatabase = {
         NameJP: "吹き荒れるしすく",
         Image: "Dark_Material_2.png",
         Text: "A stone brimming with the power of wind."
+    },
+    20:  {
+        Name: "Frost Shard",
+        Image: "Dark_Material_1.png",
+        Text: "Can be obtained from Shiva in the world battle event."
+    },
+    21:  {
+        Name: "Frost Gem",
+        Image: "Dark_Material_1.png",
+        Text: "Can be obtained from Shiva in the world battle event."
+    },
+    22:  {
+        Name: "Frost Stone",
+        Image: "Dark_Material_2.png",
+        Text: "Can be obtained from Shiva in the world battle event."
     }
 }
 
