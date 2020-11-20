@@ -83727,7 +83727,7 @@ var medalDatabase = {
         Target: "All",
         Ability:    {
             Name: "Monoslash +6",
-            Text: "1 turn: P-Medal STR +12000, self [↑ STR, R- & PSM-STR 15], targets [↓ DEF, R- & PSM-DEF 15], SP ATK B +220%. Count ±0.",
+            Text: "1 turn: Medal STR +12000, self [↑ STR, R- & PSM-STR 15], targets [↓ DEF, R- & PSM-DEF 15], SP ATK B +220%. Count ±0. Pierces DEF Boost 35%. Ignores targets' attributes.",
             SelfBuffs:  {
                 BuffGA: {
                     BuffCount: 15,
@@ -83755,12 +83755,13 @@ var medalDatabase = {
                     DurationCount: 1
                 },
                 STRPlus:  {
-                    Type: "Power",
+                    Type: "General",
                     Amount: 12000,
                     DurationType: "Turn",
                     DurationCount: 1
                 },
-                GuiltBuff: 220
+                GuiltBuff: 220,
+                AttributeAlways: "Super"
             },
             EnemyBuffs: {
                 DebuffGD: {
@@ -83790,13 +83791,14 @@ var medalDatabase = {
                 },
                 Counter:  {
                     CountDirection: "Null"
-                }
+                },
+                DEFPierce: 35
             },
             Hits: 1
         },
         Supernova:  {
             Name: "[Mastery] Reversed Strike All P",
-            Text: "1 turn: P-Medal STR +14000, self [↑ STR, R- & PSM-STR 15], targets [↓ DEF, R- & PSM-DEF 15], SP ATK B +320%. Triggers before slot 1 is activated when defending in PVP.",
+            Text: "1 turn: Medal STR +14000, self [↑ STR, R- & PSM-STR 15], targets [↓ DEF, R- & PSM-DEF 15], SP ATK B +320%. Ignores target's Defense Boost. Triggers before slot 1 is activated when defending in PVP.",
             Multi: 250.00,
             Timing: 1,
             Target: "All",
@@ -83827,7 +83829,7 @@ var medalDatabase = {
                     DurationCount: 1
                 },
                 STRPlus:  {
-                    Type: "Power",
+                    Type: "General",
                     Amount: 14000,
                     DurationType: "Turn",
                     DurationCount: 1
@@ -83859,7 +83861,8 @@ var medalDatabase = {
                     BuffCount: 15,
                     DurationType: "Turn",
                     DurationCount: 1
-                }
+                },
+                DEFPierce: 100
             },
             Hits: 1
         }
