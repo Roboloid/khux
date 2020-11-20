@@ -77488,8 +77488,8 @@ var medalDatabase = {
                 },
                 Counter:    {
                     CountDirection: "Null"
-                }
-
+                },
+                DEFPierce: 30
             },
             Hits: 4
         },
