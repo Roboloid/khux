@@ -83769,7 +83769,7 @@ var medalDatabase = {
                     DurationType: "Turn",
                     DurationCount: 1
                 },
-                DebuffUD: {
+                DebuffRD: {
                     BuffCount: 15,
                     DurationType: "Turn",
                     DurationCount: 1
