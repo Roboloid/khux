@@ -3440,4 +3440,70 @@ var cardDatabase = {
             Effect: "Restores HP. Amount restored is based on Magic."
         }
     },
+    68:  {
+        ID: 68,
+        AlbumNum: 68,
+        CardImage: "68_KH_III_Sora.png",
+        RenderImage: "68_KH_III_Sora_Render.png",
+        Name: "KH III Sora",
+        DirectionType: "Light",
+        ColorType: "Green",
+        AttackType: "Staff",
+        MainAbility:    {
+            Name: "Tornado",
+            AttackType: "Staff",
+            Element: "Wind",
+            BasePower: 50,
+            MaxPower: 100,
+            Effect: "A powerful wind-element magic attack."
+        },
+        SubAbility:    {
+            Name: "Cure II",
+            Effect: "Restores HP. Amount restored is based on Magic."
+        }
+    },
+    69:  {
+        ID: 69,
+        AlbumNum: 69,
+        CardImage: "69_KH_III_Riku.png",
+        RenderImage: "69_KH_III_Riku_Render.png",
+        Name: "KH III Riku",
+        DirectionType: "Light",
+        ColorType: "Red",
+        AttackType: "Sword",
+        MainAbility:    {
+            Name: "Blazing End",
+            AttackType: "Sword",
+            Element: "Fire",
+            BasePower: 50,
+            MaxPower: 100,
+            Effect: "A powerful fire-element physical attack."
+        },
+        SubAbility:    {
+            Name: "Defense Sap 3",
+            Effect: "Target's Defense -3 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+        }
+    },
+    70:  {
+        ID: 70,
+        AlbumNum: 70,
+        CardImage: "70_KH_III_Kairi.png",
+        RenderImage: "70_KH_III_Kairi_Render.png",
+        Name: "KH III Kairi",
+        DirectionType: "Light",
+        ColorType: "Blue",
+        AttackType: "Sword",
+        MainAbility:    {
+            Name: "Radiant Glory",
+            AttackType: "Sword",
+            Element: "Light",
+            BasePower: 50,
+            MaxPower: 100,
+            Effect: "A powerful light-element physical attack."
+        },
+        SubAbility:    {
+            Name: "Gauge Boost",
+            Effect: "Fills the bonus gauge. Stacking Cards does not increase value."
+        }
+    },
 };
