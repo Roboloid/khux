@@ -3427,6 +3427,26 @@ var cardDatabase = {
         DirectionType: "Light",
         ColorType: "Blue",
         AttackType: "Staff",
+        Passive1:   {
+            ReqCount: 1,
+            BuffType: "HP",
+            BuffCount: 1
+        },
+        Passive2:   {
+            ReqCount: 3,
+            BuffType: "Magic",
+            BuffCount: 1
+        },
+        Passive3:   {
+            ReqCount: 5,
+            BuffType: "Magic",
+            BuffCount: 1
+        },
+        Passive4:   {
+            ReqCount: 10,
+            BuffType: "Magic",
+            BuffCount: 2
+        },
         MainAbility:    {
             Name: "Pulsing Flame",
             AttackType: "Staff",
@@ -3449,6 +3469,26 @@ var cardDatabase = {
         DirectionType: "Light",
         ColorType: "Green",
         AttackType: "Staff",
+        Passive1:   {
+            ReqCount: 1,
+            BuffType: "HP",
+            BuffCount: 1
+        },
+        Passive2:   {
+            ReqCount: 3,
+            BuffType: "Magic",
+            BuffCount: 1
+        },
+        Passive3:   {
+            ReqCount: 5,
+            BuffType: "Magic",
+            BuffCount: 1
+        },
+        Passive4:   {
+            ReqCount: 10,
+            BuffType: "Magic",
+            BuffCount: 2
+        },
         MainAbility:    {
             Name: "Tornado",
             AttackType: "Staff",
@@ -3471,6 +3511,26 @@ var cardDatabase = {
         DirectionType: "Light",
         ColorType: "Red",
         AttackType: "Sword",
+        Passive1:   {
+            ReqCount: 1,
+            BuffType: "HP",
+            BuffCount: 1
+        },
+        Passive2:   {
+            ReqCount: 3,
+            BuffType: "Strength",
+            BuffCount: 1
+        },
+        Passive3:   {
+            ReqCount: 5,
+            BuffType: "Strength",
+            BuffCount: 1
+        },
+        Passive4:   {
+            ReqCount: 10,
+            BuffType: "Strength",
+            BuffCount: 2
+        },
         MainAbility:    {
             Name: "Blazing End",
             AttackType: "Sword",
@@ -3493,6 +3553,26 @@ var cardDatabase = {
         DirectionType: "Light",
         ColorType: "Blue",
         AttackType: "Sword",
+        Passive1:   {
+            ReqCount: 1,
+            BuffType: "HP",
+            BuffCount: 1
+        },
+        Passive2:   {
+            ReqCount: 3,
+            BuffType: "Strength",
+            BuffCount: 2
+        },
+        Passive3:   {
+            ReqCount: 5,
+            BuffType: "Magic",
+            BuffCount: 2
+        },
+        Passive4:   {
+            ReqCount: 10,
+            BuffType: "Magic Resist",
+            BuffCount: 2
+        },
         MainAbility:    {
             Name: "Radiant Glory",
             AttackType: "Sword",
