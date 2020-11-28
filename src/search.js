@@ -174,6 +174,7 @@ function parseMedalName(value)  {
         value = value.replace("sn++", " supernova ++ ");
         value = value.replace("sn+", " supernova + ");
         value = value.replace("sn ", " supernova ");
+        value = value.replace("and", " & ");
         value = value.replace("#", " # ");
         value = value.replace(/-/g, " - ");
         value = value.replace("(", " ( ");
