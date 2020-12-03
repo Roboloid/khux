@@ -84403,7 +84403,7 @@ var medalDatabase = {
                     DurationType: "Turn",
                     DurationCount: 1
                 },
-                BuffSA: {
+                BuffMA: {
                     BuffCount: 15,
                     DurationType: "Turn",
                     DurationCount: 1
