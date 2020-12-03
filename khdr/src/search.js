@@ -3586,4 +3586,26 @@ var cardDatabase = {
             Effect: "Fills the bonus gauge. Stacking Cards does not increase value."
         }
     },
+    71:  {
+        ID: 71,
+        AlbumNum: 71,
+        CardImage: "71_Vanitas.png",
+        RenderImage: "71_Vanitas_Render.png",
+        Name: "Vanitas",
+        DirectionType: "Dark",
+        ColorType: "Blue",
+        AttackType: "Sword",
+        MainAbility:    {
+            Name: "Spinning Shadows",
+            AttackType: "Sword",
+            Element: "Neutral",
+            BasePower: 45,
+            MaxPower: 90,
+            Effect: "A powerful non-element physical attack that has a chance of inflicting paralysis."
+        },
+        SubAbility:    {
+            Name: "Defense Sap 3",
+            Effect: "Target's Defense -3 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+        }
+    },
 };
