@@ -35572,7 +35572,7 @@ var medalDatabase = {
                     DurationCount: 1
                 },
                 BuffMA: {
-                    BuffCount: `0`,
+                    BuffCount: 10,
                     DurationType: "Turn",
                     DurationCount: 1
                 },
@@ -35662,7 +35662,7 @@ var medalDatabase = {
                     DurationCount: 1
                 },
                 BuffMA: {
-                    BuffCount: `0`,
+                    BuffCount: 10,
                     DurationType: "Turn",
                     DurationCount: 1
                 },
