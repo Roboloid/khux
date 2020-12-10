@@ -1,11 +1,13 @@
 var currAccessoryArray = [];
 var summedBP = 0;
 var summedMaterials = [];
+var summedAccessories = [];
 var currentButton = 0;
 
 function loadPage()   {
     for(var p = 1; p < Object.keys(accessoryDatabase).length + 1; p++) {
         currAccessoryArray[p] = p;
+        summedAccessories[p] = 0;
     }
 
     for(var p = 1; p < Object.keys(materialDatabase).length + 1; p++) {
@@ -80,61 +82,63 @@ function loadLeftAccessory()   {
     leftSideContainer.innerHTML = "";
 
     for(var i = currAccessoryArray.length - 1; i > 0; i--)  {
-        var accessoryBaseDiv = document.createElement('div');
-        accessoryBaseDiv.setAttribute("onclick", "loadAccessory('" + i + "');");
-        accessoryBaseDiv.style = "cursor: pointer; display: inline-block; position: relative;"
-        
-        var accessoryBaseIMG = document.createElement('img');
-        accessoryBaseIMG.src = "./images/ui/accessoryButtonOff.png";
-        accessoryBaseIMG.setAttribute("id", "accessoryBaseIMG" + i);
-        accessoryBaseIMG.style = "width: 250px; position: relative; z-index: 10";
-        accessoryBaseDiv.appendChild(accessoryBaseIMG);
+        if(accessoryDatabase[i].Uncraftable == undefined)   {
+            var accessoryBaseDiv = document.createElement('div');
+            accessoryBaseDiv.setAttribute("onclick", "loadAccessory('" + i + "');");
+            accessoryBaseDiv.style = "cursor: pointer; display: inline-block; position: relative;"
+            
+            var accessoryBaseIMG = document.createElement('img');
+            accessoryBaseIMG.src = "./images/ui/accessoryButtonOff.png";
+            accessoryBaseIMG.setAttribute("id", "accessoryBaseIMG" + i);
+            accessoryBaseIMG.style = "width: 250px; position: relative; z-index: 10";
+            accessoryBaseDiv.appendChild(accessoryBaseIMG);
 
-        var accessoryName = document.createElement('span');
-        accessoryName.style = "width: 210px; font-family: UI Font; position: absolute; color: white; font-size: 1.3em; text-shadow: 1.25px 1.25px rgb(0, 0, 0); z-index: 15; text-align: left; left: 10%; top: 14.5%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis";
-        accessoryName.appendChild(document.createTextNode(accessoryDatabase[i].Name));
-        accessoryBaseDiv.appendChild(accessoryName);
-        
-        var accessoryIMG = document.createElement('img');
-        accessoryIMG.src = "./images/assets/material/" + accessoryDatabase[i].Image;
-        accessoryIMG.style = "width: 50px; position: absolute; z-index: 20; transform: translate(-50%, -50%); left: 50%; top: 60%";
-        accessoryBaseDiv.appendChild(accessoryIMG);
+            var accessoryName = document.createElement('span');
+            accessoryName.style = "width: 210px; font-family: UI Font; position: absolute; color: white; font-size: 1.3em; text-shadow: 1.25px 1.25px rgb(0, 0, 0); z-index: 15; text-align: left; left: 10%; top: 14.5%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis";
+            accessoryName.appendChild(document.createTextNode(accessoryDatabase[i].Name));
+            accessoryBaseDiv.appendChild(accessoryName);
+            
+            var accessoryIMG = document.createElement('img');
+            accessoryIMG.src = "./images/assets/material/" + accessoryDatabase[i].Image;
+            accessoryIMG.style = "width: 50px; position: absolute; z-index: 20; transform: translate(-50%, -50%); left: 50%; top: 60%";
+            accessoryBaseDiv.appendChild(accessoryIMG);
 
-        if(accessoryDatabase[i].Rarity == 1)    {
-            var accessoryRarity = document.createElement('img');
-            accessoryRarity.src = "./images/ui/RarityStar.png";
-            accessoryRarity.style = "width: 20px; position: absolute; z-index: 20; transform: translate(-50%, -50%); left: 50%; top: 78%";
-            accessoryBaseDiv.appendChild(accessoryRarity);
+            if(accessoryDatabase[i].Rarity == 1)    {
+                var accessoryRarity = document.createElement('img');
+                accessoryRarity.src = "./images/ui/RarityStar.png";
+                accessoryRarity.style = "width: 20px; position: absolute; z-index: 20; transform: translate(-50%, -50%); left: 50%; top: 78%";
+                accessoryBaseDiv.appendChild(accessoryRarity);
+            }
+            else if(accessoryDatabase[i].Rarity == 2)    {
+                var accessoryRarity1 = document.createElement('img');
+                accessoryRarity1.src = "./images/ui/RarityStar.png";
+                accessoryRarity1.style = "width: 20px; position: absolute; z-index: 20; transform: translate(-50%, -50%); left: 47%; top: 78%";
+                accessoryBaseDiv.appendChild(accessoryRarity1);
+
+                var accessoryRarity2 = document.createElement('img');
+                accessoryRarity2.src = "./images/ui/RarityStar.png";
+                accessoryRarity2.style = "width: 20px; position: absolute; z-index: 20; transform: translate(-50%, -50%); left: 53%; top: 78%";
+                accessoryBaseDiv.appendChild(accessoryRarity2);
+            }
+            else if(accessoryDatabase[i].Rarity == 3)    {
+                var accessoryRarity1 = document.createElement('img');
+                accessoryRarity1.src = "./images/ui/RarityStar.png";
+                accessoryRarity1.style = "width: 20px; position: absolute; z-index: 20; transform: translate(-50%, -50%); left: 45%; top: 78%";
+                accessoryBaseDiv.appendChild(accessoryRarity1);
+
+                var accessoryRarity2 = document.createElement('img');
+                accessoryRarity2.src = "./images/ui/RarityStar.png";
+                accessoryRarity2.style = "width: 20px; position: absolute; z-index: 20; transform: translate(-50%, -50%); left: 50%; top: 78%";
+                accessoryBaseDiv.appendChild(accessoryRarity2);
+
+                var accessoryRarity3 = document.createElement('img');
+                accessoryRarity3.src = "./images/ui/RarityStar.png";
+                accessoryRarity3.style = "width: 20px; position: absolute; z-index: 20; transform: translate(-50%, -50%); left: 55%; top: 78%";
+                accessoryBaseDiv.appendChild(accessoryRarity3);
+            }
+
+            leftSideContainer.appendChild(accessoryBaseDiv);
         }
-        else if(accessoryDatabase[i].Rarity == 2)    {
-            var accessoryRarity1 = document.createElement('img');
-            accessoryRarity1.src = "./images/ui/RarityStar.png";
-            accessoryRarity1.style = "width: 20px; position: absolute; z-index: 20; transform: translate(-50%, -50%); left: 47%; top: 78%";
-            accessoryBaseDiv.appendChild(accessoryRarity1);
-
-            var accessoryRarity2 = document.createElement('img');
-            accessoryRarity2.src = "./images/ui/RarityStar.png";
-            accessoryRarity2.style = "width: 20px; position: absolute; z-index: 20; transform: translate(-50%, -50%); left: 53%; top: 78%";
-            accessoryBaseDiv.appendChild(accessoryRarity2);
-        }
-        else if(accessoryDatabase[i].Rarity == 3)    {
-            var accessoryRarity1 = document.createElement('img');
-            accessoryRarity1.src = "./images/ui/RarityStar.png";
-            accessoryRarity1.style = "width: 20px; position: absolute; z-index: 20; transform: translate(-50%, -50%); left: 45%; top: 78%";
-            accessoryBaseDiv.appendChild(accessoryRarity1);
-
-            var accessoryRarity2 = document.createElement('img');
-            accessoryRarity2.src = "./images/ui/RarityStar.png";
-            accessoryRarity2.style = "width: 20px; position: absolute; z-index: 20; transform: translate(-50%, -50%); left: 50%; top: 78%";
-            accessoryBaseDiv.appendChild(accessoryRarity2);
-
-            var accessoryRarity3 = document.createElement('img');
-            accessoryRarity3.src = "./images/ui/RarityStar.png";
-            accessoryRarity3.style = "width: 20px; position: absolute; z-index: 20; transform: translate(-50%, -50%); left: 55%; top: 78%";
-            accessoryBaseDiv.appendChild(accessoryRarity3);
-        }
-
-        leftSideContainer.appendChild(accessoryBaseDiv);
     }
 }
 
@@ -275,8 +279,13 @@ function loadAccessory(value)    {
         else if(accessoryDatabase[value].Components[indexElement] != undefined && accessoryDatabase[value].Components[indexElement].accessoryID != undefined)  {
             accessoryMat++;
             var materialBaseDiv = document.createElement('div');
-            materialBaseDiv.setAttribute("onclick", "loadAccessory('" + accessoryDatabase[value].Components[indexElement].accessoryID + "');");
-            materialBaseDiv.style = "cursor: pointer; display: inline-block; position: relative; margin: 2px"
+            if(accessoryDatabase[accessoryDatabase[value].Components[indexElement].accessoryID].Uncraftable == undefined)    {
+                materialBaseDiv.setAttribute("onclick", "loadAccessory('" + accessoryDatabase[value].Components[indexElement].accessoryID + "');");
+                materialBaseDiv.style = "cursor: pointer; display: inline-block; position: relative; margin: 2px";
+            }
+            else    {
+                materialBaseDiv.style = "display: inline-block; position: relative; margin: 2px";
+            }
             
             var accessoryBaseIMG = document.createElement('img');
             accessoryBaseIMG.src = "./images/ui/materialButton2.png";
@@ -330,6 +339,10 @@ function addIngredients(value)  {
     var buttonDisappear = document.getElementById("ingredientButtonID");
     buttonDisappear.style = "display: none";
 
+    for(var p = 1; p < Object.keys(accessoryDatabase).length + 1; p++) {
+        summedAccessories[p] = 0;
+    }
+
     for(var p = 1; p < Object.keys(materialDatabase).length + 1; p++) {
         summedMaterials[p] = 0;
     }
@@ -339,10 +352,13 @@ function addIngredients(value)  {
     summedBP = summedBP + accessoryDatabase[value].BPCost;
 
     for(var entry of Object.keys(accessoryDatabase[value].Components))  {
-        if(accessoryDatabase[value].Components[entry].accessoryID != undefined) {
+        if(accessoryDatabase[value].Components[entry].accessoryID != undefined && accessoryDatabase[accessoryDatabase[value].Components[entry].accessoryID].Uncraftable == undefined) {
             for(var i = 0; i < accessoryDatabase[value].Components[entry].quantity; i++)    {
                 enterLoop(accessoryDatabase[value].Components[entry].accessoryID);
             }
+        }
+        else if(accessoryDatabase[value].Components[entry].accessoryID != undefined && accessoryDatabase[accessoryDatabase[value].Components[entry].accessoryID].Uncraftable != undefined)  {
+            summedAccessories[accessoryDatabase[value].Components[entry].accessoryID] = summedAccessories[accessoryDatabase[value].Components[entry].accessoryID] + accessoryDatabase[value].Components[entry].quantity;
         }
         else if(accessoryDatabase[value].Components[entry].materialID != undefined) {
             summedMaterials[accessoryDatabase[value].Components[entry].materialID] = summedMaterials[accessoryDatabase[value].Components[entry].materialID] + accessoryDatabase[value].Components[entry].quantity;
@@ -353,6 +369,36 @@ function addIngredients(value)  {
     componentBPCost.setAttribute("id", "accessoryBPCostID");
     componentBPCost.innerHTML = "";
     componentBPCost.appendChild(document.createTextNode("Costs " + summedBP.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " BP to craft."));
+
+    for(var j = 1; j < summedAccessories.length + 1; j++) {
+
+        if(summedAccessories[j] > 0)  {
+            var materialBaseDiv = document.createElement('div');
+            materialBaseDiv.style = "display: inline-block; position: relative; margin: 2px"
+                    
+            var accessoryBaseIMG = document.createElement('img');
+            accessoryBaseIMG.src = "./images/ui/materialButton2.png";
+            accessoryBaseIMG.style = "width: 300px; position: relative; z-index: 25";
+            materialBaseDiv.appendChild(accessoryBaseIMG);
+                    
+            var accessoryIMG = document.createElement('img');
+            accessoryIMG.src = "./images/assets/material/" + accessoryDatabase[j].Image;
+            accessoryIMG.style = "width: 32px; position: absolute; z-index: 30; transform: translate(-50%, -50%); left: 6.1%; top: 52%";
+            materialBaseDiv.appendChild(accessoryIMG);
+        
+            var materialTitle = document.createElement('span');
+            materialTitle.style = "width: 175px; font-family: UI Font; display: inline-block; position: absolute; color: white; font-size: 1.25em; text-shadow: 1.25px 1.25px rgb(0, 0, 0); left: 15%; top: 6.5%; text-align: left; z-index: 35; white-space: nowrap; overflow: hidden; text-overflow: ellipsis";
+            materialTitle.appendChild(document.createTextNode(accessoryDatabase[j].Name));
+            materialBaseDiv.appendChild(materialTitle);
+        
+            var materialQuantity = document.createElement('span');
+            materialQuantity.style = "font-family: UI Font; display: inline-block; position: absolute; color: white; font-size: 1.25em; text-shadow: 1.25px 1.25px rgb(0, 0, 0); right: 5%; top: 6.5%; text-align: right; z-index: 35";
+            materialQuantity.appendChild(document.createTextNode("x" + summedAccessories[j]));
+            materialBaseDiv.appendChild(materialQuantity);
+            
+            accessoryMaterialList.appendChild(materialBaseDiv);
+        }
+    }
 
     for(var j = 1; j < summedMaterials.length + 1; j++) {
 
@@ -389,6 +435,14 @@ function addIngredients(value)  {
 
 function enterLoop(value)   {
     summedBP = summedBP + accessoryDatabase[value].BPCost;
+    if(accessoryDatabase[value].Components == undefined && accessoryDatabase[value].Uncraftable != undefined)    {
+        summedAccessories[value] = summedAccessories[value] + 1;
+        return;
+    }
+    else if(accessoryDatabase[value].Components == undefined)   {
+        return;
+    }
+
     for(var entry of Object.keys(accessoryDatabase[value].Components))  {
         if(accessoryDatabase[value].Components[entry].accessoryID != undefined) {
             for(var i = 0; i < accessoryDatabase[value].Components[entry].quantity; i++)    {
@@ -1475,7 +1529,58 @@ var accessoryDatabase = {
             }
         },
         BPCost: 100000
-    }
+    },
+    33:  {
+        Name: "Blizzard Belt",
+        Rarity: 1,
+        Image: "Dark_Material_503.png",
+        Effect: {
+            BuffType: "Water Physical Aid +5 Water Magic Aid",
+            BuffCount: "5"
+        },
+        BPCost: 0,
+        Uncraftable: "Yes"
+    },
+    34:  {
+        Name: "Blizzara Belt",
+        Rarity: 1,
+        Image: "Dark_Material_503.png",
+        Effect: {
+            BuffType: "Water Physical Aid +8 Water Magic Aid",
+            BuffCount: "8"
+        },
+        Components: {
+            Item1:  {
+                accessoryID: 33,
+                quantity: 5
+            }
+        },
+        BPCost: 3000
+    },
+    35:  {
+        Name: "Blizzaga Belt",
+        Rarity: 1,
+        Image: "Dark_Material_503.png",
+        Effect: {
+            BuffType: "Water Physical Aid +10 Water Magic Aid",
+            BuffCount: "10"
+        },
+        Components: {
+            Item1:  {
+                accessoryID: 34,
+                quantity: 1
+            },
+            Item2:  {
+                materialID: 15,
+                quantity: 3
+            },
+            Item3:  {
+                materialID: 16,
+                quantity: 3
+            }
+        },
+        BPCost: 5000
+    },
 }
 
 /*
