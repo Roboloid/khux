@@ -3608,4 +3608,98 @@ var cardDatabase = {
             Effect: "Target's Defense -3 for 10s. Stacking Cards does not increase value. Can be applied more than once."
         }
     },
+    72:  {
+        ID: 72,
+        AlbumNum: 72,
+        CardImage: "72_Yuffie.png",
+        RenderImage: "72_Yuffie_Render.png",
+        Name: "Yuffie",
+        DirectionType: "Light",
+        ColorType: "Red",
+        AttackType: "Sword",
+        MainAbility:    {
+            Name: "Icicle Spear",
+            AttackType: "Sword",
+            Element: "Water",
+            BasePower: 20,
+            MaxPower: 54,
+            Effect: "A water-element physical attack."
+        }
+    },
+    73:  {
+        ID: 73,
+        AlbumNum: 73,
+        CardImage: "73_Monstro.png",
+        RenderImage: "73_Monstro_Render.png",
+        Name: "Monstro",
+        DirectionType: "Dark",
+        ColorType: "Red",
+        AttackType: "Staff",
+        MainAbility:    {
+            Name: "Blizzard",
+            AttackType: "Staff",
+            Element: "Water",
+            BasePower: 25,
+            MaxPower: 45,
+            Effect: "A water-element magic attack."
+        }
+    },
+    74:  {
+        ID: 74,
+        AlbumNum: 74,
+        CardImage: "74_Hades.png",
+        RenderImage: "74_Hades_Render.png",
+        Name: "Hades",
+        DirectionType: "Dark",
+        ColorType: "Blue",
+        AttackType: "Staff",
+        MainAbility:    {
+            Name: "Ultimate Blaze",
+            AttackType: "Staff",
+            Element: "Fire",
+            BasePower: 15,
+            MaxPower: 50,
+            Effect: "Consumes 50% HP to unleash a powerful fire-element magic attack. Power +15."
+        }
+    },
+    75:  {
+        ID: 75,
+        AlbumNum: 75,
+        CardImage: "75_Potion_II.png",
+        RenderImage: "75_Potion_II_Render.png",
+        Name: "Potion II",
+        DirectionType: "Light",
+        ColorType: "Green",
+        AttackType: "Shield",
+        MainAbility:    {
+            Name: "Potion II",
+            AttackType: "Shield",
+            Element: "Neutral",
+            BasePower: 0,
+            MaxPower: 0,
+            Effect: "Restores 80 HP. Stacking Cards does not increase value."
+        },
+        SubAbility:    {
+            Name: "Potion",
+            Effect: "Restores 50 HP. Stacking Cards does not increase value."
+        }
+    },
+    76:  {
+        ID: 76,
+        AlbumNum: 76,
+        CardImage: "76_Genie_Jafar.png",
+        RenderImage: "76_Genie_Jafar_Render.png",
+        Name: "Genie Jafar",
+        DirectionType: "Dark",
+        ColorType: "Green",
+        AttackType: "Shield",
+        MainAbility:    {
+            Name: "Absorption",
+            AttackType: "Shield",
+            Element: "Neutral",
+            BasePower: 50,
+            MaxPower: 50,
+            Effect: "Absorbs 50 HP. Stacking Cards does not increase value."
+        }
+    },
 };
