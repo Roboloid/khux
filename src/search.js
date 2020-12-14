@@ -85007,6 +85007,7 @@ var medalDatabase = {
                 },
                 GuiltBuff: 220,
                 GaugeRecovery: 3,
+                Mastery: "Yes",
                 HPRecovery: "Yes"
             },
             EnemyBuffs: {
