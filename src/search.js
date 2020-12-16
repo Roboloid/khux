@@ -85011,11 +85011,6 @@ var medalDatabase = {
                 HPRecovery: "Yes"
             },
             EnemyBuffs: {
-                DebuffGD: {
-                    BuffCount: 10,
-                    DurationType: "Turn",
-                    DurationCount: 1
-                },
                 DebuffUD: {
                     BuffCount: 10,
                     DurationType: "Turn",
