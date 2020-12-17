@@ -22594,7 +22594,7 @@ var medalDatabase = {
     765:  {
         ID: 765,
         AlbumNum: 564,
-        Reference: [765, 766],
+        Reference: [765, 766, 2068],
         MedalImage: "564_6Star_Illustrated_Xion.png",
         RenderImage: "564_6Star_Illustrated_Xion_Render.png",
         MusicLink: "(KH1.5)_Musique_pour_la_tristesse_de_Xion.mp3",
@@ -22626,7 +22626,7 @@ var medalDatabase = {
     766:  {
         ID: 766,
         AlbumNum: 1200,
-        Reference: [765, 766],
+        Reference: [765, 766, 2068],
         MedalImage: "1200_7Star_Illustrated_Xion.png",
         RenderImage: "564_6Star_Illustrated_Xion_Render.png",
         MusicLink: "(KH1.5)_Musique_pour_la_tristesse_de_Xion.mp3",
@@ -85234,6 +85234,211 @@ var medalDatabase = {
                 Counter:    {
                     CountDirection: "Null"
                 }
+            },
+            Hits: 1
+        }
+    },
+    2068:  {
+        ID: 2068,
+        AlbumNum: 1200,
+        Reference: [765, 766, 2068],
+        MedalImage: "1200_7Star_Illustrated_Xion.png",
+        RenderImage: "564_6Star_Illustrated_Xion_Render.png",
+        MusicLink: "(KH1.5)_Musique_pour_la_tristesse_de_Xion.mp3",
+        Name: "SN++ - Illustrated Xion",
+        Rarity: 7,
+        Direction: "Reversed",
+        Attribute: "Magic",
+        Guilt: 10,
+        STR: 45710,
+        DEF: 16403,
+        Multi: 20.90,
+        Gauge: 2,
+        Target: "All",
+        Ability:    {
+            Name: "Dark Thunder Raid +7",
+            Text: "Deals 3 hits. 2 turns: M-Medal STR +6000, self [↑ STR & R-STR 15], targets [↓ DEF & R-DEF 15], SP ATK B +220%. Count ±0. Pierces Defense Boost 30%.",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                BuffRA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                STRPlus:  {
+                    Type: "Magic",
+                    Amount: 6000,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                GuiltBuff: 220
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                DebuffRD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                Counter:    {
+                    CountDirection: "Null"
+                },
+                DEFPierce: 30
+            },
+            Hits: 3
+        },
+        Supernova:  {
+            Name: "[Mastery] Reversed Strike All M",
+            Text: "1 turn: M-Medal STR +12000, self [↑ R- & M-STR 15], targets [↓ R- & M-DEF 15], SP ATK B +320%. Triggers before slot 1 is activated when defending in PVP.",
+            Multi: 240.00,
+            Timing: 1,
+            Target: "All",
+            SelfBuffs:  {
+                BuffRA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Magic",
+                    Amount: 12000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320
+            },
+            EnemyBuffs: {
+                DebuffRD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffMD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 1
+        }
+    },
+    2069:  {
+        ID: 2069,
+        AlbumNum: 1912,
+        Reference: [2069],
+        MedalImage: "1912_7Star_SN++_-_Stained_Glass_%2314.png",
+        RenderImage: "1912_7Star_SN++_-_Stained_Glass_%2314_Render.png",
+        KeyArtImage: "Art_1912_7Star_SN++_-_Stained_Glass_%2314.png",
+        Name: "SN++ - Stained Glass #14",
+        Rarity: 7,
+        Direction: "Upright",
+        Attribute: "Magic",
+        Guilt: 10,
+        STR: 40794,
+        DEF: 16518,
+        Multi: 9.53,
+        Gauge: 3,
+        Target: "Single",
+        Ability:    {
+            Name: "Lesser Imitation II EX +6",
+            Text: "1 turn: Medal STR +2000. Pierces Defense Boost 30%. Unleashes the same SP attack as the next Medal. Works only when set before a Medal.",
+            SelfBuffs:  {
+                STRPlus:  {
+                    Type: "General",
+                    Amount: 2000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Copy: {
+                    Direction: "Next",
+                    Slot: 1
+                }
+            },
+            EnemyBuffs: {
+                DEFPierce: 30
+            },
+            Hits: 1
+        },
+        Supernova:  {
+            Name: "[Mastery] Upright Strike All M",
+            Text: "1 turn: Medal STR +14000, self [↑ STR, U- & PSM-STR 15], targets [↓ DEF, U- & PSM-DEF 15], SP ATK B +320%. Ignores targets' Defense Boost. Triggers before slot 1 is activated when defending in PVP.",
+            Multi: 250.00,
+            Timing: 1,
+            Target: "All",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffPA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "General",
+                    Amount: 14000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffUD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffPD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffMD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DEFPierce: 100
             },
             Hits: 1
         }
