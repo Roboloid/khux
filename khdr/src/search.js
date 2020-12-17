@@ -3702,4 +3702,26 @@ var cardDatabase = {
             Effect: "Absorbs 50 HP. Stacking Cards does not increase value."
         }
     },
+    77:  {
+        ID: 77,
+        AlbumNum: 77,
+        CardImage: "77_Festive_Roxas.png",
+        RenderImage: "77_Festive_Roxas_Render.png",
+        Name: "Festive Roxas",
+        DirectionType: "Light",
+        ColorType: "Blue",
+        AttackType: "Staff",
+        MainAbility:    {
+            Name: "Radiant Star",
+            AttackType: "Staff",
+            Element: "Light",
+            BasePower: 50,
+            MaxPower: 100,
+            Effect: "A powerful light-element magic attack."
+        },
+        SubAbility:    {
+            Name: "Magic DEF Sap 3",
+            Effect: "Target's Magic Resist -3 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+        }
+    },
 };
