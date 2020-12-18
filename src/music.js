@@ -37,7 +37,7 @@ function skipTrack(value) {
       var newMusicName;
 
       var currentTrackNum = getKeyByValue(musicArray, currentMusicName);
-      if(currentTrackNum == 1)  {
+      if(currentTrackNum == 0)  {
         newMusicName = musicArray[111];
         document.getElementById("currentMusic").src = "./music/" + newMusicName;
       }
@@ -53,7 +53,7 @@ function skipTrack(value) {
 
       var currentTrackNum = getKeyByValue(musicArray, currentMusicName);
       if(currentTrackNum == 111)  {
-        newMusicName = musicArray[1];
+        newMusicName = musicArray[0];
         document.getElementById("currentMusic").src = "./music/" + newMusicName;
       }
       else{
@@ -71,30 +71,31 @@ function skipTrack(value) {
 }
 
 var musicArray = {
-  1: "(KHBC)_Case_of_the_Foretellers.mp3",
-  2: "(KHBC)_Guiding_Key.mp3",
-  3: "(KHBC)_The_Foretellers.mp3",
-  4: "(KHUX)_Candy_Kingdom_Battle.mp3",
-  5: "(KHUX)_Candy_Kingdom_Field.mp3",
-  6: "(KHUX)_Clash_On_the_Big_Bridge.mp3",
-  7: "(KHUX)_Classic_Kingdom.mp3",
-  8: "(KHUX)_Cy-Bug_Sector_Battle.mp3",
-  9: "(KHUX)_Cy-Bug_Sector_Field.mp3",
-  10: "(KHUX)_Dancing_Mad.mp3",
-  11: "(KHUX)_Daybreak_Town_Battle.mp3",
-  12: "(KHUX)_Daybreak_Town_Field.mp3",
-  13: "(KHUX)_Daybreak_Town_The_Heart_of_X.mp3",
-  14: "(KHUX)_Dearly_Beloved.mp3",
-  15: "(KHUX)_Defeat....mp3",
-  16: "(KHUX)_Game_Central_Station.mp3",
-  17: "(KHUX)_Gummi_Ship_Editor.mp3",
-  18: "(KHUX)_Menu.mp3",
-  19: "(KHUX)_Niceland_Battle.mp3",
-  20: "(KHUX)_Niceland_Field.mp3",
-  21: "(KHUX)_Quest_Selection.mp3",
-  22: "(KHUX)_Title.mp3",
-  23: "(KHUX)_TWISTER_-UNION_X_MIX-.mp3",
-  24: "(KHUX)_Victory!.mp3",
+  0: "(KHBC)_Case_of_the_Foretellers.mp3",
+  1: "(KHBC)_Guiding_Key.mp3",
+  2: "(KHBC)_The_Foretellers.mp3",
+  3: "(KHUX)_A_Nameless_Planet.mp3",
+  4: "(KHUX)_Before_The_Daylight.mp3",
+  5: "(KHUX)_Clash_On_the_Big_Bridge.mp3",
+  6: "(KHUX)_Classic_Kingdom.mp3",
+  7: "(KHUX)_Dancing_Mad.mp3",
+  8: "(KHUX)_Daybreak_Town_The_Heart_of_X.mp3",
+  9: "(KHUX)_Dearly_Beloved_-Union_X_Version-.mp3",
+  10: "(KHUX)_Defeat....mp3",
+  11: "(KHUX)_Game_Central_Station.mp3",
+  12: "(KHUX)_Gummi_Ship_Editor.mp3",
+  13: "(KHUX)_Hand_in_Hand_-Union_X_Version-.mp3",
+  14: "(KHUX)_Hero's_Duty_Troopers.mp3",
+  15: "(KHUX)_I'm_Gonna_Wreck_It!.mp3",
+  16: "(KHUX)_Master_of_Masters.mp3",
+  17: "(KHUX)_Mission_Complete!.mp3",
+  18: "(KHUX)_Quest_Selection.mp3",
+  19: "(KHUX)_The_Candy-Filled_Kingdom.mp3",
+  20: "(KHUX)_The_Fastest_Racer.mp3",
+  21: "(KHUX)_Title.mp3",
+  22: "(KHUX)_TWISTER_-UNION_X_MIX-.mp3",
+  23: "(KHUX)_Wake Up,_World!.mp3",
+  24: "(KHUX)_Welcome_to_Niceland.mp3",
   25: "(KHBBS)_Aqua.mp3",
   26: "(KHBBS)_Black_Power.mp3",
   27: "(KHBBS)_Castle_Escapade.mp3",
