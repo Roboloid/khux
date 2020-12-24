@@ -3724,4 +3724,88 @@ var cardDatabase = {
             Effect: "Target's Magic Resist -3 for 10s. Stacking Cards does not increase value. Can be applied more than once."
         }
     },
+    78:  {
+        ID: 78,
+        AlbumNum: 78,
+        CardImage: "78_Ansem.png",
+        RenderImage: "78_Ansem_Render.png",
+        Name: "Ansem",
+        DirectionType: "Dark",
+        ColorType: "Red",
+        AttackType: "Sword",
+        MainAbility:    {
+            Name: "Dark Fire Raid",
+            AttackType: "Sword",
+            Element: "Fire",
+            BasePower: 15,
+            MaxPower: 45,
+            Effect: "A fire-element physical attack."
+        }
+    },
+    79:  {
+        ID: 79,
+        AlbumNum: 79,
+        CardImage: "79_Key_Art_%235.png",
+        RenderImage: "79_Key_Art_%235_Render.png",
+        Name: "Key Art #5",
+        DirectionType: "Light",
+        ColorType: "Red",
+        AttackType: "Staff",
+        MainAbility:    {
+            Name: "Thundaga",
+            AttackType: "Staff",
+            Element: "Lightning",
+            BasePower: 50,
+            MaxPower: 100,
+            Effect: "A powerful lightning-element magic attack."
+        },
+        SubAbility:    {
+            Name: "Poison",
+            Effect: "Low chance to inflict poison."
+        }
+    },
+    80:  {
+        ID: 80,
+        AlbumNum: 80,
+        CardImage: "80_Key_Art_%236.png",
+        RenderImage: "80_Key_Art_%236_Render.png",
+        Name: "Key Art #6",
+        DirectionType: "Dark",
+        ColorType: "Green",
+        AttackType: "Staff",
+        MainAbility:    {
+            Name: "Firaga",
+            AttackType: "Staff",
+            Element: "Fire",
+            BasePower: 50,
+            MaxPower: 100,
+            Effect: "A powerful fire-element magic attack."
+        },
+        SubAbility:    {
+            Name: "Paralysis",
+            Effect: "Low chance to inflict paralysis."
+        }
+    },
+    81:  {
+        ID: 81,
+        AlbumNum: 81,
+        CardImage: "81_Key_Art_%237.png",
+        RenderImage: "81_Key_Art_%237_Render.png",
+        Name: "Key Art #7",
+        DirectionType: "Light",
+        ColorType: "Blue",
+        AttackType: "Sword",
+        MainAbility:    {
+            Name: "Black Hole",
+            AttackType: "Sword",
+            Element: "Water",
+            BasePower: 50,
+            MaxPower: 100,
+            Effect: "A powerful water-element physical attack."
+        },
+        SubAbility:    {
+            Name: "Sleep",
+            Effect: "Low chance to inflict sleep."
+        }
+    },
 };

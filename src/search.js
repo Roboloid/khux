@@ -17089,7 +17089,7 @@ var medalDatabase = {
     579:  {
         ID: 579,
         AlbumNum: 450,
-        Reference: [579, 580],
+        Reference: [579, 580, 2070],
         MedalImage: "450_6Star_Roxas_&_Axel_&_Xion.png",
         RenderImage: "450_6Star_Roxas_&_Axel_&_Xion_Render.png",
         Name: "Roxas & Axel & Xion",
@@ -17118,7 +17118,7 @@ var medalDatabase = {
     580:  {
         ID: 580,
         AlbumNum: 1129,
-        Reference: [579, 580],
+        Reference: [579, 580, 2070],
         MedalImage: "1129_7Star_Roxas_&_Axel_&_Xion.png",
         RenderImage: "450_6Star_Roxas_&_Axel_&_Xion_Render.png",
         Name: "Roxas & Axel & Xion",
@@ -44813,7 +44813,7 @@ var medalDatabase = {
     1443:  {
         ID: 1443,
         AlbumNum: 994,
-        Reference: [1443, 1444],
+        Reference: [1443, 1444, 2071],
         MedalImage: "994_6Star_HD_Vanitas_[EX+].png",
         RenderImage: "994_6Star_HD_Vanitas_[EX+]_Render.png",
         MusicLink: "(KHBBS)_Unbreakable_Chains.mp3",
@@ -44850,7 +44850,7 @@ var medalDatabase = {
     1444:  {
         ID: 1444,
         AlbumNum: 1429,
-        Reference: [1443, 1444],
+        Reference: [1443, 1444, 2071],
         MedalImage: "1429_7Star_HD_Vanitas_[EX+].png",
         RenderImage: "994_6Star_HD_Vanitas_[EX+]_Render.png",
         MusicLink: "(KHBBS)_Unbreakable_Chains.mp3",
@@ -85439,6 +85439,268 @@ var medalDatabase = {
                     DurationCount: 1
                 },
                 DEFPierce: 100
+            },
+            Hits: 1
+        }
+    },
+    2070:  {
+        ID: 2070,
+        AlbumNum: 1129,
+        Reference: [579, 580, 2070],
+        MedalImage: "1129_7Star_Roxas_&_Axel_&_Xion.png",
+        RenderImage: "450_6Star_Roxas_&_Axel_&_Xion_Render.png",
+        Name: "SN++ - Roxas & Pals",
+        Rarity: 7,
+        Direction: "Reversed",
+        Attribute: "Speed",
+        Guilt: 10,
+        STR: 46018,
+        DEF: 16418,
+        LowMulti: 19.10,
+        HighMulti: 21.97,
+        Gauge: 3,
+        Target: "All",
+        Ability:    {
+            Name: "Dark Aura +7",
+            Text: "Deals 6 hits. 1 turn: Medal STR +10000, self [↑ STR, R- & PSM-STR 15], targets [↓ DEF, R- & PSM-DEF 15], SP ATK B +220%. Count ±0. Critical hit chance: 50%.",
+            Condition: "Critical",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffRA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffPA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "General",
+                    Amount: 10000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 220,
+                CriticalChance: 50
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffRD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffPD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffMD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Counter:    {
+                    CountDirection: "Null"
+                }
+            },
+            Hits: 6
+        },
+        Supernova:  {
+            Name: "[Mastery] Reversed Strike All S",
+            Text: "1 turn: Medal STR +12000, self [↑ R- & PSM-STR 15], targets [↓ R- & PSM-DEF 15], SP ATK B +320%. Triggers before slot 1 is activated when defending in PVP.",
+            Multi: 240.00,
+            Timing: 1,
+            Target: "All",
+            SelfBuffs:  {
+                BuffRA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffPA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "General",
+                    Amount: 12000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320
+            },
+            EnemyBuffs: {
+                DebuffRD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffPD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffMD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 1
+        }
+    },
+    2071:  {
+        ID: 2071,
+        AlbumNum: 1429,
+        Reference: [1443, 1444, 2071],
+        MedalImage: "1429_7Star_HD_Vanitas_[EX+].png",
+        RenderImage: "994_6Star_HD_Vanitas_[EX+]_Render.png",
+        MusicLink: "(KHBBS)_Unbreakable_Chains.mp3",
+        Name: "SN++ - HD Vanitas",
+        Rarity: 7,
+        Direction: "Reversed",
+        Attribute: "Magic",
+        Guilt: 10,
+        STR: 46268,
+        DEF: 16430,
+        LowMulti: 15.76,
+        HighMulti: 20.00,
+        Gauge: 4,
+        Target: "All",
+        Ability:    {
+            Name: "Raging Darkness +7",
+            Text: "[Mastery] Deals 3 hits. 1 turn: M-Medal STR +10000, self [↑ STR, R- & M-STR 15], targets [↓ DEF, R- & M-DEF 15], SP ATK B +220%. Count ±0. Damage+: Higher HP.",
+            Condition: "HigherHP",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffRA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Magic",
+                    Amount: 10000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 220,
+                Mastery: "Yes"
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffRD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffMD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Counter:    {
+                    CountDirection: "Null"
+                }
+            },
+            Hits: 6
+        },
+        Supernova:  {
+            Name: "[Mastery] Reversed Strike All M",
+            Text: "1 turn: M-Medal STR +12000, self [↑ STR & R-STR 15], targets [↓ DEF & R-DEF 15], SP ATK B +320%. Count +2. Gauge +2. Triggers before slot 1 is activated when defending in PVP.",
+            Multi: 240.00,
+            Timing: 1,
+            Target: "All",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffRA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Magic",
+                    Amount: 12000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320,
+                GaugeRecovery: 2
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffRD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Counter:    {
+                    CountDirection: "Up",
+                    Count: 2
+                }
             },
             Hits: 1
         }
