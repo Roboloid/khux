@@ -842,23 +842,23 @@ function checkConditions(MedalID)   {
 
     if(document.getElementById("abilityFilters_SelfBuffs_STRPlusIMG").src.indexOf("On.png") != -1)   {
         if(document.getElementById("abilityFilters_SelfBuffs_STRPlusIMGcaption/Type").value != undefined && document.getElementById("abilityFilters_SelfBuffs_STRPlusIMGcaption/Type").value != "")   {
-            if(medalDatabase[MedalID].Ability == undefined || medalDatabase[MedalID].Ability.SelfBuffs == undefined || medalDatabase[MedalID].Ability.SelfBuffs.STRPlus == undefined || medalDatabase[MedalID].Ability.SelfBuffs.STRPlus.Type != document.getElementById("abilityFilters_SelfBuffs_STRPlusIMGcaption/Type").value) {
+            if((medalDatabase[MedalID].Ability == undefined || medalDatabase[MedalID].Ability.SelfBuffs == undefined || medalDatabase[MedalID].Ability.SelfBuffs.STRPlus == undefined || medalDatabase[MedalID].Ability.SelfBuffs.STRPlus.Type != document.getElementById("abilityFilters_SelfBuffs_STRPlusIMGcaption/Type").value) && (medalDatabase[MedalID].Ability == undefined || medalDatabase[MedalID].Ability.SelfBuffs == undefined || medalDatabase[MedalID].Ability.SelfBuffs["STRPlus" + document.getElementById("abilityFilters_SelfBuffs_STRPlusIMGcaption/Type").value] == undefined)) {
                 return 0;
             }
         }
         if(document.getElementById("abilityFilters_SelfBuffs_STRPlusIMGcaption/Value").value != undefined && document.getElementById("abilityFilters_SelfBuffs_STRPlusIMGcaption/Value").value != "")   {
-            if(medalDatabase[MedalID].Ability == undefined || medalDatabase[MedalID].Ability.SelfBuffs == undefined || medalDatabase[MedalID].Ability.SelfBuffs.STRPlus == undefined || medalDatabase[MedalID].Ability.SelfBuffs.STRPlus.Amount < document.getElementById("abilityFilters_SelfBuffs_STRPlusIMGcaption/Value").value) {
+            if((medalDatabase[MedalID].Ability == undefined || medalDatabase[MedalID].Ability.SelfBuffs == undefined || medalDatabase[MedalID].Ability.SelfBuffs.STRPlus == undefined || medalDatabase[MedalID].Ability.SelfBuffs.STRPlus.Amount < document.getElementById("abilityFilters_SelfBuffs_STRPlusIMGcaption/Value").value) && (medalDatabase[MedalID].Ability == undefined || medalDatabase[MedalID].Ability.SelfBuffs == undefined || medalDatabase[MedalID].Ability.SelfBuffs["STRPlus" + document.getElementById("abilityFilters_SelfBuffs_STRPlusIMGcaption/Type").value] == undefined || medalDatabase[MedalID].Ability.SelfBuffs["STRPlus" + document.getElementById("abilityFilters_SelfBuffs_STRPlusIMGcaption/Type").value].Amount < document.getElementById("abilityFilters_SelfBuffs_STRPlusIMGcaption/Value").value)) {
                 return 0;
             }
         }
-        if (medalDatabase[MedalID].Ability == undefined || medalDatabase[MedalID].Ability.SelfBuffs == undefined || medalDatabase[MedalID].Ability.SelfBuffs.STRPlus == undefined)   {
+        if ((medalDatabase[MedalID].Ability == undefined || medalDatabase[MedalID].Ability.SelfBuffs == undefined || medalDatabase[MedalID].Ability.SelfBuffs.STRPlus == undefined) && (medalDatabase[MedalID].Ability == undefined || medalDatabase[MedalID].Ability.SelfBuffs == undefined || medalDatabase[MedalID].Ability.SelfBuffs["STRPlus" + document.getElementById("abilityFilters_SelfBuffs_STRPlusIMGcaption/Type").value] == undefined))   {
             return 0;
         }
         
-        if(document.getElementById("abilityFilters_SelfBuffs_BuffDebuff/DurationType").value != undefined && document.getElementById("abilityFilters_SelfBuffs_BuffDebuff/DurationType").value != "" && medalDatabase[MedalID].Ability.SelfBuffs.STRPlus.DurationType != document.getElementById("abilityFilters_SelfBuffs_BuffDebuff/DurationType").value)   {
+        if((document.getElementById("abilityFilters_SelfBuffs_BuffDebuff/DurationType").value != undefined && document.getElementById("abilityFilters_SelfBuffs_BuffDebuff/DurationType").value != "" && medalDatabase[MedalID].Ability != undefined && medalDatabase[MedalID].Ability.SelfBuffs != undefined && medalDatabase[MedalID].Ability.SelfBuffs.STRPlus != undefined && medalDatabase[MedalID].Ability.SelfBuffs.STRPlus.DurationType != document.getElementById("abilityFilters_SelfBuffs_BuffDebuff/DurationType").value) || (document.getElementById("abilityFilters_SelfBuffs_BuffDebuff/DurationType").value != undefined && document.getElementById("abilityFilters_SelfBuffs_BuffDebuff/DurationType").value != "" && medalDatabase[MedalID].Ability == undefined && medalDatabase[MedalID].Ability.SelfBuffs == undefined && medalDatabase[MedalID].Ability.SelfBuffs["STRPlus" + document.getElementById("abilityFilters_SelfBuffs_STRPlusIMGcaption/Type").value] == undefined && medalDatabase[MedalID].Ability.SelfBuffs["STRPlus" + document.getElementById("abilityFilters_SelfBuffs_STRPlusIMGcaption/Type").value].DurationType != document.getElementById("abilityFilters_SelfBuffs_BuffDebuff/DurationType").value))   {
             return 0;
         }
-        if(document.getElementById("abilityFilters_SelfBuffs_BuffDebuff/DurationCount").value != undefined && document.getElementById("abilityFilters_SelfBuffs_BuffDebuff/DurationCount").value != "" && medalDatabase[MedalID].Ability.SelfBuffs.STRPlus.DurationCount != document.getElementById("abilityFilters_SelfBuffs_BuffDebuff/DurationCount").value)   {
+        if((document.getElementById("abilityFilters_SelfBuffs_BuffDebuff/DurationCount").value != undefined && document.getElementById("abilityFilters_SelfBuffs_BuffDebuff/DurationCount").value != "" && medalDatabase[MedalID].Ability != undefined && medalDatabase[MedalID].Ability.SelfBuffs != undefined && medalDatabase[MedalID].Ability.SelfBuffs.STRPlus != undefined && medalDatabase[MedalID].Ability.SelfBuffs.STRPlus.DurationCount != document.getElementById("abilityFilters_SelfBuffs_BuffDebuff/DurationCount").value) || (document.getElementById("abilityFilters_SelfBuffs_BuffDebuff/DurationCount").value != undefined && document.getElementById("abilityFilters_SelfBuffs_BuffDebuff/DurationCount").value != "" && medalDatabase[MedalID].Ability == undefined && medalDatabase[MedalID].Ability.SelfBuffs == undefined && medalDatabase[MedalID].Ability.SelfBuffs["STRPlus" + document.getElementById("abilityFilters_SelfBuffs_STRPlusIMGcaption/Type").value] == undefined && medalDatabase[MedalID].Ability.SelfBuffs["STRPlus" + document.getElementById("abilityFilters_SelfBuffs_STRPlusIMGcaption/Type").value].DurationCount != document.getElementById("abilityFilters_SelfBuffs_BuffDebuff/DurationCount").value))   {
             return 0;
         }
     }
@@ -1108,34 +1108,34 @@ function checkConditions(MedalID)   {
 
     if(document.getElementById("supernovaFilters_SelfBuffs_RenewIMG").src.indexOf("On.png") != -1)   {
         if(document.getElementById("supernovaFilters_SelfBuffs_RenewIMGcaption/Type").value != undefined && document.getElementById("supernovaFilters_SelfBuffs_RenewIMGcaption/Type").value != "")   {
-            if(medalDatabase[MedalID].Supernova == undefined || medalDatabase[MedalID].Supernova.SelfBuffs == undefined || medalDatabase[MedalID].Supernova.SelfBuffs.Renew == undefined || medalDatabase[MedalID].Supernova.SelfBuffs.Renew != document.getElementById("supernovaFilters_SelfBuffs_RenewIMGcaption/Type").value) {
+            if((medalDatabase[MedalID].Supernova == undefined || medalDatabase[MedalID].Supernova.SelfBuffs == undefined || medalDatabase[MedalID].Supernova.SelfBuffs.Renew == undefined || medalDatabase[MedalID].Supernova.SelfBuffs.Renew != document.getElementById("supernovaFilters_SelfBuffs_RenewIMGcaption/Type").value) && (medalDatabase[MedalID].Supernova == undefined || medalDatabase[MedalID].Supernova.SelfBuffs == undefined || medalDatabase[MedalID].Supernova.SelfBuffs["Renew" + document.getElementById("supernovaFilters_SelfBuffs_RenewIMGcaption/Type").value] == undefined)) {
                 return 0;
             }
         }
-        if(medalDatabase[MedalID].Supernova == undefined || medalDatabase[MedalID].Supernova.SelfBuffs == undefined || medalDatabase[MedalID].Supernova.SelfBuffs.Renew == undefined) {
+        if((medalDatabase[MedalID].Supernova == undefined || medalDatabase[MedalID].Supernova.SelfBuffs == undefined || medalDatabase[MedalID].Supernova.SelfBuffs.Renew == undefined) && (medalDatabase[MedalID].Supernova == undefined || medalDatabase[MedalID].Supernova.SelfBuffs == undefined || medalDatabase[MedalID].Supernova.SelfBuffs["Renew" + document.getElementById("supernovaFilters_SelfBuffs_RenewIMGcaption/Type").value] == undefined)) {
             return 0;
         }
     }
 
     if(document.getElementById("supernovaFilters_SelfBuffs_STRPlusIMG").src.indexOf("On.png") != -1)   {
-        if(document.getElementById("supernovaFilters_SelfBuffs_STRPlusIMGcaption/Type").value != undefined && document.getElementById("supernovaFilters_SelfBuffs_STRPlusIMGcaption/Type").value != "")   {
-            if(medalDatabase[MedalID].Supernova == undefined || medalDatabase[MedalID].Supernova.SelfBuffs == undefined || medalDatabase[MedalID].Supernova.SelfBuffs.STRPlus == undefined || medalDatabase[MedalID].Supernova.SelfBuffs.STRPlus.Type != document.getElementById("supernovaFilters_SelfBuffs_STRPlusIMGcaption/Type").value) {
+        if(document.getElementById("supernovaFilters_SelfBuffs_STRPlusIMG/Type").value != undefined && document.getElementById("supernovaFilters_SelfBuffs_STRPlusIMG/Type").value != "")   {
+            if((medalDatabase[MedalID].Supernova == undefined || medalDatabase[MedalID].Supernova.SelfBuffs == undefined || medalDatabase[MedalID].Supernova.SelfBuffs.STRPlus == undefined || medalDatabase[MedalID].Supernova.SelfBuffs.STRPlus.Type != document.getElementById("supernovaFilters_SelfBuffs_STRPlusIMG/Type").value) && (medalDatabase[MedalID].Supernova.SelfBuffs["STRPlus" + document.getElementById("supernovaFilters_SelfBuffs_STRPlusIMG/Type").value] == undefined)) {
                 return 0;
             }
         }
-        if(document.getElementById("supernovaFilters_SelfBuffs_STRPlusIMGcaption/Value").value != undefined && document.getElementById("supernovaFilters_SelfBuffs_STRPlusIMGcaption/Value").value != "")   {
-            if(medalDatabase[MedalID].Supernova == undefined || medalDatabase[MedalID].Supernova.SelfBuffs == undefined || medalDatabase[MedalID].Supernova.SelfBuffs.STRPlus == undefined || medalDatabase[MedalID].Supernova.SelfBuffs.STRPlus.Amount < document.getElementById("supernovaFilters_SelfBuffs_STRPlusIMGcaption/Value").value) {
+        if(document.getElementById("supernovaFilters_SelfBuffs_STRPlusIMG/Value").value != undefined && document.getElementById("supernovaFilters_SelfBuffs_STRPlusIMG/Value").value != "")   {
+            if((medalDatabase[MedalID].Supernova == undefined || medalDatabase[MedalID].Supernova.SelfBuffs == undefined || medalDatabase[MedalID].Supernova.SelfBuffs.STRPlus == undefined || medalDatabase[MedalID].Supernova.SelfBuffs.STRPlus.Amount < document.getElementById("supernovaFilters_SelfBuffs_STRPlusIMG/Value").value) && (medalDatabase[MedalID].Supernova.SelfBuffs["STRPlus" + document.getElementById("supernovaFilters_SelfBuffs_STRPlusIMG/Type")].Amount < document.getElementById("supernovaFilters_SelfBuffs_STRPlusIMG/Value").value)) {
                 return 0;
             }
         }
-        if (medalDatabase[MedalID].Supernova == undefined || medalDatabase[MedalID].Supernova.SelfBuffs == undefined || medalDatabase[MedalID].Supernova.SelfBuffs.STRPlus == undefined)   {
+        if ((medalDatabase[MedalID].Supernova == undefined || medalDatabase[MedalID].Supernova.SelfBuffs == undefined || medalDatabase[MedalID].Supernova.SelfBuffs.STRPlus == undefined) && medalDatabase[MedalID].Supernova.SelfBuffs["STRPlus" + document.getElementById("supernovaFilters_SelfBuffs_STRPlusIMG/Type").value] == undefined)   {
             return 0;
         }
         
-        if(document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationType").value != undefined && document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationType").value != "" && medalDatabase[MedalID].Supernova.SelfBuffs.STRPlus.DurationType != document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationType").value)   {
+        if((document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationType").value != undefined && document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationType").value != "" && medalDatabase[MedalID].Supernova.SelfBuffs.STRPlus.DurationType != document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationType").value) || (medalDatabase[MedalID].Supernova.SelfBuffs["STRPlus" + document.getElementById("supernovaFilters_SelfBuffs_STRPlusIMG/Type").value].DurationType != document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationType").value))   {
             return 0;
         }
-        if(document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationCount").value != undefined && document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationCount").value != "" && medalDatabase[MedalID].Supernova.SelfBuffs.STRPlus.DurationCount != document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationCount").value)   {
+        if((document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationCount").value != undefined && document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationCount").value != "" && medalDatabase[MedalID].Supernova.SelfBuffs.STRPlus.DurationCount != document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationCount").value) || (medalDatabase[MedalID].Supernova.SelfBuffs["STRPlus" + document.getElementById("supernovaFilters_SelfBuffs_STRPlusIMG/Type").value].DurationCount != document.getElementById("supernovaFilters_SelfBuffs_BuffDebuff/DurationCount").value))   {
             return 0;
         }
     }
@@ -1288,7 +1288,6 @@ function switchImage(value) {
         }
     }
     else if(type == "Music")   {
-        console.log(medalDatabase[MedalID].MusicLink);
         window.open("./music/" + medalDatabase[MedalID].MusicLink);
     }
 }
@@ -1676,6 +1675,25 @@ var newFig = document.createElement('figure');
                 selfBuffsOtherSTRPlusSpan.appendChild(document.createTextNode("\xa0\xa0"));
                 selfBuffsOther.appendChild(selfBuffsOtherSTRPlusSpan);
             }
+
+            var STRPlusTypeArray = ["General", "Upright", "Reversed", "Power", "Speed", "Magic"];
+            for (var typeValue of STRPlusTypeArray) {
+                if(medalDatabase[MedalID].Ability.SelfBuffs !== undefined && medalDatabase[MedalID].Ability.SelfBuffs["STRPlus" + typeValue] !== undefined)  {
+                    k++;
+                    var selfBuffsOtherSTRPlusSpan = document.createElement('span');
+                    selfBuffsOtherSTRPlusSpan.style = "display: inline-block";
+                    selfBuffsOtherSTRPlusSpan.title = "Raises " + typeValue + "-type STR+ by " + medalDatabase[MedalID].Ability.SelfBuffs["STRPlus" + typeValue].Amount;
+                    selfBuffsOtherSTRPlusSpan.appendChild(document.createTextNode("\xa0\xa0"));
+                    var selfBuffsOtherSTRPlus = document.createElement('img');
+                    selfBuffsOtherSTRPlus.src = "./images/ui/STRPlus_" + typeValue + ".png";
+                    selfBuffsOtherSTRPlus.style = "max-width: 50px";
+                    selfBuffsOtherSTRPlusSpan.appendChild(selfBuffsOtherSTRPlus);
+                    selfBuffsOtherSTRPlusSpan.appendChild(document.createTextNode("+" + medalDatabase[MedalID].Ability.SelfBuffs["STRPlus" + typeValue].Amount));
+                    selfBuffsOtherSTRPlusSpan.appendChild(document.createTextNode("\xa0\xa0"));
+                    selfBuffsOther.appendChild(selfBuffsOtherSTRPlusSpan);
+                }
+            }
+
             if(medalDatabase[MedalID].Ability.SelfBuffs !== undefined && medalDatabase[MedalID].Ability.SelfBuffs.DEFPlus !== undefined)  {
                 k++;
                 var selfBuffsOtherDEFPlusSpan = document.createElement('span');
@@ -2216,6 +2234,7 @@ if(medalDatabase[MedalID].Supernova !== undefined)  {
             var k = 0;
             var supernovaSelfBuffsOther = document.createElement('span');
             supernovaSelfBuffsOther.style = "font-size: 24px; text-shadow: 2px 2px rgb(0, 0, 0)";
+
             if(medalDatabase[MedalID].Supernova.SelfBuffs !== undefined && medalDatabase[MedalID].Supernova.SelfBuffs.Renew !== undefined)  {
                 k++;
                 var supernovaSelfBuffsOtherRenewSpan = document.createElement('span');
@@ -2229,6 +2248,24 @@ if(medalDatabase[MedalID].Supernova !== undefined)  {
                 supernovaSelfBuffsOtherRenewSpan.appendChild(document.createTextNode("\xa0\xa0"));
                 supernovaSelfBuffsOther.appendChild(supernovaSelfBuffsOtherRenewSpan);
             }
+
+            var RenewTypeArray = ["General", "Upright", "Reversed", "Power", "Speed", "Magic"];
+            for (var typeValue of RenewTypeArray) {
+                if(medalDatabase[MedalID].Supernova.SelfBuffs !== undefined && medalDatabase[MedalID].Supernova.SelfBuffs["Renew" + typeValue] !== undefined)  {
+                    k++;
+                    var supernovaSelfBuffsOtherRenewSpan = document.createElement('span');
+                    supernovaSelfBuffsOtherRenewSpan.style = "display: inline-block";
+                    supernovaSelfBuffsOtherRenewSpan.title = "Renews " + typeValue + "-type Supernovas";
+                    supernovaSelfBuffsOtherRenewSpan.appendChild(document.createTextNode("\xa0\xa0"));
+                    var supernovaSelfBuffsOtherRenew = document.createElement('img');
+                    supernovaSelfBuffsOtherRenew.src = "./images/ui/Renew_" + typeValue + ".png";
+                    supernovaSelfBuffsOtherRenew.style = "max-height: 50px";
+                    supernovaSelfBuffsOtherRenewSpan.appendChild(supernovaSelfBuffsOtherRenew);
+                    supernovaSelfBuffsOtherRenewSpan.appendChild(document.createTextNode("\xa0\xa0"));
+                    supernovaSelfBuffsOther.appendChild(supernovaSelfBuffsOtherRenewSpan);
+                }
+            }
+
             if(medalDatabase[MedalID].Supernova.SelfBuffs !== undefined && medalDatabase[MedalID].Supernova.SelfBuffs.STRPlus !== undefined)  {
                 k++;
                 var supernovaSelfBuffsOtherSTRPlusSpan = document.createElement('span');
@@ -2243,6 +2280,25 @@ if(medalDatabase[MedalID].Supernova !== undefined)  {
                 supernovaSelfBuffsOtherSTRPlusSpan.appendChild(document.createTextNode("\xa0\xa0"));
                 supernovaSelfBuffsOther.appendChild(supernovaSelfBuffsOtherSTRPlusSpan);
             }
+
+            var STRPlusTypeArray = ["General", "Upright", "Reversed", "Power", "Speed", "Magic"];
+            for (var typeValue of STRPlusTypeArray) {
+                if(medalDatabase[MedalID].Supernova.SelfBuffs !== undefined && medalDatabase[MedalID].Supernova.SelfBuffs["STRPlus" + typeValue] !== undefined)  {
+                    k++;
+                    var supernovaSelfBuffsOtherSTRPlusSpan = document.createElement('span');
+                    supernovaSelfBuffsOtherSTRPlusSpan.style = "display: inline-block";
+                    supernovaSelfBuffsOtherSTRPlusSpan.title = "Raises " + typeValue + "-type STR+ by " + medalDatabase[MedalID].Supernova.SelfBuffs["STRPlus" + typeValue].Amount;
+                    supernovaSelfBuffsOtherSTRPlusSpan.appendChild(document.createTextNode("\xa0\xa0"));
+                    var supernovaSelfBuffsOtherSTRPlus = document.createElement('img');
+                    supernovaSelfBuffsOtherSTRPlus.src = "./images/ui/STRPlus_" + typeValue + ".png";
+                    supernovaSelfBuffsOtherSTRPlus.style = "max-width: 50px";
+                    supernovaSelfBuffsOtherSTRPlusSpan.appendChild(supernovaSelfBuffsOtherSTRPlus);
+                    supernovaSelfBuffsOtherSTRPlusSpan.appendChild(document.createTextNode("+" + medalDatabase[MedalID].Supernova.SelfBuffs["STRPlus" + typeValue].Amount));
+                    supernovaSelfBuffsOtherSTRPlusSpan.appendChild(document.createTextNode("\xa0\xa0"));
+                    supernovaSelfBuffsOther.appendChild(supernovaSelfBuffsOtherSTRPlusSpan);
+                }
+            }
+
             if(medalDatabase[MedalID].Supernova.SelfBuffs !== undefined && medalDatabase[MedalID].Supernova.SelfBuffs.DEFPlus !== undefined)  {
                 k++;
                 var supernovaSelfBuffsOtherDEFPlusSpan = document.createElement('span');
@@ -85701,6 +85757,894 @@ var medalDatabase = {
                     CountDirection: "Up",
                     Count: 2
                 }
+            },
+            Hits: 1
+        }
+    },
+    2072:  {
+        ID: 2072,
+        AlbumNum: 1913,
+        Reference: [2072],
+        MedalImage: "1913_7Star_SN++_-_Joe_&_Mr._Mittens.png",
+        RenderImage: "1913_7Star_SN++_-_Joe_&_Mr._Mittens_Render.png",
+        Name: "SN++ - Joe & Mr. Mittens",
+        Rarity: 7,
+        Direction: "Upright",
+        Attribute: "Power",
+        Guilt: 10,
+        STR: 47213,
+        DEF: 16703,
+        Multi: 21.15,
+        Gauge: 3,
+        Target: "All",
+        Ability:    {
+            Name: "Strength Boost PSM +6",
+            Text: "1 turn: Medal STR +12000, self [↑ STR, U- & PSM-STR 15], targets [↓ DEF, U- & PSM-DEF 15], SP ATK B +220%. Gauge +3. Count +1. Ignores targets’ attributes.",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffPA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "General",
+                    Amount: 12000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 220,
+                GaugeRecovery: 3,
+                AttributeAlways: "Super"
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffUD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffPD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffMD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Counter:    {
+                    CountDirection: "Up",
+                    Count: 1
+                }
+            },
+            Hits: 1
+        },
+        Supernova:  {
+            Name: "[Mastery] Upright Strike All P",
+            Text: "1 turn: P-Medal STR +14000, self [↑ STR, U- & P-STR 15], targets [↓ DEF, U- & P-DEF 15], SP ATK B +320%. Triggers before slot 1 is activated when defending in PVP.",
+            Multi: 250.00,
+            Timing: 1,
+            Target: "All",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffPA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Power",
+                    Amount: 14000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffUD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffPD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 1
+        }
+    },
+    2073:  {
+        ID: 2073,
+        AlbumNum: 1914,
+        Reference: [2073],
+        MedalImage: "1914_7Star_SN++_-_22.png",
+        RenderImage: "1914_7Star_SN++_-_22_Render.png",
+        Name: "SN++ - 22",
+        Rarity: 7,
+        Direction: "Upright",
+        Attribute: "Magic",
+        Guilt: 10,
+        STR: 45713,
+        DEF: 16403,
+        Multi: 20.85,
+        Gauge: 1,
+        Target: "All",
+        Ability:    {
+            Name: "Strength Boost M +6",
+            Text: "1 turn: M-Medal STR +10000, self [↑ STR, U- & M-STR 15], targets [↓ DEF, U- & M-DEF 15], SP ATK B +220%. HP MAX. Count ±0.",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Magic",
+                    Amount: 10000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 220,
+                HPRecovery: "Yes"
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffUD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffMD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Counter:    {
+                    CountDirection: "Null"
+                }
+            },
+            Hits: 1
+        },
+        Supernova:  {
+            Name: "[Mastery] Upright Strike All M",
+            Text: "1 turn: M-Medal STR +14000, self [↑ U- & M-STR 15], targets [↓ U- & M-DEF 15], SP ATK B +320%. Gauge +5. Triggers before slot 1 is activated when defending in PVP.",
+            Multi: 240.00,
+            Timing: 1,
+            Target: "All",
+            SelfBuffs:  {
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Magic",
+                    Amount: 14000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320,
+                GaugeRecovery: 5
+            },
+            EnemyBuffs: {
+                DebuffUD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffMD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                }
+            },
+            Hits: 1
+        }
+    },
+    2074:  {
+        ID: 2074,
+        AlbumNum: 1915,
+        Reference: [2074],
+        MedalImage: "1915_7Star_SN++_-_Axel_B.png",
+        RenderImage: "1915_7Star_SN++_-_Axel_B_Render.png",
+        Name: "SN++ - Axel B",
+        Rarity: 7,
+        Direction: "Reversed",
+        Attribute: "Power",
+        Guilt: 10,
+        STR: 47858,
+        DEF: 16704,
+        Multi: 20.90,
+        Gauge: 1,
+        Target: "All",
+        Ability:    {
+            Name: "Ignito Raid EX +6",
+            Text: "Deals 8 hits. 1 turn: P- & S-Medal STR +7000, self [↑ STR, R-, P- & S-STR 15], targets [↓ DEF, R-, P- & S-DEF 15], SP ATK B +220%. Count +1.",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffRA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffPA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlusPower:  {
+                    Amount: 7000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlusSpeed:  {
+                    Amount: 7000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 220
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffRD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffPD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Counter:    {
+                    CountDirection: "Up",
+                    Count: 1
+                }
+            },
+            Hits: 8
+        },
+        Supernova:  {
+            Name: "[Mastery] Reversed Strike All P",
+            Text: "P & S Medal: SN Renew. 1 turn: P- & S-Medal STR +8000, SP ATK B +320%. Count ±0. Triggers before slot 6 is activated when defending in PVP.",
+            Multi: 250.00,
+            Timing: 6,
+            Target: "All",
+            SelfBuffs:  {
+                RenewPower: "Yes",
+                RenewSpeed: "Yes",
+                STRPlusPower:  {
+                    Amount: 8000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlusSpeed:  {
+                    Amount: 8000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320
+            },
+            EnemyBuffs: {
+                Counter:    {
+                    CountDirection: "Null"
+                }
+            },
+            Hits: 1
+        }
+    },
+    2075:  {
+        ID: 2075,
+        AlbumNum: 1916,
+        Reference: [2075],
+        MedalImage: "1916_7Star_SN++_-_Roxas.png",
+        RenderImage: "1916_7Star_SN++_-_Roxas_Render.png",
+        Name: "SN++ - Roxas",
+        Rarity: 7,
+        Direction: "Reversed",
+        Attribute: "Speed",
+        Guilt: 10,
+        STR: 47858,
+        DEF: 16704,
+        Multi: 20.90,
+        Gauge: 1,
+        Target: "All",
+        Ability:    {
+            Name: "Black Hole EX+ +6",
+            Text: "Deals 12 hits. 1 turn: S- & M-Medal STR +7000, self [↑ STR, R-, S- & M-STR 15], targets [↓ DEF, R-, S- & M-DEF 15], SP ATK B +220%. Count +1.",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffRA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlusSpeed:  {
+                    Amount: 7000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlusMagic:  {
+                    Amount: 7000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 220
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffRD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffMD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Counter:    {
+                    CountDirection: "Up",
+                    Count: 1
+                }
+            },
+            Hits: 12
+        },
+        Supernova:  {
+            Name: "[Mastery] Reversed Strike All S",
+            Text: "S & M Medal: SN Renew. 1 turn: S- & M-Medal STR +8000, SP ATK B +320%. Count ±0. Triggers before slot 6 is activated when defending in PVP.",
+            Multi: 250.00,
+            Timing: 6,
+            Target: "All",
+            SelfBuffs:  {
+                RenewSpeed: "Yes",
+                RenewMagic: "Yes",
+                STRPlusSpeed:  {
+                    Amount: 8000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlusMagic:  {
+                    Amount: 8000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320
+            },
+            EnemyBuffs: {
+                Counter:    {
+                    CountDirection: "Null"
+                }
+            },
+            Hits: 1
+        }
+    },
+    2076:  {
+        ID: 2076,
+        AlbumNum: 1917,
+        Reference: [2076],
+        MedalImage: "1917_7Star_SN++_-_Xion.png",
+        RenderImage: "1917_7Star_SN++_-_Xion_Render.png",
+        Name: "SN++ - Xion",
+        Rarity: 7,
+        Direction: "Reversed",
+        Attribute: "Magic",
+        Guilt: 10,
+        STR: 47858,
+        DEF: 16704,
+        Multi: 20.90,
+        Gauge: 1,
+        Target: "All",
+        Ability:    {
+            Name: "Blitz EX +6",
+            Text: "Deals 15 hits. 1 turn: P- & M-Medal STR +7000, self [↑ STR, R-, P- & M-STR 15], targets [↓ DEF, R-, P- & M-DEF 15], SP ATK B +220%. Count +1.",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffRA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffPA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlusPower:  {
+                    Amount: 7000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlusMagic:  {
+                    Amount: 7000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 220
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffRD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffPD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffMD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Counter:    {
+                    CountDirection: "Up",
+                    Count: 1
+                }
+            },
+            Hits: 15
+        },
+        Supernova:  {
+            Name: "[Mastery] Reversed Strike All M",
+            Text: "P & M Medal: SN Renew. 1 turn: P- & M-Medal STR +8000, SP ATK B +320%. Count ±0. Triggers before slot 6 is activated when defending in PVP.",
+            Multi: 250.00,
+            Timing: 6,
+            Target: "All",
+            SelfBuffs:  {
+                RenewPower: "Yes",
+                RenewMagic: "Yes",
+                STRPlusPower:  {
+                    Amount: 8000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlusMagic:  {
+                    Amount: 8000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320
+            },
+            EnemyBuffs: {
+                Counter:    {
+                    CountDirection: "Null"
+                }
+            },
+            Hits: 1
+        }
+    },
+    2077:  {
+        ID: 2077,
+        AlbumNum: 1918,
+        Reference: [2077],
+        MedalImage: "1918_7Star_SN++_-_Mr._Mittens.png",
+        RenderImage: "1918_7Star_SN++_-_Mr._Mittens_Render.png",
+        Name: "SN++ - Mr. Mittens",
+        Rarity: 7,
+        Direction: "Upright",
+        Attribute: "Speed",
+        Guilt: 10,
+        STR: 45099,
+        DEF: 16448,
+        Multi: 18.90,
+        Gauge: 0,
+        Target: "Random",
+        Ability:    {
+            Name: "Strength Boost S +6",
+            Text: "[Mastery] 1 attack: S-Medal STR +20000. 1 turn: self [↑ STR, U- & S-STR 15], targets [↓ DEF, U- & S-DEF 15], SP ATK B +220%. Count ±0.",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Speed",
+                    Amount: 20000,
+                    DurationType: "Attack",
+                    DurationCount: 1
+                },
+                GuiltBuff: 220,
+                Mastery: "Yes"
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffUD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Counter:    {
+                    CountDirection: "Null"
+                }
+            },
+            Hits: 1
+        },
+        Supernova:  {
+            Name: "[Mastery] Upright Strike All S",
+            Text: "1 attack: S-Medal STR +20000. Triggers before slot 5 is activated when defending in PVP.",
+            Multi: 250.00,
+            Timing: 5,
+            Target: "All",
+            SelfBuffs:  {
+                STRPlus:  {
+                    Type: "Speed",
+                    Amount: 20000,
+                    DurationType: "Attack",
+                    DurationCount: 1
+                }
+            },
+            Hits: 1
+        }
+    },
+    2078:  {
+        ID: 2078,
+        AlbumNum: 1919,
+        Reference: [2078],
+        MedalImage: "1919_7Star_SN++_-_Remy.png",
+        RenderImage: "1919_7Star_SN++_-_Remy_Render.png",
+        Name: "SN++ - Remy",
+        Rarity: 7,
+        Direction: "Upright",
+        Attribute: "Magic",
+        Guilt: 10,
+        STR: 41078,
+        DEF: 16521,
+        Multi: 18.90,
+        Gauge: 0,
+        Target: "All",
+        Ability:    {
+            Name: "Strength Boost M +6",
+            Text: "1 turn: Medal STR +10000, self [↑ STR, U- & PSM-STR, DEF & PSM-DEF 10], SP ATK B +220%. Gauge +5. HP MAX. Count +3. Cures ailments.",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffUA: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffPA: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffGD: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffPD: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSD: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMD: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "General",
+                    Amount: 10000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 220,
+                GaugeRecovery: 5,
+                HPRecovery: "Yes",
+                Esuna: "Yes"
+            },
+            EnemyBuffs: {
+                Counter:    {
+                    CountDirection: "Up",
+                    Count: 3
+                }
+            },
+            Hits: 1
+        },
+        Supernova:  {
+            Name: "[Mastery] Upright Strike All M",
+            Text: "1 turn: Medal STR 12000, self [↑ STR, U- & PSM-STR, DEF & PSM-DEF 10], SP ATK B +320%. Count ±0. Triggers before slot 1 is activated when defending in PVP.",
+            Multi: 240.00,
+            Timing: 1,
+            Target: "All",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffUA: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffPA: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffGD: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffPD: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSD: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMD: {
+                    BuffCount: 10,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "General",
+                    Amount: 12000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320
+            },
+            EnemyBuffs: {
+                Counter:    {
+                    CountDirection: "Null"
+                }
+            },
+            Hits: 1
+        }
+    },
+    2079:  {
+        ID: 2079,
+        AlbumNum: 1914,
+        Reference: [2079],
+        MedalImage: "1920_7Star_SN++_-_MoM_Komory_Bat.png",
+        RenderImage: "1920_7Star_SN++_-_MoM_Komory_Bat_Render.png",
+        Name: "SN++ - MoM Komory Bat",
+        Rarity: 7,
+        Direction: "Upright",
+        Attribute: "Speed",
+        Guilt: 10,
+        STR: 41339,
+        DEF: 16538,
+        Multi: 18.90,
+        Gauge: 0,
+        Target: "All",
+        Ability:    {
+            Name: "Fly-by Knight +6",
+            Text: "Deals 3 hits. 2 turns: S-Medal STR +6000, targets [↓ DEF, U- & S-DEF 15], SP ATK B +220%. Pierces Defense Boost 30%.",
+            SelfBuffs:  {
+                STRPlus:  {
+                    Type: "Speed",
+                    Amount: 6000,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                GuiltBuff: 220
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                DebuffUD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                DebuffSD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 2
+                },
+                DEFPierce: 30
+            },
+            Hits: 3
+        },
+        Supernova:  {
+            Name: "[Mastery] Upright Strike All S",
+            Text: "3 turns: S-Medal STR 12000. 1 turn: self [↑ STR, U- & S-STR 15], SP ATK B +320%. Triggers before slot 1 is activated when defending in PVP.",
+            Multi: 240.00,
+            Timing: 1,
+            Target: "All",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Speed",
+                    Amount: 12000,
+                    DurationType: "Turn",
+                    DurationCount: 3
+                },
+                GuiltBuff: 320
             },
             Hits: 1
         }
