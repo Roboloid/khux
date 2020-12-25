@@ -86570,7 +86570,7 @@ var medalDatabase = {
     },
     2079:  {
         ID: 2079,
-        AlbumNum: 1914,
+        AlbumNum: 1920,
         Reference: [2079],
         MedalImage: "1920_7Star_SN++_-_MoM_Komory_Bat.png",
         RenderImage: "1920_7Star_SN++_-_MoM_Komory_Bat_Render.png",
