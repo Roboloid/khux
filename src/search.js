@@ -26802,7 +26802,7 @@ var medalDatabase = {
     892:  {
         ID: 892,
         AlbumNum: 639,
-        Reference: [892, 893],
+        Reference: [892, 893, 2079],
         MedalImage: "639_6Star_HD_Roxas.png",
         RenderImage: "639_6Star_HD_Roxas_Render.png",
         Name: "HD Roxas",
@@ -26831,7 +26831,7 @@ var medalDatabase = {
     893:  {
         ID: 893,
         AlbumNum: 1242,
-        Reference: [892, 893],
+        Reference: [892, 893, 2079],
         MedalImage: "1242_7Star_HD_Roxas.png",
         RenderImage: "639_6Star_HD_Roxas_Render.png",
         Name: "HD Roxas",
@@ -86570,10 +86570,219 @@ var medalDatabase = {
     },
     2079:  {
         ID: 2079,
+        AlbumNum: 1242,
+        Reference: [892, 893, 2079],
+        MedalImage: "1242_7Star_HD_Roxas.png",
+        RenderImage: "639_6Star_HD_Roxas_Render.png",
+        Name: "SN++ - HD Roxas",
+        Rarity: 7,
+        Direction: "Reversed",
+        Attribute: "Power",
+        Guilt: 10,
+        STR: 46174,
+        DEF: 16426,
+        Multi: 20.90,
+        Gauge: 2,
+        Target: "All",
+        Ability:    {
+            Name: "Dual Ruin +7",
+            Text: "[Mastery] Deals 8 hits. 1 turn: P-Medal STR +10000, self [↑ STR, R- & P-STR 15], targets [↓ DEF, R- & P-DEF 15], SP ATK B +220%. Count ±0.",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffRA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffPA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Power",
+                    Amount: 10000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 220,
+                Mastery: "Yes"
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffRD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffPD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Counter:    {
+                    CountDirection: "Null"
+                }
+            },
+            Hits: 8
+        },
+        Supernova:  {
+            Name: "[Mastery] Reversed Strike All P",
+            Text: "1 turn: P-Medal STR +12000, self [↑ STR, R- & P-STR 15], targets [↓ DEF, R- & P-DEF 15], SP ATK B +320%. Count ±0. Pierces Defense Boost 50%. Triggers before slot 1 is activated when defending in PVP.",
+            Multi: 240.00,
+            Timing: 1,
+            Target: "All",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffRA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffPA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Power",
+                    Amount: 12000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffRD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffPD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Counter:    {
+                    CountDirection: "Null"
+                },
+                DEFPierce: 50
+            },
+            Hits: 1
+        }
+    },
+    2080:  {
+        ID: 2080,
         AlbumNum: 1920,
-        Reference: [2079],
-        MedalImage: "1920_7Star_SN++_-_MoM_Komory_Bat.png",
-        RenderImage: "1920_7Star_SN++_-_MoM_Komory_Bat_Render.png",
+        Reference: [2080],
+        MedalImage: "1920_7Star_SN++_-_Illustrated_Ansem.png",
+        RenderImage: "1920_7Star_SN++_-_Illustrated_Ansem_Render.png",
+        Name: "SN++ - Illustrated Ansem",
+        Rarity: 7,
+        Direction: "Reversed",
+        Attribute: "Power",
+        Guilt: 10,
+        STR: 40923,
+        DEF: 16526,
+        LowMulti: 9.13,
+        HighMulti: 10.50,
+        Gauge: 3,
+        Target: "Single",
+        Ability:    {
+            Name: "Lesser Imitation II EX +6",
+            Text: "1 turn: Medal STR +2000. Critical hit chance: 30%. Unleashes the same SP attack as the next Medal. Works only when set before a Medal.",
+            Condition: "Critical",
+            SelfBuffs:  {
+                STRPlus:  {
+                    Type: "General",
+                    Amount: 2000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Copy: {
+                    Direction: "Next",
+                    Slot: 1
+                },
+                CriticalChance: 30
+            },
+            Hits: 1
+        },
+        Supernova:  {
+            Name: "[Mastery] Reversed Strike All P",
+            Text: "1 turn: P-Medal STR 12000, self [↑ STR, R- & P-STR 15], targets [↓ DEF, R- & P-DEF 15], SP ATK B +320%. Count ±0. Triggers before slot 1 is activated when defending in PVP.",
+            Multi: 250.00,
+            Timing: 1,
+            Target: "All",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffRA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffPA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Power",
+                    Amount: 12000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffRD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffPD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Counter:    {
+                    CountDirection: "Null"
+                }
+            },
+            Hits: 1
+        }
+    },
+    2081:  {
+        ID: 2081,
+        AlbumNum: 1921,
+        Reference: [2081],
+        MedalImage: "1921_7Star_SN++_-_MoM_Komory_Bat.png",
+        RenderImage: "1921_7Star_SN++_-_MoM_Komory_Bat_Render.png",
         Name: "SN++ - MoM Komory Bat",
         Rarity: 7,
         Direction: "Upright",
