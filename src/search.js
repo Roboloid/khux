@@ -2116,7 +2116,7 @@ if(medalDatabase[MedalID].Supernova !== undefined)  {
         medalDiv.appendChild(supernovaNameSpan);
         if(medalDatabase[MedalID].Target !== undefined) {
             var novaTarget = document.createElement('img');
-            novaTarget.src = "./images/ui/Target_" + medalDatabase[MedalID].Target + ".png";
+            novaTarget.src = "./images/ui/Target_" + medalDatabase[MedalID].Supernova.Target + ".png";
             novaTarget.style = "max-width: 50px; vertical-align: middle";
             medalDiv.appendChild(novaTarget);
         }
