@@ -1581,6 +1581,57 @@ var accessoryDatabase = {
         },
         BPCost: 5000
     },
+    36:  {
+        Name: "Thunder Belt",
+        Rarity: 1,
+        Image: "Dark_Material_502.png",
+        Effect: {
+            BuffType: "Thunder Physical Aid +5 Thunder Magic Aid",
+            BuffCount: "5"
+        },
+        BPCost: 0,
+        Uncraftable: "Yes"
+    },
+    37:  {
+        Name: "Thundara Belt",
+        Rarity: 1,
+        Image: "Dark_Material_502.png",
+        Effect: {
+            BuffType: "Thunder Physical Aid +8 Thunder Magic Aid",
+            BuffCount: "8"
+        },
+        Components: {
+            Item1:  {
+                accessoryID: 36,
+                quantity: 5
+            }
+        },
+        BPCost: 3000
+    },
+    38:  {
+        Name: "Thundaga Belt",
+        Rarity: 1,
+        Image: "Dark_Material_502.png",
+        Effect: {
+            BuffType: "Thunder Physical Aid +10 Thunder Magic Aid",
+            BuffCount: "10"
+        },
+        Components: {
+            Item1:  {
+                accessoryID: 37,
+                quantity: 1
+            },
+            Item2:  {
+                materialID: 15,
+                quantity: 3
+            },
+            Item3:  {
+                materialID: 16,
+                quantity: 3
+            }
+        },
+        BPCost: 5000
+    },
 }
 
 /*
