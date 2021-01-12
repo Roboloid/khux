@@ -1586,7 +1586,7 @@ var accessoryDatabase = {
         Rarity: 1,
         Image: "Dark_Material_502.png",
         Effect: {
-            BuffType: "Thunder Physical Aid +5 Thunder Magic Aid",
+            BuffType: "Lightning Physical Aid +5 Lightning Magic Aid",
             BuffCount: "5"
         },
         BPCost: 0,
@@ -1597,7 +1597,7 @@ var accessoryDatabase = {
         Rarity: 1,
         Image: "Dark_Material_502.png",
         Effect: {
-            BuffType: "Thunder Physical Aid +8 Thunder Magic Aid",
+            BuffType: "Lightning Physical Aid +8 Lightning Magic Aid",
             BuffCount: "8"
         },
         Components: {
@@ -1613,7 +1613,7 @@ var accessoryDatabase = {
         Rarity: 1,
         Image: "Dark_Material_502.png",
         Effect: {
-            BuffType: "Thunder Physical Aid +10 Thunder Magic Aid",
+            BuffType: "Lightning Physical Aid +10 Lightning Magic Aid",
             BuffCount: "10"
         },
         Components: {
