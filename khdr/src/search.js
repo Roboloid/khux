@@ -3948,4 +3948,62 @@ var cardDatabase = {
             Effect: "Low chance to inflict sleep."
         }
     },
+    82:  {
+        ID: 82,
+        AlbumNum: 82,
+        CardImage: "82_Merlin.png",
+        RenderImage: "82_Merlin_Render.png",
+        Name: "Merlin",
+        DirectionType: "Light",
+        ColorType: "Blue",
+        AttackType: "Shield",
+        MainAbility:    {
+            Name: "Cure",
+            AttackType: "Shield",
+            Element: "Neutral",
+            BasePower: 15,
+            MaxPower: 50,
+            Effect: "Restores HP. Amount restored is based on Magic."
+        },
+        SubAbility:    {
+            Name: "Cure",
+            Effect: "Restores HP. Amount restored is based on Magic."
+        }
+    },
+    83:  {
+        ID: 83,
+        AlbumNum: 83,
+        CardImage: "83_Yuna.png",
+        RenderImage: "83_Yuna_Render.png",
+        Name: "Yuna",
+        DirectionType: "Light",
+        ColorType: "Blue",
+        AttackType: "Staff",
+        MainAbility:    {
+            Name: "Fire",
+            AttackType: "Staff",
+            Element: "Fire",
+            BasePower: 30,
+            MaxPower: 60,
+            Effect: "A fire-element magic attack."
+        }
+    },
+    84:  {
+        ID: 84,
+        AlbumNum: 84,
+        CardImage: "84_Pete.png",
+        RenderImage: "84_Pete_Render.png",
+        Name: "Pete",
+        DirectionType: "Dark",
+        ColorType: "Green",
+        AttackType: "Sword",
+        MainAbility:    {
+            Name: "Dark Fire Raid",
+            AttackType: "Sword",
+            Element: "Fire",
+            BasePower: 30,
+            MaxPower: 65,
+            Effect: "A powerful fire-element physical attack."
+        }
+    },
 };
