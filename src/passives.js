@@ -68,7 +68,7 @@ function openPlayerPassives(value) {
       tableElement.setAttribute('border', '1');
       var tableBodyElement = document.createElement('tbody');
       
-      if(value >= 350 && value <= 900)  {
+      if(value >= 350 && value <= 999)  {
           for(var level in player_passives)   {
           if(level > value)  {
               break;
@@ -2048,6 +2048,402 @@ var player_passives = {
         Count: 10
     },
     900:  {
+        Type: "STR",
+        Count: 100
+    },
+    901:  {
+        Type: "DEF",
+        Count: 10
+    },
+    902:  {
+        Type: "DEF",
+        Count: 10
+    },
+    903:  {
+        Type: "HP",
+        Count: 10
+    },
+    904:  {
+        Type: "HP",
+        Count: 10
+    },
+    905:  {
+        Type: "STR",
+        Count: 10
+    },
+    906:  {
+        Type: "DEF",
+        Count: 10
+    },
+    907:  {
+        Type: "DEF",
+        Count: 10
+    },
+    908:  {
+        Type: "HP",
+        Count: 10
+    },
+    909:  {
+        Type: "HP",
+        Count: 10
+    },
+    910:  {
+        Type: "STR",
+        Count: 10
+    },
+    911:  {
+        Type: "DEF",
+        Count: 10
+    },
+    912:  {
+        Type: "DEF",
+        Count: 10
+    },
+    913:  {
+        Type: "HP",
+        Count: 10
+    },
+    914:  {
+        Type: "HP",
+        Count: 10
+    },
+    915:  {
+        Type: "STR",
+        Count: 10
+    },
+    916:  {
+        Type: "DEF",
+        Count: 10
+    },
+    917:  {
+        Type: "DEF",
+        Count: 10
+    },
+    918:  {
+        Type: "HP",
+        Count: 10
+    },
+    919:  {
+        Type: "HP",
+        Count: 10
+    },
+    920:  {
+        Type: "STR",
+        Count: 10
+    },
+    921:  {
+        Type: "DEF",
+        Count: 10
+    },
+    922:  {
+        Type: "DEF",
+        Count: 10
+    },
+    923:  {
+        Type: "HP",
+        Count: 10
+    },
+    924:  {
+        Type: "HP",
+        Count: 10
+    },
+    925:  {
+        Type: "STR",
+        Count: 10
+    },
+    926:  {
+        Type: "DEF",
+        Count: 10
+    },
+    927:  {
+        Type: "DEF",
+        Count: 10
+    },
+    928:  {
+        Type: "HP",
+        Count: 10
+    },
+    929:  {
+        Type: "HP",
+        Count: 10
+    },
+    930:  {
+        Type: "STR",
+        Count: 10
+    },
+    931:  {
+        Type: "DEF",
+        Count: 10
+    },
+    932:  {
+        Type: "DEF",
+        Count: 10
+    },
+    933:  {
+        Type: "HP",
+        Count: 10
+    },
+    934:  {
+        Type: "HP",
+        Count: 10
+    },
+    935:  {
+        Type: "STR",
+        Count: 10
+    },
+    936:  {
+        Type: "DEF",
+        Count: 10
+    },
+    937:  {
+        Type: "DEF",
+        Count: 10
+    },
+    938:  {
+        Type: "HP",
+        Count: 10
+    },
+    939:  {
+        Type: "HP",
+        Count: 10
+    },
+    940:  {
+        Type: "STR",
+        Count: 10
+    },
+    941:  {
+        Type: "DEF",
+        Count: 10
+    },
+    942:  {
+        Type: "DEF",
+        Count: 10
+    },
+    943:  {
+        Type: "HP",
+        Count: 10
+    },
+    944:  {
+        Type: "HP",
+        Count: 10
+    },
+    945:  {
+        Type: "STR",
+        Count: 10
+    },
+    946:  {
+        Type: "DEF",
+        Count: 10
+    },
+    947:  {
+        Type: "DEF",
+        Count: 10
+    },
+    948:  {
+        Type: "HP",
+        Count: 10
+    },
+    949:  {
+        Type: "HP",
+        Count: 10
+    },
+    950:  {
+        Type: "STR",
+        Count: 100
+    },
+    951:  {
+        Type: "DEF",
+        Count: 10
+    },
+    952:  {
+        Type: "DEF",
+        Count: 10
+    },
+    953:  {
+        Type: "HP",
+        Count: 10
+    },
+    954:  {
+        Type: "HP",
+        Count: 10
+    },
+    955:  {
+        Type: "STR",
+        Count: 10
+    },
+    956:  {
+        Type: "DEF",
+        Count: 10
+    },
+    957:  {
+        Type: "DEF",
+        Count: 10
+    },
+    958:  {
+        Type: "HP",
+        Count: 10
+    },
+    959:  {
+        Type: "HP",
+        Count: 10
+    },
+    960:  {
+        Type: "STR",
+        Count: 10
+    },
+    961:  {
+        Type: "DEF",
+        Count: 10
+    },
+    962:  {
+        Type: "DEF",
+        Count: 10
+    },
+    963:  {
+        Type: "HP",
+        Count: 10
+    },
+    964:  {
+        Type: "HP",
+        Count: 10
+    },
+    965:  {
+        Type: "STR",
+        Count: 10
+    },
+    966:  {
+        Type: "DEF",
+        Count: 10
+    },
+    967:  {
+        Type: "DEF",
+        Count: 10
+    },
+    968:  {
+        Type: "HP",
+        Count: 10
+    },
+    969:  {
+        Type: "HP",
+        Count: 10
+    },
+    970:  {
+        Type: "STR",
+        Count: 10
+    },
+    971:  {
+        Type: "DEF",
+        Count: 10
+    },
+    972:  {
+        Type: "DEF",
+        Count: 10
+    },
+    973:  {
+        Type: "HP",
+        Count: 10
+    },
+    974:  {
+        Type: "HP",
+        Count: 10
+    },
+    975:  {
+        Type: "STR",
+        Count: 10
+    },
+    976:  {
+        Type: "DEF",
+        Count: 10
+    },
+    977:  {
+        Type: "DEF",
+        Count: 10
+    },
+    978:  {
+        Type: "HP",
+        Count: 10
+    },
+    979:  {
+        Type: "HP",
+        Count: 10
+    },
+    980:  {
+        Type: "STR",
+        Count: 10
+    },
+    981:  {
+        Type: "DEF",
+        Count: 10
+    },
+    982:  {
+        Type: "DEF",
+        Count: 10
+    },
+    983:  {
+        Type: "HP",
+        Count: 10
+    },
+    984:  {
+        Type: "HP",
+        Count: 10
+    },
+    985:  {
+        Type: "STR",
+        Count: 10
+    },
+    986:  {
+        Type: "DEF",
+        Count: 10
+    },
+    987:  {
+        Type: "DEF",
+        Count: 10
+    },
+    988:  {
+        Type: "HP",
+        Count: 10
+    },
+    989:  {
+        Type: "HP",
+        Count: 10
+    },
+    990:  {
+        Type: "STR",
+        Count: 10
+    },
+    991:  {
+        Type: "DEF",
+        Count: 10
+    },
+    992:  {
+        Type: "DEF",
+        Count: 10
+    },
+    993:  {
+        Type: "HP",
+        Count: 10
+    },
+    994:  {
+        Type: "HP",
+        Count: 10
+    },
+    995:  {
+        Type: "STR",
+        Count: 10
+    },
+    996:  {
+        Type: "DEF",
+        Count: 10
+    },
+    997:  {
+        Type: "DEF",
+        Count: 10
+    },
+    998:  {
+        Type: "HP",
+        Count: 10
+    },
+    999:  {
         Type: "STR",
         Count: 100
     }
