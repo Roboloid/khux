@@ -87175,7 +87175,7 @@ var medalDatabase = {
         },
         Supernova:  {
             Name: "[Mastery] Upright Strike All M",
-            Text: "3 turns: Medal STR +6500, self [↑ STR, U- & M-STR 15], targets [↓ DEF, U- & M-DEF 15], SP ATK B +320%. Count +5. Gauge +5. Triggers before slot 1 is activated when defending in PVP.",
+            Text: "3 turns: M-Medal STR +6500, self [↑ STR, U- & M-STR 15], targets [↓ DEF, U- & M-DEF 15], SP ATK B +320%. Count +5. Gauge +5. Triggers before slot 1 is activated when defending in PVP.",
             Multi: 250.00,
             Timing: 1,
             Target: "All",
@@ -87196,7 +87196,7 @@ var medalDatabase = {
                     DurationCount: 3
                 },
                 STRPlus:  {
-                    Type: "General",
+                    Type: "Magic",
                     Amount: 6500,
                     DurationType: "Turn",
                     DurationCount: 3
