@@ -577,6 +577,9 @@ function checkConditions(MedalID)   {
             medalNameHolder = medalNameHolder + " supernova ";
         }
 
+        medalNameHolder = medalNameHolder.replace("ill.", " illustrated ");
+        medalNameHolder = medalNameHolder.replace("illus.", " illustrated ");
+
         medalNameHolder = medalNameHolder.replace("#", " # ");
         medalNameHolder = medalNameHolder.replace(/-/g, " - ");
         medalNameHolder = medalNameHolder.replace("(", " ( ");
