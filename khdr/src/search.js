@@ -3831,6 +3831,26 @@ var cardDatabase = {
         DirectionType: "Light",
         ColorType: "Blue",
         AttackType: "Staff",
+        Passive1:   {
+            ReqCount: 1,
+            BuffType: "HP",
+            BuffCount: 1
+        },
+        Passive2:   {
+            ReqCount: 3,
+            BuffType: "Magic",
+            BuffCount: 1
+        },
+        Passive3:   {
+            ReqCount: 5,
+            BuffType: "Magic",
+            BuffCount: 1
+        },
+        Passive4:   {
+            ReqCount: 10,
+            BuffType: "Magic",
+            BuffCount: 2
+        },
         MainAbility:    {
             Name: "Radiant Star",
             AttackType: "Staff",
@@ -3891,6 +3911,26 @@ var cardDatabase = {
         DirectionType: "Light",
         ColorType: "Red",
         AttackType: "Staff",
+        Passive1:   {
+            ReqCount: 1,
+            BuffType: "HP",
+            BuffCount: 1
+        },
+        Passive2:   {
+            ReqCount: 3,
+            BuffType: "Magic",
+            BuffCount: 1
+        },
+        Passive3:   {
+            ReqCount: 5,
+            BuffType: "Magic",
+            BuffCount: 1
+        },
+        Passive4:   {
+            ReqCount: 10,
+            BuffType: "Magic",
+            BuffCount: 2
+        },
         MainAbility:    {
             Name: "Thundaga",
             AttackType: "Staff",
@@ -3913,6 +3953,26 @@ var cardDatabase = {
         DirectionType: "Dark",
         ColorType: "Green",
         AttackType: "Staff",
+        Passive1:   {
+            ReqCount: 1,
+            BuffType: "HP",
+            BuffCount: 1
+        },
+        Passive2:   {
+            ReqCount: 3,
+            BuffType: "Magic",
+            BuffCount: 1
+        },
+        Passive3:   {
+            ReqCount: 5,
+            BuffType: "Magic",
+            BuffCount: 1
+        },
+        Passive4:   {
+            ReqCount: 10,
+            BuffType: "Magic",
+            BuffCount: 2
+        },
         MainAbility:    {
             Name: "Firaga",
             AttackType: "Staff",
@@ -3935,6 +3995,26 @@ var cardDatabase = {
         DirectionType: "Light",
         ColorType: "Blue",
         AttackType: "Sword",
+        Passive1:   {
+            ReqCount: 1,
+            BuffType: "HP",
+            BuffCount: 1
+        },
+        Passive2:   {
+            ReqCount: 3,
+            BuffType: "Strength",
+            BuffCount: 1
+        },
+        Passive3:   {
+            ReqCount: 5,
+            BuffType: "Strength",
+            BuffCount: 1
+        },
+        Passive4:   {
+            ReqCount: 10,
+            BuffType: "Strength",
+            BuffCount: 2
+        },
         MainAbility:    {
             Name: "Black Hole",
             AttackType: "Sword",
@@ -3957,6 +4037,26 @@ var cardDatabase = {
         DirectionType: "Light",
         ColorType: "Blue",
         AttackType: "Shield",
+        Passive1:   {
+            ReqCount: 1,
+            BuffType: "HP",
+            BuffCount: 1
+        },
+        Passive2:   {
+            ReqCount: 3,
+            BuffType: "Magic",
+            BuffCount: 1
+        },
+        Passive3:   {
+            ReqCount: 5,
+            BuffType: "Magic",
+            BuffCount: 1
+        },
+        Passive4:   {
+            ReqCount: 10,
+            BuffType: "Magic",
+            BuffCount: 1
+        },
         MainAbility:    {
             Name: "Cure",
             AttackType: "Shield",
@@ -3979,6 +4079,26 @@ var cardDatabase = {
         DirectionType: "Light",
         ColorType: "Blue",
         AttackType: "Staff",
+        Passive1:   {
+            ReqCount: 1,
+            BuffType: "HP",
+            BuffCount: 1
+        },
+        Passive2:   {
+            ReqCount: 3,
+            BuffType: "Magic",
+            BuffCount: 1
+        },
+        Passive3:   {
+            ReqCount: 5,
+            BuffType: "Magic",
+            BuffCount: 1
+        },
+        Passive4:   {
+            ReqCount: 10,
+            BuffType: "Magic",
+            BuffCount: 1
+        },
         MainAbility:    {
             Name: "Fire",
             AttackType: "Staff",
@@ -3997,6 +4117,26 @@ var cardDatabase = {
         DirectionType: "Dark",
         ColorType: "Green",
         AttackType: "Sword",
+        Passive1:   {
+            ReqCount: 1,
+            BuffType: "HP",
+            BuffCount: 1
+        },
+        Passive2:   {
+            ReqCount: 3,
+            BuffType: "Strength",
+            BuffCount: 1
+        },
+        Passive3:   {
+            ReqCount: 5,
+            BuffType: "Strength",
+            BuffCount: 1
+        },
+        Passive4:   {
+            ReqCount: 10,
+            BuffType: "Strength",
+            BuffCount: 1
+        },
         MainAbility:    {
             Name: "Dark Fire Raid",
             AttackType: "Sword",
