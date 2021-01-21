@@ -4146,4 +4146,26 @@ var cardDatabase = {
             Effect: "A powerful fire-element physical attack."
         }
     },
+    85:  {
+        ID: 85,
+        AlbumNum: 85,
+        CardImage: "85_Master_Xehanort.png",
+        RenderImage: "85_Master_Xehanort_Render.png",
+        Name: "Master Xehanort",
+        DirectionType: "Dark",
+        ColorType: "Blue",
+        AttackType: "Staff",
+        MainAbility:    {
+            Name: "Firaga",
+            AttackType: "Staff",
+            Element: "Fire",
+            BasePower: 50,
+            MaxPower: 100,
+            Effect: "A powerful fire-element magic attack."
+        },
+        SubAbility:    {
+            Name: "Magic Boost 2",
+            Effect: "Magic +2 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+        }
+    },
 };
