@@ -1115,8 +1115,10 @@ function checkConditions(MedalID)   {
                 return 0;
             }
         }
-        if((medalDatabase[MedalID].Supernova == undefined || medalDatabase[MedalID].Supernova.SelfBuffs == undefined || medalDatabase[MedalID].Supernova.SelfBuffs.Renew == undefined) && (medalDatabase[MedalID].Supernova == undefined || medalDatabase[MedalID].Supernova.SelfBuffs == undefined || medalDatabase[MedalID].Supernova.SelfBuffs["Renew" + document.getElementById("supernovaFilters_SelfBuffs_RenewIMGcaption/Type").value] == undefined)) {
-            return 0;
+        else if(document.getElementById("supernovaFilters_SelfBuffs_RenewIMGcaption/Type").value == "")   {
+            if((medalDatabase[MedalID].Supernova == undefined || medalDatabase[MedalID].Supernova.SelfBuffs == undefined || medalDatabase[MedalID].Supernova.SelfBuffs.Renew == undefined) && (medalDatabase[MedalID].Supernova == undefined || medalDatabase[MedalID].Supernova.SelfBuffs == undefined || (medalDatabase[MedalID].Supernova.SelfBuffs["Renew"] == undefined && medalDatabase[MedalID].Supernova.SelfBuffs["RenewUpright"] == undefined && medalDatabase[MedalID].Supernova.SelfBuffs["RenewReversed"] == undefined && medalDatabase[MedalID].Supernova.SelfBuffs["RenewPower"] == undefined && medalDatabase[MedalID].Supernova.SelfBuffs["RenewSpeed"] == undefined && medalDatabase[MedalID].Supernova.SelfBuffs["RenewMagic"] == undefined))) {
+                return 0;
+            }
         }
     }
 
