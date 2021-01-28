@@ -1520,7 +1520,7 @@ function generateCard(MedalID)  {
         multiText.appendChild(blankSpacer.cloneNode());
         multiText.appendChild(document.createTextNode("Max Multiplier (w/ Guilt): " + (processGuilt(medalDatabase[MedalID].Guilt) *  medalDatabase[MedalID].LowMulti).toFixed(2) + "x — " +  (processGuilt(medalDatabase[MedalID].Guilt) * medalDatabase[MedalID].HighMulti).toFixed(2) + "x"));
         multiText.appendChild(blankSpacer.cloneNode());
-        multiText.appendChild(document.createTextNode("Max Multiplier + 320% Guilt: " + ((3.20 + processGuilt(medalDatabase[MedalID].Guilt)) *  medalDatabase[MedalID].LowMulti).toFixed(2) + "x — " +  ((3.00 + processGuilt(medalDatabase[MedalID].Guilt)) * medalDatabase[MedalID].HighMulti).toFixed(2) + "x"));
+        multiText.appendChild(document.createTextNode("Max Multiplier + 320% Guilt: " + ((3.20 + processGuilt(medalDatabase[MedalID].Guilt)) *  medalDatabase[MedalID].LowMulti).toFixed(2) + "x — " +  ((3.20 + processGuilt(medalDatabase[MedalID].Guilt)) * medalDatabase[MedalID].HighMulti).toFixed(2) + "x"));
         sideSpan.appendChild(multiText);
     }
     else if(medalDatabase[MedalID].FixedMulti !== undefined)  {
