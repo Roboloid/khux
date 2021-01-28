@@ -4168,4 +4168,44 @@ var cardDatabase = {
             Effect: "Magic +2 for 10s. Stacking Cards does not increase value. Can be applied more than once."
         }
     },
+    86:  {
+        ID: 86,
+        AlbumNum: 86,
+        CardImage: "86_Sora_&_Riku.png",
+        RenderImage: "86_Sora_&_Riku_Render.png",
+        Name: "Sora & Riku",
+        DirectionType: "Light",
+        ColorType: "Green",
+        AttackType: "Sword",
+        MainAbility:    {
+            Name: "Radiant Glory",
+            AttackType: "Sword",
+            Element: "Light",
+            BasePower: 60,
+            MaxPower: 110,
+            Effect: "A powerful light-element physical attack."
+        },
+        SubAbility:    {
+            Name: "Attack Boost 2",
+            Effect: "Strength +2 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+        }
+    },
+    87:  {
+        ID: 87,
+        AlbumNum: 87,
+        CardImage: "87_KH_III_King_Mickey.png",
+        RenderImage: "87_KH_III_King_Mickey_Render.png",
+        Name: "KH III King Mickey",
+        DirectionType: "Light",
+        ColorType: "Red",
+        AttackType: "Sword",
+        MainAbility:    {
+            Name: "Storm Dance",
+            AttackType: "Sword",
+            Element: "Wind",
+            BasePower: 20,
+            MaxPower: 50,
+            Effect: "A powerful wind-element physical attack."
+        }
+    },
 };
