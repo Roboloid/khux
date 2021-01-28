@@ -186,6 +186,8 @@ function parseMedalName(value)  {
         value = value.replace(/é/g, " e ");
         value = value.replace("kh2", "kh ii");
         value = value.replace("kh3", "kh iii");
+        value = value.replace("illus.", "illustrated");
+        value = value.replace("ill.", "illustrated");
         queryArray = value.split(" ");
     }
     else    {
@@ -577,8 +579,8 @@ function checkConditions(MedalID)   {
             medalNameHolder = medalNameHolder + " supernova ";
         }
 
-        medalNameHolder = medalNameHolder.replace("ill.", " illustrated ");
         medalNameHolder = medalNameHolder.replace("illus.", " illustrated ");
+        medalNameHolder = medalNameHolder.replace("ill.", " illustrated ");
 
         medalNameHolder = medalNameHolder.replace("#", " # ");
         medalNameHolder = medalNameHolder.replace(/-/g, " - ");
