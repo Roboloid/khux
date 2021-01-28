@@ -45582,7 +45582,7 @@ var medalDatabase = {
     1462:  {
         ID: 1462,
         AlbumNum: 1004,
-        Reference: [1462, 1463],
+        Reference: [1462, 1463, 2089],
         MedalImage: "1004_6Star_Master_Xehanort_[EX+].png",
         RenderImage: "1004_6Star_Master_Xehanort_[EX+]_Render.png",
         MusicLink: "(KH2.5)_Fate_of_the_Unknown.mp3",
@@ -45619,7 +45619,7 @@ var medalDatabase = {
     1463:  {
         ID: 1463,
         AlbumNum: 1430,
-        Reference: [1462, 1463],
+        Reference: [1462, 1463, 2089],
         MedalImage: "1430_7Star_Master_Xehanort_[EX+].png",
         RenderImage: "1004_6Star_Master_Xehanort_[EX+]_Render.png",
         MusicLink: "(KH2.5)_Fate_of_the_Unknown.mp3",
@@ -63045,7 +63045,7 @@ var medalDatabase = {
     1797:  {
         ID: 1797,
         AlbumNum: 1703,
-        Reference: [1797, 1798],
+        Reference: [1797, 1798, 2088],
         MedalImage: "1703_7Star_Supernova_-_Key_Art_%2320.png",
         RenderImage: "1703_7Star_Supernova_-_Key_Art_%2320_Render.png",
         KeyArtImage: "Art_1703_Supernova_-_Key_Art_%2320.png",
@@ -63090,7 +63090,7 @@ var medalDatabase = {
     1798:  {
         ID: 1798,
         AlbumNum: 1703,
-        Reference: [1797, 1798],
+        Reference: [1797, 1798, 2088],
         MedalImage: "1703_7Star_Supernova_-_Key_Art_%2320.png",
         RenderImage: "1703_7Star_Supernova_-_Key_Art_%2320_Render.png",
         KeyArtImage: "Art_1703_Supernova_-_Key_Art_%2320.png",
@@ -87601,6 +87601,494 @@ var medalDatabase = {
                     BuffCount: 10,
                     DurationType: "Turn",
                     DurationCount: 1
+                }
+            },
+            Hits: 1
+        }
+    },
+    2088:  {
+        ID: 2088,
+        AlbumNum: 1703,
+        Reference: [1797, 1798, 2088],
+        MedalImage: "1703_7Star_Supernova_-_Key_Art_%2320.png",
+        RenderImage: "1703_7Star_Supernova_-_Key_Art_%2320_Render.png",
+        KeyArtImage: "Art_1703_Supernova_-_Key_Art_%2320.png",
+        Name: "SN++ - Key Art #20",
+        Rarity: 7,
+        Direction: "Upright",
+        Attribute: "Magic",
+        Guilt: 10,
+        STR: 48000,
+        DEF: 16448,
+        Multi: 20.50,
+        Gauge: 6,
+        Target: "All",
+        Ability:    {
+            Name: "Spreading Flames +7",
+            Text: "Deals 3 hits. 1 attack: M-Medal STR +20000.",
+            SelfBuffs:  {
+                STRPlus:  {
+                    Type: "Magic",
+                    Amount: 20000,
+                    DurationType: "Attack",
+                    DurationCount: 1
+                }
+            },
+            Hits: 3
+        },
+        Supernova:  {
+            Name: "[Mastery] Upright Strike All M",
+            Text: "1 turn: M-Medal STR +12000, self [↑ U- & M-STR 15], SP ATK B +320%. Pierces Defense Boost 50%. Gauge +5. Triggers before slot 3 is activated when defending in PVP.",
+            Multi: 240.00,
+            Timing: 3,
+            Target: "All",
+            SelfBuffs:  {
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Magic",
+                    Amount: 12000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320,
+                GaugeRecovery: 5
+            },
+            EnemyBuffs: {
+                DEFPierce: 50
+            },
+            Hits: 1
+        }
+    },
+    2089:  {
+        ID: 2089,
+        AlbumNum: 1430,
+        Reference: [1462, 1463, 2089],
+        MedalImage: "1430_7Star_Master_Xehanort_[EX+].png",
+        RenderImage: "1004_6Star_Master_Xehanort_[EX+]_Render.png",
+        MusicLink: "(KH2.5)_Fate_of_the_Unknown.mp3",
+        Name: "SN++ - Master Xehanort B",
+        Rarity: 7,
+        Direction: "Reversed",
+        Attribute: "Speed",
+        Guilt: 10,
+        STR: 46646,
+        DEF: 16448,
+        LowMulti: 18.53,
+        HighMulti: 20.87,
+        Gauge: 4,
+        Target: "All",
+        Ability:    {
+            Name: "Raging Darkness +7",
+            Text: "Deals 3 hits. 1 turn: S-Medal STR +12000, self [↑ STR, R- & S-STR 15], targets [↓ DEF, R- & S-DEF 15], SP ATK B +220%. Count ±0. Damage+: Higher HP. Pierces Defense Boost 30%.	",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffRA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Speed",
+                    Amount: 12000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 220
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffRD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Counter:    {
+                    CountDirection: "Null"
+                },
+                DEFPierce: 30
+            },
+            Hits: 3
+        },
+        Supernova:  {
+            Name: "[Mastery] Reversed Strike All S",
+            Text: "1 turn: S-Medal STR +12000, self [↑ R-STR 15], targets [↓ R-DEF 15], SP ATK B +320%. Pierces Defense Boost 50%. Triggers before slot 1 is activated when defending in PVP.",
+            Multi: 240.00,
+            Timing: 1,
+            Target: "All",
+            SelfBuffs:  {
+                BuffRA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlus:  {
+                    Type: "Speed",
+                    Amount: 12000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320
+            },
+            EnemyBuffs: {
+                DebuffRD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DEFPierce: 50
+            },
+            Hits: 1
+        }
+    },
+    2090:  {
+        ID: 2090,
+        AlbumNum: 1925,
+        Reference: [2090],
+        MedalImage: "1925_7Star_SN++_-_MoM_Terra.png",
+        RenderImage: "1925_7Star_SN++_-_MoM_Terra_Render.png",
+        Name: "SN++ - MoM Terra",
+        Rarity: 7,
+        Direction: "Upright",
+        Attribute: "Power",
+        Guilt: 10,
+        STR: 47923,
+        DEF: 16709,
+        Multi: 20.90,
+        Gauge: 1,
+        Target: "All",
+        Ability:    {
+            Name: "Blastwave EX +6",
+            Text: "Deals 3 hits. 1 turn: P- & S-Medal STR +7000, self [↑ STR, U-, P- & S-STR 15], targets [↓ DEF, U-, P- & S-DEF 15], SP ATK B +220%. Count +1.",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffPA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlusPower:  {
+                    Amount: 7000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlusSpeed:  {
+                    Amount: 7000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 220
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffUD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffPD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Counter:    {
+                    CountDirection: "Up",
+                    Count: 1
+                }
+            },
+            Hits: 3
+        },
+        Supernova:  {
+            Name: "[Mastery] Upright Strike All P",
+            Text: "P & S Medal: SN Renew. 1 turn: P- & S-Medal STR +8000, SP ATK B +320%. Count ±0. Triggers before slot 6 is activated when defending in PVP.",
+            Multi: 250.00,
+            Timing: 6,
+            Target: "All",
+            SelfBuffs:  {
+                RenewPower: "Yes",
+                RenewSpeed: "Yes",
+                STRPlusPower:  {
+                    Amount: 8000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlusSpeed:  {
+                    Amount: 8000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320
+            },
+            EnemyBuffs: {
+                Counter:    {
+                    CountDirection: "Null"
+                }
+            },
+            Hits: 1
+        }
+    },
+    2091:  {
+        ID: 2091,
+        AlbumNum: 1926,
+        Reference: [2091],
+        MedalImage: "1926_7Star_SN++_-_MoM_Ventus.png",
+        RenderImage: "1926_7Star_SN++_-_MoM_Ventus_Render.png",
+        Name: "SN++ - MoM Ventus",
+        Rarity: 7,
+        Direction: "Upright",
+        Attribute: "Speed",
+        Guilt: 10,
+        STR: 47923,
+        DEF: 16709,
+        Multi: 20.90,
+        Gauge: 1,
+        Target: "All",
+        Ability:    {
+            Name: "Blastwave EX +6",
+            Text: "Deals 3 hits. 1 turn: S- & M-Medal STR +7000, self [↑ STR, U-, S- & M-STR 15], targets [↓ DEF, U-, S- & M-DEF 15], SP ATK B +220%. Count +1.",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffUA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffSA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlusSpeed:  {
+                    Amount: 7000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlusMagic:  {
+                    Amount: 7000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 220
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffUD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffSD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffMD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Counter:    {
+                    CountDirection: "Up",
+                    Count: 1
+                }
+            },
+            Hits: 3
+        },
+        Supernova:  {
+            Name: "[Mastery] Upright Strike All S",
+            Text: "S & M Medal: SN Renew. 1 turn: S- & M-Medal STR +8000, SP ATK B +320%. Count ±0. Triggers before slot 6 is activated when defending in PVP.",
+            Multi: 250.00,
+            Timing: 6,
+            Target: "All",
+            SelfBuffs:  {
+                RenewSpeed: "Yes",
+                RenewMagic: "Yes",
+                STRPlusSpeed:  {
+                    Amount: 8000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlusMagic:  {
+                    Amount: 8000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320
+            },
+            EnemyBuffs: {
+                Counter:    {
+                    CountDirection: "Null"
+                }
+            },
+            Hits: 1
+        }
+    },
+    2092:  {
+        ID: 2092,
+        AlbumNum: 1927,
+        Reference: [2092],
+        MedalImage: "1927_7Star_SN++_-_MoM_Aqua.png",
+        RenderImage: "1927_7Star_SN++_-_MoM_Aqua_Render.png",
+        Name: "SN++ - MoM Aqua",
+        Rarity: 7,
+        Direction: "Upright",
+        Attribute: "Magic",
+        Guilt: 10,
+        STR: 47923,
+        DEF: 16709,
+        Multi: 20.90,
+        Gauge: 1,
+        Target: "All",
+        Ability:    {
+            Name: "Blastwave EX +6",
+            Text: "Deals 3 hits. 1 turn: P- & M-Medal STR +7000, self [↑ STR, U-, P- & M-STR 15], targets [↓ DEF, U-, P- & M-DEF 15], SP ATK B +220%. Count +1.",
+            SelfBuffs:  {
+                BuffGA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffRA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffPA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                BuffMA: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlusPower:  {
+                    Amount: 7000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlusMagic:  {
+                    Amount: 7000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 220
+            },
+            EnemyBuffs: {
+                DebuffGD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffRD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffPD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                DebuffMD: {
+                    BuffCount: 15,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                Counter:    {
+                    CountDirection: "Up",
+                    Count: 1
+                }
+            },
+            Hits: 3
+        },
+        Supernova:  {
+            Name: "[Mastery] Upright Strike All M",
+            Text: "P & M Medal: SN Renew. 1 turn: P- & M-Medal STR +8000, SP ATK B +320%. Count ±0. Triggers before slot 6 is activated when defending in PVP.",
+            Multi: 250.00,
+            Timing: 6,
+            Target: "All",
+            SelfBuffs:  {
+                RenewPower: "Yes",
+                RenewMagic: "Yes",
+                STRPlusPower:  {
+                    Amount: 8000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                STRPlusMagic:  {
+                    Amount: 8000,
+                    DurationType: "Turn",
+                    DurationCount: 1
+                },
+                GuiltBuff: 320
+            },
+            EnemyBuffs: {
+                Counter:    {
+                    CountDirection: "Null"
                 }
             },
             Hits: 1
