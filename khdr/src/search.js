@@ -4155,6 +4155,26 @@ var cardDatabase = {
         DirectionType: "Dark",
         ColorType: "Blue",
         AttackType: "Staff",
+        Passive1:   {
+            ReqCount: 1,
+            BuffType: "HP",
+            BuffCount: 1
+        },
+        Passive2:   {
+            ReqCount: 3,
+            BuffType: "Magic",
+            BuffCount: 1
+        },
+        Passive3:   {
+            ReqCount: 5,
+            BuffType: "Magic",
+            BuffCount: 1
+        },
+        Passive4:   {
+            ReqCount: 10,
+            BuffType: "Magic",
+            BuffCount: 2
+        },
         MainAbility:    {
             Name: "Firaga",
             AttackType: "Staff",
