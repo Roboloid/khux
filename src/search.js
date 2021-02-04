@@ -88301,7 +88301,7 @@ var medalDatabase = {
                     DurationCount: 1
                 },
                 BuffMA: {
-                    BuffCount: 10,
+                    BuffCount: 15,
                     DurationType: "Turn",
                     DurationCount: 1
                 },
