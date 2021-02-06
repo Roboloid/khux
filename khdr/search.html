@@ -186,7 +186,7 @@
         max-width: 80%;
         text-align: center;
         color: rgb(255, 255, 255);
-        background: rgb(108, 49, 143);
+        background: rgb(119, 61, 153);
         position: fixed;
         max-height: 100%;
         overflow-y: auto;
@@ -393,7 +393,7 @@
                   </span>
 
                   <span id="otherFilters_Power" style="font-size: 18px; text-shadow: 1.50px 1.50px rgb(0, 0, 0); display: table; float: right">
-                      <label for="Power">Set Power: </label>
+                      <label for="Power">Set Max Power: </label>
                       <select id="PowerOrder" style="display: inline-block; margin: 10px">
                           <option value=">=">≥</option>
                           <option value="<=">≤</option>
@@ -447,18 +447,190 @@
 
               </div>
 
-              <hr>
+            <br><br>
 
-              <div id="subAbility">
-                  <span id="otherFilters_HasSubAbilitySpan" onclick="lightButtons('HasSubAbility')" class="spanHeaderStyle">
-                      <img id="HasSubAbility" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
-                      <p class="buttonText" style="font-size: 18px; margin-left: 3px">Has sub-ability</p>
-                  </span>
+            <h1 style="font-size: 22px; text-shadow: 1.50px 1.50px rgb(0, 0, 0)">Self:</h1>
 
-                  <br><br>
-              </div>
+            <div id="abilityFilters" style="overflow: hidden; display: block; margin: 15px">
+
+                <span id="abilityFilters_SelfBuffs_FillsGauge" onclick="lightButtons('abilityFilters_SelfBuffs_FillsGaugeIMG')" class="spanHeaderStyle">
+                    <img id="abilityFilters_SelfBuffs_FillsGaugeIMG" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                    <p class="buttonText" style="font-size: 15px; top: 48%; left: 49%">Fills bonus gauge</p>
+                </span>
+
+                <span id="abilityFilters_SelfBuffs_HPRecovery" onclick="lightButtons('abilityFilters_SelfBuffs_HPRecoveryIMG')" class="spanHeaderStyle">
+                    <img id="abilityFilters_SelfBuffs_HPRecoveryIMG" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                    <p class="buttonText" style="font-size: 16px">Recovers HP</p>
+                </span>
+
+                <span id="abilityFilters_SelfBuffs_Esuna" onclick="lightButtons('abilityFilters_SelfBuffs_EsunaIMG')" class="spanHeaderStyle">
+                    <img id="abilityFilters_SelfBuffs_EsunaIMG" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                    <p class="buttonText" style="font-size: 16px">Cures status</p>
+                </span>
+                <span id="abilityFilters_SelfBuffs_EsunaIMGcaption" class="caption">
+                    <select id="abilityFilters_SelfBuffs_EsunaIMGcaption/Type" style="display: inline-block; margin: 10px">
+                        <option value=""></option>
+                        <option value="Poison">Poison</option>
+                    </select>
+                </span>
+
+                <!-- Regular buffs -->
+
+                <br><br>
+
+                    <label class="styledText" for="abilityFilters_SelfBuffs_BuffDebuff/BuffCount">Buff count: </label>
+                    <input type="number" placeholder="Count" id="abilityFilters_SelfBuffs_BuffDebuff/BuffCount" style="width: 75px; margin-right: 50px">
+                    <label class="styledText" for="abilityFilters_SelfBuffs_BuffDebuff/DurationType">Duration: </label>
+                    <input type="number" placeholder="Seconds" id="abilityFilters_SelfBuffs_BuffDebuff/DurationCount" style="width: 75px">
+
+                <br>
+
+                <span id="abilityFilters_SelfBuffs_BuffStrength" onclick="lightButtons('abilityFilters_SelfBuffs_BuffStrengthIMG')" class="spanHeaderStyle">
+                    <img id="abilityFilters_SelfBuffs_BuffStrengthIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Buff_Strength.png" style="width: 40px; right: 2px">
+                </span>
+                <span id="abilityFilters_SelfBuffs_BuffDefense" onclick="lightButtons('abilityFilters_SelfBuffs_BuffDefenseIMG')" class="spanHeaderStyle">
+                    <img id="abilityFilters_SelfBuffs_BuffDefenseIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Buff_Defense.png" style="width: 40px; right: 2px">
+                </span>
+                <span id="abilityFilters_SelfBuffs_BuffMagic" onclick="lightButtons('abilityFilters_SelfBuffs_BuffMagicIMG')" class="spanHeaderStyle">
+                    <img id="abilityFilters_SelfBuffs_BuffMagicIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Buff_Magic.png" style="width: 40px; right: 2px">
+                </span>
+                <span id="abilityFilters_SelfBuffs_BuffMagicResist" onclick="lightButtons('abilityFilters_SelfBuffs_BuffMagicResistIMG')" class="spanHeaderStyle">
+                    <img id="abilityFilters_SelfBuffs_BuffMagicResistIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Buff_MagicResist.png" style="width: 40px; right: 2px">
+                </span>
+
+                <br><br>
+                <h1 style="font-size: 22px; text-shadow: 1.50px 1.50px rgb(0, 0, 0)">Enemy:</h1>
+
+                <span id="abilityFilters_EnemyBuffs_InflictsStatus" onclick="lightButtons('abilityFilters_EnemyBuffs_InflictsStatusIMG')" class="spanHeaderStyle">
+                    <img id="abilityFilters_EnemyBuffs_InflictsStatusIMG" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                    <p class="buttonText" style="font-size: 16px">Inflicts status</p>
+                </span>
+                <span id="abilityFilters_EnemyBuffs_InflictsStatusIMGcaption" class="caption">
+                    <select id="abilityFilters_EnemyBuffs_InflictsStatusIMGcaption/Type" style="display: inline-block; margin: 10px">
+                        <option value=""></option>
+                        <option value="Poison">Poison</option>
+                        <option value="Paralysis">Paralysis</option>
+                        <option value="Sleep">Sleep</option>
+                    </select>
+                </span>
+
+                <br><br>
+
+                <span id="abilityFilters_EnemyBuffs_DebuffStrength" onclick="lightButtons('abilityFilters_EnemyBuffs_DebuffStrengthIMG')" class="spanHeaderStyle">
+                    <img id="abilityFilters_EnemyBuffs_DebuffStrengthIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Debuff_Strength.png" style="width: 40px; right: 2px">
+                </span>
+                <span id="abilityFilters_EnemyBuffs_DebuffDefense" onclick="lightButtons('abilityFilters_EnemyBuffs_DebuffDefenseIMG')" class="spanHeaderStyle">
+                    <img id="abilityFilters_EnemyBuffs_DebuffDefenseIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Debuff_Defense.png" style="width: 40px; right: 2px">
+                </span>
+                <span id="abilityFilters_EnemyBuffs_DebuffMagic" onclick="lightButtons('abilityFilters_EnemyBuffs_DebuffMagicIMG')" class="spanHeaderStyle">
+                    <img id="abilityFilters_EnemyBuffs_DebuffMagicIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Debuff_Magic.png" style="width: 40px; right: 2px">
+                </span>
+                <span id="abilityFilters_EnemyBuffs_DebuffMagicResist" onclick="lightButtons('abilityFilters_EnemyBuffs_DebuffMagicResistIMG')" class="spanHeaderStyle">
+                    <img id="abilityFilters_EnemyBuffs_DebuffMagicResistIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Debuff_MagicResist.png" style="width: 40px; right: 2px">
+                </span>
 
             </div>
+
+            <hr>
+
+            <div id="subAbility">
+                <p style="text-shadow: 1.50px 1.50px rgb(0, 0, 0); font-size: 24px">Sub-Ability</p>
+
+                <span id="otherFilters_HasSubAbilitySpan" onclick="lightButtons('HasSubAbility')" class="spanHeaderStyle">
+                    <img id="HasSubAbility" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                    <p class="buttonText" style="font-size: 18px; margin-left: 3px">Has sub-ability</p>
+                </span>
+
+                <br><br>
+
+                <h1 style="font-size: 22px; text-shadow: 1.50px 1.50px rgb(0, 0, 0)">Self:</h1>
+
+                <span id="subAbilityFilters_SelfBuffs_FillsGauge" onclick="lightButtons('subAbilityFilters_SelfBuffs_FillsGaugeIMG')" class="spanHeaderStyle">
+                    <img id="subAbilityFilters_SelfBuffs_FillsGaugeIMG" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                    <p class="buttonText" style="font-size: 15px; top: 48%; left: 49%">Fills bonus gauge</p>
+                </span>
+
+                <span id="subAbilityFilters_SelfBuffs_HPRecovery" onclick="lightButtons('subAbilityFilters_SelfBuffs_HPRecoveryIMG')" class="spanHeaderStyle">
+                    <img id="subAbilityFilters_SelfBuffs_HPRecoveryIMG" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                    <p class="buttonText" style="font-size: 16px">Recovers HP</p>
+                </span>
+
+                <!-- Regular buffs -->
+
+                <br><br>
+
+                    <label class="styledText" for="subAbilityFilters_SelfBuffs_BuffDebuff/BuffCount">Buff count: </label>
+                    <input type="number" placeholder="Count" id="subAbilityFilters_SelfBuffs_BuffDebuff/BuffCount" style="width: 75px; margin-right: 50px">
+                    <label class="styledText" for="subAbilityFilters_SelfBuffs_BuffDebuff/DurationType">Duration: </label>
+                    <input type="number" placeholder="Seconds" id="subAbilityFilters_SelfBuffs_BuffDebuff/DurationCount" style="width: 75px">
+
+                <br>
+
+                <span id="subAbilityFilters_SelfBuffs_BuffStrength" onclick="lightButtons('subAbilityFilters_SelfBuffs_BuffStrengthIMG')" class="spanHeaderStyle">
+                    <img id="subAbilityFilters_SelfBuffs_BuffStrengthIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Buff_Strength.png" style="width: 40px; right: 2px">
+                </span>
+                <span id="subAbilityFilters_SelfBuffs_BuffDefense" onclick="lightButtons('subAbilityFilters_SelfBuffs_BuffDefenseIMG')" class="spanHeaderStyle">
+                    <img id="subAbilityFilters_SelfBuffs_BuffDefenseIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Buff_Defense.png" style="width: 40px; right: 2px">
+                </span>
+                <span id="subAbilityFilters_SelfBuffs_BuffMagic" onclick="lightButtons('subAbilityFilters_SelfBuffs_BuffMagicIMG')" class="spanHeaderStyle">
+                    <img id="subAbilityFilters_SelfBuffs_BuffMagicIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Buff_Magic.png" style="width: 40px; right: 2px">
+                </span>
+                <span id="subAbilityFilters_SelfBuffs_BuffMagicResist" onclick="lightButtons('subAbilityFilters_SelfBuffs_BuffMagicResistIMG')" class="spanHeaderStyle">
+                    <img id="subAbilityFilters_SelfBuffs_BuffMagicResistIMG" class="underImage" src="./images/ui/search_buffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Buff_MagicResist.png" style="width: 40px; right: 2px">
+                </span>
+
+                <br><br>
+                <h1 style="font-size: 22px; text-shadow: 1.50px 1.50px rgb(0, 0, 0)">Enemy:</h1>
+
+                <span id="subAbilityFilters_EnemyBuffs_InflictsStatus" onclick="lightButtons('subAbilityFilters_EnemyBuffs_InflictsStatusIMG')" class="spanHeaderStyle">
+                    <img id="subAbilityFilters_EnemyBuffs_InflictsStatusIMG" class="underImage" src="./images/ui/search_genericOff.png" style="height: 50px">
+                    <p class="buttonText" style="font-size: 16px">Inflicts status</p>
+                </span>
+                <span id="subAbilityFilters_EnemyBuffs_InflictsStatusIMGcaption" class="caption">
+                    <select id="subAbilityFilters_EnemyBuffs_InflictsStatusIMGcaption/Type" style="display: inline-block; margin: 10px">
+                        <option value=""></option>
+                        <option value="Poison">Poison</option>
+                        <option value="Paralysis">Paralysis</option>
+                        <option value="Sleep">Sleep</option>
+                    </select>
+                </span>
+
+                <br><br>
+
+                <span id="subAbilityFilters_EnemyBuffs_DebuffStrength" onclick="lightButtons('subAbilityFilters_EnemyBuffs_DebuffStrengthIMG')" class="spanHeaderStyle">
+                    <img id="subAbilityFilters_EnemyBuffs_DebuffStrengthIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Debuff_Strength.png" style="width: 40px; right: 2px">
+                </span>
+                <span id="subAbilityFilters_EnemyBuffs_DebuffDefense" onclick="lightButtons('subAbilityFilters_EnemyBuffs_DebuffDefenseIMG')" class="spanHeaderStyle">
+                    <img id="subAbilityFilters_EnemyBuffs_DebuffDefenseIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Debuff_Defense.png" style="width: 40px; right: 2px">
+                </span>
+                <span id="subAbilityFilters_EnemyBuffs_DebuffMagic" onclick="lightButtons('subAbilityFilters_EnemyBuffs_DebuffMagicIMG')" class="spanHeaderStyle">
+                    <img id="subAbilityFilters_EnemyBuffs_DebuffMagicIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Debuff_Magic.png" style="width: 40px; right: 2px">
+                </span>
+                <span id="subAbilityFilters_EnemyBuffs_DebuffMagicResist" onclick="lightButtons('subAbilityFilters_EnemyBuffs_DebuffMagicResistIMG')" class="spanHeaderStyle">
+                    <img id="subAbilityFilters_EnemyBuffs_DebuffMagicResistIMG" class="underImage" src="./images/ui/search_debuffOff.png" style="height: 50px">
+                    <img class="buffImage" src="./images/ui/Debuff_MagicResist.png" style="width: 40px; right: 2px">
+                </span>
+
+                <br><br>
+
+            </div>
+
+        </div>
 
         </div>
 

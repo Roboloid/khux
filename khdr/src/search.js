@@ -461,7 +461,7 @@ function checkConditions(CardID)   {
         }
     }
     if(document.getElementById("Power").value != undefined && document.getElementById("Power").value != "")   {
-        if(cardDatabase[CardID].MainAbility == undefined || cardDatabase[CardID].MainAbility.Power == undefined || performOperator(cardDatabase[CardID].MainAbility.Power, document.getElementById("Power").value, document.getElementById("PowerOrder").value) == false)  {
+        if(cardDatabase[CardID].MainAbility == undefined || cardDatabase[CardID].MainAbility.MaxPower == undefined || performOperator(cardDatabase[CardID].MainAbility.MaxPower, document.getElementById("Power").value, document.getElementById("PowerOrder").value) == false)  {
             return 0;
         }
     }
@@ -577,7 +577,151 @@ function checkConditions(CardID)   {
             return 0;
         }
     }
+
+/*
+  __  __          _____ _   _            ____ _____ _      _____ _________     __
+ |  \/  |   /\   |_   _| \ | |     /\   |  _ \_   _| |    |_   _|__   __\ \   / /
+ | \  / |  /  \    | | |  \| |    /  \  | |_) || | | |      | |    | |   \ \_/ / 
+ | |\/| | / /\ \   | | | . ` |   / /\ \ |  _ < | | | |      | |    | |    \   /  
+ | |  | |/ ____ \ _| |_| |\  |  / ____ \| |_) || |_| |____ _| |_   | |     | |   
+ |_|  |_/_/    \_\_____|_| \_| /_/    \_\____/_____|______|_____|  |_|     |_|   
+*/
     
+    if(document.getElementById("abilityFilters_SelfBuffs_FillsGaugeIMG").src.indexOf("On.png") != -1)   {
+        if(cardDatabase[CardID].MainAbility == undefined || cardDatabase[CardID].MainAbility.SelfBuffs == undefined || cardDatabase[CardID].MainAbility.SelfBuffs.FillsGauge == undefined) {
+            return 0;
+        }
+    }
+
+    if(document.getElementById("abilityFilters_SelfBuffs_HPRecoveryIMG").src.indexOf("On.png") != -1)   {
+        if(cardDatabase[CardID].MainAbility == undefined || cardDatabase[CardID].MainAbility.SelfBuffs == undefined || cardDatabase[CardID].MainAbility.SelfBuffs.HPRecovery == undefined) {
+            return 0;
+        }
+    }
+
+    if(document.getElementById("abilityFilters_SelfBuffs_EsunaIMG").src.indexOf("On.png") != -1)   {
+        if(document.getElementById("abilityFilters_SelfBuffs_EsunaIMGcaption/Type").value != undefined && document.getElementById("abilityFilters_SelfBuffs_EsunaIMGcaption/Type").value != "")   {
+            if(cardDatabase[CardID].MainAbility == undefined || cardDatabase[CardID].MainAbility.SelfBuffs == undefined || cardDatabase[CardID].MainAbility.SelfBuffs.CuresStatus != document.getElementById("abilityFilters_SelfBuffs_EsunaIMGcaption/Type").value) {
+                return 0;
+            }
+        }
+        else if(cardDatabase[CardID].MainAbility == undefined || cardDatabase[CardID].MainAbility.SelfBuffs == undefined || cardDatabase[CardID].MainAbility.SelfBuffs.CuresStatus == undefined) {
+            return 0;
+        }
+    }
+
+    var buffTypeStoreArray = ["Strength", "Defense", "Magic", "MagicResist"];
+    var buffArray = ["Buff"];
+    for(var tempBuffValue of buffArray)   {
+        for(var tempTypeValue of buffTypeStoreArray)  {
+            if(document.getElementById("abilityFilters_SelfBuffs_" + tempBuffValue + tempTypeValue + "IMG").src.indexOf("On.png") != -1)   {
+                if(cardDatabase[CardID].MainAbility == undefined || cardDatabase[CardID].MainAbility.SelfBuffs == undefined || cardDatabase[CardID].MainAbility.SelfBuffs[tempBuffValue + tempTypeValue] == undefined) {
+                    return 0;
+                }
+                if(document.getElementById("abilityFilters_SelfBuffs_BuffDebuff/BuffCount").value != undefined && document.getElementById("abilityFilters_SelfBuffs_BuffDebuff/BuffCount").value != "" && cardDatabase[CardID].MainAbility.SelfBuffs[tempBuffValue + tempTypeValue].BuffCount != document.getElementById("abilityFilters_SelfBuffs_BuffDebuff/BuffCount").value)   {
+                    return 0;
+                }
+                if(document.getElementById("abilityFilters_SelfBuffs_BuffDebuff/DurationCount").value != undefined && document.getElementById("abilityFilters_SelfBuffs_BuffDebuff/DurationCount").value != "" && cardDatabase[CardID].MainAbility.SelfBuffs[tempBuffValue + tempTypeValue].Duration != document.getElementById("abilityFilters_SelfBuffs_BuffDebuff/DurationCount").value)   {
+                    return 0;
+                }
+            }
+        }
+    }
+
+
+    if(document.getElementById("abilityFilters_EnemyBuffs_InflictsStatusIMG").src.indexOf("On.png") != -1)   {
+        if(document.getElementById("abilityFilters_EnemyBuffs_InflictsStatusIMGcaption/Type").value != undefined && document.getElementById("abilityFilters_EnemyBuffs_InflictsStatusIMGcaption/Type").value != "")   {
+            if(cardDatabase[CardID].MainAbility == undefined || cardDatabase[CardID].MainAbility.EnemyBuffs == undefined || cardDatabase[CardID].MainAbility.EnemyBuffs.InflictsStatus != document.getElementById("abilityFilters_EnemyBuffs_InflictsStatusIMGcaption/Type").value) {
+                return 0;
+            }
+        }
+        else if(cardDatabase[CardID].MainAbility == undefined || cardDatabase[CardID].MainAbility.EnemyBuffs == undefined || cardDatabase[CardID].MainAbility.EnemyBuffs.InflictsStatus == undefined) {
+            return 0;
+        }
+    }
+
+    var debuffArray = ["Debuff"];
+
+    for(var tempBuffValue of debuffArray)   {
+        for(var tempTypeValue of buffTypeStoreArray)  {
+            if(document.getElementById("abilityFilters_EnemyBuffs_" + tempBuffValue + tempTypeValue + "IMG").src.indexOf("On.png") != -1)   {
+                if(cardDatabase[CardID].MainAbility == undefined || cardDatabase[CardID].MainAbility.EnemyBuffs == undefined || cardDatabase[CardID].MainAbility.EnemyBuffs[tempBuffValue + tempTypeValue] == undefined) {
+                    return 0;
+                }
+                if(document.getElementById("abilityFilters_SelfBuffs_BuffDebuff/BuffCount").value != undefined && document.getElementById("abilityFilters_SelfBuffs_BuffDebuff/BuffCount").value != "" && cardDatabase[CardID].MainAbility.EnemyBuffs[tempBuffValue + tempTypeValue].BuffCount != document.getElementById("abilityFilters_SelfBuffs_BuffDebuff/BuffCount").value)   {
+                    return 0;
+                }
+                if(document.getElementById("abilityFilters_SelfBuffs_BuffDebuff/DurationCount").value != undefined && document.getElementById("abilityFilters_SelfBuffs_BuffDebuff/DurationCount").value != "" && cardDatabase[CardID].MainAbility.EnemyBuffs[tempBuffValue + tempTypeValue].Duration != document.getElementById("abilityFilters_SelfBuffs_BuffDebuff/DurationCount").value)   {
+                    return 0;
+                }
+            }
+        }
+    }
+
+/*
+   _____ _    _ ____             ____ _____ _      _____ _________     __
+  / ____| |  | |  _ \      /\   |  _ \_   _| |    |_   _|__   __\ \   / /
+ | (___ | |  | | |_) |    /  \  | |_) || | | |      | |    | |   \ \_/ / 
+  \___ \| |  | |  _ <    / /\ \ |  _ < | | | |      | |    | |    \   /  
+  ____) | |__| | |_) |  / ____ \| |_) || |_| |____ _| |_   | |     | |   
+ |_____/ \____/|____/  /_/    \_\____/_____|______|_____|  |_|     |_|   
+*/
+
+    if(document.getElementById("subAbilityFilters_SelfBuffs_FillsGaugeIMG").src.indexOf("On.png") != -1)   {
+        if(cardDatabase[CardID].SubAbility == undefined || cardDatabase[CardID].SubAbility.SelfBuffs == undefined || cardDatabase[CardID].SubAbility.SelfBuffs.FillsGauge == undefined) {
+            return 0;
+        }
+    }
+
+    if(document.getElementById("subAbilityFilters_SelfBuffs_HPRecoveryIMG").src.indexOf("On.png") != -1)   {
+        if(cardDatabase[CardID].SubAbility == undefined || cardDatabase[CardID].SubAbility.SelfBuffs == undefined || cardDatabase[CardID].SubAbility.SelfBuffs.HPRecovery == undefined) {
+            return 0;
+        }
+    }
+
+    for(var tempBuffValue of buffArray)   {
+        for(var tempTypeValue of buffTypeStoreArray)  {
+            if(document.getElementById("subAbilityFilters_SelfBuffs_" + tempBuffValue + tempTypeValue + "IMG").src.indexOf("On.png") != -1)   {
+                if(cardDatabase[CardID].SubAbility == undefined || cardDatabase[CardID].SubAbility.SelfBuffs == undefined || cardDatabase[CardID].SubAbility.SelfBuffs[tempBuffValue + tempTypeValue] == undefined) {
+                    return 0;
+                }
+                if(document.getElementById("subAbilityFilters_SelfBuffs_BuffDebuff/BuffCount").value != undefined && document.getElementById("subAbilityFilters_SelfBuffs_BuffDebuff/BuffCount").value != "" && cardDatabase[CardID].SubAbility.SelfBuffs[tempBuffValue + tempTypeValue].BuffCount != document.getElementById("subAbilityFilters_SelfBuffs_BuffDebuff/BuffCount").value)   {
+                    return 0;
+                }
+                if(document.getElementById("subAbilityFilters_SelfBuffs_BuffDebuff/DurationCount").value != undefined && document.getElementById("subAbilityFilters_SelfBuffs_BuffDebuff/DurationCount").value != "" && cardDatabase[CardID].SubAbility.SelfBuffs[tempBuffValue + tempTypeValue].Duration != document.getElementById("subAbilityFilters_SelfBuffs_BuffDebuff/DurationCount").value)   {
+                    return 0;
+                }
+            }
+        }
+    }
+
+
+    if(document.getElementById("subAbilityFilters_EnemyBuffs_InflictsStatusIMG").src.indexOf("On.png") != -1)   {
+        if(document.getElementById("subAbilityFilters_EnemyBuffs_InflictsStatusIMGcaption/Type").value != undefined && document.getElementById("subAbilityFilters_EnemyBuffs_InflictsStatusIMGcaption/Type").value != "")   {
+            if(cardDatabase[CardID].SubAbility == undefined || cardDatabase[CardID].SubAbility.EnemyBuffs == undefined || cardDatabase[CardID].SubAbility.EnemyBuffs.InflictsStatus != document.getElementById("subAbilityFilters_EnemyBuffs_InflictsStatusIMGcaption/Type").value) {
+                return 0;
+            }
+        }
+        else if(cardDatabase[CardID].SubAbility == undefined || cardDatabase[CardID].SubAbility.EnemyBuffs == undefined || cardDatabase[CardID].SubAbility.EnemyBuffs.InflictsStatus == undefined) {
+            return 0;
+        }
+    }
+
+    for(var tempBuffValue of debuffArray)   {
+        for(var tempTypeValue of buffTypeStoreArray)  {
+            if(document.getElementById("subAbilityFilters_EnemyBuffs_" + tempBuffValue + tempTypeValue + "IMG").src.indexOf("On.png") != -1)   {
+                if(cardDatabase[CardID].SubAbility == undefined || cardDatabase[CardID].SubAbility.EnemyBuffs == undefined || cardDatabase[CardID].SubAbility.EnemyBuffs[tempBuffValue + tempTypeValue] == undefined) {
+                    return 0;
+                }
+                if(document.getElementById("subAbilityFilters_SelfBuffs_BuffDebuff/BuffCount").value != undefined && document.getElementById("subAbilityFilters_SelfBuffs_BuffDebuff/BuffCount").value != "" && cardDatabase[CardID].SubAbility.EnemyBuffs[tempBuffValue + tempTypeValue].BuffCount != document.getElementById("subAbilityFilters_SelfBuffs_BuffDebuff/BuffCount").value)   {
+                    return 0;
+                }
+                if(document.getElementById("subAbilityFilters_SelfBuffs_BuffDebuff/DurationCount").value != undefined && document.getElementById("subAbilityFilters_SelfBuffs_BuffDebuff/DurationCount").value != "" && cardDatabase[CardID].SubAbility.EnemyBuffs[tempBuffValue + tempTypeValue].Duration != document.getElementById("subAbilityFilters_SelfBuffs_BuffDebuff/DurationCount").value)   {
+                    return 0;
+                }
+            }
+        }
+    }
 
     return 1;
 
@@ -1695,7 +1839,13 @@ var cardDatabase = {
             Element: "Neutral",
             BasePower: 0,
             MaxPower: 0,
-            Effect: "Restores 50 HP. Stacking Cards does not increase value."
+            Effect: "Restores 50 HP. Stacking Cards does not increase value.",
+            SelfBuffs:  {
+                HPRecovery: {
+                    Type: "Fixed",
+                    Amount: 50
+                }
+            }
         }
     },
     23:  {
@@ -1733,7 +1883,12 @@ var cardDatabase = {
             Element: "Neutral",
             BasePower: 15,
             MaxPower: 50,
-            Effect: "Restores HP. Amount restored is based on Magic."
+            Effect: "Restores HP. Amount restored is based on Magic.",
+            SelfBuffs:  {
+                HPRecovery: {
+                    Type: "Magic"
+                }
+            }
         }
     },
     24:  {
@@ -1771,7 +1926,14 @@ var cardDatabase = {
             Element: "Neutral",
             BasePower: 0,
             MaxPower: 0,
-            Effect: "Defense +1 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+            Effect: "Defense +1 for 10s. Stacking Cards does not increase value. Can be applied more than once.",
+            SelfBuffs:  {
+                BuffDefense:   {
+                    Type: "General",
+                    BuffCount: 1,
+                    Duration: 10
+                }
+            }
         }
     },
     25:  {
@@ -1809,7 +1971,14 @@ var cardDatabase = {
             Element: "Neutral",
             BasePower: 0,
             MaxPower: 0,
-            Effect: "Magic Resist +1 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+            Effect: "Magic Resist +1 for 10s. Stacking Cards does not increase value. Can be applied more than once.",
+            SelfBuffs:  {
+                BuffMagicResist:   {
+                    Type: "General",
+                    BuffCount: 1,
+                    Duration: 10
+                }
+            }
         }
     },
     26:  {
@@ -1961,7 +2130,10 @@ var cardDatabase = {
             Element: "Neutral",
             BasePower: 0,
             MaxPower: 0,
-            Effect: "Cures Poison."
+            Effect: "Cures Poison.",
+            SelfBuffs:  {
+                CuresStatus: "Poison"
+            }
         }
     },
     30:  {
@@ -1999,7 +2171,14 @@ var cardDatabase = {
             Element: "Neutral",
             BasePower: 0,
             MaxPower: 0,
-            Effect: "Strength +2 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+            Effect: "Strength +2 for 10s. Stacking Cards does not increase value. Can be applied more than once.",
+            SelfBuffs:  {
+                BuffStrength:   {
+                    Type: "General",
+                    BuffCount: 2,
+                    Duration: 10
+                }
+            }
         }
     },
     31:  {
@@ -2037,7 +2216,14 @@ var cardDatabase = {
             Element: "Neutral",
             BasePower: 0,
             MaxPower: 0,
-            Effect: "Magic +2 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+            Effect: "Magic +2 for 10s. Stacking Cards does not increase value. Can be applied more than once.",
+            SelfBuffs:  {
+                BuffMagic:   {
+                    Type: "General",
+                    BuffCount: 2,
+                    Duration: 10
+                }
+            }
         }
     },
     32:  {
@@ -2231,7 +2417,14 @@ var cardDatabase = {
         },
         SubAbility:    {
             Name: "Attack Boost",
-            Effect: "Strength +1 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+            Effect: "Strength +1 for 10s. Stacking Cards does not increase value. Can be applied more than once.",
+            SelfBuffs:  {
+                BuffStrength:   {
+                    Type: "General",
+                    BuffCount: 1,
+                    Duration: 10
+                }
+            }
         }
     },
     37:  {
@@ -2345,7 +2538,12 @@ var cardDatabase = {
             Element: "Neutral",
             BasePower: 15,
             MaxPower: 50,
-            Effect: "Restores HP. Amount restored is based on Magic."
+            Effect: "Restores HP. Amount restored is based on Magic.",
+            SelfBuffs:  {
+                HPRecovery: {
+                    Type: "Magic"
+                }
+            }
         }
     },
     40:  {
@@ -2535,7 +2733,10 @@ var cardDatabase = {
             Element: "Neutral",
             BasePower: 0,
             MaxPower: 0,
-            Effect: "Fills the bonus gauge. Stacking Cards does not increase value."
+            Effect: "Fills the bonus gauge. Stacking Cards does not increase value.",
+            SelfBuffs:  {
+                FillsGauge: "Yes"
+            }
         }
     },
     45:  {
@@ -2839,7 +3040,10 @@ var cardDatabase = {
             Element: "Neutral",
             BasePower: 8,
             MaxPower: 18,
-            Effect: "A lesser non-element magic attack that has a low chance of inflicting poison."
+            Effect: "A lesser non-element magic attack that has a low chance of inflicting poison.",
+            EnemyBuffs:  {
+                InflictsStatus: "Poison"
+            }
         }
     },
     53:  {
@@ -2919,7 +3123,14 @@ var cardDatabase = {
         },
         SubAbility:    {
             Name: "Attack Boost+",
-            Effect: "Strength +2 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+            Effect: "Strength +2 for 10s. Stacking Cards does not increase value. Can be applied more than once.",
+            SelfBuffs:  {
+                BuffStrength:   {
+                    Type: "General",
+                    BuffCount: 2,
+                    Duration: 10
+                }
+            }
         }
     },
     55:  {
@@ -2961,7 +3172,14 @@ var cardDatabase = {
         },
         SubAbility:    {
             Name: "Magic Boost+",
-            Effect: "Magic +2 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+            Effect: "Magic +2 for 10s. Stacking Cards does not increase value. Can be applied more than once.",
+            SelfBuffs:  {
+                BuffMagic:   {
+                    Type: "General",
+                    BuffCount: 2,
+                    Duration: 10
+                }
+            }
         }
     },
     56:  {
@@ -3041,7 +3259,14 @@ var cardDatabase = {
         },
         SubAbility:    {
             Name: "Attack Boost+",
-            Effect: "Strength +2 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+            Effect: "Strength +2 for 10s. Stacking Cards does not increase value. Can be applied more than once.",
+            SelfBuffs:  {
+                BuffStrength:   {
+                    Type: "General",
+                    BuffCount: 2,
+                    Duration: 10
+                }
+            }
         }
     },
     58:  {
@@ -3083,7 +3308,14 @@ var cardDatabase = {
         },
         SubAbility:    {
             Name: "Magic Boost+",
-            Effect: "Magic +2 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+            Effect: "Magic +2 for 10s. Stacking Cards does not increase value. Can be applied more than once.",
+            SelfBuffs:  {
+                BuffMagic:   {
+                    Type: "General",
+                    BuffCount: 2,
+                    Duration: 10
+                }
+            }
         }
     },
     59:  {
@@ -3121,7 +3353,14 @@ var cardDatabase = {
             Element: "Neutral",
             BasePower: 0,
             MaxPower: 0,
-            Effect: "Target's Magic Resist -5 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+            Effect: "Target's Magic Resist -5 for 10s. Stacking Cards does not increase value. Can be applied more than once.",
+            EnemyBuffs:  {
+                DebuffMagicResist:   {
+                    Type: "General",
+                    BuffCount: 5,
+                    Duration: 10
+                }
+            }
         }
     },
     60:  {
@@ -3163,7 +3402,14 @@ var cardDatabase = {
         },
         SubAbility:    {
             Name: "Magic Boost+",
-            Effect: "Magic +2 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+            Effect: "Magic +2 for 10s. Stacking Cards does not increase value. Can be applied more than once.",
+            SelfBuffs:  {
+                BuffMagic:   {
+                    Type: "General",
+                    BuffCount: 2,
+                    Duration: 10
+                }
+            }
         }
     },
     61:  {
@@ -3205,7 +3451,14 @@ var cardDatabase = {
         },
         SubAbility:    {
             Name: "Attack Boost+",
-            Effect: "Strength +2 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+            Effect: "Strength +2 for 10s. Stacking Cards does not increase value. Can be applied more than once.",
+            SelfBuffs:  {
+                BuffStrength:   {
+                    Type: "General",
+                    BuffCount: 2,
+                    Duration: 10
+                }
+            }
         }
     },
     62:  {
@@ -3247,7 +3500,14 @@ var cardDatabase = {
         },
         SubAbility:    {
             Name: "Attack Boost+",
-            Effect: "Strength +2 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+            Effect: "Strength +2 for 10s. Stacking Cards does not increase value. Can be applied more than once.",
+            SelfBuffs:  {
+                BuffStrength:   {
+                    Type: "General",
+                    BuffCount: 2,
+                    Duration: 10
+                }
+            }
         }
     },
     63:  {
@@ -3289,7 +3549,14 @@ var cardDatabase = {
         },
         SubAbility:    {
             Name: "Magic Boost+",
-            Effect: "Magic +2 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+            Effect: "Magic +2 for 10s. Stacking Cards does not increase value. Can be applied more than once.",
+            SelfBuffs:  {
+                BuffMagic:   {
+                    Type: "General",
+                    BuffCount: 2,
+                    Duration: 10
+                }
+            }
         }
     },
     64:  {
@@ -3331,7 +3598,14 @@ var cardDatabase = {
         },
         SubAbility:    {
             Name: "Attack Boost+",
-            Effect: "Strength +2 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+            Effect: "Strength +2 for 10s. Stacking Cards does not increase value. Can be applied more than once.",
+            SelfBuffs:  {
+                BuffStrength:   {
+                    Type: "General",
+                    BuffCount: 2,
+                    Duration: 10
+                }
+            }
         }
     },
     65:  {
@@ -3373,7 +3647,14 @@ var cardDatabase = {
         },
         SubAbility:    {
             Name: "Attack Boost+",
-            Effect: "Strength +2 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+            Effect: "Strength +2 for 10s. Stacking Cards does not increase value. Can be applied more than once.",
+            SelfBuffs:  {
+                BuffStrength:   {
+                    Type: "General",
+                    BuffCount: 2,
+                    Duration: 10
+                }
+            }
         }
     },
     66:  {
@@ -3415,7 +3696,14 @@ var cardDatabase = {
         },
         SubAbility:    {
             Name: "Attack Boost+",
-            Effect: "Strength +2 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+            Effect: "Strength +2 for 10s. Stacking Cards does not increase value. Can be applied more than once.",
+            SelfBuffs:  {
+                BuffStrength:   {
+                    Type: "General",
+                    BuffCount: 2,
+                    Duration: 10
+                }
+            }
         }
     },
     67:  {
@@ -3457,7 +3745,12 @@ var cardDatabase = {
         },
         SubAbility:    {
             Name: "Cure",
-            Effect: "Restores HP. Amount restored is based on Magic."
+            Effect: "Restores HP. Amount restored is based on Magic.",
+            SelfBuffs:  {
+                HPRecovery: {
+                    Type: "Magic"
+                }
+            }
         }
     },
     68:  {
@@ -3499,7 +3792,12 @@ var cardDatabase = {
         },
         SubAbility:    {
             Name: "Cure II",
-            Effect: "Restores HP. Amount restored is based on Magic."
+            Effect: "Restores HP. Amount restored is based on Magic.",
+            SelfBuffs:  {
+                HPRecovery: {
+                    Type: "Magic"
+                }
+            }
         }
     },
     69:  {
@@ -3541,7 +3839,14 @@ var cardDatabase = {
         },
         SubAbility:    {
             Name: "Defense Sap 3",
-            Effect: "Target's Defense -3 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+            Effect: "Target's Defense -3 for 10s. Stacking Cards does not increase value. Can be applied more than once.",
+            EnemyBuffs:  {
+                DebuffDefense:   {
+                    Type: "General",
+                    BuffCount: 3,
+                    Duration: 10
+                }
+            }
         }
     },
     70:  {
@@ -3583,7 +3888,10 @@ var cardDatabase = {
         },
         SubAbility:    {
             Name: "Gauge Boost",
-            Effect: "Fills the bonus gauge. Stacking Cards does not increase value."
+            Effect: "Fills the bonus gauge. Stacking Cards does not increase value.",
+            SelfBuffs:  {
+                FillsGauge: "Yes"
+            }
         }
     },
     71:  {
@@ -3621,11 +3929,21 @@ var cardDatabase = {
             Element: "Neutral",
             BasePower: 45,
             MaxPower: 90,
-            Effect: "A powerful non-element physical attack that has a chance of inflicting paralysis."
+            Effect: "A powerful non-element physical attack that has a chance of inflicting paralysis.",
+            EnemyBuffs:  {
+                InflictsStatus: "Paralysis"
+            }
         },
         SubAbility:    {
             Name: "Defense Sap 3",
-            Effect: "Target's Defense -3 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+            Effect: "Target's Defense -3 for 10s. Stacking Cards does not increase value. Can be applied more than once.",
+            EnemyBuffs:  {
+                DebuffDefense:   {
+                    Type: "General",
+                    BuffCount: 3,
+                    Duration: 10
+                }
+            }
         }
     },
     72:  {
@@ -3777,11 +4095,23 @@ var cardDatabase = {
             Element: "Neutral",
             BasePower: 0,
             MaxPower: 0,
-            Effect: "Restores 80 HP. Stacking Cards does not increase value."
+            Effect: "Restores 80 HP. Stacking Cards does not increase value.",
+            SelfBuffs:  {
+                HPRecovery: {
+                    Type: "Fixed",
+                    Amount: 80
+                }
+            }
         },
         SubAbility:    {
             Name: "Potion",
-            Effect: "Restores 50 HP. Stacking Cards does not increase value."
+            Effect: "Restores 50 HP. Stacking Cards does not increase value.",
+            SelfBuffs:  {
+                HPRecovery: {
+                    Type: "Fixed",
+                    Amount: 50
+                }
+            }
         }
     },
     76:  {
@@ -3819,7 +4149,13 @@ var cardDatabase = {
             Element: "Neutral",
             BasePower: 50,
             MaxPower: 50,
-            Effect: "Absorbs 50 HP. Stacking Cards does not increase value."
+            Effect: "Absorbs 50 HP. Stacking Cards does not increase value.",
+            SelfBuffs:  {
+                HPRecovery: {
+                    Type: "Fixed",
+                    Amount: 50
+                }
+            }
         }
     },
     77:  {
@@ -3861,7 +4197,14 @@ var cardDatabase = {
         },
         SubAbility:    {
             Name: "Magic DEF Sap 3",
-            Effect: "Target's Magic Resist -3 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+            Effect: "Target's Magic Resist -3 for 10s. Stacking Cards does not increase value. Can be applied more than once.",
+            EnemyBuffs:  {
+                DebuffMagicResist:   {
+                    Type: "General",
+                    BuffCount: 3,
+                    Duration: 10
+                }
+            }
         }
     },
     78:  {
@@ -3941,7 +4284,10 @@ var cardDatabase = {
         },
         SubAbility:    {
             Name: "Poison",
-            Effect: "Low chance to inflict poison."
+            Effect: "Low chance to inflict poison.",
+            EnemyBuffs:  {
+                InflictsStatus: "Poison"
+            }
         }
     },
     80:  {
@@ -3983,7 +4329,10 @@ var cardDatabase = {
         },
         SubAbility:    {
             Name: "Paralysis",
-            Effect: "Low chance to inflict paralysis."
+            Effect: "Low chance to inflict paralysis.",
+            EnemyBuffs:  {
+                InflictsStatus: "Paralysis"
+            }
         }
     },
     81:  {
@@ -4025,7 +4374,10 @@ var cardDatabase = {
         },
         SubAbility:    {
             Name: "Sleep",
-            Effect: "Low chance to inflict sleep."
+            Effect: "Low chance to inflict sleep.",
+            EnemyBuffs:  {
+                InflictsStatus: "Sleep"
+            }
         }
     },
     82:  {
@@ -4063,11 +4415,21 @@ var cardDatabase = {
             Element: "Neutral",
             BasePower: 15,
             MaxPower: 50,
-            Effect: "Restores HP. Amount restored is based on Magic."
+            Effect: "Restores HP. Amount restored is based on Magic.",
+            SelfBuffs:  {
+                HPRecovery: {
+                    Type: "Magic"
+                }
+            }
         },
         SubAbility:    {
             Name: "Cure",
-            Effect: "Restores HP. Amount restored is based on Magic."
+            Effect: "Restores HP. Amount restored is based on Magic.",
+            SelfBuffs:  {
+                HPRecovery: {
+                    Type: "Magic"
+                }
+            }
         }
     },
     83:  {
@@ -4185,7 +4547,14 @@ var cardDatabase = {
         },
         SubAbility:    {
             Name: "Magic Boost 2",
-            Effect: "Magic +2 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+            Effect: "Magic +2 for 10s. Stacking Cards does not increase value. Can be applied more than once.",
+            SelfBuffs:  {
+                BuffMagic:   {
+                    Type: "General",
+                    BuffCount: 2,
+                    Duration: 10
+                }
+            }
         }
     },
     86:  {
@@ -4197,6 +4566,26 @@ var cardDatabase = {
         DirectionType: "Light",
         ColorType: "Green",
         AttackType: "Sword",
+        Passive1:   {
+            ReqCount: 1,
+            BuffType: "HP",
+            BuffCount: 1
+        },
+        Passive2:   {
+            ReqCount: 3,
+            BuffType: "Strength",
+            BuffCount: 1
+        },
+        Passive3:   {
+            ReqCount: 5,
+            BuffType: "Strength",
+            BuffCount: 1
+        },
+        Passive4:   {
+            ReqCount: 10,
+            BuffType: "Strength",
+            BuffCount: 2
+        },
         MainAbility:    {
             Name: "Radiant Glory",
             AttackType: "Sword",
@@ -4207,7 +4596,14 @@ var cardDatabase = {
         },
         SubAbility:    {
             Name: "Attack Boost 2",
-            Effect: "Strength +2 for 10s. Stacking Cards does not increase value. Can be applied more than once."
+            Effect: "Strength +2 for 10s. Stacking Cards does not increase value. Can be applied more than once.",
+            SelfBuffs:  {
+                BuffStrength:   {
+                    Type: "General",
+                    BuffCount: 2,
+                    Duration: 10
+                }
+            }
         }
     },
     87:  {
@@ -4219,6 +4615,26 @@ var cardDatabase = {
         DirectionType: "Light",
         ColorType: "Red",
         AttackType: "Sword",
+        Passive1:   {
+            ReqCount: 1,
+            BuffType: "HP",
+            BuffCount: 1
+        },
+        Passive2:   {
+            ReqCount: 3,
+            BuffType: "HP",
+            BuffCount: 1
+        },
+        Passive3:   {
+            ReqCount: 5,
+            BuffType: "Strength",
+            BuffCount: 1
+        },
+        Passive4:   {
+            ReqCount: 10,
+            BuffType: "Defense",
+            BuffCount: 1
+        },
         MainAbility:    {
             Name: "Storm Dance",
             AttackType: "Sword",
