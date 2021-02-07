@@ -88618,7 +88618,7 @@ var medalDatabase = {
     },
     2097:  {
         ID: 2097,
-        AlbumNum: 1611,
+        AlbumNum: 1928,
         Reference: [2097],
         MedalImage: "1928_7Star_SN++_-_MoM_Axel.png",
         RenderImage: "1928_7Star_SN++_-_MoM_Axel_Render.png",
