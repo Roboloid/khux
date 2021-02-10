@@ -4644,4 +4644,33 @@ var cardDatabase = {
             Effect: "A powerful wind-element physical attack."
         }
     },
+    88:  {
+        ID: 88,
+        AlbumNum: 88,
+        CardImage: "88_Key_Art_%238.png",
+        RenderImage: "88_Key_Art_%238_Render.png",
+        Name: "Key Art #8",
+        DirectionType: "Light",
+        ColorType: "Blue",
+        AttackType: "Sword",
+        MainAbility:    {
+            Name: "Extreme Arcana",
+            AttackType: "Sword",
+            Element: "Neutral",
+            BasePower: 60,
+            MaxPower: 120,
+            Effect: "A powerful non-element physical attack."
+        },
+        SubAbility:    {
+            Name: "Attack Boost 2",
+            Effect: "Strength +2 for 10s. Stacking Cards does not increase value. Can be applied more than once.",
+            SelfBuffs:  {
+                BuffStrength:   {
+                    Type: "General",
+                    BuffCount: 2,
+                    Duration: 10
+                }
+            }
+        }
+    },
 };
