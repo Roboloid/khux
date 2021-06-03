@@ -29,7 +29,7 @@ function mapFunction(value)  {
 
 function pageLoad()	{
 	if(getParameterByName("daybreak") == "true")   {
-		var variable1 = "Dwarf_Woodlands_Container";
+		var variable1 = "Daybreak_Town_Container";
     document.getElementById(variable1).classList.toggle("showMap");
     $(document).ready(function() {
       $("#" + variable1).find("img").each(function() {
