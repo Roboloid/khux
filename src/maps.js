@@ -1,20 +1,117 @@
 // Display maps
 function mapFunction(value)  {
   if(value == "All")  {
-    document.getElementById("Daybreak_Town_Container").classList.toggle("showMap");
-    document.getElementById("Scala_ad_Caelum_Container").classList.toggle("showMap");
-    document.getElementById("Dwarf_Woodlands_Container").classList.toggle("showMap");
-    document.getElementById("Wonderland_Container").classList.toggle("showMap");
-    document.getElementById("Agrabah_Container").classList.toggle("showMap");
-    document.getElementById("Olympus_Coliseum_Container").classList.toggle("showMap");
-    document.getElementById("Beasts_Castle_Container").classList.toggle("showMap");
-    document.getElementById("Castle_of_Dreams_Container").classList.toggle("showMap");
-    document.getElementById("Enchanted_Dominion_Container").classList.toggle("showMap");
-    document.getElementById("Game_Central_Station_Container").classList.toggle("showMap");
-    document.getElementById("Niceland_Container").classList.toggle("showMap");
-    document.getElementById("Cy-Bug_Sector_Container").classList.toggle("showMap");
-    document.getElementById("Candy_Kingdom_Container").classList.toggle("showMap");
-    document.getElementById("Extras_Container").classList.toggle("showMap");
+      var variable1 = "Daybreak_Town_Container";
+      document.getElementById(variable1).classList.toggle("showMap");
+      $(document).ready(function() {
+        $("#" + variable1).find("img").each(function() {
+             $(this).attr("src", $(this).data("src"));
+           });
+      });
+    
+      var variable2 = "Scala_ad_Caelum_Container";
+      document.getElementById(variable2).classList.toggle("showMap");
+      $(document).ready(function() {
+        $("#" + variable2).find("img").each(function() {
+             $(this).attr("src", $(this).data("src"));
+           });
+      });
+    
+      var variable3 = "Dwarf_Woodlands_Container";
+      document.getElementById(variable3).classList.toggle("showMap");
+      $(document).ready(function() {
+        $("#" + variable3).find("img").each(function() {
+             $(this).attr("src", $(this).data("src"));
+           });
+      });
+    
+      var variable4 = "Wonderland_Container";
+      document.getElementById(variable4).classList.toggle("showMap");
+      $(document).ready(function() {
+        $("#" + variable4).find("img").each(function() {
+             $(this).attr("src", $(this).data("src"));
+           });
+      });
+    
+      var variable5 = "Agrabah_Container";
+      document.getElementById(variable5).classList.toggle("showMap");
+      $(document).ready(function() {
+        $("#" + variable5).find("img").each(function() {
+             $(this).attr("src", $(this).data("src"));
+           });
+      });
+    
+      var variable6 = "Olympus_Coliseum_Container";
+      document.getElementById(variable6).classList.toggle("showMap");
+      $(document).ready(function() {
+        $("#" + variable6).find("img").each(function() {
+             $(this).attr("src", $(this).data("src"));
+           });
+      });
+    
+      var variable7 = "Beasts_Castle_Container";
+      document.getElementById(variable7).classList.toggle("showMap");
+      $(document).ready(function() {
+        $("#" + variable7).find("img").each(function() {
+             $(this).attr("src", $(this).data("src"));
+           });
+      });
+    
+      var variable8 = "Castle_of_Dreams_Container";
+      document.getElementById(variable8).classList.toggle("showMap");
+      $(document).ready(function() {
+        $("#" + variable8).find("img").each(function() {
+             $(this).attr("src", $(this).data("src"));
+           });
+      });
+    
+      var variable9 = "Enchanted_Dominion_Container";
+      document.getElementById(variable9).classList.toggle("showMap");
+      $(document).ready(function() {
+        $("#" + variable9).find("img").each(function() {
+             $(this).attr("src", $(this).data("src"));
+           });
+      });
+    
+      var variable10 = "Game_Central_Station_Container";
+      document.getElementById(variable10).classList.toggle("showMap");
+      $(document).ready(function() {
+        $("#" + variable10).find("img").each(function() {
+             $(this).attr("src", $(this).data("src"));
+           });
+      });
+    
+      var variable11 = "Niceland_Container";
+      document.getElementById(variable11).classList.toggle("showMap");
+      $(document).ready(function() {
+        $("#" + variable11).find("img").each(function() {
+             $(this).attr("src", $(this).data("src"));
+           });
+      });
+    
+      var variable12 = "Cy-Bug_Sector_Container";
+      document.getElementById(variable12).classList.toggle("showMap");
+      $(document).ready(function() {
+        $("#" + variable12).find("img").each(function() {
+             $(this).attr("src", $(this).data("src"));
+           });
+      });
+    
+      var variable13 = "Candy_Kingdom_Container";
+      document.getElementById(variable13).classList.toggle("showMap");
+      $(document).ready(function() {
+        $("#" + variable13).find("img").each(function() {
+             $(this).attr("src", $(this).data("src"));
+           });
+      });
+    
+      var variable14 = "Extras_Container";
+      document.getElementById(variable14).classList.toggle("showMap");
+      $(document).ready(function() {
+        $("#" + variable14).find("img").each(function() {
+             $(this).attr("src", $(this).data("src"));
+           });
+      });
   }
   else  {
     var variable = value + "_Container";

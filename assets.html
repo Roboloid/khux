@@ -86,6 +86,14 @@
         margin: 5px 5px 5px;
         width: 150px;
       }
+      .Character  {
+        display: relative;
+        cursor: pointer;
+        margin: 5px 5px 5px;
+        height: 200px;
+        width: 150px;
+        object-fit: scale-down;
+      }
       .Keyblade  {
         display: relative;
         cursor: pointer;
@@ -147,7 +155,7 @@
 
   
 
-  <body>
+  <body onload="pageLoad()">
 
     <script>
         $(function(){
@@ -158,18 +166,6 @@
     <div id="navbar-placeholder">
 
     </div>
-
-    <script>
-        function showFunction(value)  {
-            var variable = value + "_Container";
-            document.getElementById(variable).classList.toggle("showSection");
-            $(document).ready(function() {
-              $("#" + variable).find("img").each(function() {
-                  $(this).attr("src", $(this).data("src"));
-                });
-            });
-        }
-    </script>
 
         <div class="whiteOverlay">
 
@@ -279,6 +275,99 @@
                 <pre></pre>
 
                 <pre></pre>
+                
+                <input type="image" onclick="showFunction('Character')" id="Character" src ="./images/icon/icon_assetsCharacter.png" width=25%/>
+    
+                    <div id="Character_Container" class="imageContainer">
+                    <pre></pre>
+    
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Chirithy_O_1.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Chirithy_S_1.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Chirithy_S_2.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Chirithy_S_3.png"/>
+                        <pre></pre>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Ephemer_O_1.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Ephemer_R_Default.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Ephemer_R_Sitting.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Ephemer_R_Battle.png"/>
+                        <pre></pre>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Skuld_O_1.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Skuld_S_1.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Skuld_R_Default.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Skuld_R_Sitting.png"/>
+                        <pre></pre>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Ventus_O_1.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Ventus_R_Default.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Ventus_R_Sitting.png"/>
+                        <pre></pre>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Brain_O_1.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Brain_R_Default.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Brain_R_Sitting.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Brain_R_Confident.png"/>
+                        <pre></pre>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Lauriam_O_1.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Lauriam_S_1.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Lauriam_R_Default.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Lauriam_R_Sitting.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Lauriam_R_Leaning.png"/>
+                        <pre></pre>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Strelitzia_O_1.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Strelitzia_S_1.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Strelitzia_S_2.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Strelitzia_S_3.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Strelitzia_R_Strelitzia_and_Chirithy.png"/>
+                        <pre></pre>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Elrena_O_1.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Elrena_S_1.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Elrena_R_Sitting.png"/>
+                        <pre></pre>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Luxu_O_1.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Luxu_S_1.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Luxu_R_Luxu-Brain.png"/>
+                        <pre></pre>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Darkness_S_1.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Darkness_R_Default.png"/>
+                        <pre></pre>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Sigurd_R_Default.png"/>
+                        <pre></pre>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Unnamed_Woman_R_Default.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Unnamed_Woman_R_Unnamed_Woman_and_Xehanort.png"/>
+                        <pre></pre>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Xehanort_S_1.png"/>
+                        <pre></pre>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Unnamed_Elder_S_1.png"/>
+                        <pre></pre>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Aced_O_1.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Aced_S_1.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Aced_S_2.png"/>
+                        <pre></pre>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Ira_O_1.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Ira_S_1.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Ira_S_2.png"/>
+                        <pre></pre>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Invi_O_1.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Invi_S_1.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Invi_S_2.png"/>
+                        <pre></pre>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Gula_O_1.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Gula_S_1.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Gula_S_2.png"/>
+                        <pre></pre>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Ava_O_1.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Ava_S_1.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Ava_S_2.png"/>
+                        <img class="Character" onclick="window.open(this.src)" data-src="./images/assets/character/Ava_S_3.png"/>
+    
+                    </div>
+                    <pre></pre>
+    
+                    <pre></pre>
+    
+                    <pre></pre>
+    
+                    <pre></pre>
+    
+                    <pre></pre>
 
             <input type="image" onclick="showFunction('Keyblade')" id="Keyblade" src ="./images/icon/icon_assetsKeyblade.png" width=25%/>
 
@@ -6442,6 +6531,8 @@
                 </div>
 
         </div>
+
+    <script src="./src/assets.js"></script>
 
   </body>
 </html>
