@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>                         <!---------------------- START HEADER ---------------------->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163660070-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-163660070-1');
+    </script>
+    
+    <meta charset="utf-8" />
+    <meta name="author" content="Roboloid" />
+    <meta name="description" content="Theater" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.50, viewport-fit=cover" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://roboloid.github.io/khux/images/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://roboloid.github.io/khux/images/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://roboloid.github.io/khux/images/icon/favicon-16x16.png">
+    <link rel="manifest" href="https://roboloid.github.io/khux/images/icon/site.webmanifest">
+    <link rel="mask-icon" href="https://roboloid.github.io/khux/images/icon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="https://roboloid.github.io/khux/images/icon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="https://roboloid.github.io/khux/images/icon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Metadata start -->
+    <html prefix="og: http://ogp.me/ns#"></html>
+    
+    <meta property="og:title" content="Theater">
+
+    <meta property="og:description" content="Choose one of many movies from the Age of Fairy Tales.">
+
+    <meta property="og:site_name" content="Roboloid's KHUχ Info Page" >
+
+    <meta property="og:image" content="https://roboloid.github.io/khux/images/icon/theater_thumb.png">
+    <!-- Metadata end -->
+
+    <!-- Site title -->
+    <title>KHUχ</title>
+
+    <!-- Script imports -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto">
+    <script src="https://www.youtube.com/iframe_api"></script>
+        
+    <!-- Content overlay -->
+    <style type="text/css">
+
+      input:focus{
+        outline: none;   
+      }
+      html *
+      {
+        font-family: "Roboto" !important;
+      }
+      ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(90, 90, 90);
+      }
+      ::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.2);
+      }
+      .gradOverlay {
+        padding: 15px 15px 15px;
+        margin: 10% 10% 10%;
+        color: #ffffff;
+        background-color: #000920;
+        background-position: center;
+        margin-left: auto;
+        margin-right: auto;
+        height: 100%;
+        width: 95%;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      }
+      .darkOverlayClass {
+        position: fixed;
+        background:rgb(0, 0, 0);
+        display: none;
+        opacity: 50%;
+        width: 100%;
+        height: 100%;
+        z-index: 10000;
+      }
+      .detailsPopupClass {
+        position: fixed;
+        display: none;
+        max-width: 90%;
+        width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+        max-height: 90%;
+        overflow-y: auto;
+        z-index: 10001;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+        background: rgb(0, 0, 0);
+      }
+      .videoPlayerReplacerClass {
+        position: fixed;
+        margin: 0 auto;
+        width: 1280px;
+        height: 720px;
+        z-index: 10010;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+      }
+      .thumbnailImageClass  {
+        width: 400px
+      }
+      .thumbnailImageClass:hover {
+        box-shadow: 0px 0px 15px rgb(0, 183, 255);
+      }
+      .videoIconClass  {
+        position: relative;
+        display: inline-block;
+        width: 400px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+      }
+
+    </style>
+
+    <!-- Backdrop pattern -->
+    <style>
+        body  {
+          background-image: url("./images/other/bg_theater.png");
+          background-size: 150px;
+          background-repeat: repeat
+        }
+    </style>
+  </head>                         <!---------------------- END HEADER ---------------------->
+
+  
+
+  <body onload="pageLoad()">
+
+    <div id="darkOverlay" class="darkOverlayClass">
+    </div>
+
+    <script>
+        $(function(){
+            $("#navbar-placeholder").load("./src/navigation.html");
+        });
+    </script>
+
+    <img src="./images/icon/videoPlayButtonOff.png" style="display: none"></img>
+    <img src="./images/icon/videoPlayButtonOn.png" style="display: none"></img>
+
+        <div class="gradOverlay">
+
+            <div id="videoDetailsPopup" class="detailsPopupClass">
+              
+            </div>
+
+            <h1 style="text-align:center;color:rgb(255, 255, 255)">Theater</h1>
+
+            <pre></pre>
+
+            <pre></pre>
+            
+            <div id="mainDiv">
+
+                <div id="storyVideoDiv">
+
+                    <h2 style="text-align:left;font-family:Verdana, sans-serif;">Story Videos</h2>
+
+                    <pre></pre>
+
+                    <div class="videoIconClass">
+                        <input type="image" onclick="loadDetailsPopup('complete_story')" src="./images/icon/video_complete_story.png" class="thumbnailImageClass"/>
+                        <h4 style="text-align:left">The Complete Story</h4>
+                    </div>
+
+                    <div class="videoIconClass">
+                        <input type="image" onclick="loadDetailsPopup('x_scenes')" src="./images/icon/video_x_scenes.png" class="thumbnailImageClass"/>
+                        <h4 style="text-align:left">The χ Scenes</h4>
+                    </div>
+
+                </div>
+
+                <pre></pre>
+                <pre></pre>
+                <pre></pre>
+                <pre></pre>
+                <pre></pre>
+
+                <div id="characterVideoDiv">
+
+                    <h2 style="text-align:left;font-family:Verdana, sans-serif;">Character Stories</h2>
+
+                    <pre></pre>
+
+                    <div class="videoIconClass">
+                        <input type="image" onclick="loadDetailsPopup('story_ephemer')" src="./images/icon/video_story_ephemer.png" class="thumbnailImageClass"/>
+                        <h4 style="text-align:left">The Case of Ephemer</h4>
+                    </div>
+
+                    <div class="videoIconClass">
+                        <input type="image" onclick="loadDetailsPopup('story_skuld')" src="./images/icon/video_story_skuld.png" class="thumbnailImageClass"/>
+                        <h4 style="text-align:left">The Case of Skuld</h4>
+                    </div>
+
+                    <div class="videoIconClass">
+                        <input type="image" onclick="loadDetailsPopup('story_ventus')" src="./images/icon/video_story_ventus.png" class="thumbnailImageClass"/>
+                        <h4 style="text-align:left">The Case of Ventus</h4>
+                    </div>
+
+                    <div class="videoIconClass">
+                        <input type="image" onclick="loadDetailsPopup('story_brain')" src="./images/icon/video_story_brain.png" class="thumbnailImageClass"/>
+                        <h4 style="text-align:left">The Case of Brain</h4>
+                    </div>
+
+                    <div class="videoIconClass">
+                        <input type="image" onclick="loadDetailsPopup('story_lauriam')" src="./images/icon/video_story_lauriam.png" class="thumbnailImageClass"/>
+                        <h4 style="text-align:left">The Case of Lauriam</h4>
+                    </div>
+
+                    <div class="videoIconClass">
+                        <input type="image" onclick="loadDetailsPopup('story_player')" src="./images/icon/video_story_player.png" class="thumbnailImageClass"/>
+                        <h4 style="text-align:left">The Case of the Player</h4>
+                    </div>
+
+                </div>
+
+                <pre></pre>
+                <pre></pre>
+                <pre></pre>
+                <pre></pre>
+                <pre></pre>
+
+                <div id="specialVideoDiv">
+
+                    <h2 style="text-align:left;font-family:Verdana, sans-serif;">Specials</h2>
+
+                    <pre></pre>
+
+                    <div class="videoIconClass">
+                        <input type="image" onclick="loadDetailsPopup('all_bosses')" src="./images/icon/video_all_bosses.png" class="thumbnailImageClass"/>
+                        <h4 style="text-align:left">All Bosses & Ending</h4>
+                    </div>
+
+                </div>
+
+            </div>
+            
+            
+        </div>
+
+    <script src="./src/theater.js"></script>
+
+  </body>
+</html>
