@@ -79,6 +79,16 @@ function pageLoad()	{
         });
     }
     
+    if(getParameterByName("playerparts") == "true")   {
+        var variable7 = "PlayerParts_Container";
+        document.getElementById(variable7).classList.toggle("showSection");
+        $(document).ready(function() {
+        $("#" + variable7).find("img").each(function() {
+            $(this).attr("src", $(this).data("src"));
+            });
+        });
+    }
+    
     if(getParameterByName("pet") == "true")   {
         var variable8 = "Pet_Container";
         document.getElementById(variable8).classList.toggle("showSection");
