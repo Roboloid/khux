@@ -144,7 +144,7 @@
 
   
 
-  <body>
+  <body onload="pageLoad()">
 
     <script>
         $(function(){
@@ -165,6 +165,48 @@
                   $(this).attr("src", $(this).data("src"));
                 });
             });
+        }
+
+        function pageLoad()	{
+            if(getParameterByName("character") == "true" || getParameterByName("characters") == "true")   {
+                var variable1 = "Characters_Container";
+                document.getElementById(variable1).classList.toggle("showSection");
+                $(document).ready(function() {
+                $("#" + variable1).find("img").each(function() {
+                    $(this).attr("src", $(this).data("src"));
+                    });
+                });
+            }
+            
+            if(getParameterByName("card") == "true" || getParameterByName("template") == "true" || getParameterByName("cardTemplate") == "true")   {
+                var variable2 = "CardTemplates_Container";
+                document.getElementById(variable2).classList.toggle("showSection");
+                $(document).ready(function() {
+                $("#" + variable2).find("img").each(function() {
+                    $(this).attr("src", $(this).data("src"));
+                    });
+                });
+            }
+            
+            if(getParameterByName("material") == "true" || getParameterByName("materials") == "true" || getParameterByName("ui") == "true" || getParameterByName("materialsui") == "true")   {
+                var variable3 = "MaterialsUI_Container";
+                document.getElementById(variable3).classList.toggle("showSection");
+                $(document).ready(function() {
+                $("#" + variable3).find("img").each(function() {
+                    $(this).attr("src", $(this).data("src"));
+                    });
+                });
+            }
+        }
+
+        function getParameterByName(name, url = window.location.href) {
+            name = name.toLowerCase();
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
         }
     </script>
 
